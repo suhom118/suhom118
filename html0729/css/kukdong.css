@@ -1,0 +1,44 @@
+body {
+    font-family: 'noto sans kr', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+/*body에 기본 글자의 스타일을 설정- body안에있는 모든 태그는 
+글자의 스타일을 상속받는다*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto /*가운데 정렬*/
+}
+.recruit{
+    background-image: url(../images/recruit.png);
+    background-position: center center;
+    height: 665px;
+}
+.tit{
+    font-size: 40px;
+    text-align: center;
+    padding: 122px 0 52px 0;
+}
+ul{
+    display: flex;
+}
+li{
+    width: 290px;
+    margin 0 40 0 0 ;
+}
+.last{
+    margin: 0;
+}
+h1{
+    font-size: 25px;
+    font-weight: 400;
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+body {
+    font-family: 'noto sans kr', sans-serif;
+    font-size: 15px;
+    color: #3d3d3d;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+/*body에 기본 글자의 스타일을 설정- body안에있는 모든 태그는 
+글자의 스타일을 상속받는다*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto /*가운데 정렬*/
+}
+h1{
+    font-size: 25px;
+    color: #1d1d1d;
+    font-weight: 700;
+    margin: 60px 0 28px 0;
+}
+h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 23px 0 5px 0;
+}
+p{
+    margin: 5px 0 15px 0;
+}
+.color{
+    background: #F4F4F4;
+    padding: 1px 0 80px 0;
+    margin: 80px 0 0 0;
+}
+ul{
+    list-style: none;
+}
+h3{
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+.system{
+    display: flex;
+}
+li{
+    width: 300px;
+    height: 350px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 250px 0 0 40px;
+    box-sizing: border-box;
+}
+.teal{
+    background: #053e5f;
+}
+.blue{
+    background: #71C5E8;
+    margin: 0 20px 0 0;
+}
+.green{
+    background: #71DBD4;
+    margin: 0 20px 0 0;
+}
+.yellow{
+    background: #F8E08E;
+    margin: 0 0 0 0;
+}
+ul{
+    display: flex;
+}
+.pri{
+    margin: 0 40px 0 0;
+}
