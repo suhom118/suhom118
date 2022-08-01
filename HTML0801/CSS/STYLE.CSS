@@ -1,11 +1,87 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
 body, section, p, div{/* body,section등의 모든태그에 여백삭제 */
     padding: 0;
     margin: 0;
 }
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #3d3d3d;
+    letter-spacing: -0.05em;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto;
+}
 .visual{
     background-image: url(../IMAGES/VISUAL_BG.png);
     background-position: center,center;
-    background-size: 50%;
     background-repeat: no-repeat;
     height: 1080px;
+}
+.visual p{/*클래스명이 visual인 태그에감싸여있는 p태그*/
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.visual a{
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 7px 23px;
+    border-radius: 20px;/*높이의 절반*/
+    display: inline-block;
+}
+.intro p{
+    color: #3d3d3d;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.intro a{
+    color: #0d0d0d;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 7px 23px;
+    border-radius: 20px;/*높이의 절반*/
+    display: inline-block;
+}
+.service{
+    background-color: #F4F4F4;
+}
+.service p{
+    color: #3d3d3d;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.service a{
+    color: #0d0d0d;
+    text-decoration: none;
+    border: 1px solid #3d3d3d;
+    padding: 7px 23px;
+    border-radius: 20px;/*높이의 절반*/
+    display: inline-block;
+}
+.it{
+    background-image: url(../IMAGES/IT_BG.png);
+    background-position: center,center;
+    background-repeat: no-repeat;
+    height: 1080px;
+}
+.it p{
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.it a{
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 7px 23px;
+    border-radius: 20px;/*높이의 절반*/
+    display: inline-block;
 }
