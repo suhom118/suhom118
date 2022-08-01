@@ -1,0 +1,11 @@
+body, section, p, div{/* body,section등의 모든태그에 여백삭제 */
+    padding: 0;
+    margin: 0;
+}
+.visual{
+    background-image: url(../IMAGES/VISUAL_BG.png);
+    background-position: center,center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    height: 1080px;
+}
