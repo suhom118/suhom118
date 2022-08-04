@@ -7,6 +7,21 @@ body, section, p, div, ul, li, h1, h2, h3, h4, h5, h6, nav {
 ul, li {
     list-style: none; /* ul태그 앞에 동그라미 삭제 */
 }
+em,address{
+    font-style: normal;/*em,address태그로 기울어진 글자를 반듯이*/
+}
+button{
+    background-color: transparent;/*배경투명*/
+    color: inherit;        
+    font-family: inherit;  
+    font-size: inherit;
+    cursor: pointer;/*커서가 손바닥으로 변경*/
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+.clearfix:after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
 body {
     color:#3d3d3d;
     line-height: 1.5;
@@ -16,7 +31,8 @@ body {
     letter-spacing: -0.05em;
 }
 a {
-    color:#3d3d3d;
+    color:inherit;
+    /*브라우저가 정의하는 파란색은 적용하지않고 부모요소가 정의한 색상을 따르겠다는 뜻*/
     text-decoration: none;
 }
 .wrapper {
@@ -53,6 +69,9 @@ header nav ul li a {
     height: 750px;
 }
 .visual strong {
+    display: block;
+    /*strong은 인라인태그라 margin padding이 적용이안되서 block요소로 변경*/
+    padding: 228px 0 10px 0;
     color: #FFFFFF;
     font-size: 25px;
     font-weight: 400;
@@ -61,4 +80,144 @@ header nav ul li a {
     color: #FFFFFF;
     line-height: 1.2;
     font-size: 50px;
+}
+.visual p em{
+    font-weight: 700;
+}
+.promotion .art{
+    margin: 154px 0 100px 0;
+}
+.promotion .art img{
+    float: left;
+}
+.promotion .art .inner{
+    float: left;
+    margin: 65px 0 0 80px;
+}
+/*두요소에 float:right를 주면 코딩순서의 역순정렬*/
+.promotion .lee{
+    margin: 0 0 146px 0;
+}
+.promotion .lee img{
+    float: right;
+}
+.promotion .lee .inner{
+    float: right;
+    margin: 65px 80px 0 0;
+}
+.promotion h2{
+    color: #1D1D1D;
+    font-size: 50px;
+    font-weight: 700
+}
+.promotion p{
+    margin: 20px 0 50px 0;
+}
+.promotion p strong{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+.promotion a{
+    display: inline-block;
+    float: left;
+    padding: 6px 20px;
+    margin: 0 5px 0 0;
+    border: 1px solid #666666;
+}
+.bbs {
+    background-image: url(../images/bbs_bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.bbs .notice{
+    /*notice글자는 대부분 흰색 내부요소에 스타일은 상속*/
+    color: #FFFFFF;
+}
+.bbs .notice .tit{
+    float: left;
+    margin: 93px 0 0 0;
+}
+.bbs .notice .tit h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+.bbs .notice .tit a{
+    display: inline-block;
+    padding: 6px 20px;
+    margin: 0 5px 0 0;
+    border: 1px solid #FFFFFF;
+}
+.bbs .notice .tit p{
+    margin: 16px 0 24px 0;
+}
+.bbs .notice ul{
+    float: right;
+    width: 770px;
+    margin: 102px 0 0 0;
+}
+.bbs .notice ul li{
+    border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
+}
+.bbs .notice ul li.first{
+    border-top: rgba(255, 255, 255, 0.2) solid 1px;
+}
+.bbs .notice ul li a strong{
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.bbs .notice ul li a{
+    padding: 15px 25px 15px 17px;
+}
+.bbs .notice ul li a span{
+    float: right;
+    margin: 4px 0 0 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+.bbs .movie{
+    margin: 160px 0 0 0;
+}
+.bbs .movie h2{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 18px 0;
+}
+.bbs .movie ul li{
+    float: left;
+    width: 400px;
+    margin: 0 40px 0 0 ;
+}
+.bbs .movie ul li.last{
+   margin: 0;
+}
+.bbs .movie ul li a{
+    display: block;
+    /*a태그는 잘눌리라고 block으로 바꿔줌*/
+}
+.bbs .movie ul li a span{
+    display: block;
+    margin: 5px 0 5px 0;
+}
+.bbs .movie ul li a strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+footer{
+    margin: 80px 0 0 0;
+    background-color: #0A0A0A;
+    color: rgba(255, 255, 255, 0.8);
+}
+footer .inner{
+    float: left;
+    margin: 54px 0 64px 0;
+}
+footer button{
+    float: right;
+    width: 160px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
