@@ -1,0 +1,226 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
+body, section, p, div,ul,li{/* body,section등의 모든태그에 여백삭제 */
+    padding: 0;
+    margin: 0;
+}
+ul, li{
+    list-style: none;/*ul태그앞에 동그라미삭제*/
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #3d3d3d;
+    letter-spacing: -0.05em;
+}
+.wrapper{
+    width: 1280px;
+    margin: 0 auto;
+}
+.visual{
+    background-image: url(../images/VISUAL_BG.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 1080px;
+    padding: 500px 0 0 0;
+    box-sizing: border-box;
+    /*width/height padding을 동시에 선언해도 사이즈가 늘어나지않음*/
+}
+.visual p{
+    font-size: 50px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0 0 38px 0;
+}
+.visual a{
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 20px;/*높이의절반*/
+    padding: 5px 22px;
+    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+}
+.intro{
+    text-align: center;
+    /*자손요소를 가운데 정렬-나자신x*/
+    margin: 88px 0 100px 0;
+}
+.intro strong{
+    font-weight: 700;
+}
+.intro p{
+    font-size: 50px;
+    line-height: 1.2;
+    color: #3d3d3d;
+    font-weight: 700;
+    margin: 27px 0 38px 0;
+}
+.intro span{
+    color: #999999;
+}
+.intro a{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0d0d0d;
+    border-radius: 20px;/*높이의절반*/
+    padding: 5px 22px;
+    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+}
+.service{
+    background-color: #f4f4f4;
+    padding: 140px 0 140px 0;
+}
+.service strong{
+    font-weight: 700;
+}
+.service p{
+    font-size: 50px;
+    line-height: 1.2;
+    color: #3d3d3d;
+    font-weight: 700;
+    margin: 27px 0 38px 0;
+}
+.service span{
+    color: #999999;
+}
+.service a{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0d0d0d;
+    border-radius: 20px;/*높이의절반*/
+    padding: 5px 22px;
+    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+}
+.it{ 
+    background-image: url(../images/IT_BG.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 1080px;
+    padding: 345px 0 0 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.it strong{
+    font-weight: 700;
+    color:#ffffff ;
+}
+.it p{
+    font-size: 50px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0 0 38px 0;
+}
+.it a{
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 20px;/*높이의절반*/
+    padding: 5px 22px;
+    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+}
+.bbs{
+    padding: 190px 0 100px 0;
+}
+.bbs p{
+    font-size: 50px;
+    line-height: 1.2;
+    color: #3d3d3d;
+    font-weight: 700; 
+    margin: 0 0 80px 0;
+}
+.bbs p span{
+    color: #999999;
+}
+.bbs ul{
+    display: flex;
+}
+.bbs ul li{
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.bbs ul li.last{
+    /*li태그중에서 last라는 클래스명을 가진 li*/
+    margin: 0;
+}
+.bbs ul li a{
+    display: block;
+    color: #3d3d3d;
+    text-decoration: none;
+}
+.bbs ul li a img{
+    border: 1px solid #999999;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.bbs ul li a strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 5x 0 15px 0;
+}
+.bbs ul li a span{
+    display: block;
+    color:#999999;
+}
+.bbs .more{
+    text-align: center;
+    margin: 50px 0 0 0 ;
+}
+.bbs .more a{
+    color: #3d3d3d;
+    text-decoration: none;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;/*높이의절반*/
+    padding: 5px 22px;
+    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+}
+.banner{
+    margin: 0 0 100px 0;
+}
+.banner ul{
+    display: flex;
+}
+.banner ul li{
+    width: 620px;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 40px 40px 40px;
+    box-sizing: border-box;
+}
+.banner ul li.partner{
+    /*li태그중에서 partner라는 클래스명li*/
+    background-color: #04C75B;
+    margin: 0 40px 0 0 ;
+}
+.banner ul li.career{
+    /*li태그중에서 partner라는 클래스명li*/
+    background-color: #08B4EB;
+}
+.banner ul li .tit strong{
+    color: #ffffff;
+    font-weight: 700;
+}
+.banner ul li .tit p{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 5px 0 0 0 ;
+}
+.banner ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0d0d0d;
+    border-radius: 20px;/*높이의절반*/
+    padding: 5px 22px;
+    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+}
+
