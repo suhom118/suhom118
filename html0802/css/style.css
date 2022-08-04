@@ -1,226 +1,227 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
-body, section, p, div,ul,li{/* body,section등의 모든태그에 여백삭제 */
+body, section, p, div, ul, li { 
+    /* body, section 등의 모든 태그의 모든 여백 삭제 */
     padding: 0;
     margin: 0;
 }
-ul, li{
-    list-style: none;/*ul태그앞에 동그라미삭제*/
+ul, li {
+    list-style: none; /* ul태그 앞에 동그라미 삭제 */
 }
-body{
+body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
-    line-height: 1.5;
     font-weight: 400;
-    color: #3d3d3d;
+    line-height: 1.5;
+    color:#3d3d3d;
     letter-spacing: -0.05em;
 }
-.wrapper{
+.wrapper {
     width: 1280px;
     margin: 0 auto;
 }
-.visual{
-    background-image: url(../images/VISUAL_BG.png);
+.visual {
+    background-image: url(../images/visual_bg.png);
     background-position: center center;
     background-repeat: no-repeat;
     height: 1080px;
-    padding: 500px 0 0 0;
+    padding: 367px 0 0 0;
     box-sizing: border-box;
-    /*width/height padding을 동시에 선언해도 사이즈가 늘어나지않음*/
+    /* width/height와 padding을 동시에 선언해도 사이즈가 늘어나지 않음 */
 }
-.visual p{
+.visual p {
+    color: #ffffff;
     font-size: 50px;
     line-height: 1.2;
-    color: #ffffff;
     font-weight: 700;
     margin: 0 0 38px 0;
 }
-.visual a{
+.visual a {
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #ffffff;
-    border-radius: 20px;/*높이의절반*/
+    border-radius: 20px; /* 높이의 절반 */
     padding: 5px 22px;
-    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+    display: inline-block; 
+    /* 인라인 요소 a태그에 padding/border을 적용하기 위해서 준 값 */
 }
-.intro{
+.intro {
     text-align: center;
-    /*자손요소를 가운데 정렬-나자신x*/
+    /* 자손요소를 가운데 정렬 - 나 자신X */
     margin: 88px 0 100px 0;
 }
-.intro strong{
-    font-weight: 700;
+.intro strong {
+   font-weight: 700;
 }
-.intro p{
+.intro p {
+    color: #3D3D3D;
     font-size: 50px;
     line-height: 1.2;
-    color: #3d3d3d;
     font-weight: 700;
     margin: 27px 0 38px 0;
 }
-.intro span{
+.intro p span {
     color: #999999;
 }
-.intro a{
+.intro a {
     color: #ffffff;
     text-decoration: none;
-    background-color: #0d0d0d;
-    border-radius: 20px;/*높이의절반*/
+    background-color: #3D3D3D;
+    border-radius: 20px; /* 높이의 절반 */
     padding: 5px 22px;
-    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+    display: inline-block; 
+    /* 인라인 요소 a태그에 padding/border을 적용하기 위해서 준 값 */
 }
-.service{
-    background-color: #f4f4f4;
+.service {
+    background-color: #F4F4F4;
     padding: 140px 0 140px 0;
 }
-.service strong{
+.service strong {
     font-weight: 700;
 }
-.service p{
+.service p {
+    color: #3D3D3D;
     font-size: 50px;
     line-height: 1.2;
-    color: #3d3d3d;
     font-weight: 700;
     margin: 27px 0 38px 0;
 }
-.service span{
+.service p span {
     color: #999999;
 }
-.service a{
+.service a {
     color: #ffffff;
     text-decoration: none;
-    background-color: #0d0d0d;
-    border-radius: 20px;/*높이의절반*/
+    background-color: #3D3D3D;
+    border-radius: 20px; /* 높이의 절반 */
     padding: 5px 22px;
-    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+    display: inline-block; 
+    /* 인라인 요소 a태그에 padding/border을 적용하기 위해서 준 값 */
 }
-.it{ 
-    background-image: url(../images/IT_BG.png);
+.it {
+    background-image: url(../images/it_bg.png);
     background-position: center center;
     background-repeat: no-repeat;
     height: 1080px;
     padding: 345px 0 0 0;
-    text-align: center;
     box-sizing: border-box;
 }
-.it strong{
+.it strong {
     font-weight: 700;
-    color:#ffffff ;
-}
-.it p{
+    color: #ffffff;
+ }
+.it p {
+    color: #ffffff;
     font-size: 50px;
     line-height: 1.2;
-    color: #ffffff;
     font-weight: 700;
     margin: 0 0 38px 0;
 }
-.it a{
+.it a {
     color: #ffffff;
     text-decoration: none;
     border: 1px solid #ffffff;
-    border-radius: 20px;/*높이의절반*/
+    border-radius: 20px; /* 높이의 절반 */
     padding: 5px 22px;
-    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+    display: inline-block; 
+    /* 인라인 요소 a태그에 padding/border을 적용하기 위해서 준 값 */
 }
-.bbs{
-    padding: 190px 0 100px 0;
+.bbs {
+    margin: 190px 0 100px 0;
 }
-.bbs p{
+.bbs p {
+    color: #3D3D3D;
     font-size: 50px;
     line-height: 1.2;
-    color: #3d3d3d;
-    font-weight: 700; 
+    font-weight: 700;
     margin: 0 0 80px 0;
 }
-.bbs p span{
+.bbs p span {
     color: #999999;
 }
-.bbs ul{
+.bbs ul {
     display: flex;
 }
-.bbs ul li{
+.bbs ul li {
     width: 290px;
     margin: 0 40px 0 0;
 }
-.bbs ul li.last{
-    /*li태그중에서 last라는 클래스명을 가진 li*/
+.bbs ul li.last {
+    /* li라는 태그 중에서 last라는 클래스 명을 갖은 li */
     margin: 0;
 }
-.bbs ul li a{
-    display: block;
-    color: #3d3d3d;
+.bbs ul li a {
+    color: #3D3D3D;
     text-decoration: none;
+    display: block;
 }
-.bbs ul li a img{
+.bbs ul li a img {
     border: 1px solid #999999;
-    border-radius: 20px;
+    border-radius: 18px;
     width: 100%;
     box-sizing: border-box;
 }
-.bbs ul li a strong{
+.bbs ul li a strong {
     display: block;
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.5;
-    padding: 5x 0 15px 0;
+    line-height: 1.35;
+    margin: 5px 0 15px 0;
 }
-.bbs ul li a span{
+.bbs ul li a span {
     display: block;
-    color:#999999;
+    color: #666666;
 }
-.bbs .more{
+.bbs .more {
     text-align: center;
-    margin: 50px 0 0 0 ;
+    margin: 100px 0 0 0;
 }
-.bbs .more a{
-    color: #3d3d3d;
+.bbs .more a {
+    color: #3D3D3D;
     text-decoration: none;
-    border: 1px solid #3d3d3d;
-    border-radius: 20px;/*높이의절반*/
+    border: 1px solid #3D3D3D;
+    border-radius: 20px; /* 높이의 절반 */
     padding: 5px 22px;
-    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+    display: inline-block; 
+    /* 인라인 요소 a태그에 padding/border을 적용하기 위해서 준 값 */
 }
-.banner{
-    margin: 0 0 100px 0;
-}
-.banner ul{
+.banner { margin: 0 0 100px 0; }
+.banner ul {
     display: flex;
 }
-.banner ul li{
+.banner ul li {
     width: 620px;
-    height: 160px;
+    height: 145px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 40px 40px 40px;
+    padding: 0 40px 27px 40px;
     box-sizing: border-box;
 }
-.banner ul li.partner{
-    /*li태그중에서 partner라는 클래스명li*/
+.banner ul li.partner {
+    /* li태그 중에서 partner라는 클래스 명을 갖은 li */
     background-color: #04C75B;
-    margin: 0 40px 0 0 ;
+    margin: 0 40px 0 0;
 }
-.banner ul li.career{
-    /*li태그중에서 partner라는 클래스명li*/
+.banner ul li.career {
     background-color: #08B4EB;
 }
-.banner ul li .tit strong{
+.banner ul li .tit strong {
     color: #ffffff;
     font-weight: 700;
 }
-.banner ul li .tit p{
+.banner ul li .tit p {
     color: #ffffff;
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.5;
-    margin: 5px 0 0 0 ;
+    line-height: 1.35;
+    margin: 12px 0 0 0;
 }
-.banner ul li a{
+.banner ul li a {
     color: #ffffff;
     text-decoration: none;
-    background-color: #0d0d0d;
-    border-radius: 20px;/*높이의절반*/
+    background-color: #3D3D3D;
+    border-radius: 20px; /* 높이의 절반 */
     padding: 5px 22px;
-    display: inline-block;/*인라인요소 a태그에 padding/border를 적용하기위해서*/
+    display: inline-block;
 }
-
