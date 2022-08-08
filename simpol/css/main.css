@@ -79,3 +79,6 @@ header nav a.market{
 .category ul li{
     float: left;
 }
+.category ul li:nth-child(5){
+    float: right;
+}
