@@ -1,0 +1,81 @@
+/*main.css에 default.css 호출*/
+@import url(default.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR);
+header{
+    height: 100px;
+    padding: 0 40px;
+}
+header h1{
+    float: left;
+    margin: 24px 0 0 0;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    float: left;
+}
+header nav ul li{
+    float: left;
+}
+header nav ul li a{
+    display: block;
+    padding: 30px 28px;
+    color: #1d1d1d;
+    font-size: 22px;
+    font-weight: 700;
+}
+header nav a.market{
+    float: right;
+    margin: 25px 0 0 102px;
+    color: #13A94F;
+    padding: 5px 25px 5px 55px;
+    border: #13A94F 1px solid;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    background-image: url(../images/market_ico.png);
+    background-position: center left 20px;
+    background-repeat: no-repeat;
+}
+.visual{
+    padding: 0 40px;
+}
+.visual .inner{
+    background-image: url(../images/visual.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 700px;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+    background-size: cover;
+    font-family: 'Noto Serif KR', serif;
+    padding: 180px;
+    text-shadow: 0 0 10px rgba(0, 0, 0,0.2);
+}
+.visual .inner strong{
+    font-size: 22px;
+    font-weight: 700;
+}
+.visual .inner h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0 25px 0;
+}
+.category .tit{
+    color: #1d1d1d;
+    margin: 0 0 38px 0;
+}
+.category .tit strong{
+    font-weight: 700;
+    padding: 101px 0 7px 0;
+    display: block;
+}
+.category .tit h2{
+    font-weight: 300;
+    font-size: 50px;
+}
+.category ul li{
+    float: left;
+}
