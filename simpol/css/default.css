@@ -23,6 +23,7 @@ ul, li{
 }
 html, body{
     min-width: 1280px;
+    /*브라우저에 가로스크롤이 생성되었을때 배경이 짤리지않기위해 최소넓이*/
     color: #3d3d3d;
     line-height: 1.5;
     font-family: 'Noto Sans KR', sans-serif;
