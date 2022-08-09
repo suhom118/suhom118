@@ -4,6 +4,9 @@
 body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, p, button, a, ul, li, address, strong, span, em{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    /*width/height와 padding 결합되면 사이즈가늘어남 이걸막는 스타일*/
+    /*padding을줘도 width/height가 유지가됨*/
 }
 /*a태그에 브라우저가 주는 기본속성 초기화*/
 a{
@@ -19,6 +22,7 @@ ul, li{
     list-style: none;
 }
 html, body{
+    min-width: 1280px;
     color: #3d3d3d;
     line-height: 1.5;
     font-family: 'Noto Sans KR', sans-serif;

@@ -78,7 +78,246 @@ header nav a.market{
 }
 .category ul li{
     float: left;
+    width: 240px;
+    margin: 0 20px 0 0;
 }
-.category ul li:nth-child(5){
+.category ul li:last-child{
+    margin: 0;
+}
+.category ul li a{
+    display: block;
+}
+.category ul li strong img{
+    width: 100%;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
+}
+.category ul li strong{
+    display: block;
+    color: #1d1d1d;
+    margin: 26px 0 0 0;
+}
+.network{
+    height: 700px;
+    margin: 128px 0 0 0;
+    background-image: url(../images/network.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.network h2{
+    padding: 191px 0 0 0 ;
+    font-size: 30px;
+    font-weight: 700;
+}
+.network p{
+    margin: 22px 0 51px 0;
+}
+.network a{
+    display: block;
+    float: left;/*a사이의 여백없이 나란히 배치*/
+    padding: 17px 14px;
+    margin: 0 10px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.network a:last-child{
+    padding: 17px 29px;
+}
+.community .tit{
+    margin: 85px 0 0 0;
+    color: #1d1d1d;
+}
+.community .tit strong{
+    font-weight: 700;
+}
+.community .tit h2{
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0 0 74px 0;
+}
+.community .list .colgroup1{
+    float: left;
+    width: 630px;
+    margin: 0 20px 0 0;
+}
+.community .list .colgroup2{
+    float: left;
+    width: 630px;
+}
+
+.community .list ul li{
+    float: left;
+}
+.community .list ul li a{
+    display: block;
+    width: 305px;
+    height: 244px;
+    background-color: #d9d9d9;
+    padding: 36px 0 0 20px;
+}
+.community .list ul li a em{
+    display: block;
+}
+.community .list ul li a strong{
+    display: block;
+    margin: 20px 0 40px 0;
+    height: 3em;/*행간*줄수 단위는 em*/
+    overflow: hidden;/*제목을 2줄로 고정하는스타일*/
+    font-size: 20px;
+    font-weight: 700;
+}
+.community .list ul li a .date{
+    display: block;
+    color: #666666;
+}
+.community .list ul li a .date .write{
+    position: relative;
+    padding: 0 13px 0 0;
+}
+.community .list ul li a .date .write::after{
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    width: 1px;
+    height: 15px;
+    background-color: #666666;
+    content: "";
+}
+.community .list ul li.green a{
+    background-color:#13A94F ;
+    margin: 0 20px 0 0;
+    color: #ffffff;
+}
+.community .list ul li.date_w{
+    color: rgba(255, 255, 255,0.8);
+}
+.community .list ul li.green a .date{
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .list ul li.blue a{
+    margin: 0 20px 0 0;
+    background-color: #005BAE;
+    color: #ffffff;
+}
+.community .list ul li.blue a .date{
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .list ul li.blue a .date .write::after{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.community .list ul li.img01 a{
+    width: 630px;
+    height: 440px;
+    margin: 20px 0 0 0;
+    background-image: url(../images/community02.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.community .list ul li.img02 a{
+    width: 630px;
+    height: 440px;
+    margin: 0 0 20px 0;
+    background-image: url(../images/community01.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.community .list ul li a .date{
+    color: #3d3d3d;
+}
+.community .list ul li.date_w a .date{
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .list ul li.date_w a .write::after{
+    background-color: rgba(255, 255, 255, 0.8)
+}
+.community .list ul li.img01 a em,.community .list ul li.img02 a em{
+    margin: 270px 0 10px 0;
+}
+.community .list ul li.img01 a strong,.community .list ul li.img02 a strong{
+    margin: 0 0 10px 0;
+    height: auto;/*높이고정을 해제*/
+    overflow: hidden;/*제목을 2줄로 고정하는스타일*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+footer{
+    color: rgba(255, 255, 255, 0.8)
+}
+footer .fhead{
+    height: 60px;
+    background-color: #111111;
+    margin: 60px 0 0 0;
+}
+footer .fhead ul li{
+    float: left;
+    margin: 10px 0 0 0;
+}
+footer .fhead ul li.privacy{
+    font-weight: 700;
+}
+footer .fhead ul li a{
+    display: block;
+    position: relative;/*after 위치를준 기준*/
+    padding: 15px 15px 5px 15px;
+}
+footer .fhead ul li:first-child a{
+    padding-left: 0;
+}
+footer .fhead ul li a::after{
+    position: absolute;
+    /*after를 감싸는 요소 a에 position 속성이 있기때문에
+    a를 기준으로 right 오른쪽 top상단으로 정렬*/
+    right: 0;
+    top: 20px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(255, 255, 255, 0.3);
+    content: "";
+}
+footer .fhead ul li:last-child a::after{
+    display: none;
+}
+footer .fhead a.quest{
     float: right;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 8px 0 0 0;
+}
+footer .fbody{
+    background-color: #0a0a0a;
+    height: 194px;
+}
+footer .fbody .info{
+    padding: 30px 0 13px 0;
+}
+footer .fbody .info ul li{
+    position: relative;
+    float: left;
+    line-height: 1.9;
+    margin: 0 36px 0 0;
+}
+footer .fbody .info ul li::after{
+    display: block;
+    position: absolute;
+    /*after를 감싸는 요소 a에 position 속성이 있기때문에
+    a를 기준으로 right 오른쪽 top상단으로 정렬*/
+    right: -20px;
+    top: 8px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(255, 255, 255, 0.3);
+    content: "";
+}
+
+footer .fbody .info ul li:last-child::after{
+    /*li중에 마지막li의 after가상요소*/
+    display: none;/*숨김*/
+}
+footer .fbody .copyright{
+    color: rgba(255, 255, 255, 0.6);
 }
