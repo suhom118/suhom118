@@ -257,7 +257,7 @@ footer .finfo li::after{
     background-color: #cccccc;
     content: "";
 }
-footer .finfo li:last-child{
+footer .finfo li:last-child::after{
     display: none;
 }
 footer .copyright{
