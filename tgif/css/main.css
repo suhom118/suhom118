@@ -1,0 +1,80 @@
+/*main.css에 default.css 호출*/
+@import url(default.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR);
+header{
+    height: 100px;
+}
+header h1{
+    float: left;
+    margin: 28px;
+}
+header nav{
+    float: right;
+    margin: 28px;
+}
+header nav ul li{
+    float: left;
+}
+header nav ul li a{
+    display: block;
+    padding: 5px 22px ;
+    color: #1d1d1d;
+    font-size: 22px;
+    font-weight: 700;
+}
+.visual{
+    height: 846px;
+    background-image: url(../images/visual_bg1.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.visual h2{
+    float: right;
+    line-height: 1.2;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 146px 0 0 0;
+}
+.visual h2 span{
+    color: #ffffff;
+}
+.food{
+    margin: 131px 0 0 0;
+}
+.food h2{
+    display: none;
+}
+.food .rowgroup1 .menu{
+    float: left;;
+    margin: 0 0 0 40px;
+}
+.food .rowgroup1 img{
+    float: left;
+}
+.food .rowgroup2{
+    position: relative;/*정렬의 기준점*/
+    /*rowgroup2의 영역 안에서 left top 여백을 계산*/
+    margin: 60px 0 0 0;
+}
+.food .rowgroup2 .food_img02{
+    float: right;
+}
+.food .rowgroup2 .food_img01{
+    position: absolute;
+    left: 0;
+    top:133px;
+}
+.food .rowgroup2 .menu{
+    /*menu를 감싸고있는 rowgroup2가 position 속성을 가지고있기때문에
+    rowgroup2를 기준으로 left 왼쪽 top위쪽 위치를 계산*/
+    position: absolute;
+    left: 520px;
+    top: 133px;
+}
+.food .menu h3{
+    font-size: 50px;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.07em;
+}
+
+
