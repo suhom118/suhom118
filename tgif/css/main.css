@@ -73,8 +73,199 @@ header nav ul li a{
 }
 .food .menu h3{
     font-size: 50px;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     letter-spacing: -0.07em;
 }
+.drink{
+    height: 786px;
+    background-image: url(../images/drink_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 80px 0 0 0 ;
+}
+.drink h2{
+    display: none;
+}
+.drink ul{
+    padding: 100px 0 0 0;
+}
+.drink ul li{
+    float: left;
+    margin: 0 40px 0 0;
+}
+.drink ul li a{
+    display: block;
+    height: 480px;
+    width: 400px;
+    padding: 260px 0 0 13px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#ffffff;
+    font-weight: 700;
+    letter-spacing: -0.1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25)
+    /*블러 이펙트*/
+}
+.drink ul li em{
+    display: block;
+}
+.drink ul li strong{
+    display: block;
+    font-size: 35px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.drink ul li span{
+    display: block;
+}
+.drink ul li:first-child{
+    margin-top: 40px;
+}
+.drink ul li:last-child{
+    margin: 40px 0 0 0;
+}
+.drink ul li.drink01 a{
+    background-image: url(../images/drink01.png);
+}
+.drink ul li.drink02 a{
+    background-image: url(../images/drink02.png);
+}
+.drink ul li.drink03 a{
+    background-image: url(../images/drink03.png);
+}
+.sns{
+    margin-top: 65px;
+}
+.sns .wrapper{
+    position: relative;
+}
+.sns .tit {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sns .tit h2{
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.07em;
+}
+.sns .tit ul{
+    margin: 20px 0 0 0;
+}
+.sns .tit ul li{
+    float: left;
+    margin: 0 10px 0 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.sns .tit ul li a{
+    display: block;
+    width: 81px;
+    height: 81px;
+    border: 1px solid #cccccc;
+    border-radius: 41px;
+    font-size: 0;/*글자숨김*/
+}
+.sns .tit ul li.insta{
+    background-image: url(../images/sns_insta.png);
+}
+.sns .tit ul li.twitter{
+    background-image: url(../images/sns_twitter.png);
+}
+.sns .tit ul li.facebook{
+    background-image: url(../images/sns_facebook.png);
+}
+.sns .list li{
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.sns .list li:first-child{
+    margin-left: 650px;
+}
+.sns .list li:nth-child(2){
+    margin-right: 0;
+}
+.sns .list li:nth-child(3){
+    clear: left;
+}
+.sns .list li:last-child{
+    margin: 0;
+}
+.sns .list li a{
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+footer{
+    border-top: 1px solid #cccccc;
+    text-align: center;
+    margin: 80px 0 0 0;
+    color: #999999;
+}
+footer .flogo{
+    margin: 40px 0 20px 0;
+}
+footer .fnavy{
+    margin-bottom:20px ;
+}
+footer .fnavy li{
+    position: relative;
+}
+footer .fnavy li:first-child{
+    color: #3d3d3d;
+}
+footer .fnavy li::after{
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    width:1px;
+    height: 11px;
+    background-color: #cccccc;
+    content: "";
+}
+footer .fnavy li:last-child::after{
+    display: none;
+}
+footer .fnavy li{
+    display: inline-block;
+    /*li를 가운데 정렬해야하는데 float가 들어간요소는 가운데 정렬이 안됨
+    display:inline-block으로 인라인 요소로 변경해서 li좌우로 배치하고
+    가운데 정렬이 적용됨-여백을 정확하게 맞춰야하는경우가 아니면
+    이런방법으로*/
+    margin: 0 14px;
+}
+footer .fnavy li a{
+    display: block;
+    padding: 0 12px;
+}
+footer .finfo li{
+    display: inline-block;
+    position: relative;
+    padding: 0 12px;
+}
+footer .finfo li::after{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width:1px;
+    height: 11px;
+    background-color: #cccccc;
+    content: "";
+}
+footer .finfo li:last-child{
+    display: none;
+}
+footer .copyright{
+    margin: 20px 0 105px 0;
+}
+
+
+
+
 
 
