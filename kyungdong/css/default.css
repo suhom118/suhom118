@@ -31,6 +31,7 @@ html, body{
     font-weight: 400;
     letter-spacing: -0.05em;
     word-break: keep-all;
+    text-align: center;
 }
 /*컨텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치*/
 .wrapper{

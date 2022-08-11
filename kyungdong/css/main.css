@@ -1,0 +1,54 @@
+@import url(default.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR);
+
+h2{
+    font-size: 45px;
+    font-weight: 700;
+    padding: 80px 0 20px 0;
+}
+.business{
+    height: 688px;
+}
+.business ul li{
+    float: left;
+    width: 290px;
+    margin-right: 40px;
+    text-align: left;
+}
+.business ul li img{
+    display: block;
+}
+.business ul li:last-child{
+    margin: 0;
+}
+.business ul li strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0 10px 0;
+}
+.tech {
+    margin-bottom: 80px;
+}
+.tech ul li{
+    float: left;
+    color: #ffffff;
+    height: 514px;
+    width: 620px;
+}
+.tech ul li strong{
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 196px 0 8px 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tech ul li:first-child{
+    background-image: url(../images/tech01.png);
+    margin-right: 40px;
+}
+.tech ul li:last-child{
+    background-image: url(../images/tech02.png);
+}
