@@ -39,3 +39,14 @@ html, body{
 }
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
+@media screen and (max-width:450px){
+    html, body{
+        min-width: auto;
+        font-size: 13px;
+    }
+    /*컨텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치*/
+    .wrapper{
+        width:auto;
+        margin: 0 20px;
+    }
+}

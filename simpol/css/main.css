@@ -1,68 +1,5 @@
 /*main.css에 default.css 호출*/
 @import url(default.css);
-@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR);
-header{
-    height: 100px;
-    padding: 0 40px;
-}
-header h1{
-    float: left;
-    margin: 24px 0 0 0;
-}
-header nav{
-    float: right;
-}
-header nav ul{
-    float: left;
-}
-header nav ul li{
-    float: left;
-}
-header nav ul li a{
-    display: block;
-    padding: 30px 28px;
-    color: #1d1d1d;
-    font-size: 22px;
-    font-weight: 700;
-}
-header nav a.market{
-    float: right;
-    margin: 25px 0 0 102px;
-    color: #13A94F;
-    padding: 5px 25px 5px 55px;
-    border: #13A94F 1px solid;
-    border-radius: 20px;
-    font-size: 22px;
-    font-weight: 700;
-    background-image: url(../images/market_ico.png);
-    background-position: center left 20px;
-    background-repeat: no-repeat;
-}
-.visual{
-    padding: 0 40px;
-}
-.visual .inner{
-    background-image: url(../images/visual.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 700px;
-    text-align: center;
-    color: #ffffff;
-    box-sizing: border-box;
-    background-size: cover;
-    font-family: 'Noto Serif KR', serif;
-    padding: 180px;
-    text-shadow: 0 0 10px rgba(0, 0, 0,0.2);
-}
-.visual .inner strong{
-    font-size: 22px;
-    font-weight: 700;
-}
-.visual .inner h2{
-    font-size: 30px;
-    font-weight: 700;
-    margin: 10px 0 25px 0;
-}
 .category .tit{
     color: #1d1d1d;
     margin: 0 0 38px 0;
@@ -87,7 +24,7 @@ header nav a.market{
 .category ul li a{
     display: block;
 }
-.category ul li strong img{
+.category ul li img{
     width: 100%;
     border: 1px solid #ededed;
     box-sizing: border-box;
@@ -96,6 +33,37 @@ header nav a.market{
     display: block;
     color: #1d1d1d;
     margin: 26px 0 0 0;
+}
+@media screen and (max-width:450px){
+    .category .tit strong{
+        padding: 30px 0 7px 0;
+    }
+    .category .tit h2{
+        font-size: 30px;
+    }
+    .category ul li{
+        width: 48%;
+        margin: 0 4% 0 0;
+    }
+    .category ul li:nth-child(2), .category ul li:nth-child(4){
+        margin-right: 0;
+    }
+    .category ul li:last-child{
+        display: none;
+    }
+    .category ul li a{
+        display: block;
+    }
+    .category ul li img{
+        width: 100%;
+        border: 1px solid #ededed;
+        box-sizing: border-box;
+    }
+    .category ul li strong{
+        display: block;
+        color: #1d1d1d;
+        margin: 5px 0 0 0;
+    }
 }
 .network{
     height: 700px;
@@ -124,200 +92,24 @@ header nav a.market{
 .network a:last-child{
     padding: 17px 29px;
 }
-.community .tit{
-    margin: 85px 0 0 0;
-    color: #1d1d1d;
-}
-.community .tit strong{
-    font-weight: 700;
-}
-.community .tit h2{
-    font-size: 50px;
-    font-weight: 300;
-    margin: 0 0 74px 0;
-}
-.community .list .colgroup1{
-    float: left;
-    width: 630px;
-    margin: 0 20px 0 0;
-}
-.community .list .colgroup2{
-    float: left;
-    width: 630px;
-}
-
-.community .list ul li{
-    float: left;
-}
-.community .list ul li a{
-    display: block;
-    width: 305px;
-    height: 244px;
-    background-color: #d9d9d9;
-    padding: 36px 0 0 20px;
-}
-.community .list ul li a em{
-    display: block;
-}
-.community .list ul li a strong{
-    display: block;
-    margin: 20px 0 40px 0;
-    height: 3em;/*행간*줄수 단위는 em*/
-    overflow: hidden;/*제목을 2줄로 고정하는스타일*/
-    font-size: 20px;
-    font-weight: 700;
-}
-.community .list ul li a .date{
-    display: block;
-    color: #666666;
-}
-.community .list ul li a .date .write{
-    position: relative;
-    padding: 0 13px 0 0;
-}
-.community .list ul li a .date .write::after{
-    position: absolute;
-    right: 4px;
-    top: 3px;
-    width: 1px;
-    height: 15px;
-    background-color: #666666;
-    content: "";
-}
-.community .list ul li.green a{
-    background-color:#13A94F ;
-    margin: 0 20px 0 0;
-    color: #ffffff;
-}
-.community .list ul li.date_w{
-    color: rgba(255, 255, 255,0.8);
-}
-.community .list ul li.green a .date{
-    color: rgba(255, 255, 255, 0.8);
-}
-.community .list ul li.blue a{
-    margin: 0 20px 0 0;
-    background-color: #005BAE;
-    color: #ffffff;
-}
-.community .list ul li.blue a .date{
-    color: rgba(255, 255, 255, 0.8);
-}
-.community .list ul li.blue a .date .write::after{
-    background-color: rgba(255, 255, 255, 0.8);
-}
-.community .list ul li.img01 a{
-    width: 630px;
-    height: 440px;
-    margin: 20px 0 0 0;
-    background-image: url(../images/community02.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
-}
-.community .list ul li.img02 a{
-    width: 630px;
-    height: 440px;
-    margin: 0 0 20px 0;
-    background-image: url(../images/community01.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
-}
-.community .list ul li a .date{
-    color: #3d3d3d;
-}
-.community .list ul li.date_w a .date{
-    color: rgba(255, 255, 255, 0.8);
-}
-.community .list ul li.date_w a .write::after{
-    background-color: rgba(255, 255, 255, 0.8)
-}
-.community .list ul li.img01 a em,.community .list ul li.img02 a em{
-    margin: 270px 0 10px 0;
-}
-.community .list ul li.img01 a strong,.community .list ul li.img02 a strong{
-    margin: 0 0 10px 0;
-    height: auto;/*높이고정을 해제*/
-    overflow: hidden;/*제목을 2줄로 고정하는스타일*/
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-footer{
-    color: rgba(255, 255, 255, 0.8)
-}
-footer .fhead{
-    height: 60px;
-    background-color: #111111;
-    margin: 60px 0 0 0;
-}
-footer .fhead ul li{
-    float: left;
-    margin: 10px 0 0 0;
-}
-footer .fhead ul li.privacy{
-    font-weight: 700;
-}
-footer .fhead ul li a{
-    display: block;
-    position: relative;/*after 위치를준 기준*/
-    padding: 15px 15px 5px 15px;
-}
-footer .fhead ul li:first-child a{
-    padding-left: 0;
-}
-footer .fhead ul li a::after{
-    position: absolute;
-    /*after를 감싸는 요소 a에 position 속성이 있기때문에
-    a를 기준으로 right 오른쪽 top상단으로 정렬*/
-    right: 0;
-    top: 20px;
-    width: 1px;
-    height: 13px;
-    background-color: rgba(255, 255, 255, 0.3);
-    content: "";
-}
-footer .fhead ul li:last-child a::after{
-    display: none;
-}
-footer .fhead a.quest{
-    float: right;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 10px 20px;
-    margin: 8px 0 0 0;
-}
-footer .fbody{
-    background-color: #0a0a0a;
-    height: 194px;
-}
-footer .fbody .info{
-    padding: 35px 0 13px 0;
-}
-footer .fbody .info ul li{
-    position: relative;
-    float: left;
-    line-height: 1.9;
-    margin: 0 36px 0 0;
-}
-footer .fbody .info ul li::after{
-    display: block;
-    position: absolute;
-    /*after를 감싸는 요소 a에 position 속성이 있기때문에
-    a를 기준으로 right 오른쪽 top상단으로 정렬*/
-    right: -20px;
-    top: 8px;
-    width: 1px;
-    height: 13px;
-    background-color: rgba(255, 255, 255, 0.3);
-    content: "";
-}
-
-footer .fbody .info ul li:last-child::after{
-    /*li중에 마지막li의 after가상요소*/
-    display: none;/*숨김*/
-}
-footer .fbody .copyright{
-    color: rgba(255, 255, 255, 0.6);
+@media screen and (max-width:450px){
+    .network{
+        height: auto;
+        padding: 0 0 90px 0;
+        margin: 20px 0 0 0;
+    }
+    .network h2{
+        padding: 150px 0 0 0 ;
+        font-size: 20px;
+    }
+    .network p{
+        margin: 15px 0 25px 0;
+    }
+    .network a{
+        padding: 10x 5px;
+        margin: 0 10px 0 0;
+    }
+    .network a:last-child{
+        padding: 17px 29px;
+    }
 }
