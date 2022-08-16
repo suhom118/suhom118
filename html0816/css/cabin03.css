@@ -1,0 +1,168 @@
+@import url(default.css);
+
+.service .tit{
+    text-align: center;
+}
+.service .tit h2{
+    margin: 31px 0 34px 0;
+    font-size: 50px;
+    font-weight: 400;
+}
+.service .tit strong{
+    display: block;
+    margin: 0 0 17px 0;
+    font-size: 35px;
+    font-weight: 400;
+}
+.service .tit p{
+    margin: 0 0 83px 0;
+}
+.service .tit p span{
+    /*p태그안에서 임의로 줄바꿈을 주기위해*/
+    display: block;
+}
+.service ul li{
+    float: left;
+    position: relative;
+    width: 290px;
+    padding-top: 70px;
+    margin: 0 40px 77px 0;
+}
+.service ul li::before{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 53px;
+    height: 53px;
+    border-radius: 26px;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 53px;/*행간을 높이와 동일하게-글자가 위아래 가운데*/
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    content: "";
+}
+.service ul li:nth-child(1)::before{
+    content: "1";
+}
+.service ul li:nth-child(2)::before{
+    content: "2";
+}
+.service ul li:nth-child(3)::before{
+    content: "3";
+}
+.service ul li:nth-child(4)::before{
+    content: "4";
+}
+.service ul li:nth-child(5)::before{
+    content: "5";
+}
+.service ul li:nth-child(6)::before{
+    content: "6";
+}
+.service ul li:nth-child(7)::before{
+    content: "7";
+}
+.service ul li:nth-child(8)::before{
+    content: "8";
+}
+.service ul li:nth-child(4){
+    margin: 0;
+}
+.service ul li:nth-child(5){
+    clear: left;
+    /*2줄이상을 float로 정렬할때 두번째줄 첫번째 요소*/
+}
+.service ul li:nth-child(8){
+    margin: 0;
+}
+.service ul li h3{
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:640px){
+    .service .tit{
+        text-align: left;
+    } 
+    .service .tit h2{
+        margin: 31px 0 5px 0;
+        font-size: 30px;
+    }
+    .service .tit strong{
+        display: block;
+        margin: 0 0 10px 0;
+        font-size: 15px;
+    }
+    .service .tit p{
+        margin: 0 0 60px 0;
+    }
+    .service .tit p span{
+        display: inline;/*모바일에서 줄바꿈해제하기위해*/
+    }
+    .service ul li{ 
+        float: none;
+        width: auto;
+        padding-top: 54px;
+        margin: 0 0 55px 0;
+    }
+    .service ul li::before{
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        line-height: 40px;/*행간을 높이와 동일하게-글자가 위아래 가운데*/
+        font-size: 20px;
+    }
+    .service ul li h3{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1280px){/*브라우저 사이즈 640px 이하부터는 이안에 정의된 css가 적용됨
+    640초과일때는 적용안됨*/
+    html, body{
+        min-width: auto;
+        /*font-size: 13px; */
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+    .service ul li{
+        width: 22%;
+        padding-top: 70px;
+        margin: 0 4% 77px 0;
+    }
+}
+@media screen and (min-width:641px) and (max-width:1023px){
+    html, body{
+        min-width: auto;
+        /*font-size: 13px; */
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+    .service ul li{
+        width: 48%;
+        padding-top: 70px;
+        margin: 0 4% 77px 0;
+    }
+    .service ul li:nth-child(2){
+        margin: 0;
+    }
+    .service ul li:nth-child(6){
+        margin: 0;
+    }
+    .service ul li:nth-child(3){
+        clear: left;
+        /*2줄이상을 float로 정렬할때 두번째줄 첫번째 요소*/
+    }
+    .service ul li:nth-child(7){
+        clear: left;
+        /*2줄이상을 float로 정렬할때 두번째줄 첫번째 요소*/
+    }
+}
