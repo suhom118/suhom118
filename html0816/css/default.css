@@ -38,5 +38,18 @@ html, body{
     width: 1280px;
     margin: 0 auto;
 }
+@media screen and (max-width:640px){/*브라우저 사이즈 640px 이하부터는 이안에 정의된 css가 적용됨
+    640초과일때는 적용안됨*/
+    html, body{
+        min-width: auto;/*디바이스 크기에 맞춰서 100%
+        pc에서 넓이를 제한했기때문에 넓이 제한을 풀려고*/
+        font-size: 13px;
+    }
+    .wrapper{
+        width: auto;
+        margin: 0 20px;
+    }
+}
+
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
