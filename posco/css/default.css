@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*본고딕 폰트 스타일 삽입*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+/*모든 태그에 브라우저에서 주는 여백을 삭제*/
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, p, button, a, ul, li, address, strong, span, em{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*width/height와 padding 결합되면 사이즈가늘어남 이걸막는 스타일*/
+    /*padding을줘도 width/height가 유지가됨*/
+}
+/*a태그에 브라우저가 주는 기본속성 초기화*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/*브라우저에서 기울임을 주는것을 초기화*/
+em, address{
+    font-style: normal;
+}
+/*항목앞에 동그라미 삭제*/
+ul, li{
+    list-style: none;
+}
+html, body{
+    min-width: 1280px;
+    /*브라우저에 가로스크롤이 생성되었을때 배경이 짤리지않기위해 최소넓이*/
+    color: #3d3d3d;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    word-break: keep-all;
+}
+/*컨텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치*/
+.wrapper{
+    width: 1280px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    /*640px이하의 디바이스에서만 아래css가적용
+    pc에서는 1280px이라는 콘텐츠 고정넓이가 존재했지만
+    모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+    구현방식이 달라서 고정값을 모두삭제*/
+    html, body{
+        min-width: auto;
+        font-size: 13px;
+    }
+    /*컨텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치*/
+    .wrapper{
+        width:auto;
+        margin: 0 20px;
+    }
+}/*media종료*/
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}

@@ -1,0 +1,222 @@
+@import url(default.css);
+.biz h2{
+    margin: 67px 0 40px 0;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.biz ul li{
+    width: 33.33%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.biz ul li.plant{
+    background-image: url(../images/biz01.png);
+}
+.biz ul li.infra{
+    background-image: url(../images/biz02.png);
+}
+.biz ul li.building{
+    background-image: url(../images/biz03.png);
+}
+.biz ul li a{
+    display: block;
+    height: 600px;
+    color: #fff;
+    padding: 376px 0 0 50px;
+}
+.biz ul li a strong{
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+.biz ul li a strong span{
+    display: block;
+}
+.biz ul li a span.sub{
+    margin-left: 5px;
+}
+@media screen and (max-width:640px){
+    .biz h2{
+        margin: 53px 0 24px 0;
+        font-size: 25px;
+    }
+    .biz ul li{
+        width: auto;/*100%가 아니라 auto*/
+        float: none;
+    }
+    .biz ul li a{
+        height: auto;/*내부에 글자가 2줄이되더라도
+        디자인스타일을 유지하기 위해서 높이가 아니라
+        padding 으로 구현해야됨*/
+        padding: 55px 20px 41px 20px;/*오른쪽여백 유지를위해 왼쪽여백이랑 동일하게줌*/
+    }
+    .biz ul li a strong{
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+    .biz ul li a strong span{
+        display: inline;
+    }
+    .biz ul li a span.sub{
+        margin-left: 5px;
+    }
+}/*미디어종료*/
+.news{
+    margin-bottom: 150px;
+}
+.news h2{
+    margin: 120px 0 40px 0;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.news ul li{
+    float: left;
+    width: 290px;
+    margin-right: 40px;
+}
+.news ul li:last-child{
+    margin-right: 0;
+}
+.news ul li a{
+    display: block;
+}
+.news ul li a .date{
+    display: block;
+    color: #666;
+    margin: 10px 0 10px 0;
+}
+.news ul li a .date span{
+    display: inline-block;/*마진을주기위해서 (스페이스공간이 더생기니 마진고려)*/
+}
+.news ul li a .date span:first-child{
+    position: relative;
+    margin-right: 14px;
+}
+.news ul li a .date span:first-child::after{
+    position: absolute;
+    content: "";
+    background-color: #cccccc;
+    width: 1px;
+    height: 10px;
+    top: 7px;
+    right:-9px;
+}
+.news ul li a .tit{
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+}
+@media screen and (max-width:640px){
+    .news{
+        margin-bottom: 85px;
+    }
+    .news h2{
+        margin: 50px 0 25px 0;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .news ul li{
+        float: none;
+        width: auto;
+        margin-right: 0;
+    }
+    .news ul li a{
+        border-top: 1px solid #ccc;
+        padding: 20px 0;/*높이를따로주기않고 디바이스크기가 줄어도 글자유지하게*/
+    }
+    .news ul li:last-child a{
+        border-bottom: 1px solid #ccc;
+    }
+    .news ul li a .date{
+        margin: 0 0 3px 0;
+    }
+    .news ul li a .date span:first-child{
+        margin-right: 11px;
+    }
+    .news ul li a .date span:first-child::after{
+        top: 6px;
+        right:-7px;
+    }
+    .news ul li a img{
+        display: none;
+    }
+    .news ul li a .tit{
+        font-size: 15px;
+        line-height: 1.5;
+        max-height: 3em;/*한줄은 한줄로 보이고 두줄이상은 허락하지않게하기위해
+        height가 아닌 max-height로*/
+        overflow: hidden;
+    }
+}/*미디어종료*/
+.banner ul li{
+    float: left;
+}
+.banner ul li a{
+    display: block;
+    width: 550px;
+    height: 400px;
+    color: #fff;
+    padding: 80px 0 0 65px;
+}
+.banner ul li:first-child a{
+    width: 730px;
+    height: 800px;
+}
+.banner ul li a span{
+    display: block;
+}
+.banner ul li a .more{
+    font-weight: 700;
+}
+.banner ul li a .tit{
+    display: block;
+    font-size: 40px;
+    margin: 10px 0 20px 0;
+    font-weight: 400;
+}
+.banner ul li.esg{
+    background-image: url(../images/ban01.png);
+}
+.banner ul li.customer{
+    background-image: url(../images/ban02.png);
+}
+.banner ul li.recruit{
+    background-image: url(../images/ban03.png);
+}
+@media screen and (max-width:640px){
+    .banner ul li{
+        float: none;
+    }
+    .banner ul li a{
+        width: auto;
+        height: auto;
+        color: #fff;
+        padding: 34px 30px 20px 30px;
+    }
+    .banner ul li:first-child a{
+        width: auto;
+        height: auto;
+
+    }
+    .banner ul li a .top{
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .banner ul li a span{
+        display: inline;
+    }
+    .banner ul li a .tit{
+        font-size: 20px;
+        line-height: 1.5;
+        max-height: 3em;
+        overflow: hidden;
+        margin: 3px 0 2px 0;
+        font-weight: 400;
+    }
+}
