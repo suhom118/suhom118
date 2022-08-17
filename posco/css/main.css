@@ -154,6 +154,9 @@
         overflow: hidden;
     }
 }/*미디어종료*/
+.banner h2{
+    display: none;
+}
 .banner ul li{
     float: left;
 }
@@ -206,7 +209,6 @@
     }
     .banner ul li a .top{
         white-space:nowrap;
-        text-overflow:ellipsis;
     }
     .banner ul li a span{
         display: inline;
