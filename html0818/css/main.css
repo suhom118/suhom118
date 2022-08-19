@@ -292,3 +292,87 @@ header .tnb button span{
         width: 410px;
     }
 }/*media종료*/
+.purpose{
+    position: relative;
+    background: url(../images/purp_bg.png) no-repeat center center / cover;
+    color: #FFF;
+    height: 357px;
+    text-align: center;
+    padding-top: 108px;
+}
+.purpose::before{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+}
+
+.purpose .inner{
+    position: relative;
+    z-index: 1;
+}
+.purpose h2{
+    position: relative;
+    margin-bottom: 43px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.purpose h2 strong::before{
+    left: 280px;
+    top: 0;
+    content: "";
+    background: url(../images/prop_quot_left.png) no-repeat center center / cover;
+
+}
+.purpose h2 strong::after{
+    right: 280px;
+    bottom: 0;
+    content: "";
+    background: url(../images/prop_quot_right.png) no-repeat center center / cover;
+
+}
+.purpose h2 strong::before, .purpose h2 strong::after{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    width: 70px;
+    height: 60px;
+}
+@media screen and (max-width:640px){
+    .purpose{
+        height: auto;
+        padding: 80px 0 38px 0;
+    }
+    .purpose::before{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .purpose h2{
+        position: relative;
+        margin-bottom: 75px;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .purpose h2 strong::before{
+        left: 38%;
+        top: -60px;
+        content: "";
+        background: url(../images/prop_quot_left.png) no-repeat center center /cover;
+        background-size: 35px auto;/*넓이를 35px로 높이는비율에맞게*/
+    }
+    .purpose h2 strong::after{
+        right: 40%;
+        bottom: -60px;
+        content: "";
+        background: url(../images/prop_quot_right.png) no-repeat center center /cover;
+        background-size: 35px
+    }
+    .purpose h2 span{
+        display: block;
+    }
+}/*media종료*/
