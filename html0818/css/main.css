@@ -72,6 +72,12 @@ header .tnb i{
 header .tnb button span{
     display: none;
 }
+header.fixed{/*header가 고정됐을때 jquery가 class를 추가*/
+    position: fixed;
+    background-color: #fff;
+    color: #1d1d1d;
+}
+
 @media screen and (max-width:640px){
     header{
         height: 45px;
