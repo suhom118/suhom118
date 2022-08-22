@@ -563,6 +563,9 @@ footer .copyright{
     footer .fnav li{
         margin: 25px 0 16px 0;
     }
+    footer .fnav li a{
+        padding: 0 10px;
+    }
     footer .fnav li:first-child a{
         padding-left: 3px;
     }
