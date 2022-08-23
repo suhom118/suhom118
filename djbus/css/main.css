@@ -62,7 +62,34 @@ header nav ul li a {
     color: #1D1D1D;
     font-size: 20px;
 }
-
+header button span{
+    float: right;
+    display: none;
+}
+@media screen and (max-width:640px){
+    header { /* header영역은 대부분 높이를 입력함 */
+        height: 45px;
+    }
+    header h1 {
+        margin: 8px 0 0 0;
+    }
+    header h1 img{
+        display: block;
+        width: 89px;
+        height: 26px;
+    }
+    header nav {
+        display: none;
+    }
+    header button{
+        display: block;
+        float: right;
+        height: 18px;
+    }
+    header button i{
+        font-size: 18px;
+    }
+}
 .visual {
     background-image: url(../images/visual_bg.png);
     background-position: center center;
