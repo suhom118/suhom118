@@ -1,0 +1,81 @@
+@import url('default.css');
+header{
+    position: absolute;/*body를 기준으로 정렬*/
+    width: 100%;/*position:absolute를 주면 inline-block처럼 내부에
+    콘텐츠가 존재하는 만큼의 넓이만 갖는다*/
+    left: 0;
+    top: 0;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 100;
+}
+header h1{
+    margin: 30px 0 0 0;
+}
+header h1 a{
+    float: left;
+    background: url(../images/logo_w.svg) no-repeat center center / 100%
+    /*로고를 영역에 꽉차게 하기위해서 size를 넓이 100%(높이는 비율에맞게 알아서)(cover는배경을 영역에 빈틈없이 메꾸는것이기때문에 로고가짤림)*/;
+    width: 256px;
+    height: 41px;
+    font-size: 0;/*글자 사라지게 하기위해*/
+    line-height: 0;
+    margin-right: 225px;
+}
+header .gnb{
+    float: left;
+}
+header .gnb li{
+    float: left;
+    font-size: 25px;
+}
+header .gnb li a{
+    display: block;
+    padding: 0 20px;
+}
+header .tnb{
+    float: right;
+}
+header .tnb li span{
+    display: none;
+}
+.visual{
+    height: 800px;
+    background: url(../images/visual_bg.png) no-repeat center center /cover;
+    color: #fff;
+    text-align: center;
+}
+.visual h2{
+    font-size: 40px;
+    font-weight: 400;
+    padding: 320px 0 25px 0;
+}
+.visual p{
+    font-size: 20px;
+}
+.visual .txt_mobile{
+    display: none;/*모바일에서만 보일글자*/
+}
+@media screen and (max-width:640px){
+    .visual{
+        height: auto;
+        padding-bottom: 113px;
+    }
+    .visual h2{
+        font-size: 25px;
+        padding: 79px 0 20px 0;
+    }
+    .visual h2 span{
+        display: block;
+    }
+    .visual p{
+        font-size: 13px;
+    }
+    .visual .txt_pc{
+        display: none;/*pc에서만보일글자*/
+    }
+    .visual .txt_mobile{
+        display: block;/*모바일에서만 보일글자*/
+    }
+}/*media종료*/

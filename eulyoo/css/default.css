@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 본고딕 폰트 스타일 삽입 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+@import url('font.css');
 
 /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
 body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p, i {
@@ -42,7 +42,7 @@ html, body {
        최소 넓이를 줌 */
     color: #3D3D3D;
     line-height: 1.5;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'EY', sans-serif;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: -0.05em;
