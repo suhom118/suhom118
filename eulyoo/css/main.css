@@ -56,7 +56,6 @@ header .tnb ul li button i{
 @media screen and (max-width:640px){
     header{
         height: 45px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         z-index: 100;
     }
     header h1 a{
@@ -159,7 +158,7 @@ header .tnb ul li button i{
 .book .tit h2{
     font-size: 40px;
     font-weight: 700;
-    margin: 8px 0 15px 0;
+    margin: 8px 0 0 0;
 }
 .book .tit button{
     float: left;
@@ -178,14 +177,17 @@ header .tnb ul li button i{
 }
 .book .list{
     margin-left: 330px;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: calc(100%+20px);
+    padding: 10px 0;
 }
 /*왼쪽요소는 float:left를 줌
 오른쪽요소는 margin-left로 왼쪽요소의 넓이만큼을 여백으로준다
 오른쪽 요소는 block
 오른쪽 요소가 왼쪽요소를 인지하지 못하고 위로 올라옴*/
 .book .list ul{
-    width: 1940px;
+    width: 1980px;/*1940px+40px*/
 }
 .book .list ul li{
     float: left;
@@ -230,7 +232,7 @@ header .tnb ul li button i{
     }
     .book .tit{
         float: none;
-        margin-bottom: 8px;
+        margin-bottom: 0;
     }
     /*컨텐츠 영역 밖으로 나가는 리스트 -스크롤(모바일)
         1.ul을 감싸는 div가 있어야함
