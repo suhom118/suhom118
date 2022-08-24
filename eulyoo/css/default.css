@@ -37,9 +37,6 @@ button{
     cursor: pointer;/*마우스오버시 손바닥모양*/
 }
 html, body {
-    min-width: 1280px;
-    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
-       최소 넓이를 줌 */
     color: #3D3D3D;
     line-height: 1.5;
     font-family: 'EY', 'Noto sans kr', 'NanumGothic','Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo','Dotum', sans-serif;
@@ -62,7 +59,6 @@ html, body {
       모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
       구현방식이 달라서 고정값을 모두 삭제 */
     html, body {
-        min-width: auto;
         font-size: 13px;
     }
     .wrapper {
