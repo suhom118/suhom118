@@ -179,7 +179,7 @@ header .tnb ul li button i{
     margin-left: 330px;
     overflow-x: auto;
     overflow-y: hidden;
-    width: calc(100%+20px);
+    width: calc(100%+40px);
     padding: 10px 0;
 }
 /*왼쪽요소는 float:left를 줌
