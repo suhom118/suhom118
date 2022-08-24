@@ -294,3 +294,124 @@ header .tnb ul li button i{
         margin: 0;
     }
 }/*media종료*/
+.interview{
+    color: #fff;
+}
+.interview h2{
+    color: #3d3d3d;
+    font-size: 30px;
+    margin: 29px 0 20px 0;
+}
+.interview .colgroup{
+    position: relative;
+    /* pic_box 정렬의 기준점을 만들어주려고 */
+}
+.interview .pic_box{
+    position: absolute;
+    left: 0;
+    top: 116px;
+}
+.interview .pic_box img{
+    display: block;
+}
+.interview .cnt_box{
+    float: right;
+    width: 1210px;
+    height: 578px;
+    background-color: #645453;
+}
+.interview .cnt_box .inner{
+    padding: 159px 0 0 595px;
+}
+.interview .cnt_box .inner strong{
+    font-weight: 400;
+}
+.interview .cnt_box .inner h3{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 29px 0 20px 0;
+}
+.interview .cnt_box .inner p{
+    margin-bottom: 43px;
+}
+.interview .cnt_box a{
+    padding: 0 5px;
+    line-height: 43px;
+    white-space: nowrap;
+    display: block;
+    border: 1px solid #fff;
+    width: 120px;
+    height: 43px;
+}
+.interview .cnt_box a span{
+    float: left;
+}
+.interview .cnt_box a i{
+    float: right;
+    margin: 9px 0 0 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+@media screen and (max-width:640px){
+    .interview h2{
+        font-size: 25px;
+        margin: 48px 0 20px 0;
+    }
+    .interview .pic_box{
+        position: relative;/*position:absolute 해지는 position:relative*/
+        left: auto;
+        top: auto;
+    }
+    .interview .pic_box img{
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+    .interview .pic_box::after{
+        position: absolute;
+        left: -20px;
+        bottom: 0;
+        width: calc(100% + 40px);
+        height: 27%;
+        background-color: #645453;
+        content: "";
+    }
+    .interview .cnt_box{
+        float: none;
+        width: calc(100% + 40px);
+        margin: 0 0 0 -20px;
+        height: auto;
+        background-color: #645453;
+    }
+    .interview .cnt_box .inner{
+        padding: 15px 20px 10px 20px;
+    }
+    .interview .cnt_box .inner strong{
+        display: none;
+    }
+    .interview .cnt_box .inner h3{
+        font-size: 18px;
+        margin: 0 0 0 0;
+    }
+    .interview .cnt_box .inner p{
+        margin: 20px 0 20px 0;
+    }
+    .interview .cnt_box a{
+        padding: 0 5px;
+        line-height: 43px;
+        white-space: nowrap;
+        display: block;
+        border: 1px solid #fff;
+        width: 120px;
+        height: 43px;
+    }
+    .interview .cnt_box a span{
+        float: left;
+    }
+    .interview .cnt_box a i{
+        float: right;
+        margin: 9px 0 0 0;
+        font-size: 24px;
+        font-weight: 300;
+    }
+}/*media종료*/
