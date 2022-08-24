@@ -49,6 +49,11 @@ html, body {
     word-break: keep-all;
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+#wrap{/*id=wrap 호출*/
+    overflow-x: hidden;
+    min-width: 1280px;    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+    최소 넓이를 줌 */
+}
 .wrapper {
     width: 1280px;
     margin: 0 auto;
@@ -64,6 +69,10 @@ html, body {
     .wrapper {
         width: auto;
         margin: 0 20px;
+    }
+    #wrap{/*id=wrap 호출*/
+        min-width: auto;    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+        최소 넓이를 줌 */
     }
 }/* media 종료 */
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
