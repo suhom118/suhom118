@@ -10,14 +10,13 @@ header{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 100;
 }
-header h1{
-    margin: 30px 0 0 0;
-}
+
 header h1 a{
+    margin: 30px 0 225px 0;
     float: left;
     background: url(../images/logo_w.svg) no-repeat center center / 100%
     /*로고를 영역에 꽉차게 하기위해서 size를 넓이 100%(높이는 비율에맞게 알아서)(cover는배경을 영역에 빈틈없이 메꾸는것이기때문에 로고가짤림)*/;
-    width: 256px;
+    width: 234px;
     height: 41px;
     font-size: 0;/*글자 사라지게 하기위해*/
     line-height: 0;
@@ -26,20 +25,87 @@ header h1 a{
 header .gnb{
     float: left;
 }
-header .gnb li{
+header .gnb button{
+    display: none;/*모바일에서만표시-메뉴버튼*/
+}
+header .gnb ul li{
+    margin-top: 15px;
     float: left;
     font-size: 25px;
 }
-header .gnb li a{
+header .gnb ul li a{
     display: block;
-    padding: 0 20px;
+    padding: 15px 20px;
 }
 header .tnb{
     float: right;
 }
-header .tnb li span{
-    display: none;
+header .tnb ul li{
+    float: left;
+    margin: 20px 0 0 33px;
 }
+header .tnb ul li button{
+    padding: 10px;
+}
+header .tnb ul li button span{
+    display: none;/*접근성때문에 쓴 텍스트 숨김*/
+}
+header .tnb ul li button i{
+    font-size: 40px;
+}
+@media screen and (max-width:640px){
+    header{
+        height: 45px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 100;
+    }
+    header h1 a{
+        margin: 11px 0 0 0;
+        width: 80px;
+        height: 20px;
+    }
+    header .gnb{
+       float: right;
+       margin: 12px 0 0 8px;
+    }
+    /*float:right를 먼저 선언한곳이 가장오른쪽*/
+    header .gnb button{
+        display: block;/*모바일에서만표시-메뉴버튼*/
+    }
+    header .gnb button span{
+        display: none;
+    }
+    header .gnb button span i{
+        font-size: 24px;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    header .gnb ul{
+        display: none;
+    }
+    header .tnb{
+        margin: 9px 0 0 0;
+    }
+    header .tnb ul li{
+        float: left;
+        margin: 4px 0 0 0;
+    }
+    header .tnb ul li.mypage{
+        display: none;
+    }
+    header .tnb ul li button{
+        padding: 0;
+
+    }
+    header .tnb ul li button span{
+        display: none;/*접근성때문에 쓴 텍스트 숨김*/
+    }
+    header .tnb ul li button i{
+        font-size: 24px;
+        font-weight: 300;
+    }
+}/*media종료*/
+
 .visual{
     height: 800px;
     background: url(../images/visual_bg.png) no-repeat center center /cover;
@@ -79,3 +145,77 @@ header .tnb li span{
         display: block;/*모바일에서만 보일글자*/
     }
 }/*media종료*/
+.book{
+    margin: 112px 0 0 0;
+}
+.book .tit{
+    float: left;
+}
+/*컨텐츠 영역 밖으로 나가는 리스트 -스크롤(모바일)
+    1.ul을 감싸는 div가 있어야함
+    2.ul을 감싸는 div는 overflow:auto 여야함(모바일)
+    3.ul은 li전체의 널이를 가져야함
+    4.ul은 position:absoluet(모바일)*/
+.book .tit h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 8px 0 15px 0;
+}
+.book .tit button{
+    margin: 30px 0 0 0;
+    width: 40px;
+    height: 35px;
+    border: 1px solid #666;
+}
+.book .tit button i{
+    margin: 5px 0 0 5px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.book .tit button span{
+    display: none;
+}
+.book .list{
+    margin-left: 330px;
+}
+/*왼쪽요소는 float:left를 줌
+오른쪽요소는 margin-left로 왼쪽요소의 넓이만큼을 여백으로준다
+오른쪽 요소는 block
+오른쪽 요소가 왼쪽요소를 인지하지 못하고 위로 올라옴*/
+.book .list ul{
+    width: 1940px;
+}
+.book .list ul li{
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.book .list ul li:last-child{
+    margin-right: 0;
+}
+.book .list ul li img{
+    display: block;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.book .list ul li a .subject{
+    margin: 20px 0 0 0;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    /*한줄로표시*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book .list ul li a .writer{
+    display: block;
+    color: #666;
+    margin: 9px 0 20px 0;
+}
+.book .list ul li a  .cnt{
+    display: block;
+    /*세줄로 표시*/
+    line-height: 1.5;
+    height: 4.5em;
+    overflow: hidden;
+}

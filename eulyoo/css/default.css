@@ -42,7 +42,10 @@ html, body {
        최소 넓이를 줌 */
     color: #3D3D3D;
     line-height: 1.5;
-    font-family: 'EY', sans-serif;
+    font-family: 'EY', 'Noto sans kr', 'NanumGothic','Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo','Dotum', sans-serif;
+    /*폰트적용 우선수위
+    을유 웹폰트 우선적용, 만약에 웹폰트가 지원되지 않으면 그다음에 선언된 폰트가 적용됨
+    apple sd gothic-아이폰에서 지원하는 폰트*/
     font-size: 15px;
     font-weight: 400;
     letter-spacing: -0.05em;
