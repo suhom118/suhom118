@@ -136,6 +136,7 @@ header .tnb ul li button i{
     }
     .visual p{
         font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
     }
     .visual .txt_pc{
         display: none;/*pc에서만보일글자*/
@@ -395,6 +396,7 @@ header .tnb ul li button i{
     }
     .interview .cnt_box .inner p{
         margin: 20px 0 20px 0;
+        color: rgba(255, 255, 255, 0.8);
     }
     .interview .cnt_box a{
         padding: 0 5px;
