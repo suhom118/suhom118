@@ -7,7 +7,7 @@ header{
     top: 0;
     height: 100px;
     color: #fff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 100;
 }
 
@@ -113,7 +113,7 @@ header .tnb ul li button i{
 }
 .visual h2{
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 700;
     padding: 320px 0 25px 0;
 }
 .visual p{
@@ -200,7 +200,7 @@ header .tnb ul li button i{
 }
 .book .list ul li img{
     display: block;
-    box-shadow: 0 0 10px rgba(0,0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.1);
 }
 .book .list ul li a .subject{
     margin: 20px 0 0 0;
@@ -297,6 +297,7 @@ header .tnb ul li button i{
 }/*media종료*/
 .interview{
     color: #fff;
+    margin: 0 0 130px 0;
 }
 .interview h2{
     color: #3d3d3d;
@@ -417,3 +418,63 @@ header .tnb ul li button i{
         font-weight: 300;
     }
 }/*media종료*/
+.news{
+    margin: 0 0 100px 0;
+}
+.news .tit{
+    margin-bottom: 40px;
+}
+.news .tit h2{
+    float: left;
+    font-weight: 700;
+    color: #1d1d1d;
+    font-size: 40px;
+}
+.news .tit .btn{
+    float: right;
+}
+.news .tit button{
+
+    margin: 30px 0 0 0;
+    width: 40px;
+    height: 35px;
+    border: 1px solid #666;
+}
+
+.news .tit button i{
+    margin: 5px 0 0 5px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.news .tit button span{
+    display: none;
+}
+.news .list{
+    overflow-x: auto;
+}
+.news .list ul{
+    width: 2310px;
+}
+.news .list ul li{
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0 ;
+
+}
+.news .list ul li a{
+    display: block;
+}
+.news .list ul li a img{
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0, 0, 0.1);
+}
+.news .list ul li a .subject{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    line-height:1.5; max-height: 3em; overflow:hidden;/*최대 2줄로 나타내기*/
+    margin: 34px 0 18px 0;
+}
+.news .list ul li a .cnt{
+    display: block;
+}
