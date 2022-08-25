@@ -422,7 +422,7 @@ header .tnb ul li button i{
     }
 }/*media종료*/
 .news{
-    margin: 0 0 130px 0;
+    margin: 0 0 50px 0;
 }
 .news .tit{
     margin-bottom: 20px;
@@ -534,3 +534,89 @@ header .tnb ul li button i{
         display: none;
     }
 }/*media종료*/
+footer{
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(71, 61, 51, 0.7);
+    padding: 30px 0 36px 0;
+}
+footer .flogo img{
+    display: block;
+    float: left;
+    width: 223px;/*이미지는 넓이만 주면 높이는 자동으로 들어감*/
+    /* height: 35px; */
+    opacity: 0.8;
+}
+footer .fnav{
+    float: left;
+    margin: 0 180px 0 86px;
+}
+footer .fnav ul li a{
+    display: block;
+    line-height: 25px;
+    padding: 3px 5px;
+}
+footer .sns{
+    float: right;
+}
+footer .sns a{
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    /* 글자없애기 */
+    font-size: 0;
+    line-height: 0;
+}
+footer .sns a.insta{
+    background: url(../images/sns_insta.svg) no-repeat center center ;
+}
+footer .sns a.facebook{
+    background: url(../images/sns_facebook.svg) no-repeat center center ;
+}
+footer .sns a.naver{
+    background: url(../images/sns_naver.svg) no-repeat center center ;
+}
+footer .copyright{
+    float: left;
+    line-height: 30px;
+    margin: 0 146px 0 0;
+}
+@media screen and (max-width:640px){
+    footer{
+        padding: 15px 0 30px 0;
+        text-align: center;
+    }
+    footer .flogo img{
+        float: none;
+        width: 180px;/*이미지는 넓이만 주면 높이는 자동으로 들어감*/
+        /* height: 35px; */ 
+        margin: 0 ;
+        display: inline-block;
+    }
+    footer .fnav{
+        float: none;
+        margin: 11px 0 5px 0;
+    }
+    footer .fnav ul li a{
+        display: block;
+        line-height: 19px;
+        padding: 3px 5px;
+    }
+    footer .sns{
+        float: none;
+        padding: 5px 10px;
+    }
+    footer .sns a{
+        float: none;
+        width: 30px;
+        height: 30px;
+    }
+    footer .sns a:nth-child(2){
+        margin: 0 20px 0 20px;
+    }
+    footer .copyright{
+        float: none;
+        line-height: 19px;
+        margin: 21px 0 0 0;
+    }
+}
