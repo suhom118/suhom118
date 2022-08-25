@@ -355,6 +355,9 @@ header .tnb ul li button i{
     font-weight: 300;
 }
 @media screen and (max-width:640px){
+    .interview{
+        margin-bottom: 40px;
+    }
     .interview h2{
         font-size: 25px;
         margin: 48px 0 20px 0;
@@ -419,19 +422,16 @@ header .tnb ul li button i{
     }
 }/*media종료*/
 .news{
-    margin: 0 0 100px 0;
+    margin: 0 0 130px 0;
 }
 .news .tit{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .news .tit h2{
-    float: left;
-    font-weight: 700;
-    color: #1d1d1d;
-    font-size: 40px;
+    font-size: 25px;
 }
 .news .tit .btn{
-    float: right;
+    padding-bottom: 5px;
 }
 .news .tit button{
 
@@ -451,6 +451,7 @@ header .tnb ul li button i{
 }
 .news .list{
     overflow-x: auto;
+    overflow-y: hidden;
 }
 .news .list ul{
     width: 2310px;
@@ -462,6 +463,7 @@ header .tnb ul li button i{
 }
 .news .list ul li a{
     display: block;
+    padding-bottom: 10px;
 }
 .news .list ul li a img{
     display: block;
@@ -477,3 +479,58 @@ header .tnb ul li button i{
 .news .list ul li a .cnt{
     display: block;
 }
+@media screen and (max-width:640px){
+    .news{
+        margin: 0 0 40px 0;
+    }
+    .news .tit{
+        margin-bottom: 20px;
+    }
+    .news .tit h2{
+        display: inline;
+        font-size: 25px;
+    }
+
+    .news .tit .btn{
+        float: right;
+        padding-bottom: 0;
+        padding-top: 5px;
+    }
+    .news .tit button{
+        margin: 0px 0 0 0;
+        width: 25px;
+        height: 25px;
+    }
+    .news .tit button i{
+        margin: 4px 0 0 5px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .news .list{
+        width: calc(100% + 20px);
+    }
+    .news .list ul{
+        width: 1490px;
+    }
+    .news .list ul li{
+        width: 200px;
+        height: auto;
+        margin: 0 10px 0 0 ;
+    }
+    .news .list ul li:first-child{
+        margin: 0 10px 0 20px;
+    }
+    .news .list ul li a {
+        padding-bottom: 10px;
+    }
+    .news .list ul li img{
+        width: 100%;
+    }
+    .news .list ul li a .subject{
+        font-size: 18px;
+        margin: 20px 0 0 0;
+    }
+    .news .list ul li a .cnt{
+        display: none;
+    }
+}/*media종료*/

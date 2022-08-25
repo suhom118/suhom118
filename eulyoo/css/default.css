@@ -50,7 +50,7 @@ html, body {
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 #wrap{/*id=wrap 호출*/
-    overflow-x: hidden;
+    overflow: hidden;
     min-width: 1280px;    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
     최소 넓이를 줌 */
 }
