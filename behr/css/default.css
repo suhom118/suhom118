@@ -9,7 +9,7 @@ body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, 
        padding을 줘도 width/height가 유지가 됨 */
 }
 /* a태그에 브라우저가 주는 기본 속성 초기화 */
-a {
+a,img {
     color: inherit;
     text-decoration: none;
     display: block;
@@ -49,7 +49,7 @@ html, body {
     word-break: keep-all;
 }
 #wrap { /* id="wrap" */
-    overflow: hidden;
+    /* overflow: hidden; */
     min-width: 1280px;
     /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
        최소 넓이를 줌 */

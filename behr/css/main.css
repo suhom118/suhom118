@@ -62,12 +62,12 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
     }
     header nav{
         float: right;
-        margin-top: 0;
+        margin-top: 4px;
     }
     header nav .gnb_open{
         display: block;
         padding: 0 0 0 10px;
-        height: 45px;
+        height: 40px;
     }
     header nav .gnb_open span{
         display: none;
@@ -115,3 +115,299 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
         display: none;
     }
 }/* visual media종료 */
+.product{
+    margin: 117px 0 0 0;
+}
+.product h2{
+    float: left;
+    font-size: 55px;
+    font-weight: 700;
+    position: sticky;
+    top: 100px;
+}
+.product h2 span{
+    display: block;
+    /* pc에서만 줄바꿈 */
+}
+.product .list{
+    margin-left: 440px;
+}
+.product .list ul li{
+    float: left;
+    width: 400px;
+    height: 700px;
+}
+.product .list ul li a strong{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+    margin: 15px 0;
+
+}
+.product .list ul li a span{
+    display: block;
+    line-height: 1.5;
+    height: 4.5em;
+    overflow: hidden;
+    margin-bottom: 11px;
+}
+.product .list ul li a i{
+    font-size: 35px;
+}
+.product .list ul li:nth-child(2){
+    float: right;
+    margin-top: 200px;
+}
+.product .list ul li:nth-child(4){
+    float: right;
+}
+@media screen and (max-width:640px){
+    .product{
+        margin: 51px 0 0 0;
+    }
+    .product h2{
+        float: none;
+        font-size: 20px;
+        position: relative;
+        top: auto;
+    }
+    .product h2 span{
+        display: inline;
+        /* 모바일에서 줄바꿈x */
+    }
+    .product .list{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin: 0 ;
+    }
+    .product .list ul{
+        width: 1350px;
+        padding: 0;
+    }
+    .product .list ul li{
+        width: 250px;
+        margin: 0 20px 0 0 ;
+        height: auto;
+    }
+    .product .list ul li a strong{
+        font-size: 15px;
+        overflow: hidden;
+        margin: 18px 0;
+        }
+    .product .list ul li a span{
+        display: block;
+        height: 7.5em;
+        margin-bottom: 11px;
+    }
+    .product .list ul li a img{
+        width: 100%;
+    }
+    .product .list ul li a i{
+        font-size: 24px;
+    }
+    .product .list ul li:nth-child(2){
+        margin-top: 0;
+    }
+    .product .list ul li:last-child{
+        margin-right: 0;
+    }
+
+}/* product media종료 */
+.brand{
+    text-align: center;
+    padding-top: 93px;
+    background-color: #f4f4f4;
+    height: 530px;
+}
+.brand h2{
+    font-size: 35px;
+    font-weight: 700;
+}
+.brand h2 strong{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.brand ul{
+    margin: 125px 0 0 0;
+}
+.brand ul li{
+    float: left;
+    width: 290px;
+    margin-right:40px ;
+    position: relative;
+}
+.brand ul li::after{
+    position: absolute;
+    top: 15px;
+    right: -20px;
+    background-color: #ccc;
+    content: "";
+    width: 1px;
+    height: 99px;
+}
+
+.brand ul li:last-child{
+    margin-right: 0;
+}
+.brand ul li:last-child::after{
+    display: none;
+}
+.brand ul li h3{
+    margin: 23px 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.brand ul li i{
+    font-size: 30px;
+    color: #666;
+}
+@media screen and (max-width:640px){
+    .brand{
+        margin: 64px 0 0 0;
+        padding-top: 50px;
+        height: auto;
+    }
+    .brand h2{
+        font-size: 20px;
+        margin-bottom: 55px;
+    }
+    .brand h2 strong{
+        display: none;
+        margin-bottom: 0;
+    }
+    .brand h2 span{
+        display: block;
+    }
+    .brand ul{
+        margin: 0;
+        width: 100%;
+    }
+    .brand ul li{
+        float: left;
+        width: 50%;
+        margin-right:0 ;
+        position: relative;
+        padding: 22px 0 32px 0;
+    }
+    .brand ul li::after{
+        position: relative;
+    }
+    .brand ul li:first-child::after {
+        position: absolute;
+        right: 0;
+        top: 27px;
+        content: "";
+        background-color: #ccc;
+        width:1px;
+        height:160%;
+    }
+    .brand ul li:nth-child(3)::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background-color: #ccc;
+        width:200%;
+        height:1px;
+    }
+    .brand ul li:last-child::before{
+        position: relative;
+    }
+    .brand ul li h3{
+        margin: 0 0 5px 0;
+        font-size: 14px;
+
+    }
+    .brand ul li i{
+        font-size: 30px;
+    }
+}/* brand media종료 */
+.service ul li{
+    float: left;
+    width: 33.33%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.service ul li.how{
+    background-image: url(../images/service01.png);
+}
+.service ul li.store{
+    background-image: url(../images/service02.png);
+}
+.service ul li.color{
+    background-image: url(../images/service03.png);
+}
+.service ul li a{
+    padding: 39px 0 0 47px;
+    height: 480px;
+}
+.service ul li a span{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+.service ul li a strong{
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 5px 0 25px 0;
+}
+.service ul li a i{
+    font-size: 24px;
+}
+@media screen and (max-width:640px){
+    .service ul li{
+        float: none;
+        width: auto;
+    }
+    .service ul li a{
+        padding: 30px 0 0 16px;
+        height: 130px;
+    }
+    .service ul li a span{
+        font-size: 13px;
+    }
+    .service ul li a strong{
+        font-size: 20px;
+        margin: 3px 0 6px 0;
+    }
+    .service ul li a i{
+        font-size: 24px;
+    }
+}/* service media종료 */
+aside{
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+}
+aside button{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #1d1d1d;
+    color: #fff;
+    text-align: center;
+    line-height: 0.5;
+    /* top과 아이콘간격줄이기위해 */
+    padding: 0 0 11px 0;
+}
+aside button i{
+    font-size: 20px;
+}
+aside button span{
+    font-size: 13px;
+
+}
+@media screen and (max-width:1400px){
+  aside{
+    display: none;
+  }
+}/* aside media종료 */
