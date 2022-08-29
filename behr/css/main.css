@@ -1,0 +1,114 @@
+@import url('default.css');
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;/*absolute는 넓이가 필요할때 반드시*/
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255 , 0.1);
+}
+header h1{
+    float: left;
+    background: url(../images/logo_w.svg) no-repeat left top/ 100% auto;
+    /* 사이즈가 다를수도있어서 center center가 아닌 left top,,,영역에맞춰서 들어가는 로고는 짤리면 안됨 그래서 size가 100%넓이에 꽉차게 auto높이비율에 맞게(cover안됨)*/
+    font-size: 0;
+    line-height: 0;
+    margin: 30px 0 0 0;
+}
+header h1 a{
+    width: 128px;
+    height: 43px;
+}
+header nav{
+    float: right;
+    margin-top: 15px
+}
+header nav .gnb_open{
+    display: none;
+}
+header nav .gnb_close{
+    display: none;
+}
+header nav>ul>li{/*1차메뉴 선택(header부터 선택하면 wrapper까지 포함
+    1. 자식선택의 시작이 반복되는 태그 x, nav처럼 한번 나오는태그만가능
+    2. 자식선택으로 선택시 중간에 감싸는 태그를 누락할수없음
+     nav>ul>ul 선택불가
+    그래서 1차메뉴의 a를 선택하는 선택자는 nav>ul>li>a
+    2차메뉴의 a를 선택하는 선택자는 nav>ul>li>ul>li>a */
+    float: left;
+    width: 246px;
+    text-align: center;
+
+}
+header nav>ul>li>a{/*1차메뉴*/
+    padding: 20px 0 20px 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+header nav>ul>li>ul>li{/*2차메뉴선택*/
+    display: none;
+}
+@media screen and (max-width:640px){
+    header{
+        height: 45px;
+    }
+    header h1{
+        margin: 16px 0 0 0;
+    }
+    header h1 a{
+        width: 60px;
+        height: 15px;
+    }
+    header nav{
+        float: right;
+    }
+    header nav .gnb_open{
+        display: block;
+    }
+    header nav .gnb_open span{
+        display: none;
+    }
+    header nav .gnb_open i{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    header nav>ul{/*1차메뉴 선택(header부터 선택하면 wrapper까지 포함
+        1. 자식선택의 시작이 반복되는 태그 x, nav처럼 한번 나오는태그만가능
+        2. 자식선택으로 선택시 중간에 감싸는 태그를 누락할수없음
+         nav>ul>ul 선택불가
+        그래서 1차메뉴의 a를 선택하는 선택자는 nav>ul>li>a
+        2차메뉴의 a를 선택하는 선택자는 nav>ul>li>ul>li>a */
+       display: none;
+    }
+    
+}/* header media종료 */
+.visual{
+    height: 900px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover; 
+    color: #fff;
+}
+.visual h2{
+    font-size: 50px;
+    font-weight: 700;
+    padding: 249px 0 40px 0;
+}
+.visual p{
+    font-size: 20px;
+}
+@media screen and (max-width:640px){
+    .visual{
+        height: auto;
+        text-align: center;
+    }
+    .visual h2{
+        font-size: 25px;
+        padding: 184px 0 166px 0;
+    }
+    .visual h2 span{
+        display: block;
+    }
+    .visual p{
+        display: none;
+    }
+}/* visual media종료 */
