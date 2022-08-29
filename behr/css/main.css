@@ -62,10 +62,12 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
     }
     header nav{
         float: right;
-        margin-top: 5px;
+        margin-top: 0;
     }
     header nav .gnb_open{
         display: block;
+        padding: 0 0 0 10px;
+        height: 45px;
     }
     header nav .gnb_open span{
         display: none;
@@ -73,7 +75,6 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
     header nav .gnb_open i{
         font-size: 18px;
         font-weight: 300;
-        padding: 10px 0 10px 10px;
     }
     header nav>ul{/*1차메뉴 선택(header부터 선택하면 wrapper까지 포함
         1. 자식선택의 시작이 반복되는 태그 x, nav처럼 한번 나오는태그만가능
