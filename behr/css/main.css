@@ -274,7 +274,7 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
     }
     .brand h2{
         font-size: 20px;
-        margin-bottom: 55px;
+        margin-bottom: 30px;
     }
     .brand h2 strong{
         display: none;
