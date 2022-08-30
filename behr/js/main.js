@@ -28,5 +28,9 @@ $(document).ready(function(){
          $('header').removeClass('fixed')  
         }
     })
+
+
+
+    function
 })
 
