@@ -402,6 +402,7 @@ header.open nav>ul>li>ul>li>a{
         font-size: 30px;
     }
 }/* brand media종료 */
+.service h2{display: none;}
 .service ul li{
     float: left;
     width: 33.33%;
