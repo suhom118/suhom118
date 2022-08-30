@@ -8,12 +8,12 @@ $(document).ready(function(){
     // top버튼을 클릭했을때 상단으로 스크롤
     $('aside button').on('click',function(){
         console.log('눌렀어')
-        // $(window).scrollTop(0)
         $('html,body').animate({
             scrollTop:0
         },500)
     })
-
+    let scrolling
+    headerFixed()//함수의실행
     
     /*스크롤되면 header에 클래스 추가 
     1.scroll값이 0보다 크면 header에 fixed추가
@@ -21,7 +21,8 @@ $(document).ready(function(){
     // 로딩했을때 맨 처음
     let scrolling=$(window).scrollTop()
     /*스크롤할때마다실행*/  
-    $(window).scroll(function(){      
+    $(window).scroll(function(){  
+        scrolling=$(window).scrollTop()
         if(scrolling>0){
           $('header').addClass('fixed')  
         }else{
@@ -31,6 +32,13 @@ $(document).ready(function(){
 
 
 
-    function
+    function headerFixed(){
+        scrolling=$(window).scrollTop()
+        if(scrolling>0){
+            $('header').addClass('fixed')  
+          }else{
+           $('header').removeClass('fixed')  
+          }
+    }
 })
 
