@@ -292,7 +292,7 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
         width: 50%;
         margin-right:0 ;
         position: relative;
-        padding: 22px 0 32px 0;
+        padding: 22px 0 40px 0;
     }
     .brand ul li::after{
         position: relative;
@@ -300,7 +300,7 @@ header nav>ul>li>ul>li{/*2차메뉴선택*/
     .brand ul li:first-child::after {
         position: absolute;
         right: 0;
-        top: 27px;
+        top: 29px;
         content: "";
         background-color: #ccc;
         width:1px;
@@ -406,8 +406,132 @@ aside button span{
     font-size: 13px;
 
 }
-@media screen and (max-width:1400px){
+@media screen and (max-width:1420px){
   aside{
     display: none;
   }
 }/* aside media종료 */
+footer{
+    background-color: #2d2d2d;
+    color: rgba(255, 255, 255 , 0.8);
+    padding-bottom: 100px;
+}
+footer .inner{
+    position: relative;
+}
+footer .sns{
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255 , 0.2);
+}
+footer .sns ul{
+    float: right;
+    margin: 20px 0 0 0;
+}
+footer .sns ul li{
+    float: left;
+    margin-right: 5px;
+}
+footer .sns ul li:last-child{
+    margin-right: 0;
+}
+footer .sns ul li a{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255 , 0.6);
+    font-size: 0;
+    line-height: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 19px auto;
+    background-color: rgba(255, 255, 255 , 0.8);
+}
+footer .sns ul li.facebook a{
+    background-image: url(../images/sns_facebook.svg);
+}
+footer .sns ul li.naver a{
+    background-image: url(../images/sns_naver.svg);
+}
+footer .sns ul li.insta a{
+    background-image: url(../images/sns_insta.svg);
+}
+footer .sns ul li.youtube a{
+    background-image: url(../images/sns_youtube.svg);
+}
+footer .flogo{
+    position: absolute;
+    left: 0;
+    top: 25px;
+}
+footer .flogo img{
+    width: 85px;
+    opacity: 0.8;
+}
+footer .finfo{
+    margin: 25px 0;
+}
+footer .finfo span{
+    display: inline-block;
+}
+footer .finfo span.brd{
+    position: relative;
+    margin: 0 33px 0 0 ;
+}
+footer .finfo span.brd::after{
+    position: absolute;
+    content: "";
+    right: -20px;
+    top: 3px;
+    width: 1px;
+    height: 11px;
+    background-color: rgba(255, 255, 255 , 0.2);
+}
+@media screen and (max-width:640px){
+    footer{
+        padding-bottom: 50px;
+    }
+
+    footer .sns{
+        height: 50px;
+        text-align: center;
+    }
+    footer .sns ul{
+        float: none;
+        margin: 0;
+        padding: 12px 0 0 0;
+        display: inline-block;
+    }
+    footer .sns ul li{
+        margin-right: 10px;
+    }
+    footer .sns ul li a{
+        width: 25px;
+        height: 25px;
+        border-radius: 13px;
+        background-size: 16px auto;
+        background-color: rgba(255, 255, 255 , 0.8);
+    }
+    footer .flogo{
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 24px 0 0 0;
+    }
+    footer .finfo{
+        margin: 15px 0 25px 0;
+    }
+    footer .finfo span{
+        display: inline-block;
+    }
+    footer .finfo span.brd{
+        margin: 0 17px 0 0 ;
+    }
+    footer .finfo span.brd::after{
+        position: absolute;
+        content: "";
+        right: -11px;
+        top: 3px;
+        height: 9px;
+        background-color: rgba(255, 255, 255 , 0.2);
+    }
+}
