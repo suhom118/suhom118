@@ -45,7 +45,7 @@ header에 open클래스를 추가
     $('header').on('mouseleave',function(){
         $('header').removeClass('open')
     })
-    $('header nav>ul>li:lastchild>ul>li').on('mouseleave focusout',function(){
+    $('header nav > ul > li:last-child > ul > li:last-child').on('focusout', function(){
         $('header').removeClass('open')
     })
 })
