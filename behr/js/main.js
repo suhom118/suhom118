@@ -12,14 +12,14 @@ $(document).ready(function(){
             scrollTop:0
         },500)
     })
+    // 로딩했을때 맨 처음
     let scrolling
     headerFixed()
     /*스크롤되면 header에 클래스 추가 
     1.scroll값이 0보다 크면 header에 fixed추가
-    scroll값이 0이면 header에 fixed삭제
-    로딩했을때 맨 처음
-    /*스크롤할때마다실행*/  
+    scroll값이 0이면 header에 fixed삭제*/
     
+    // 스크롤할때마다실행
     scrolling=$(window).scrollTop();
     $(window).scroll(function(){
         headerFixed()
