@@ -1,7 +1,113 @@
 @import url(default.css);
 header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;/*absolute는 넓이가 필요할때 반드시*/
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255 , 0.1);
+    z-index: 100;
+}
+header h1{
+    float: left;
+    margin: 23px 60px 0 0 ;
+}
+header .gnb{
+    float: left;
+}
+header .gnb .gnb_open{
     display: none;
 }
+header .gnb .gnb_close{
+    display: none;
+}
+header .gnb>ul{
+    width: 1000px;
+    text-align: center;
+}
+/* 1차메뉴 */
+header .gnb>ul>li{
+    float: left;
+    font-size: 25px;
+    width: 250px;
+    font-weight: 700;
+}
+header .gnb>ul>li a{
+    width: 250px;
+    line-height: 100px;
+    white-space: nowrap;
+    /* 글자를 위아래 가운데 두기위해 header높이 100px을 line-height로 */
+}
+/* 2차메뉴시작 */
+header .gnb>ul>li>ul{
+    display: none;
+}
+header .tnb{
+    float: right;
+    margin: 22px 0 0 0;
+}
+header .tnb  a{
+    float: left;
+    padding: 5px 0 5px 5px;
+}
+header .tnb  a i{
+    font-size: 40px;
+}
+header .tnb  a span{
+    display: none;
+}
+@media screen and (max-width:640px){
+    header{
+        height: 45px;
+    }
+    header h1{
+        margin: 14px 0 0 0 ;
+    }
+    header h1 a img{
+        width: 90px;
+    }
+    header .gnb{
+        float: right;
+    }
+    header .gnb .gnb_open{
+        display: block;
+        margin: 14px 0 0 0;
+    }
+    header .gnb .gnb_open span{
+        display: none;
+    }
+    header .gnb .gnb_open i{
+        font-size: 20px;
+    }
+    header .gnb .gnb_close{
+        display: none;
+    }
+    header .gnb>ul{
+        display: none;
+    }
+    /* 1차메뉴 */
+    header .gnb>ul>li{
+        float: left;
+        font-size: 25px;
+        width: 250px;
+        font-weight: 700;
+    }
+    header .gnb>ul>li a{
+        width: 250px;
+        line-height: 100px;
+        white-space: nowrap;
+        /* 글자를 위아래 가운데 두기위해 header높이 100px을 line-height로 */
+    }
+    /* 2차메뉴시작 */
+    header .gnb>ul>li>ul{
+        display: none;
+    }
+    header .tnb{
+        display: none;
+    }
+}
+/* header media종료 */
 
 .visual{
     height: 1000px;
@@ -54,3 +160,15 @@ header{
     }
 }
 /* visual media종료 */
+.care .tit{
+    margin: 117px 0 0 0;
+}
+.care .tit h2{
+    float: left;
+    font-size: 60px;
+    font-weight: 700;
+}
+.care .tit p{
+    display: inline-block;
+    vertical-align: bottom;
+}
