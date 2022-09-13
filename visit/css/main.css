@@ -226,15 +226,6 @@ h1{
     .road ul li:last-child{
         margin: 0;
     }
-    .road ul li.road01{
-        background: url(../images/road01.png) no-repeat center center / cover;
-    }
-    .road ul li.road02{
-        background: url(../images/road02.png) no-repeat center center / cover;
-    }
-    .road ul li.road03{
-        background: url(../images/road03.png) no-repeat center center / cover;
-    }
     .road ul li h3{
         font-size: 25px;
         font-weight: 700;
