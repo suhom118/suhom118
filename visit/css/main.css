@@ -1,0 +1,263 @@
+@import url('default.css');
+h1{
+    display: none;
+}
+.visual{
+    height: 870px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+}
+.visual h2{
+    position: relative;
+    font-size: 100px;
+    line-height: 1.1;
+    padding: 324px 0 21px 0;
+    font-weight: 700;
+}
+.visual h2::before{
+    /* 왼쪽요소는 right에 margin-right로 정렬 */
+    position: absolute;
+    content: "";
+    right: calc(50% + 333px);
+    top: 327px;
+    width: 55px;
+    height: 261px;
+    border: 5px solid #fff;
+    border-right: 0;
+}
+.visual h2::after{
+    /* 왼쪽요소는 right에 margin-right로 정렬 */
+    position: absolute;
+    content: "";
+    left: calc(50% + 336px);
+    top: 327px;
+    width: 55px;
+    height: 261px;
+    border: 5px solid #fff;
+    border-left: 0;
+}
+.visual p{
+    font-size: 20px;
+}
+@media screen and (max-width:640px){
+    .visual{
+        height: auto;
+    }
+    .visual h2{
+        position: relative;
+        font-size: 40px;
+        padding: 141px 0 18px 0;
+    }
+    .visual h2::before{
+        display: none;
+    }
+    .visual h2::after{
+    display: none;
+    }
+    .visual p{
+        font-size: 13px;
+        padding: 0 0 138px 0;
+    }
+}
+/* visual media종료 */
+.river{
+    margin: 117px 0 0 0 ;
+}
+.river .inner2{
+    position: relative;
+}
+.river h2{
+    float: left;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.river .inner{
+    float: right;
+    width: 730px;
+}
+.river .inner p{
+    margin: 0 0 36px 0;
+}
+.river .more{
+    position: absolute;
+    left: 0;
+    top: 210px;
+}
+/* 글자의 오른쪽으로 긴 선을 그릴때 right:0면 오른쪽에서 왼쪽방향으로 선이생성 
+오른쪽 방향으로 선을 변경하려면 right:-넓이값+여백 */
+.river .more::after{
+    position: absolute;
+    content: "";
+    right: -107px;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #666;
+}
+@media screen and (max-width:640px){
+    .river{
+        margin: 86px 0 0 0 ;
+    }
+    .river h2{
+        float: none;
+        font-size: 25px;
+    }
+    .river .inner{
+        float: none;
+        width: auto;
+    }
+    .river .inner p{
+        margin: 20px 0 20px 0;
+    }
+    .river img{
+        width: 100%;
+        /* 컨텐츠 영역의 넓이에 맞춰서 꽉차게 나타나기 */
+        margin: 0 0 20px 0;
+    }
+    .river .more{
+        position: relative;
+        left: auto;
+        top: auto;
+        text-align: center;
+    }
+    .river .more a{
+        display: inline-block;
+        border-bottom: 1px solid #666;
+        padding: 0 5px 3px 5px;
+    }
+    /* 글자의 오른쪽으로 긴 선을 그릴때 right:0면 오른쪽에서 왼쪽방향으로 선이생성 
+    오른쪽 방향으로 선을 변경하려면 right:-넓이값+여백 */
+    .river .more::after{
+        display: none;
+    }
+}
+/* river media종료 */
+.road{
+    margin: 136px 0 0 0;
+}
+.road .inner{
+    position: relative;
+}
+.road h2{
+    float: left;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.road .cnt{
+    float: right;
+    width: 730px;
+    margin: 84px 0 0 0;
+}
+.road ul{
+    margin: 113px 0 0 0;
+    color: #fff;
+    text-align: center;
+}
+.road ul li{
+    float: left;
+    width: 400px;
+    height: 345px;
+    margin: 0 40px 0 0;
+    padding: 113px 0 110px 0;
+}
+.road ul li:last-child{
+    margin: 0;
+}
+.road ul li.road01{
+    background: url(../images/road01.png) no-repeat center center / cover;
+}
+.road ul li.road02{
+    background: url(../images/road02.png) no-repeat center center / cover;
+}
+.road ul li.road03{
+    background: url(../images/road03.png) no-repeat center center / cover;
+}
+.road ul li h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+.road ul li p{
+    padding: 0 50px;
+}
+.road .more{
+    position: absolute;
+    left: 0;
+    top: 210px;
+}
+/* 글자의 오른쪽으로 긴 선을 그릴때 right:0면 오른쪽에서 왼쪽방향으로 선이생성 
+오른쪽 방향으로 선을 변경하려면 right:-넓이값+여백 */
+.road .more::after{
+    position: absolute;
+    content: "";
+    right: -107px;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #666;
+}
+@media screen and (max-width:640px){
+    .road{
+        margin: 82px 0 0 0;
+    }
+    .road h2{
+        float: none;
+        font-size: 25px;
+    }
+    .road .cnt{
+        float: none;
+        width: auto;
+        margin: 18px 0 40px 0;
+    }
+    .road ul{
+        margin: 0 0 23px 0;
+        text-align: left;
+    }
+    .road ul li{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 0 0 0 0;
+        padding: 40px 27px 38px 16px;
+    }
+    .road ul li:last-child{
+        margin: 0;
+    }
+    .road ul li.road01{
+        background: url(../images/road01.png) no-repeat center center / cover;
+    }
+    .road ul li.road02{
+        background: url(../images/road02.png) no-repeat center center / cover;
+    }
+    .road ul li.road03{
+        background: url(../images/road03.png) no-repeat center center / cover;
+    }
+    .road ul li h3{
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 16px 0;
+    }
+    .road ul li p{
+        padding: 0 20px 0 0;
+    }
+    .road .more{
+        position: relative;
+        left: auto;
+        top: auto;
+        text-align: center;
+    }
+    .road .more a{
+        display: inline-block;
+        border-bottom: 1px solid #666;
+        padding: 0 5px 3px 5px;
+    }
+    /* 글자의 오른쪽으로 긴 선을 그릴때 right:0면 오른쪽에서 왼쪽방향으로 선이생성 
+    오른쪽 방향으로 선을 변경하려면 right:-넓이값+여백 */
+    .road .more::after{
+       display: none;
+    }
+}
+/* road media종료 */
