@@ -227,8 +227,7 @@ h1{
         margin: 0;
     }
     .road ul li h3{
-        font-size: 25px;
-        font-weight: 700;
+        font-size: 20px;
         margin: 0 0 16px 0;
     }
     .road ul li p{
@@ -252,3 +251,145 @@ h1{
     }
 }
 /* road media종료 */
+.garden{
+    margin: 114px 0 0 0;
+    color: #fff;
+    position: relative;
+}
+.garden .inner{
+    background-color: rgba(9, 104, 124, 0.95);
+    width: 50%;
+    height: 580px;
+    /* inner감싸는 garden영역 넓이의 50%를 왼쪽여백 */
+    margin: 0 0 0 50%;
+    position: relative;
+    z-index: 2;
+}
+.garden .inner .inner2{
+    width: 620px;
+    padding: 113px 0 0 100px;
+}
+.garden .inner .inner2 h2{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.garden .inner .inner2 p{
+    margin: 37px 0 30px 0;
+}
+.garden img{
+    position: absolute;
+    /* 이미지를 가운데정렬하기위해 
+    left:50%에서 시작
+    margin-left로 넓이의 절반을줌*/
+    left: 50%;
+    top: 0;
+    margin-left: -960px;
+    z-index: 1;
+}
+.garden .more{
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 420px;
+    z-index: 3;
+}
+/* 글자의 오른쪽으로 긴 선을 그릴때 right:0면 오른쪽에서 왼쪽방향으로 선이생성 
+오른쪽 방향으로 선을 변경하려면 right:-넓이값+여백 */
+.garden .more::after{
+    position: absolute;
+    content: "";
+    right: -107px;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width:640px){
+    .garden{
+        margin: 84px 20px 0 20px;
+        color: #3d3d3d;
+
+    }
+    .garden .inner{
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        /* inner감싸는 garden영역 넓이의 50%를 왼쪽여백 */
+        margin: 0;
+    }
+    .garden .inner .inner2{
+        width: auto;
+        padding: 0;
+    }
+    .garden .inner .inner2 h2{
+        font-size: 25px;
+    }
+    .garden .inner .inner2 p{
+        margin: 16px 0 20px 0;
+    }
+    .garden img{
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        z-index: 1;
+        margin: 0 0 20px 0;
+    }
+    .garden .more{
+        position: relative;
+        left: auto;
+        top: auto;
+        z-index: 3;
+        text-align: center;
+    }
+    .garden .more a{
+        display: inline-block;
+        border-bottom: 1px solid #666;
+        padding: 0 5px 3px 5px;
+    }
+    /* 글자의 오른쪽으로 긴 선을 그릴때 right:0면 오른쪽에서 왼쪽방향으로 선이생성 
+    오른쪽 방향으로 선을 변경하려면 right:-넓이값+여백 */
+    .garden .more::after{
+        display: none;
+    }
+}
+/* garden media종료 */
+footer{
+    margin: 60px 0 0 0;
+    text-align: center;
+    color: #666;
+}
+footer ul{
+    display: inline-block;
+}
+footer ul li{
+    float: left;
+    margin: 0 10px 0 0 ;
+}
+footer ul li:last-child{
+    margin: 0;
+}
+footer .copyright{
+    margin: 33px 0 81px 0;
+}
+@media screen and (max-width:640px){
+    footer{
+        margin: 60px 0 0 0;
+        background-color: #f4f4f4;
+        padding: 48px 0 52px 0;
+    }
+    footer ul{
+        display: inline-block;
+    }
+    footer ul li{
+        float: left;
+        margin: 0 10px 0 0 ;
+    }
+    footer ul li:last-child{
+        margin: 0;
+    }
+    footer .copyright{
+        margin: 20px 0 0 0;
+    }
+}
+/* footer media종료 */
