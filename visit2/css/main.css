@@ -1,444 +1,414 @@
 @import url('default.css');
-h1{
+
+h1 {
     display: none;
 }
-.visual{
+
+.visual {
     height: 870px;
     background: url(../images/visual_bg.png) no-repeat center center / cover;
-    color: #fff;
+    color: #FFF;
     text-align: center;
 }
-.visual h2{
-    position: relative;
-    font-size: 100px;
-    line-height: 1.1;
+.visual h2 {
+    position: relative; /* before 정렬의 기준 */
     padding: 324px 0 21px 0;
+    font-size: 100px;
     font-weight: 700;
+    line-height: 1.1;
 }
-.visual h2::before{
+.visual h2::before {
     /* 왼쪽요소는 right에 margin-right로 정렬 */
     position: absolute;
-    content: "";
-    right: calc(50% + 333px);
+    right: 50%;
     top: 327px;
     width: 55px;
     height: 261px;
-    border: 5px solid #fff;
+    margin-right: 330px;
+    border: 5px solid #FFF;
     border-right: 0;
+    content: ""; /* before,after 필수요소 */
 }
-.visual h2::after{
-    /* 왼쪽요소는 right에 margin-right로 정렬 */
+.visual h2::after {
+    /* 오른쪽요소는 left에 margin-left로 정렬 */
     position: absolute;
-    content: "";
-    left: calc(50% + 336px);
+    left: 50%;
     top: 327px;
     width: 55px;
     height: 261px;
-    border: 5px solid #fff;
-    border-left: 0;
+    margin-left: 330px;
+    border: 5px solid #FFF;
+    border-left: 0; 
+    content: ""; /* before,after 필수요소 */
 }
-.visual p{
+.visual p {
     font-size: 20px;
 }
 @media screen and (max-width:640px){
-    .visual{
+    .visual {
         height: auto;
     }
-    .visual h2{
-        position: relative;
+    .visual h2 {
+        padding: 141px 0 16px 0;
         font-size: 40px;
-        padding: 141px 0 18px 0;
     }
-    .visual h2::before{
+    .visual h2::before {
         display: none;
     }
-    .visual h2::after{
-    display: none;
+    .visual h2::after {
+        display: none;
     }
-    .visual p{
+    .visual p {
         font-size: 13px;
-        padding: 0 0 138px 0;
+        padding: 0 0 140px 0;
     }
+}/* visual media 종료 */
+.river {
+    margin: 117px 0 0 0;
 }
-/* visual media종료 */
-.river{
-    margin: 117px 0 0 0 ;
-}
-.river .inner2{
+.river .inner2 {
     position: relative;
 }
-.river h2{
+.river h2 {
     float: left;
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
 }
-.river .inner{
+.river .inner {
     float: right;
     width: 730px;
 }
-.river .inner p{
+.river p {
     margin: 0 0 36px 0;
 }
-.river .more{
+.river .more {
     position: absolute;
-    top: 210px;
     left: 0;
+    top: 210px;
 }
-.river .more a{
+.river .more a {
     display: inline-block;
     position: relative;
     padding: 0 105px 0 0;
 }
-.river .more a::after{
+.river .more a::after {
     position: absolute;
     right: 0;
     top: 50%;
     width: 100px;
     height: 1px;
+    background-color: #666666;
     content: "";
-    background-color: #666;
 }
+
 @media screen and (max-width:640px){
-    .river{
-        margin: 86px 0 0 0 ;
+    .river {
+        margin: 84px 0 0 0;
     }
-    .river h2{
+    .river h2 {
         float: none;
         font-size: 25px;
     }
-    .river .inner{
+    .river .inner {
         float: none;
         width: auto;
     }
-    .river .inner p{
-        margin: 20px 0 20px 0;
+    .river p {
+        margin: 16px 0 21px 0;
     }
-    .river img{
+    .river img {
         width: 100%;
-        /* 컨텐츠 영역의 넓이에 맞춰서 꽉차게 나타나기 */
-        margin: 0 0 20px 0;
+        /* 콘텐츠 영역의 넓이에 맞춰서 꽉차게 나타나기 */
     }
-    .river .more{
+    .river .more {
         position: relative;
-        top: auto;
         left: auto;
+        top: auto;
+        margin: 21px 0 0 0;
         text-align: center;
     }
-    .river .more a{
+    .river .more a {
         padding: 0 0 2px 0;
     }
-    .river .more a::after{
+    .river .more a::after {
+        /* absolute를 top으로 정렬했던 것을 bottom정렬로 변경하려면 
+           반드시 top auto값을 주고 bottom 선언해야함. */
         top: auto;
         bottom: 0;
         width: 100%;
-        height: 1px;
     }
-}
-/* river media종료 */
-.road{
+}/* river media 종료 */
+
+.road {
     margin: 135px 0 0 0;
 }
-.road .inner{
-    position: relative;
+.road .inner {
+    position: relative; /* more 정렬의 기준점 */
 }
-.road .inner h2{
+.road h2 {
     float: left;
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
 }
-.road .inner .cnt{
+.road .cnt {
     float: right;
     width: 730px;
     margin: 84px 0 0 0;
 }
 .road ul {
-    margin: 130px 0 0 0;
-    color: #fff;
-    text-align: center;
+    margin: 112px 0 0 0;
 }
-.road ul li{
+.road ul li {
     position: relative;
     float: left;
     width: 400px;
     height: 345px;
-    margin: 0 40px 0 0 ;
-   
+    margin: 0 40px 0 0;
+    color: #FFF;
+    text-align: center;
 }
-.road ul li:last-child{
-    margin: 0;
+.road ul li:last-child {
+    margin-right: 0;
 }
-.road ul li .inner2{
+.road ul li .inner2 {
     position: relative;
     z-index: 2;
-    padding: 120px 20px 0 20px;
+    padding: 118px 50px 0 50px;
 }
-.road ul li h3{
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 10px 0;
-}
-.road ul li .bg{
+.road ul li .bg {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    z-index: 1;
 }
-.road ul li .road01{
+.road ul li .road01 {
     background: url(../images/road01.png) no-repeat center center / cover;
 }
-.road ul li .road02{
+.road ul li .road02 {
     background: url(../images/road02.png) no-repeat center center / cover;
 }
-.road ul li .road03{
+.road ul li .road03 {
     background: url(../images/road03.png) no-repeat center center / cover;
 }
-.road .more{
-    position: absolute;
-    top: 210px;
-    left: 0;
+.road ul li h3 {
+    margin: 0 0 11px 0;
+    font-size: 25px;
+    font-weight: 700;
 }
-.road .more a{
+.road .more {
+    position: absolute;
+    left: 0;
+    top: 210px;
+}
+.road .more a {
     display: inline-block;
     position: relative;
     padding: 0 105px 0 0;
 }
-.road .more a::after{
+.road .more a::after {
     position: absolute;
     right: 0;
     top: 50%;
     width: 100px;
     height: 1px;
+    background-color: #666666;
     content: "";
-    background-color: #666;
 }
 @media screen and (max-width:640px){
-    .road{
-        margin: 77px 0 0 0;
+    .road {
+        margin: 80px 0 0 0;
     }
-    .road .inner{
-        position: relative;
-    }
-    .road .inner h2{
+    .road h2 {
         float: none;
         font-size: 25px;
     }
-    .road .inner .cnt{
+    .road .cnt {
         float: none;
         width: auto;
-        margin: 16px 0 24px 0;
+        margin: 16px 0 0 0;
     }
     .road ul {
-        margin: 20px 0 ;
-        color: #3d3d3d ;
-        text-align: left;
+        margin: 23px 0 0 0;
     }
-    .road ul li{
+    .road ul li {
         float: none;
         width: auto;
         height: auto;
-        margin: 0 ;
-       
+        margin: 0 0 15px 0;
+        color: #3D3D3D;
+        text-align: left;
     }
-    .road ul li .inner2{
-        position: relative;
-        z-index: 2;
+    .road ul li:last-child {
+        margin-bottom: 0;
+    }
+    .road ul li .inner2 {
         padding: 0;
     }
-    .road ul li h3{
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 0 0 10px 0;
-    }
-    .road ul li .bg{
+    .road ul li .bg {
         position: relative;
         left: auto;
         top: auto;
         height: 125px;
         margin: 15px 0 0 0;
-        z-index: 1;
     }
-    .road ul li .road01{
-        background: url(../images/road01.png) no-repeat center center / cover;
+    .road ul li h3 {
+        margin: 0 0 8px 0;
+        font-size: 20px;
     }
-    .road ul li .road02{
-        background: url(../images/road02.png) no-repeat center center / cover;
-    }
-    .road ul li .road03{
-        background: url(../images/road03.png) no-repeat center center / cover;
-    }
-    .road .more{
-        color: #3d3d3d;
-        position: absolute;
-        top: 210px;
-        left: 0;
-    }
-    .road .more a{
-        display: inline-block;
+    .road .more {
         position: relative;
-        padding: 0 105px 0 0;
+        left: auto;
+        top: auto;
+        margin: 21px 0 0 0;
+        text-align: center;
     }
-    .road .more a::after{
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 100px;
-        height: 1px;
-        content: "";
-        background-color: #666;
+    .road .more a {
+        padding: 0 0 2px 0;
     }
-}
-/* road media종료 */
+    .road .more a::after {
+        /* absolute를 top으로 정렬했던 것을 bottom정렬로 변경하려면 
+           반드시 top auto값을 주고 bottom 선언해야함. */
+        top: auto;
+        bottom: 0;
+        width: 100%;
+    }
+}/* road media 종료 */
 
-
-.garden{
-    margin: 114px 0 0 0;
-    color: #fff;
+.garden {
     position: relative;
+    margin: 114px 0 0 0;
 }
-.garden .inner{
-    background-color: rgba(9, 104, 124, 0.95);
-    width: 50%;
-    height: 580px;
-    /* inner감싸는 garden영역 넓이의 50%를 왼쪽여백 */
-    margin: 0 0 0 50%;
+.garden .inner {
     position: relative;
     z-index: 2;
+    /* img 위에 배치하기 위해서 z-index를 줌
+       z-index가 적용되게 하기 위해서는 position값이 필수 */
+    background-color: rgba(9,104,124,0.95);
+    width: 50%;
+    height: 580px;
+    margin: 0 0 0 50%;
+    /* inner감싸는 garden영역 넓이의 50%를 왼쪽 여백 */
+    color: #FFF;
 }
-.garden .inner .inner2{
+.garden .inner .inner2 {
     width: 620px;
-    padding: 113px 0 0 100px;
+    padding: 106px 0 0 100px;
 }
-.garden .inner .inner2 h2{
+.garden h2 {
+    margin: 0 0 40px 0;
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
 }
-.garden .inner .inner2 p{
-    margin: 37px 0 30px 0;
-}
-.garden img{
+.garden img {
+    /* 이미지를 가운데 정렬 시키기 위해서
+       left 50%로 가운데에서 시작
+       margn-left로 넓이의 절반을 줌 */
     position: absolute;
-    /* 이미지를 가운데정렬하기위해 
-    left:50%에서 시작
-    margin-left로 넓이의 절반을줌*/
     left: 50%;
     top: 0;
-    margin-left: -960px;
     z-index: 1;
+    margin-left: -960px; /* 이미지 넓이의 절반 */
 }
-.garden .more{
+.garden .more {
     position: absolute;
-    top: 416px;
     left: calc(50% + 100px);
+    top: 416px;
     z-index: 3;
 }
-.garden .more a{
+.garden .more a {
     display: inline-block;
     position: relative;
     padding: 0 105px 0 0;
+    color: #FFF;
 }
-.garden .more a::after{
+.garden .more a::after {
     position: absolute;
     right: 0;
     top: 50%;
     width: 100px;
     height: 1px;
+    background-color: rgba(255,255,255,0.6);
     content: "";
-    background-color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (max-width:640px){
-    .garden{
-        margin: 84px 20px 0 20px;
-        color: #3d3d3d;
-
+    .garden {
+        margin: 80px 20px 0 20px;
     }
-    .garden .inner{
+    .garden .inner {
         background-color: transparent;
         width: auto;
         height: auto;
-        /* inner감싸는 garden영역 넓이의 50%를 왼쪽여백 */
         margin: 0;
+        color: #3D3D3D;
     }
-    .garden .inner .inner2{
+    .garden .inner .inner2 {
         width: auto;
         padding: 0;
     }
-    .garden .inner .inner2 h2{
+    .garden h2 {
+        margin: 0 0 16px 0;
         font-size: 25px;
     }
-    .garden .inner .inner2 p{
-        margin: 16px 0 20px 0;
-    }
-    .garden img{
+    .garden img {
         position: relative;
         left: auto;
         top: auto;
         width: 100%;
-        z-index: 1;
-        margin: 0 0 20px 0;
+        margin: 21px 0 21px 0;
     }
-    .garden .more{
+    .garden .more {
         position: relative;
-        top: auto;
         left: auto;
+        top: auto;
         text-align: center;
     }
-    .garden .more a{
-        display: inline-block;
-        position: relative;
+    .garden .more a {
         padding: 0 0 2px 0;
+        color: #3d3d3d;
     }
-    .garden .more a::after{
+    .garden .more a::after {
         top: auto;
         bottom: 0;
         width: 100%;
-        background-color: #666;
+        background-color: #666666;
     }
-}
-/* garden media종료 */
-footer{
-    margin: 60px 0 0 0;
+}/* garden media 종료 */
+
+footer {
     text-align: center;
-    color: #666;
+    color: #666666;
 }
-footer ul{
+footer ul {
     display: inline-block;
+    margin: 62px 0 32px 0;
 }
-footer ul li{
+footer ul li {
     float: left;
-    margin: 0 10px 0 0 ;
+    margin: 0 10px 0 0;
 }
-footer ul li:last-child{
-    margin: 0;
+footer ul li:last-child {
+    margin-right: 0;
 }
-footer .copyright{
-    margin: 33px 0 81px 0;
+footer .copyright {
+    margin: 0 0 80px 0;
 }
+
 @media screen and (max-width:640px){
-    footer{
+    footer {
         margin: 60px 0 0 0;
-        background-color: #f4f4f4;
-        padding: 48px 0 52px 0;
+        background-color: #F4F4F4;
     }
-    footer ul{
-        display: inline-block;
+    footer ul {
+        margin: 49px 0 20px 0;
     }
-    footer ul li{
-        float: left;
-        margin: 0 10px 0 0 ;
-    }
-    footer ul li:last-child{
+    footer .copyright {
         margin: 0;
-    }
-    footer .copyright{
-        margin: 20px 0 0 0;
+        padding: 0 0 52px 0;
     }
 }
-/* footer media종료 */
