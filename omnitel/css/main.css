@@ -1,0 +1,235 @@
+@import url('default.css');
+.visual{
+    width: 100%;
+    height: 850px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.visual h2{
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 298px 0 0 0;
+}
+.visual h2 span{
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .visual{
+        height: auto;
+    }
+    .visual h2{
+        font-size: 35px;
+        padding: 107px 0 132px 0;
+    }
+}/* visual media 종료 */
+.work{
+    background-color: #F39800;
+    text-align: center;
+    color: #fff;
+}
+.work .tit{
+    height: 245px;
+}
+.work .tit h2{
+    font-size: 50px;
+    font-weight: 700;
+    padding: 65px 0 22px 0;
+}
+.work .tit p span{
+    display: block;
+}
+.work ul li{
+    float: left;
+    height: 300px;
+    width: 33.3%;
+    padding: 81px 0;
+}
+.work ul .work01{
+    background: url(../images/work01.png) no-repeat center center / cover;
+}
+.work ul .work02{
+    background: url(../images/work02.png) no-repeat center center / cover;
+}
+.work ul .work03{
+    background: url(../images/work03.png) no-repeat center center / cover;
+}
+.work ul li i{
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+.work ul li h3{
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .work{
+        background-color: #F39800;
+        text-align: center;
+        color: #fff;
+    }
+    .work .inner{
+        width: auto;
+        margin: 0 20px;
+        padding-bottom: 20px;
+    }
+    .work .tit{
+        height: auto;
+    }
+    .work .tit h2{
+        font-size: 25px;
+        padding: 38px 0 0 0;
+    }
+    .work .tit p span{
+        display: inline;
+    }
+    .work ul{
+        margin-top: 20px;
+    }
+    .work ul li{
+        float: none;
+        height: auto;
+        width: 100%;
+        padding: 29px 0 35px 0;
+    }
+    .work ul li a{
+        height: auto;
+        width: 100%;
+    }
+    .work ul li i{
+        font-size: 30px;
+    }
+    .work ul li h3{
+        font-size: 20px;
+    }
+}/* work media 종료 */
+.news{
+    margin: 70px 0 0 0;
+}
+.news h2{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 45px 0;
+}
+.news ul li{
+    float: left;
+    width: 400px;
+    margin-right: 40px;
+}
+.news ul li:last-child{
+    margin-right: 0;
+}
+.news ul li h3{
+    font-size: 20px;
+    font-weight: 700;
+    line-height:1.5; height:3em; overflow:hidden;
+}
+.news ul li span{
+    display: block;
+    color: #666;
+    margin: 13px 0 13px 0;
+}
+.news ul li p{
+    line-height:1.5; height:10.5em; overflow:hidden;
+}
+@media screen and (max-width:640px){
+    .news{
+        margin: 44px 0 0 0;
+    }
+    .news h2{
+        font-size: 25px;
+        margin: 0 0 30px 0;
+    }
+    .news ul li{
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+    .news ul li h3{
+        font-size: 17px;
+        line-height:1.5; height:auto; overflow:visible;
+    }
+    .news ul li span{
+        display: block;
+        color: #666;
+        margin: 13px 0 13px 0;
+    }
+    .news ul li p{
+        position: relative;
+        line-height:1.5; height:6em; overflow:hidden;
+        margin-bottom: 40px;
+    }
+    .news ul li p::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right:  0;
+        height: 1px;
+        width: 100%;
+        background-color: #ccc;
+    }
+    .news ul li:last-child p::after{
+        display: none;
+    }
+}/* news media 종료 */
+footer{
+    margin-top: 95px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #3d3d3d;
+    height: 245px;
+}
+footer .finfo{
+    padding: 60px 0 0 0;
+}
+footer .finfo span{
+    margin: 0 32px 0 0 ;
+    line-height: 1.8;
+}
+footer .finfo .brd{
+    position: relative;
+}
+footer .finfo .brd::after{
+    position: absolute;
+    content: "";
+    top: 7px;
+    right: -16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 10px;
+    width: 1px;
+}
+footer .copyright{
+    margin-top: 24px;
+}
+@media screen and (max-width:640px){
+    footer{
+        margin-top: 95px;
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #3d3d3d;
+        height: 245px;
+    }
+    footer .finfo{
+        padding: 60px 0 0 0;
+    }
+    footer .finfo span{
+        margin: 0 32px 0 0 ;
+        line-height: 1.8;
+    }
+    footer .finfo .brd{
+        position: relative;
+    }
+    footer .finfo .brd::after{
+        position: absolute;
+        content: "";
+        top: 7px;
+        right: -16px;
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 10px;
+        width: 1px;
+    }
+    footer .copyright{
+        margin-top: 24px;
+    }
+}/* footer media 종료 */
