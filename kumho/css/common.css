@@ -1,0 +1,107 @@
+/* 모든페이지에 공통 들어가는 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    /* 폰트 적용 우선순위
+       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
+       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+a, img{
+    display: block;
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    min-width: 1400px;
+    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+       최소 넓이를 줌 */
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 1400px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 320px;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* absolute를 주면 inline태그처럼 변해서 블럭요소처럼 쓰려면 
+    width:100% 필요 */
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+header h1{
+    position: absolute;
+    left: 32px;
+    top: 25px;
+}
+header h1 a{
+    display: block;
+    width: 100px;
+    height: 34px;
+    background-image: url(../images/common/logo_w.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;  
+    /* 주어진 넓이와 높이에서 로고 전체가 짤리지않고 최대한 꽉차게
+    나타나는 속성
+    영역의 넓이와 높이가 변경되면 배경이미지가 알아서 변경 */
+    font-size: 0;
+    line-height: 0;
+}
+
+
+header .gnb .open{
+    display: none;
+}
+header .gnb .close{
+    display: none;
+}
+header .gnb>ul{
+    /* li를 좌우로 배치할때 float:left로 할때는 li에
+    하지만 display:flex를 줄때는 부모에게 flex를 줘야함
+    (절대 조부모 gnb에 줄수는 없음) */
+    display: flex;
+    justify-content: center;
+}
+/* 2차메뉴 */
+header .gnb>ul>li>ul{
+    display: none;
+}
+header .lang{
+    position: absolute;
+    right: 20px;
+    top: 31px;
+}
+header .lang ul{
+    display: none;
+}
+header .lang .close{
+    display: none;
+}
