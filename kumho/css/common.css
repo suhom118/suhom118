@@ -138,7 +138,7 @@ header .gnb>ul>li>ul{
     /* position:absolute로 inline요소로 바뀌니 width:100%줘야됨 */
     width: 100%;
     /* 2차메뉴ul의 높이는 일정하게 (메뉴가out되면 안됨 */
-    height: 230px;
+    height: 235px;
 }
 header .lang{
     position: absolute;
