@@ -12,7 +12,11 @@
 </head>
 <body>
     <div id="wrap">
-        <header class="header">
+        <!-- 
+            스크롤내릴때 header상단에 고정 fixed클래스 추가
+            메뉴에 마우스를 오버했을때 menu_open 클래스 추가
+         -->
+        <header class="header menu_open">
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
             <nav class="gnb">
                 <button class="open" title="메뉴열기">
@@ -23,7 +27,7 @@
                 <ul>
                     <li>
                         <!-- 1차메뉴 클릭시 1차하위메뉴로이동-->
-                        <a href="contents/about.html">회사소개</a>
+                        <a href="contents/about.html"><span>회사소개</span></a>
                         <!-- 2차메뉴 -->
                         <ul>
                             <li>
@@ -58,7 +62,7 @@
                     </li>
                     <li>
                         <!-- 1차메뉴 클릭시 1차하위메뉴로이동-->
-                        <a href="contents/manageA03.html"> 지속가능경영</a>
+                        <a href="contents/manageA03.html"> <span>지속가능경영</span></a>
                         <!-- 2차메뉴 -->
                         <ul>
                             <li>
@@ -90,7 +94,7 @@
                     </li>
                     <li>
                         <!-- 1차메뉴 클릭시 1차하위메뉴로이동-->
-                        <a href="contents/architecture.html">사업분야</a>
+                        <a href="contents/architecture.html"><span>사업분야</span></a>
                         <!-- 2차메뉴 -->
                         <ul>
                             <li>
@@ -124,7 +128,7 @@
                     </li>
                     <li>
                         <!-- 1차메뉴 클릭시 1차하위메뉴로이동-->
-                        <a href="contents/corpInfo01.html">투자정보</a>
+                        <a href="contents/corpInfo01.html"><span>투자정보</span></a>
                         <!-- 2차메뉴 -->
                         <ul>
                             <li>
@@ -156,7 +160,7 @@
                     </li>
                     <li>
                         <!-- 1차메뉴 클릭시 1차하위메뉴로이동-->
-                        <a href="contents/recruitmentGuide.html">인재채용</a>
+                        <a href="contents/recruitmentGuide.html"><span>인재채용</span></a>
                         <!-- 2차메뉴 -->
                         <ul>
                             <li>
@@ -173,7 +177,7 @@
                     </li>
                     <li>
                         <!-- 1차메뉴 클릭시 1차하위메뉴로이동-->
-                        <a href="contents/news.html">홍보센터</a>
+                        <a href="contents/news.html"><span>홍보센터</span></a>
                         <!-- 2차메뉴 -->
                         <ul>
                             <li>
@@ -217,13 +221,31 @@
             </nav>
            
             <div class="lang">
-                <button class="open" title="언어선택 열기">KOR</button>
+                <button class="open" title="언어선택 열기">
+                    <i class="material-symbols-outlined">
+                        language
+                    </i>
+                    <span>KOR</span>
+                    <i class="material-symbols-outlined">
+                        expand_more
+                    </i>
+                    
+                </button>
                 <ul>
                     <!-- 현재선택되어 있는 언어는 active class추가 -->
                     <li class="active"><a href="#n">KOR</a></li>
                     <li><a href="#n">ENG</a></li>
                 </ul>
-                <button class="close" title="언어선택 닫기">KOR</button>
+                <button class="close" title="언어선택 닫기">
+                    <i class="material-symbols-outlined">
+                        language
+                    </i>
+                    <span>KOR</span>
+                    <i class="material-symbols-outlined">
+                        expand_less
+                    </i>
+                </button>    
+                    
             </div>
         </header>
         <section class="visual">

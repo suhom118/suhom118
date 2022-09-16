@@ -17,6 +17,8 @@ a, img{
 }
 #wrap { /* id="wrap" */
     overflow: hidden;
+    /* header의기준점 */
+
     min-width: 1400px;
     /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
        최소 넓이를 줌 */
@@ -54,12 +56,14 @@ header{
     width: 100%;
     height: 100px;
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 100;
 }
 header h1{
     position: absolute;
     left: 32px;
     top: 25px;
+    z-index: 103;
 }
 header h1 a{
     display: block;
@@ -75,7 +79,10 @@ header h1 a{
     font-size: 0;
     line-height: 0;
 }
-
+header .gnb{
+    position: relative;
+    z-index: 102;
+}
 
 header .gnb .open{
     display: none;
@@ -89,19 +96,150 @@ header .gnb>ul{
     (절대 조부모 gnb에 줄수는 없음) */
     display: flex;
     justify-content: center;
+    text-align: center;
 }
+header .gnb>ul>li{
+    width: 157px;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+}
+header .gnb>ul>li>a{
+    display: block;
+    line-height: 100px;
+}
+header .gnb>ul>li:hover>a{
+    color: #ED1C24;
+    font-weight: 700;
+}
+header .gnb>ul>li:hover>a>span{
+    position: relative;
+}
+header .gnb>ul>li:hover>a>span::after{
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    width: 100%;
+    height: 1px;
+    background-color: #ED1C24;
+    content: "";
+}
+
 /* 2차메뉴 */
 header .gnb>ul>li>ul{
     display: none;
+    line-height: 35px;
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    padding-top: 4px;
+    /* 1차메뉴a와 2차메뉴ul사이에는 여백이 존재하면안됨 */
+    /* position:absolute로 inline요소로 바뀌니 width:100%줘야됨 */
+    width: 100%;
+    /* 2차메뉴ul의 높이는 일정하게 (메뉴가out되면 안됨 */
+    height: 230px;
 }
 header .lang{
     position: absolute;
     right: 20px;
-    top: 31px;
+    top: 30px;
+    z-index: 103;
+}
+header .lang button{
+    width: 145px;
+    height: 39px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    /* button내부요소 i와 span태그를 좌우정렬 위아래가운데 배치 */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header .lang button i{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+  
+}
+header .lang button span{
+    font-size: 18px;
+    font-weight: 400;
 }
 header .lang ul{
     display: none;
+    position: absolute;
+    left: 0;
+    top: 39px;
+    width: 145px;
+    height: 81px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #3D3D3D;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+}
+header .lang ul li:first-child{
+    margin: 8px 0 0 0 ;
+}
+header .lang ul li a{
+    display: block;
+    line-height: 1.8;
+}
+header .lang ul li a:hover, header .lang ul li.active a{
+    color: #ED1C24;
+    font-weight: 700;
 }
 header .lang .close{
     display: none;
 }
+/* lang가 열렸을때 */
+header .lang_open ul{
+    display: block;
+}
+header .lang_open .open{
+    display: none;
+}
+header .lang_open .close{
+    display: flex;
+}
+/* 메뉴에 마우스를 오버했을때 */
+.menu_open{
+    color: #3D3D3D;
+
+}
+.menu_open::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 337px;
+    background-color: #fff;
+    height: 337px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+    z-index: 101;
+}
+.menu_open::after{
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 101;
+}
+.menu_open h1 a{
+    background-image: url(../images/common/logo.svg);
+}
+.menu_open .gnb>ul>li>ul{
+    display: block;
+
+}
+.menu_open .lang button i{
+    color: #666;
+}
+.menu_open .lang ul{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* 2차메뉴 */
+

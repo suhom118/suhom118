@@ -16,5 +16,20 @@ $(document).ready(function(){
 
     $('.visual .cnt_h').height(winH)
    })
+
+   /*.header .lang .open 클릭했을때
+   1.ul이 보여야되고
+   2.open이 안보이고 close가 보여야됨 
+   .header .lang에 lang_open 클래스를추가
+   3..header .lang .close를 클릭하면
+    .header .lang에 lang_open 클래스를 삭제*/
+   $('header .lang .open').on('click',function(){
+    $('header .lang').addClass('lang_open')
+   })
+
+   $('header .lang .close').on('click',function(){
+    $('header .lang').removeClass('lang_open')
+   })
+
 })
 // document.ready종료
