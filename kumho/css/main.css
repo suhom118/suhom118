@@ -36,7 +36,6 @@ top 50%에서 시작 그리고 위아래 이동값을 줌
     }
     .visual h2{
         font-size: 35px;
-        padding: 0 0 23px 0;
     }
     .visual h2 span{
         display: block;

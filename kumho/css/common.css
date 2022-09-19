@@ -12,9 +12,6 @@ html, body {
     /* letter-spacing: -0.05em; */
     word-break: keep-all; /* 단어별 줄바꿈 */
 }
-a, img{
-    display: block;
-}
 #wrap { /* id="wrap" */
     overflow: hidden;
     /* header의기준점 */
@@ -158,8 +155,6 @@ header .lang button{
 }
 header .lang button i{
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.7);
-  
 }
 header .lang button span{
     font-size: 18px;
@@ -175,9 +170,7 @@ header .lang ul{
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.4);
     color: #3D3D3D;
-    font-size: 18px;
     text-align: center;
-    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
 }
 header .lang ul li:first-child{
     margin: 8px 0 0 0 ;
@@ -189,9 +182,6 @@ header .lang ul li a{
 header .lang ul li a:hover, header .lang ul li.active a{
     color: #ED1C24;
     font-weight: 700;
-}
-header .lang .close{
-    display: none;
 }
 /* lang가 열렸을때 */
 header .lang_open ul{
@@ -206,27 +196,17 @@ header .lang_open .close{
 /* 메뉴에 마우스를 오버했을때 */
 .menu_open{
     color: #3D3D3D;
-
 }
 .menu_open::before{
     position: absolute;
-    content: "";
     left: 0;
     top: 0;
-    width: 100%;
-    height: 337px;
-    background-color: #fff;
-    height: 337px;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
     z-index: 101;
 }
 .menu_open::after{
     position: absolute;
     width: 100%;
     content: "";
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 101;
 }
 .menu_open h1 a{
     background-image: url(../images/common/logo.svg);
