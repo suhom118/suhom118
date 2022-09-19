@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+/* 모든 태그에 브라우저에서 주는 여백을 삭제 */
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    /* width/height와 padding결합되면 사이즈가 늘어남. 이걸 막는 스타일
+       padding을 줘도 width/height가 유지가 됨 */
+}
+/* a태그에 브라우저가 주는 기본 속성 초기화 */
+a {
+    color: inherit; 
+    text-decoration: none;
+}
+/* 브라우저에서 기울임을 주는 것을 초기화 */
+em, address {
+    font-style: normal;
+}
+/* 항목 앞에 동그라미 삭제 */
+ul, ol, li {
+    list-style: none;
+}
+button {
+    background-color: transparent; /* 투명 */
+    border: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    /* 서체 상속 - button은 body에서 적용한 서체를 
+       자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
+    cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
+}
+
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    /* 폰트 적용 우선순위
+       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
+       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    min-width: 1280px;
+    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+       최소 넓이를 줌 */
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 320px;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}

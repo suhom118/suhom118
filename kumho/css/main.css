@@ -1,44 +1,49 @@
 @import url('default.css');
 @import url('common.css');
 
-/* main에만 존재하는 디자인스타일 */
-
-
-.visual{
-    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
-    color: #fff;
+/* 메인에만 존재하는 디자인 스타일 */
+.visual {
+    background: url(../images/main/visual_bg.png) no-repeat center center/cover;
+    color: #FFF;
 }
-.visual .cnt_h{
+.visual .cnt_h {
+    position: relative;
     height: 1000px;
 }
-/* cnt_h는 visual의 높이와 동일
-그 높이값을 기준으로 컨텐츠 가운데 배치하기 위해서
-top 50%에서 시작 그리고 위아래 이동값을 줌
-(cnt_h의 높이가 변해도 상하가운데정렬)*/
-.visual .cnt_h .txt{
-    position: relative;
-    top: calc(50% - 82px);
+/* cnt_h는 visual의 높이와 동일 
+   그 높이값을 기준으로 컨텐츠를 위아래 가운데 배치하기 위해서
+   absolute top 50%에서 시작
+   그리고 위아래 이동값을 줌
+   (cnt_h의 높이가 변해도 위아래 가운데로 정렬됨)
+*/
+.visual .cnt_h .inner {
+    position: absolute;
     left: 0;
+    top: calc(50% - 132px);
+    /* margin-top: -132px; */
 }
-.visual h2{
+.visual h2 {
+    padding: 0 0 35px 0;
     font-size: 50px;
+    font-weight: 700;
     line-height: 1.2;
-    font-weight: 400;
-    padding: 0 0 29px 0;
+}
+.visual p {
+    font-size: 20px;
 }
 @media screen and (max-width:640px){
-    .visual .cnt_h{
-        position: relative;
-        height: 640px;
+    .visual .cnt_h {
+        height: 670px;
     }
-    .visual .cnt_h .txt{
-        top: calc(50% - 98px);
+    .visual .cnt_h .inner {
+        top: calc(50% - 100px);
+        /* margin-top: -100px; */
     }
-    .visual h2{
+    .visual h2 {
+        padding: 0 0 17px 0;
         font-size: 35px;
     }
-    .visual h2 span{
-        display: block;
+    .visual p {
+        font-size: 15px;
     }
-}
-/* visual media종료 */
+} /* visual 반응형 종료 */

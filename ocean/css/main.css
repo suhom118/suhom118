@@ -1,0 +1,76 @@
+@import url('default.css');
+.visual{
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    height: 870px;
+}
+.visual h2{
+    font-size: 50px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 400;
+    padding-top: 285px;
+}
+.visual h2 span{
+    font-weight: 700;
+}
+@media screen and (max-width:640px){
+    .visual{
+
+        height: 450px;
+    }
+    .visual h2{
+        font-size: 25px;
+        padding-top: 158px;
+    }
+
+}/*visual media 종료 */
+.about{
+    margin: 107px 0 0 0;
+    text-align: center;
+}
+.about h2{
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 23px 0;
+}
+.about p span{
+    display: block;
+}
+.about ul{
+    display: flex;
+    margin: 80px 0 0 0;
+    justify-content: space-evenly;
+}
+
+.about ul li i{
+    font-size: 80px;
+    margin: 0 0 15px 0;
+}
+.about ul li p span{
+    display: block;
+}
+@media screen and (max-width:640px){
+    .about{
+        margin: 65px 0 0 0;
+    }
+    .about h2{
+        font-size: 30px;
+        margin: 0 0 15px 0;
+    }
+    .about p span{
+        display: inline;
+    }
+    .about ul{
+        display:flex;
+        margin: 80px 0 0 0;
+        justify-content: space-evenly;
+    }
+    .about ul li i{
+        font-size: 80px;
+        margin: 0 0 15px 0;
+    }
+    .about ul li p span{
+        display: inline;
+    }
+
+}/*about media 종료 */
