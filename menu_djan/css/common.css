@@ -206,6 +206,7 @@ html, body {
         direction: ltr;
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
+        content: "\e5cf";
     }
     /* 2차메뉴 */
     .header .gnb>ul>li>ul{

@@ -17,5 +17,24 @@ $(document).ready(function(){
         console.log('window의 높이' + winH);
     });
 
+    /*
+    .biz .list ul li 에 마우스를 오버하면
+    .biz .list ul 에 over클래스추가
+    .biz .list ul li에 active 클래스 추가
+
+     .biz .list ul li 에 마우스를 아웃하면
+    .biz .list ul 에 over클래스삭제
+    .biz .list ul li에 active 클래스 삭제
+     */
     
-});//document.ready 종료
+    $('.biz .list ul li').on('mouseenter', function(){
+        $('.biz .list ul').addClass('over')
+        $(this).addClass('active')
+    })
+    $('.biz .list ul li').on('mouseleave', function(){
+        $('.biz .list ul').removeClass('over')
+        $(this).removeClass('active')
+    })
+
+})
+//document.ready 종료

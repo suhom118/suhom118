@@ -1,0 +1,36 @@
+@import url('default.css');
+@import url('common.css');
+
+
+
+.visual {
+    height: 900px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.visual h2 {
+    padding: 320px 0 23px 0;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.visual p {
+    font-size: 20px;
+    line-height: 1.2;
+}
+@media screen and (max-width:640px){
+    .visual {
+        height: auto;
+        text-align: center;
+    }
+    .visual h2 {
+        padding: 184px 0 167px 0;
+        font-size: 25px;
+    }
+    .visual h2 span {
+        display: block;
+    }
+    .visual p {
+        display: none;
+    }
+}/* visual media 종료 */

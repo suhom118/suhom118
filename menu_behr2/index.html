@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>베어페인트</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 
+            (pc버전에서는) 메뉴에 마우스를 오버하면 header에 menu_open 클래스 추가 
+            (mobile버전에서는) 메뉴열기 버튼을 클릭하면 header에 menu_mobile 클래스를 추가
+        -->
+        <header class="header">
+            <div class="wrapper inner">
+                <h1 class="logo"><a href="#n">베어페인트 로고</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open" title="메뉴닫기"><i class="material-symbols-rounded">menu</i></button>
+                    <ul>
+                        <!-- 모바일에서 2차메뉴가 열리면 sub_open -->
+                        <li>
+                            <a href="contents/about.html"><span>BEHR STORY</span></a>
+                            <ul> <!--2차메뉴-->
+                                <li><a href="contents/about.html">브랜드 소개</a></li>
+                                <li><a href="contents/why.html">BEHR 프리미엄 품질</a></li>
+                                <li><a href="contents/best.html">BEHR 최상급 친환경</a></li>
+                                <li><a href="contents/portfolio.html">BEHR 시공 사례</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/prod01.html"><span>PRODUCT STORY</span></a>
+                            <ul> <!--2차메뉴-->
+                                <li><a href="contents/prod01.html">벽지용 페인트</a></li>
+                                <li><a href="contents/prod02.html">방문용 페인트</a></li>
+                                <li><a href="contents/prod03.html">젯소/프라이머</a></li>
+                                <li><a href="contents/prod04.html">목재용 우드스테인</a></li>
+                                <li><a href="contents/prod05.html">바닥용 스테인</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/paint01.html"><span>PAINTING STORY</span></a>
+                            <ul> <!--2차메뉴-->
+                                <li><a href="contents/paint01.html">벽지 페인트 칠하기</a></li>
+                                <li><a href="contents/paint02.html">방문 페인트 칠하기</a></li>
+                                <li><a href="contents/paint03.html">천장 칠하기</a></li>
+                                <li><a href="contents/paint04.html">우드스테인 칠하기</a></li>
+                                <li><a href="contents/paint05.html">콘크리트 스테인 칠하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/offline.html"><span>WITH BEHR</span></a>
+                            <ul> <!--2차메뉴-->
+                                <li><a href="contents/offline.html">본사 오시는 길</a></li>
+                                <li><a href="contents/store.html">지역별 매장 안내</a></li>
+                                <li><a href="contents/contact.html">제휴/협찬/취급 문의</a></li>
+                                <li><a href="contents/online.html">BEHR 공식 온라인 스토어</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="gnb_close" title="메뉴닫기"><i class="material-symbols-rounded">close</i></button>
+                </nav>
+            </div>
+        </header>
+        <section class="visual">
+            <div class="wrapper">
+                <h2>A SIMPLER WAY TO<br />
+                    FIND YOUR <span>PERFECT COLOR</span></h2>
+                <p>Adding to the ease and hassle-free nature of your paint shopping<br />
+                    experience, your painting kit, complete with top-quality paints and<br />
+                    painting supplies, will be delivered right to your front door.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Montserrat', 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    /* 폰트 적용 우선순위
+       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
+       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all;
+}
+#wrap { /* id="wrap" */
+    /* overflow: hidden; */
+    position: relative;
+    min-width: 1280px;
+    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+       최소 넓이를 줌 */
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: auto;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+
+.header {
+    position: absolute; /* wrap (기본콘텐츠 넓이) 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #FFF;    
+}
+/* 
+    header 영역을 gnb가 전체를 차지하고
+    logo나 다른 요소가 있으면 모두 absolute로 배치
+*/
+.header .inner {
+    position: relative; /* logo정렬의 기준 */
+}
+.header .logo {
+    position: absolute;
+    left: 0;
+    top: 37px;
+}
+.header .logo a {
+    display: block;
+    width: 120px;
+    height: 30px;
+    background-image: url(../images/logo_w.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    font-size: 0;
+    line-height: 0;
+}
+.header .gnb .gnb_open {
+    display: none; /* 모바일에서만 나옴 */
+}
+.header .gnb .gnb_close {
+    display: none; /* 모바일에서만 나옴 */
+}
+/* li가 좌우로 배치되면 li를 감싸는 부모에 display:flex를 줌 */
+.header .gnb > ul {
+    display: flex;
+    justify-content: flex-end; /* li를 ul의 넓이에서 오른쪽에 배치 */
+}
+.header .gnb > ul > li {
+    position: relative; /* 2차메뉴 정렬의 기준 */
+    width: 240px;
+    text-align: center;
+}
+.header .gnb > ul > li:hover > a {
+    /* 2차메뉴에 마우스를 오버했을때에도 1차메뉴 a가 오버된 스타일을 유기하기 위해 */
+    font-weight: 700;
+}
+.header .gnb > ul > li > a {
+    display: block;
+    font-size: 21px;
+    line-height: 100px;
+}
+.header .gnb > ul > li > a span {
+    position: relative;
+}
+.header .gnb > ul > li:hover > a span::before {
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #1D1D1D;
+    content: "";
+}
+.header .gnb > ul > li > ul { 
+    /* 2차메뉴 
+      없다가 나타나는 요소는 position:absolute를 줘야함
+      그래야 나타났을때 다른 요소가 밀리지 않음 
+      1차메뉴 li를 기준으로 정렬 */
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px; 
+    /* 1차메뉴의 높이만큼 - 절대 1차메뉴와 여백이 있으면 안됨 
+       1차메뉴에서 2차메뉴로 마우스를 이동할때 메뉴가 out되지 않도록 하려면
+       반드시 1차메뉴 a와 2차메뉴 사이에 여백이 존재하면 안됨
+       디자인상 1차메뉴 a와 2차메뉴 사이에는 여백이 존재함
+       -- 2차메뉴에 상단에 padding으로 그 여백을 줌 
+          (padding은 ul의 영역이 늘어나는 내부 여백으로 메뉴가 out되지 않음)
+    */
+    width: 100%;
+    height: 280px; 
+    /* 2차메뉴라고 인지하는 영역의 높이를 모든 메뉴에 균일하게 주기 위해 
+       2차메뉴가 짧은 메뉴나 긴메뉴나 모두 동일한 높이로 메뉴의 영역으로 인지되게 하기 위해
+    */
+    padding: 19px 0 0 0;
+}
+.header .gnb > ul > li > ul > li > a {
+    display: block;
+    color: #666666;
+    font-size: 17px;
+    line-height: 40px;
+}
+.header .gnb > ul > li > ul > li > a:hover {
+    color: #1D1D1D;
+    font-weight: 700;
+}
+
+/* 메뉴에 마우스를 올렸을때 (하위메뉴가 보일때)
+   1. header와 하위메뉴 전체를 하얀으로 배경을 깔아줌
+   2. 로고 이미지가 변경됨 흰색 -> 검은색
+   3. 메뉴 색상도 변경됨 흰색 -> 검은색
+   4. 2차 메뉴가 나타남 
+
+   이 상황을 제외하고 2차메뉴의 스타일이라던가, 메뉴에 마우스를 오버했을때의 스타일
+   이런 스타일은 원래 기본 스타일로 적용되어 있어야함.
+*/
+@media screen and (min-width:641px){ /* pc버전일때만 적용 */
+    .header.menu_open {
+        color: #1D1D1D;
+    }
+    .header.menu_open::before { /* header를 기준으로 정렬 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 412px;
+        background-color: #FFF;
+        content: "";
+    }
+    .header.menu_open::after {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 1px;
+        background-color: #DDD;
+        content: "";
+    }
+    .header.menu_open .logo a {
+        background-image: url(../images/logo.svg);
+    }
+    .header.menu_open .gnb > ul > li > ul { /* 2차메뉴 */
+        display: block;
+    }
+}/* pc버전일때만 */
+@media screen and (max-width:640px){
+    .header {
+        height: 45px;  
+    }
+    .header .logo {
+        top: 16px;
+    }
+    .header .logo a {
+        width: 61px;
+        height: 15px;
+    }
+    .header .gnb .gnb_open {
+        display: block; /* 모바일에서만 나옴 */
+        float: right;
+        height: 45px;
+    }
+    .header .gnb .gnb_open i {
+        margin: 4px 0 0 0;
+        font-size: 18px;
+    }
+    .header .gnb .gnb_close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 45px;
+    }
+    .header .gnb .gnb_close i {
+        margin: 4px 0 0 0;
+        font-size: 18px;
+    }
+    .header .gnb > ul {
+        display: none;
+        padding: 53px 0 20px 0;
+    }
+    .header .gnb > ul > li {
+        width: auto;
+        text-align: left;
+    }
+    .header .gnb > ul > li:hover > a {
+        /* 1차메뉴를 클릭해서 열렸을 때의 스타일과 동일하게 적용 --> 모바일에서는 hover과 클릭이 동일하게 적용 */
+    }
+    .header .gnb > ul > li > a {
+        position: relative;
+        font-size: 18px;
+        line-height: 45px;
+    }
+    .header .gnb > ul > li > a::after {
+        position: absolute;
+        right: 0;
+        top: 14px;
+        color: #666666;
+        font-family: 'Material Symbols Rounded';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        content: "\e5cf";
+    }
+    .header .gnb > ul > li:hover > a span::before {
+        display: none;
+    }
+    .header .gnb > ul > li > ul {
+        display: none;
+        position: relative;
+        left: auto;
+        top: auto; 
+        width: auto;
+        height: auto; 
+        padding: 5px 0 5px 20px;
+        background-color: #F4F4F4;
+    }
+    .header .gnb > ul > li > ul > li > a {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    
+    /* 모바일 메뉴가 열린 상태
+        1. 전체가 흰색이 깔림 (화면을 꽉채워서)
+        2. gnb_open (메뉴열기)가 사라짐
+           gnb_close (메뉴닫기)가 나타남
+           ul (메뉴)가 나타남
+        3. 글자/아이콘 색상 변경
+
+        --> 메뉴가 열릴때 display:none/block 등의 상태변경되고, 스타일은 원래 들어가 있는 것 (특히 메뉴)
+    */
+    .header.menu_mobile {
+        color: #1D1D1D;
+    }
+    .header.menu_mobile::before {
+        position: fixed; /* fixed 무조건 body와만 정렬 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFF;
+        content: "";
+    }
+    .header.menu_mobile::after {
+        position: absolute;
+        left: 0;
+        top: 45px;
+        width: 100%;
+        height: 1px;
+        background-color: #DDDDDD;
+        content: "";
+    }
+    .header.menu_mobile .logo a {
+        background-image: url(../images/logo.svg);
+    }
+    .header.menu_mobile .gnb .gnb_open {
+        display: none;
+    }
+    .header.menu_mobile .gnb .gnb_close {
+        display: block;
+    }
+    .header.menu_mobile .gnb > ul {
+        display: block;
+    }
+
+    /* 2차메뉴가 오픈 됐을때 */
+    .header .gnb > ul > li.sub_open > ul {
+        display: block;
+    }
+    .header .gnb > ul > li.sub_open > a {
+        font-weight: 700;
+    }
+    .header .gnb > ul > li.sub_open > a::after {
+        content: "\e5ce";
+    }
+}/* header 반응형 종료 */

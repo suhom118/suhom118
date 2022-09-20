@@ -1,0 +1,46 @@
+@import url('default.css');
+@import url('common.css');
+
+.visual {
+    position: relative;
+    height: 1000px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    background-attachment: fixed;
+    color: #FFF;
+}
+.visual .inner {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    /* margin: -188px 0 0 0; */
+    transform: translate(0, -188px);
+}
+.visual h2 {
+    margin: 0 0 36px 0;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1.25;
+}
+.visual h2 strong {
+    font-weight: 700;
+}
+.visual a {
+    display: inline-block;
+    padding: 2px 5px 2px 0;
+    font-weight: 700;
+    border-bottom: 1px solid #FFF;
+}
+
+@media screen and (max-width:640px){
+    .visual {
+        height: 760px;
+    }
+    .visual .inner {
+        transform: translate(0, -160px);
+    }
+    .visual h2 {
+        margin: 0 0 20px 0;
+        font-size: 30px;
+    }
+}/* visual media 종료 */

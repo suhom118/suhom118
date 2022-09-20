@@ -117,10 +117,205 @@
                 </div>
             </div>
         </section>
-        <section class="biz"></section>
-        <section class="news"></section>
-        <section class="link"></section>
-        <footer class="footer"></footer>
+        <section class="biz">
+            <div class="tit clearfix">
+                <div class="wrapper">
+                    <h2>Area of Business</h2>
+                    <!-- 사업분야의 더보기가 아니라 관련링크이기때문에
+                    ul li 하단에 있지않아도됨-->
+                    <a href="contents/businessSrch.html">
+                        <span>사업실적보기</span>
+                        <i class="material-symbols-rounded">arrow_forward</i>
+                        
+                    </a>
+                </div>
+            </div>
+            <!-- 하나의 li에 마우스를 오버하면 
+                오버한 li는 
+                사이즈가 커짐글자bold가 들어가고 사이즈가 달라짐
+            오버안된 나머지li는 
+            넓이가줄어들고 배경이 어두워지고 글자가 투명해짐
+            1. 전체를 감싸는 ul에 over클래스추가
+            2. 마우스를 오버한 li에 active 클래스추가
+                (나머지 li는 not선택자로)-->
+            
+            <div class="list">
+                <ul>
+                    <li class="arch">
+                        <a href="contents/architecture.html">
+                            <strong>Architecture</strong>
+                            <span>빌딩 개발에서 도시개발로 이어지는<br/>
+                                금호건설의 건축사업</span>
+                        </a>
+                    </li>
+                    <li class="civil">
+                        <a href="contents/civil.html">
+                            <strong>Civil</strong>
+                            <span>도시와 국토를 잇는 공간 예술,
+                                <br/>
+                                금호건설의 토목사업</span>
+                        </a>
+                    </li>
+                    <li class="housing">
+                        <a href="contents/housing.html">
+                            <strong>Housing</strong>
+                            <span>전국 곳곳에서 신주거단지 조성으로
+                                <br/>
+                                고객의 높은 신뢰를 얻어온 금호</span>
+                        </a>
+                    </li>
+                    <li class="plant">
+                        <a href="contents/plant.html">
+                            <strong>Plant <br/>
+                                Enviroment</strong>
+                            <span>산업발전의 기틀을 다지는 환경경영을
+                                <br/>
+                                실천하는 환경/플랜트산업</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="news">
+            <div class="wrapper inner">
+                <h2>KUMHO E&C News</h2>
+                <ul>
+                    <li>
+                        <a href="contents/news.html">
+                            <strong class="subject">금호건설, 제5회 어울림 음악회 개최…<br/>
+                                "취약계층 아동 지원 취지"</strong>
+                            <span class="cnt">금호건설이 서울 성북구 길음동 소재 꿈빛극장에서 지난 19일 '제5회 어울림 음악회'를 개최했다.어울림 음악회는 문화 취약계층 아동들의 문화생활을 지원하기 위해 기획된 음악공연 후원사업이다.</span>
+                            <span class="date">22.09.06</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contents/news.html">
+                            <strong class="subject">금호건설, 독립유공자 후손·다문화가정<br/> 아동 후원 나서</strong>
+                            <span class="cnt">금호건설이 ‘2022 815 런’ 캠페인을 후원하고 다문화가정 아동에게 지원금을 전달하는 등 사회공헌 활동에 나섰다.
+                                ‘2022 815 런’ 캠페인에 기부금을 전달했다고 16일 밝혔다.
+                               </span>
+                            <span class="date">	22.08.16</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contents/news.html">
+                            <strong class="subject">건설 전분야 풍부한 경험…공항공사에선<br/> 업계 최고 평가</strong>
+                            <span class="cnt">1967년 설립된 금호건설은 토목, 건축, 플랜트, 주택 등 건설 전 분야에서 풍부한 경험을 쌓아왔다. 대표 주택 브랜드인 ‘어울림’은 ‘생활과의 어울림, 자연과의 어울림, 사람과의 어울림’이란 뜻이다. </span>
+                            <span class="date">22.07.20</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 모바일에서 가운데 정렬시킬 영역 -->
+                <div class="more">
+                    <a href="contents/news.html">
+                        <span>더보기</span>
+                        <i class="material-symbols-rounded">arrow_forward</i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="link">
+            <div class="wrapper">
+                <!-- h2태그전에 p태그를쓰면안됨 -->
+                <h2>세계 속의 한국, 한국 속의 세계 건설하기 위해 
+                   <span> 새 천년의 초일류기업으로 거듭 태어나겠습니다.</span>
+                </h2>
+                <ul>
+                    <li>
+                        <a href="contents/manageA03.html">
+                            <i class="material-symbols-rounded">
+                                volunteer_activism</i>
+                            <div class="inner">
+                                <h3>Sustainable management</h3>
+                                <p>지속가능경영 바로가기</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contents/corpInfo01.html">
+                            <i class="material-symbols-rounded">
+                                attach_money</i>
+                            <div class="inner">
+                                <h3>Financial
+                                    information</h3>
+                                <p>투자정보 바로가기</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://webzine.kumhoenc.com/" target="_blank" title="새창">
+                            <i class="material-symbols-rounded">
+                                auto_stories</i>
+                            <div class="inner">
+                                <h3>KUMHO E&C Webzine</h3>
+                                <p>웹진 바로가기</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="family">
+                    <div class="inner">
+                        <button class="btn_open" title="그룹사바로가기열기">
+                            <span>그룹사 바로가기</span>
+                            <i class="material-symbols-rounded">
+                                expand_more</i>
+                        </button>
+                        <ul>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    금호터미널
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    금호문화재단
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나항공
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나IDT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    에어부산
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나에어포트
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나세이버
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    에어서울
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="btn_close" title="그룹사바로가기닫기">
+                            <span>그룹사 바로가기</span>
+                            <i class="material-symbols-rounded">
+                                expand_less</i>
+                        </button>
+                     </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
