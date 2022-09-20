@@ -38,13 +38,21 @@
 }
 .about ul{
     display: flex;
-    margin: 80px 0 0 0;
-    justify-content: space-evenly;
+    margin: 85px 0 0 0;
+    justify-content: space-between;
 }
-
+.about ul li {
+    width: 290px;
+}
 .about ul li i{
     font-size: 80px;
+    line-height: 150px;
     margin: 0 0 15px 0;
+    border: 1px solid #f4f4f4;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: #f4f4f4;
 }
 .about ul li p span{
     display: block;
@@ -61,19 +69,118 @@
         display: inline;
     }
     .about ul{
-        display:block;
+        display:flex;
         margin: 30px 0 0 0;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     .about ul li{
-        width: calc(50% - 60px);
+        width: 50%;
+        margin: 0 0 31px 0;
     }
     .about ul li i{
         font-size: 45px;
         margin: 0 0 15px 0;
+        line-height: 90px;
+        margin: 0 0 15px 0;
+        width: 90px;
+        height: 90px;
+        border-radius: 45px;
+
+    
     }
     .about ul li p span{
         display: inline;
     }
 
 }/*about media 종료 */
+.service{
+    margin: 179px 0 0 0;
+    text-align: center;
+    color: #fff;
+}
+.service h2{
+    font-size: 50px;
+    color: #3d3d3d;
+    font-weight: 700;
+    margin: 0 0 42px 0;
+}
+.service ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.service ul li{
+    width: 33.33%;
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-size: cover;
+}
+.service ul li.ad{
+    background-image:url(../images/service01.png) ;
+}
+.service ul li.web{
+    background-image:url(../images/service02.png) ;
+}
+.service ul li.mobile{
+    background-image:url(../images/service03.png) ;
+}
+.service ul li.sns{
+    background-image:url(../images/service04.png) ;
+}
+.service ul li.promotion{
+    background-image:url(../images/service05.png) ;
+}
+.service ul li.video{
+    background-image:url(../images/service06.png) ;
+}
+.service ul li a{
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+.service ul li a h3{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 72px 0 9px 0;
+}
+@media screen and (max-width:640px){
+    .service{
+        margin: 78px 0 0 0;
+    }
+    .service h2{
+        font-size: 30px;
+        margin: 0 0 15px 0;
+    }
+    .service ul li{
+        width: 50%;
+    }
+    .service ul li a{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .service ul li a h3{
+        font-size: 30px;
+        font-weight: 700;
+        padding: 29px 0 34px 0;
+    }
+    .service ul li a p{
+        display: none;
+    }
+
+}/*service media 종료 */
+.footer{
+    margin: 117px 0 0 0;
+    height: 148px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width:640px){
+    .footer{
+        margin: 70px 0 0 0;
+    }
+}
