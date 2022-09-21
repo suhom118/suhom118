@@ -316,10 +316,14 @@ html, body {
         white-space: nowrap;
         word-wrap: normal;
         direction: ltr;
+        -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
         content: "\e5cf";
     }
-
+    /* hover이 요소를 클릭해도 스타일이 적용됨 */
+    .header .gnb > ul > li:hover > a > span::after {
+        display: none;
+    }
     .header .gnb > ul > li > ul {
         display: none; /* 2차메뉴 */
         position: relative;
