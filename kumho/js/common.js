@@ -87,4 +87,18 @@ $(document).ready(function(){
                 $(this).toggleClass('sub_open');
             }
         });
-});
+
+        /*  .footer .family .btn_open을 클릭하면
+            .footer .family에 open클래스 추가
+            .footer .family .btn_close을 클릭하면
+            .footer .family에 open클래스 삭제
+        */
+        $('.footer .family .btn_open').on('click', function(){
+            $('.footer .family').addClass('open')
+        })
+        $('.footer .family .btn_close').on('click', function(){
+            $('.footer .family').removeClass('open')
+        })
+
+
+});//document.ready종료

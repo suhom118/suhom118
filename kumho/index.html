@@ -257,7 +257,9 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="wrapper">
+            <!-- wrapper와 동일한넓이를가진 position:relative가 있는 요소는 cnt_wrap으로 -->
+            <div class="wrapper cnt_wrap">
+                <!-- family가 열리면 open클래스추가 -->
                 <div class="family">
                     <div class="inner">
                         <button class="btn_open" title="그룹사바로가기열기">
@@ -314,7 +316,18 @@
                         </button>
                      </div>
                 </div>
+                <ul class="fnav">
+                    <li><a href="#n">제보실</a></li>
+                    <li><a href="#n"> 고객센터</a></li>
+                    <li><a href="#n"> OB사랑방</a></li>
+                    <li><a href="#n"> Contact us</a></li>
+                    <li><a href="#n">개인정보처리방침</a></li>
+                </ul>
+                <div class="copyright">
+                    <span>COPYRIGHT (C) KUMHO E&C ALL RIGHTS RESERVED.</span>
+                </div>
             </div>
+
         </footer>
     </div>
 </body>
