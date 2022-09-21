@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,0,0" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <title>CEO인사말 | 회사소개 | 금호건설</title>
+    <!-- 현재메뉴명|상위메뉴명|맨뒤에사이트명 -->
+</head>
+<body>
+    <div id="wrap">
+        <!-- 
+            스크롤내릴때 header 상단에 고정 - fixed 클래스 추가
+            메뉴에 마우스를 오버했을 때 - menu_open 클래스를 추가
+
+            모바일 메뉴가 열렸을때 - menu_mobile 클래스를 추가
+         -->
+        <header class="header">
+            <h1 class="logo"><a href="../index.html">금호건설</a></h1>
+            <nav class="gnb">
+                <button class="open" title="메뉴열기"><i class="material-symbols-rounded">menu</i></button>
+                <ul>
+                    <li class="now">
+                        <a href="about.html"><span>회사소개</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
+                        <ul><!--2차메뉴-->
+                            <li><a href="about.html">기업정보</a></li>
+                            <li class="now"><a href="ceo.html">CEO인사말</a></li>
+                            <li><a href="historyN.html">연혁</a></li>
+                            <li><a href="org.html">조직도</a></li>
+                            <li><a href="labInfo.html">기술혁신</a></li>
+                            <li><a href="location.html">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="manageA03.html"><span>지속가능경영</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
+                        <ul><!--2차메뉴-->
+                            <li><a href="manageA03.html">윤리경영</a></li>
+                            <li><a href="manageB01.html">품질경영</a></li>
+                            <li><a href="manageC01.html">안전경영</a></li>
+                            <li><a href="manageD01.html">환경경영</a></li>
+                            <li><a href="manageE01.html">상생경영</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="architecture.html"><span>사업분야</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
+                        <ul><!--2차메뉴-->
+                            <li><a href="architecture.html">건축사업</a></li>
+                            <li><a href="civil.html">토목사업</a></li>
+                            <li><a href="housing.html">주택사업</a></li>
+                            <li><a href="plant.html">플랜트/환경사업</a></li>
+                            <li><a href="businessSrch.html">사업실적검색</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="corpInfo01.html"><span>투자정보</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
+                        <ul><!--2차메뉴-->
+                            <li><a href="corpInfo01.html">기업지배구조</a></li>
+                            <li><a href="manageInfo.html">경영정보</a></li>
+                            <li><a href="benefit01.html">재무정보</a></li>
+                            <li><a href="stock01.html">주가정보</a></li>
+                            <li><a href="contact.html">IR Contact</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="recruitmentGuide.html"><span>인재채용</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
+                        <ul><!--2차메뉴-->
+                            <li><a href="recruitmentGuide.html">직무가이드</a></li>
+                            <li><a href="recruitmentTip.html">채용/면접 Tip</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="manageA03.html"><span>홍보센터</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
+                        <ul><!--2차메뉴-->
+                            <li><a href="news.html">금호뉴스</a></li>
+                            <li><a href="sellList.html">분양뉴스</a></li>
+                            <li><a href="ci.html">CI/BI</a></li>
+                            <li><a href="brochure.html">PR갤러리</a></li>
+                            <li><a href="history.html">금호역사관</a></li>
+                            <li><a href="https://webzine.kumhoenc.com/" target="_blank" title="새창">웹진</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="close" title="메뉴닫기"><i class="material-symbols-rounded">close</i></button>
+            </nav>
+            <div class="lang">
+                <button class="open" title="언어선택 열기">
+                    <i class="material-symbols-rounded">language</i>
+                    <span>KOR</span>
+                    <i class="material-symbols-rounded">expand_more</i>
+                </button>
+                <ul>
+                    <!-- 현재 선택되어 있는 언어는 class active 추가 -->
+                    <li class="active"><a href="#n">KOR</a></li>
+                    <li><a href="#n">ENG</a></li>
+                </ul>
+                <button class="close" title="언어선택 닫기">
+                    <i class="material-symbols-rounded">language</i>
+                    <span>KOR</span>
+                    <i class="material-symbols-rounded">expand_less</i>
+                </button>
+            </div>
+        </header>
+        <!-- sub페이지에선 section태그 안씀 -->
+        <!-- 1차메뉴별로 sub_visual이미지가 다름
+            회사소개일때는 sub1클래스추가
+            지속가능경영일때는 sub2클래스추가..
+         -->
+        <div class="sub_visual sub1">
+            <div class="wrapper">
+                <p>아름다운 기업이 만드는<br/>
+                    아름다운 세상</p>
+            </div>
+        </div>
+        <!-- lnb local navigation bar
+             snb sub navigation bar -->
+        <nav class="lnb">
+            <div class="wrapper">
+                <div class="lnb_wrap">
+                    <div class="menu">
+                        <a href="../index.html" class="home" title="첫페이지로 이동">
+                            <i class="material-symbols-rounded">home</i>
+                        </a>
+                        <!-- 1차메뉴 
+                        메뉴가 열리면 depth에open클래스-->
+                        <div class="depth">
+                            <button class="btn_open" title="1차메뉴열기">
+                                <span>회사소개</span>
+                                <i class="material-symbols-rounded">expand_more</i>
+                            </button>
+                            <ul>
+                                <li class="now"><a href="about.html"><span>회사소개</span></a></li>
+                                <li><a href="manageA03.html"><span>지속가능경영</span></a></li>
+                                <li><a href="architecture.html"><span>사업분야</span></a></li>
+                                <li><a href="corpInfo01.html"><span>투자정보</span></a></li>
+                                <li><a href="recruitmentGuide.html"><span>인재채용</span></a></li>
+                                <li><a href="manageA03.html"><span>홍보센터</span></a></li>
+                            </ul>
+                            <button class="btn_close" title="1차메뉴닫기">
+                                <span>회사소개</span>
+                                <i class="material-symbols-rounded">expand_less</i>
+                            </button>
+                        </div>
+                        <!-- 2차메뉴 -->
+                        <div class="depth">
+                            <button class="btn_open" title="2차메뉴열기">
+                                <span>CEO인사말</span>
+                                <i class="material-symbols-rounded">expand_more</i>
+                            </button>
+                            <ul>
+                                <li><a href="about.html">기업정보</a></li>
+                                <li class="now"><a href="ceo.html">CEO인사말</a></li>
+                                <li><a href="historyN.html">연혁</a></li>
+                                <li><a href="org.html">조직도</a></li>
+                                <li><a href="labInfo.html">기술혁신</a></li>
+                                <li><a href="location.html">찾아오시는길</a></li>
+                            </ul>
+                            <button class="btn_close" title="1차메뉴닫기">
+                                <span>회사소개</span>
+                                <i class="material-symbols-rounded">expand_less</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lnb_btn">
+                        <ul>
+                            <li>
+                                <button title="페이지 인쇄하기">
+                                    <i class="material-symbols-rounded">
+                                        print
+                                    </i>
+                                </button>
+                            </li>
+                            <li>
+                                <button title="sns공유 열기">
+                                    <i class="material-symbols-rounded">
+                                        share
+                                    </i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="sub_tit">
+                <div class="wrapper">
+                    <h2>CEO인사말</h2>
+                </div>
+            </div>
+            <!-- ↑↑↑↑<body>~<div id="contents">까지의 영역은 서브레이아웃
+                모든 페이지에서는 서브레이아웃 영역의 html 구조를 수정할 수 없다
+                실제 개발을 하면 서브 레이아웃은 공통영역으로 분리한다
+                즉, 이 구조를 출력하는 파일이 하나
+                contents 내부영역은 각각의 페이지마다 컨텐츠가 들어갈영역 -->
+            <div id="contents">
+                <div class="wrapper">
+
+                    <!-- 모든 서브페이지의 콘텐츠를 코딩하는영역
+                    cnt_파일명 으로 주는 것을 규칙으로 한다 -->
+                    <div class="cnt_ceo">
+
+                    </div>
+                </div>
+                <!-- ↓↓↓↓↓↓<div id="contents">닫는 태그부터 footer까지
+                    서브레이아웃 영역,절대 html구조가 바뀔수 없는 구간 -->
+                
+            </div>
+        </div>
+        <footer class="footer">
+            <!-- wrapper와 동일한넓이를가진 position:relative가 있는 요소는 cnt_wrap으로 -->
+            <div class="wrapper cnt_wrap">
+                <!-- family가 열리면 open클래스추가 -->
+                <div class="family">
+                    <div class="inner">
+                        <button class="btn_open" title="그룹사바로가기열기">
+                            <span>그룹사 바로가기</span>
+                            <i class="material-symbols-rounded">
+                                expand_more</i>
+                        </button>
+                        <ul>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    금호터미널
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    금호문화재단
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나항공
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나IDT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    에어부산
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나에어포트
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    아시아나세이버
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n" target="_blank" title="새창">
+                                    에어서울
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="btn_close" title="그룹사바로가기닫기">
+                            <span>그룹사 바로가기</span>
+                            <i class="material-symbols-rounded">
+                                expand_less</i>
+                        </button>
+                     </div>
+                </div>
+                <ul class="fnav">
+                    <li><a href="#n">제보실</a></li>
+                    <li><a href="#n"> 고객센터</a></li>
+                    <li><a href="#n"> OB사랑방</a></li>
+                    <li><a href="#n"> Contact us</a></li>
+                    <li><a href="#n">개인정보처리방침</a></li>
+                </ul>
+                <div class="copyright">
+                    <span>COPYRIGHT (C) KUMHO E&C ALL RIGHTS RESERVED.</span>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>

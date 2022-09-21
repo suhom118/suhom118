@@ -104,7 +104,7 @@ html, body {
     display: flex;
     justify-content: center; 
     /* ul의 넓이안에서 li를 가운데 정렬 */
-    margin: 5px 5px 0 0;
+    margin: 0 5px 0 0;
 }
 .header .gnb > ul > li {
     position: relative; /* 2차메뉴 정렬의 기준 */
