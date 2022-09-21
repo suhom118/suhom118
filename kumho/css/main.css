@@ -302,7 +302,6 @@
     .news ul li a .subject{
         font-size: 20px;
         font-weight: 400;
-        overflow: visible;
     }
     .news ul li a .cnt{
         display: none;
