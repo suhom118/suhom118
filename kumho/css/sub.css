@@ -50,6 +50,9 @@
     height: 45px;
     background-color: #ED1C24;
     color: #fff;
+    /* lnb가 콘텐츠에 깔리지 않도록 z-index를 줌 */
+    position: relative;
+    z-index: 50;
 }
 .lnb .lnb_wrap{
     display: flex;
