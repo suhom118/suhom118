@@ -76,15 +76,28 @@ $(document).ready(function(){
 
         /*
             1차메뉴를 클릭해서
+            li를 클릭할때 실행을 하면 하위메뉴를 클릭할때도 이벤트가 발생
+            1차메뉴클릭과 하위메뉴 클릭하는 건 구분
+            이 이벤트는 1차메뉴를 클릭할때만 작동해야함
+            1차메뉴 클릭이벤트를 .header .gnb > ul > li>a한테 주고
+            클래스는 .header .gnb > ul > li 한테 줌
+            <li>------------------------------$(this).parents('li')
+                <a></a>-----------------------이벤트대상
+                <ul>
+                    <li><a></a></li>
+                </ul>
+            </li>
+
+
                 닫혀있으면 li에 sub_open 클래스를 추가
                 열려있으면 li에 sub_open 클래스를 삭제
             --> toggle 
         */
-        $('.header .gnb > ul > li').on('click', function(e){
+        $('.header .gnb > ul > li>a').on('click', function(e){
             if(pcMobile == 'mobile'){
                 e.preventDefault(); 
                 /* 1차메뉴를 클릭했을때 a href로 페이지가 이동하는 현상을 막기 */
-                $(this).toggleClass('sub_open');
+                $(this).parents('li').toggleClass('sub_open');
             }
         });
 

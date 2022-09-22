@@ -152,7 +152,9 @@ html, body {
     display: block;
     line-height: 36px;
 }
-.header .gnb > ul > li > ul > li > a:hover {
+.header .gnb > ul > li > ul > li > a:hover,
+.header .gnb ul li.sub_open>a,
+.header .gnb ul li.now>a {
     color: #ED1C24;
     font-weight: 700;
 }
@@ -200,7 +202,7 @@ html, body {
     line-height: 2;
 }
 .header .lang ul li a:hover, 
-.header .lang ul li.active a {
+.header .lang ul li.active a{
     color: #ED1C24;
     font-weight: 700;
 }

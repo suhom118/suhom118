@@ -167,7 +167,7 @@
     }
     .lnb .menu .depth{
         position: relative;
-        width: calc((100% -35px)/2);
+        width: calc((100% - 35px) / 2 );
     }
     .lnb .menu .depth ul{
         top: 35px;
@@ -214,8 +214,27 @@
         최소 높이를 주고 코딩*/
     min-height: 300px;
 }
+.container .sub_tit {
+    margin: 77px 0 64px 0;
+}
 .container .sub_tit h2{
     color: #1d1d1d;
     font-size: 40px;
     font-weight: 700;
 }
+.container #contents{
+    margin:  0 0 106px 0;
+}
+@media screen and (max-width:640px){
+    .container .sub_tit {
+        margin: 42px 0 0 0;
+    }
+    .container .sub_tit h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    .container #contents{
+        margin:  0 0 70px 0;
+    }
+}
+/* container 반응형 종료 */
