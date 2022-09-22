@@ -45,6 +45,7 @@
         padding: 106px 0 0 0;
     }
 }
+/* sub_visual반응형 종료 */
 .lnb{
     height: 45px;
     background-color: #ED1C24;
@@ -146,7 +147,66 @@
 .lnb .lnb_btn ul li:last-child{
     border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
-
+@media screen and (max-width:640px){
+    .lnb{
+        height: 35px;
+    }
+    .lnb .wrapper{
+        margin: 0;
+    }
+    .lnb .menu{
+        width: 100%;
+    }
+    .lnb .menu a{
+        width: 35px;
+        border-left: 0;
+    }
+    .lnb .menu a i{
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .lnb .menu .depth{
+        position: relative;
+        width: calc((100% -35px)/2);
+    }
+    .lnb .menu .depth ul{
+        top: 35px;
+    }
+    .lnb .menu .depth ul li a{
+        padding: 0 0 0 16%;
+        line-height: 35px;
+    }
+    .lnb .menu .depth .btn_close{
+        display: none;
+    }
+    /* 1차메뉴/2차메뉴가 열렸을때
+            1.btn_open이사라짐
+            2.ul이 나타남
+            3.btn_close나타남 */ 
+    .lnb .lnb_btn ul{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .lnb .lnb_btn ul li{
+        width: 35px;
+        height: 35px;
+        border-left: 0;
+       
+    }
+    .lnb .lnb_btn ul .print{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .lnb .lnb_btn ul li button i{
+        font-size: 18px;
+    }
+    .lnb .lnb_btn ul li:last-child{
+        border-right: 0;
+    }
+}
+/* lnb반응형 종료 */
 
 .container{
     /* 초기에 코딩할때 메뉴별 빈페이지를 만들고 코딩
