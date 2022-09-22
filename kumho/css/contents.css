@@ -1,0 +1,46 @@
+/* 회사소개>ceo인사말 */
+.cnt_ceo{
+    position: relative;
+}
+/* 이미지가 컨텐츠 영역 안에도 있고, 일부가 밖에나가는디자인
+컨텐츠 영역 밖에 나간 이미지는 브라우저 사이즈가 줄어들면 짤려도 상관없음
+position:absolute; left/right:50%; 가운데를 기준으로 정렬 */
+.cnt_ceo .ceo_pic{
+    position: absolute;
+    right: calc(50% + 180px);
+    top: 0;
+}
+.cnt_ceo .inner{
+    margin:  0 0 0 600px;
+}
+.cnt_ceo .tit{
+    font-size: 30px;
+    margin: 0 0 35px 0;
+
+}
+.cnt_ceo .tit strong{
+    font-weight: 400;
+    color: #ED1C24;
+}
+.cnt_ceo .sign{
+    margin: 35px 0 0 0;
+    text-align: right;
+}
+@media screen and (max-width:640px){
+  
+    .cnt_ceo .ceo_pic{
+        display: none;
+    }
+    .cnt_ceo .inner{
+        margin:  0 ;
+    }
+    .cnt_ceo .tit{
+        font-size: 20px;
+        margin: 37px 0 19px 0;
+    
+    }
+    .cnt_ceo .sign{
+        margin: 15px 0 0 0;
+    }
+}
+
