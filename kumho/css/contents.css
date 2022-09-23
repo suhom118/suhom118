@@ -20,7 +20,6 @@ position:absolute; left/right:50%; 가운데를 기준으로 정렬 */
 }
 .cnt_ceo .tit strong{
     font-weight: 400;
-    color: #ED1C24;
 }
 .cnt_ceo .sign{
     margin: 35px 0 0 0;
@@ -36,8 +35,6 @@ position:absolute; left/right:50%; 가운데를 기준으로 정렬 */
     }
     .cnt_ceo .tit{
         font-size: 20px;
-        margin: 37px 0 19px 0;
-    
     }
     .cnt_ceo .sign{
         margin: 15px 0 0 0;
@@ -61,7 +58,6 @@ position:absolute; left/right:50%; 가운데를 기준으로 정렬 */
     top: 0;
     width: 1px;
     height: 100%;
-    content: "";
     background-color: #ED1C24;
 }
 .cnt_historyN .inner{
@@ -80,11 +76,8 @@ position:absolute; left/right:50%; 가운데를 기준으로 정렬 */
 .cnt_historyN .year_tit .bg{
     width: 440px;
     height: 440px;
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    border: 1px solid #Fff;
-    border-radius: 220px;
 }
 .cnt_historyN .year_tit .bg.year2010{
     background-image: url(../images/contents/historyN_img01.png);
