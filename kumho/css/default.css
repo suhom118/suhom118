@@ -19,7 +19,7 @@ em, address {
     font-style: normal;
 }
 /* 항목 앞에 동그라미 삭제 */
-ul, ol, li {
+ul, ol, li,dl, dt, dd {
     list-style: none;
 }
 button {

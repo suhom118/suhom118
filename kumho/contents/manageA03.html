@@ -9,7 +9,7 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/sub.js"></script>
-    <title>연혁 | 회사소개 | 금호건설</title>
+    <title>윤리경영 | 지속가능경영 | 금호건설</title>
     <!-- 현재메뉴명이 맨앞 / 뒤에 상위 메뉴명 / 맨 뒤에 사이트명 -->
 </head>
 <body>
@@ -26,21 +26,21 @@
                 <button class="open" title="메뉴열기"><i class="material-symbols-rounded">menu</i></button>
                 <ul>
                     <!-- 현재 선택된 메뉴 -->
-                    <li class="sub_open now">
+                    <li>
                         <a href="about.html"><span>회사소개</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
                         <ul><!--2차메뉴-->
                             <li><a href="about.html">기업정보</a></li>
                             <li><a href="ceo.html">CEO인사말</a></li>
-                            <li class="now"><a href="historyN.html">연혁</a></li>
+                            <li><a href="historyN.html">연혁</a></li>
                             <li><a href="org.html">조직도</a></li>
                             <li><a href="labInfo.html">기술혁신</a></li>
                             <li><a href="location.html">찾아오시는길</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="sub_open now">
                         <a href="manageA03.html"><span>지속가능경영</span></a><!--1차메뉴 (첫번째 하위 메뉴로 이동)-->
                         <ul><!--2차메뉴-->
-                            <li><a href="manageA03.html">윤리경영</a></li>
+                            <li class="now"><a href="manageA03.html">윤리경영</a></li>
                             <li><a href="manageB01.html">품질경영</a></li>
                             <li><a href="manageC01.html">안전경영</a></li>
                             <li><a href="manageD01.html">환경경영</a></li>
@@ -111,10 +111,10 @@
             회사소개일때 sub1 클래스추가
             지속가능경영 일때는 sub2 클래스추가
         -->
-        <div class="sub_visual sub1">
+        <div class="sub_visual sub2">
             <div class="wrapper">
-                <p>아름다운기업이 만드는<br />
-                    아름다운세상</p>
+                <p>윤리경영을 토대로 <br />
+                    아름다운 세상을 만들겠습니다.</p>
             </div>
         </div>
         <!-- lnb : location navigation bar
@@ -126,39 +126,38 @@
                         <a href="../index.html" class="home" title="첫페이지로 이동"><i class="material-symbols-rounded">home</i></a>
                         <div class="depth "> <!-- 1차메뉴 : 메뉴가 열리면 open 클래스 추가 -->
                             <button class="btn_open" title="1차메뉴 열기">
-                                <span>회사소개</span>
+                                <span>지속가능경영</span>
                                 <i class="material-symbols-rounded">expand_more</i>
                             </button>
                             <ul>
                                 <!-- 현재 선택된 1차메뉴 -->
-                                <li class="now"><a href="about.html">회사소개</a></li>
-                                <li><a href="manageA03.html">지속가능경영</a></li>
+                                <li><a href="about.html">회사소개</a></li>
+                                <li class="now"><a href="manageA03.html">지속가능경영</a></li>
                                 <li><a href="architecture.html">사업분야</a></li>
                                 <li><a href="corpInfo01.html">투자정보</a></li>
                                 <li><a href="recruitmentGuide.html">인재채용</a></li>
                                 <li><a href="manageA03.html">홍보센터</a></li>
                             </ul>
                             <button class="btn_close" title="1차메뉴 닫기">
-                                <span>회사소개</span>
+                                <span>지속가능경영</span>
                                 <i class="material-symbols-rounded">expand_less</i>
                             </button>
                         </div>
                         <div class="depth"> <!-- 2차메뉴 -->
                             <button class="btn_open" title="2차메뉴 열기">
-                                <span>연혁</span>
+                                <span>윤리경영</span>
                                 <i class="material-symbols-rounded">expand_more</i>
                             </button>
                             <ul>
                                 <!-- 현재 선택된 2차메뉴 -->
-                                <li><a href="about.html">기업정보</a></li>
-                                <li><a href="ceo.html">CEO인사말</a></li>
-                                <li class="now"><a href="historyN.html">연혁</a></li>
-                                <li><a href="org.html">조직도</a></li>
-                                <li><a href="labInfo.html">기술혁신</a></li>
-                                <li><a href="location.html">찾아오시는길</a></li>
+                                <li class="now"><a href="manageA03.html">윤리경영</a></li>
+                                <li><a href="manageB01.html">품질경영</a></li>
+                                <li><a href="manageC01.html">안전경영</a></li>
+                                <li><a href="manageD01.html">환경경영</a></li>
+                                <li><a href="manageE01.html">상생경영</a></li>
                             </ul>
                             <button class="btn_close" title="2차메뉴 닫기">
-                                <span>연혁</span>
+                                <span>윤리경영</span>
                                 <i class="material-symbols-rounded">expand_less</i>
                             </button>
                         </div>
@@ -175,7 +174,7 @@
         <div class="container">
             <div class="sub_tit">
                 <div class="wrapper">
-                    <h2>연혁</h2>
+                    <h2>윤리경영</h2>
                 </div>
             </div>
             <div id="contents">
@@ -187,122 +186,9 @@
                 contents 내부영역은 각각의 페이지마다 콘텐츠가 들어갈 영역 
             -->
 
-                <div class="cnt_historyN">
+                <div class="cnt_ceo">
                     <!-- 모든 서브 페이지의 콘텐츠를 코딩하는 영역 
                         cnt_파일명 으로 주는 것을 규칙으로 한다. -->
-                    <div class="wrapper">
-                        <p class="tit">금호건설의 1967년 설립부터
-                            <span>집념과 도전의 반세기 역사를 소개합니다.</span></p>
-                        <div class="history_wrap">
-                            <div class="inner">
-                                <div class="year_tit left">
-                                    <div class="bg year2010"></div>
-                                    <h3>2010's</h3>
-                                </div>
-                                <div class="year_list left">
-                                    <h4>2021</h4>
-                                    <dl>
-                                        <dt>03</dt>
-                                        <dd>금호건설(주)로 상호변경</dd>
-                                    </dl>
-                                    <h4>2018</h4>
-                                    <dl>
-                                        <dt>10</dt>
-                                        <dd>건설업계 최초 자회사형 장애인 표준사업장 설립 협약 체결</dd>
-                                        <dt>02</dt>
-                                        <dd>아파트 브랜드 '어울림' BI 디자인 교체</dd>
-                                    </dl>
-                                    <h4>2016</h4>
-                                    <dl>
-                                        <dt>07</dt>
-                                        <dd>서재환 사장 체제로 조직 개편</dd>
-                                        <dt>05</dt>
-                                        <dd>금호타이어 미국조지아공장 준공</dd>
-                                        <dt>04</dt>
-                                        <dd>연대금호아트홀 준공</dd>
-                                    </dl>
-                                    <h4>2014</h4>
-                                    <dl>
-                                        <dt>08</dt>
-                                        <dd>인천공항 제2 격납고 준공</dd>
-                                        <dt>07</dt>
-                                        <dd>금호타이어 중앙연구소 준공</dd>
-                                        <dd>충북 증평군 사곡리마을과 1社1村 자매결연</dd>
-                                    </dl>
-                                    <h4>2012</h4>
-                                    <dl>
-                                        <dt>03</dt>
-                                        <dd>다기능 스마트 스위치, 레드닷 디자인 어워드 수상</dd>
-                                        <dt>02</dt>
-                                        <dd>베트남 타임스퀘어 준공</dd>
-                                    </dl>
-                                    <h4>2011</h4>
-                                    <dl>
-                                        <dt>12</dt>
-                                        <dd>신보령 1,2호기 착공</dd>
-                                        <dt>10</dt>
-                                        <dd>베트남 21개 현지 협력사와 ‘우수 협력사 Partnership 강화’ MOU 체결</dd>
-                                        <dt>08</dt>
-                                        <dd>빛그린어울림마을 2호 조성</dd>
-                                        <dt>04</dt>
-                                        <dd>UAE 아부다비 공항 관제탑 그랜드 오픈(Grand Open)</dd>
-                                        <dd>경기도 화성시 신천마을과 1社1村 자매결연식</dd>
-                                    </dl>
-                                    <h4>2010</h4>
-                                    <dl>
-                                        <dt>11</dt>
-                                        <dd>도심 최대규모 오피스빌딩 센터원(CENTER1) 준공</dd>
-                                        <dt>10</dt>
-                                        <dd>UAE 아부다비 공항 관제탑 준공</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="inner">
-                                <div class="year_tit right">
-                                    <div class="bg year2000"></div>
-                                    <h3>2000's'</h3>
-                                </div>
-                                <div class="year_list right">
-                                    <h4>2009</h4>
-                                    <dl>
-                                        <dt>09</dt>
-                                        <dd>베트남 금호아시아나플라자 준공</dd>
-                                        <dt>08</dt>
-                                        <dd>빛그린어울림마을 1호 조성</dd>
-                                        <dt>06</dt>
-                                        <dd>상반기 공공부분 수주실적 1조원 돌파, 업계 최다 실적</dd>
-                                        <dt>04</dt>
-                                        <dd>전남 고흥군과 5,000억 규모 풍력발전사업 MOU 체결</dd>
-                                        <dt>03</dt>
-                                        <dd>아로마 향기 도어폰, 레드닷 디자인 어워드 수상</dd>
-                                        <dd>전력산업기술기준(KEPIC:Korea Electric Power Industry Code) 자격 인증서 취득</dd>
-                                    </dl>
-                                    <h4>2008</h4>
-                                    <dl>
-                                        <dt>10</dt>
-                                        <dd>여수시 신재생에너지 사업 참여 MOU 체결</dd>
-                                        <dt>09</dt>
-                                        <dd>금호아시아나 본관 준공</dd>
-                                        <dt>07</dt>
-                                        <dd>건설업계 최저 재해율 1위 달성</dd>
-                                        <dt>06</dt>
-                                        <dd>2008년 상반기 건설업계 최다 GD마크 획득</dd>
-                                        <dd>베트남 사랑의 집 9호</dd>
-                                    </dl>
-                                    <h4>2006</h4>
-                                    <dl>
-                                        <dt>12</dt>
-                                        <dd>두바이 지사 설립</dd>
-                                    </dl>
-                                    <h4>2005</h4>
-                                    <dl>
-                                        <dt>09</dt>
-                                        <dd>베트남 금호아시아나플라자 착공, 해외사업 재개</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             
             <!-- ↓↓↓↓↓ <div id="contents">닫는 태그부터 footer까지
