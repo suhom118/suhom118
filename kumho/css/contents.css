@@ -1,4 +1,3 @@
-@import url('default.css');
 /* 각각의 콘텐츠 페이지의 스타일을 저장 */
 
 /* 회사소개 > CEO인사말 */
@@ -76,27 +75,25 @@
 .cnt_historyN .inner {
     position: relative; /* year_tit 정렬의 기준 */
 }
-.cnt_historyN .inner+.inner{
-    margin: 120px 0 0 0;
+.cnt_historyN .inner + .inner {
+    margin: 116px 0 0 0;
 }
 .cnt_historyN .year_tit {
     position: absolute;
     top: 0;
 }
 .cnt_historyN .year_tit.left {
-    left: 120px;
+    left: 0;
 }
 .cnt_historyN .year_tit.right {
-    right: 120px;
+    right: 0;
 }
 .cnt_historyN .year_tit .bg {
-    width: 440px;
-    height: 440px;
+    width: 600px;
+    height: 340px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 220px;
 }
 .cnt_historyN .year_tit .bg.year2010 {
     background-image: url(../images/contents/historyN_img01.png);
@@ -107,12 +104,12 @@
 .cnt_historyN .year_tit h3 {
     position: absolute;
     left: 0;
-    top: 170px;
+    top: 141px;
     width: 100%;
-    color: #fff;
-    text-align: center;
+    color: #FFF;
     font-size: 50px;
     font-weight: 700;
+    text-align: center;
 }
 .cnt_historyN .year_list.left {
     margin: 0 0 0 50%;
@@ -120,9 +117,10 @@
 .cnt_historyN .year_list.right {
     margin: 0 50% 0 0;
 }
+
 .cnt_historyN .year_list h4 {
     position: relative;
-    color: #1d1d1d;
+    color: #1D1D1D;
     font-size: 25px;
     font-weight: 700;
 }
@@ -133,6 +131,7 @@
 .cnt_historyN .year_list.right h4 {
     margin-right: 39px;
     float: right;
+    /* text-align: right; */
 }
 .cnt_historyN .year_list h4::before {
     position: absolute;
@@ -141,7 +140,7 @@
     height: 8px;
     border: 2px solid #ED1C24;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #FFF;
     content: "";
 }
 .cnt_historyN .year_list.left h4::before {
@@ -163,10 +162,10 @@
     float: right;
 }
 .cnt_historyN .year_list.left dl dd {
-    margin-left: 45px;
+    margin-left:45px;
 }
 .cnt_historyN .year_list.right dl dd {
-    margin-right: 45px;
+    margin-right:45px;
     text-align: right;
 }
 .cnt_historyN .year_list dl {
@@ -175,17 +174,18 @@
 .cnt_historyN .year_list dl dt {
     font-weight: 700;
     line-height: 1.3;
-} 
+}
 .cnt_historyN .year_list dl dd {
     line-height: 1.3;
     margin-bottom: 7px;
 }
-.cnt_historyN .year_list dl dd ~dt {
+.cnt_historyN .year_list dl dd ~ dt {
     padding-top: 10px;
-} 
+}
 .cnt_historyN .year_list dl dt + dd ~ dt + dd {
     padding-top: 10px;
-} 
+}
+
 @media screen and (max-width:640px){
     .cnt_historyN .tit {
         font-size: 20px;
@@ -196,14 +196,13 @@
     .cnt_historyN .history_wrap {
         margin: 28px 0 0 0;
     }
-    /* 빨간선 */
     .cnt_historyN .history_wrap::before {
-        left: -9px;
+        left: 0;
         top: 0;
         height: 100%;
     }
-    .cnt_historyN .inner+.inner{
-        margin: 0;
+    .cnt_historyN .inner + .inner {
+        margin: 29px 0 0 0; 
     }
     .cnt_historyN .year_tit {
         position: relative;
@@ -213,25 +212,25 @@
         left: -20px;
     }
     .cnt_historyN .year_tit.right {
-        right: -20px;
+        right: 20px;
     }
     .cnt_historyN .year_tit .bg {
         width: 100%;
-        height: 160px;
-        border: 0;
-        border-radius: 0;
+        height: 122px;
     }
     .cnt_historyN .year_tit h3 {
-        top: 50px;
+        top: 36px;
         font-size: 30px;
     }
     .cnt_historyN .year_list.left {
-        float: none;
-        margin: 0 0 0 10px;
+        margin: 29px 0 0 23px;
     }
     .cnt_historyN .year_list.right {
-        float: none;
-        margin: 0 10px 0 0;
+        margin: 29px 0 0 23px;
+    }
+    
+    .cnt_historyN .year_list h4 {
+        font-size: 20px;
     }
     .cnt_historyN .year_list.left h4 {
         margin-left: 0;
@@ -242,51 +241,35 @@
         float: none;
     }
     .cnt_historyN .year_list h4::before {
-        top: 11px;
-        width: 8px;
-        height: 8px;
-        border: 2px solid #ED1C24;
-        border-radius: 6px;
-        background-color: #fff;
-        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
     }
     .cnt_historyN .year_list.left h4::before {
-        left: -25px;
+        left: -27px;
     }
     .cnt_historyN .year_list.right h4::before {
         right: auto;
-        left: -25px;
+        left: -27px;
     }
     .cnt_historyN .year_list.left dl {
-        margin: 0 0 26px 0;
+        margin: 5px 0 26px 0;
     }
     .cnt_historyN .year_list.right dl {
-        margin: 0 0 26px 0;
+        margin: 5px 0 26px 0;
+    }
+    .cnt_historyN .year_list.right dl dt {
+        float: left;
     }
     .cnt_historyN .year_list.left dl dd {
-        margin-left: 0;
+        margin-left:33px;
     }
     .cnt_historyN .year_list.right dl dd {
-        margin-right: 0;
+        margin-right:0;
+        margin-left: 33px;
         text-align: left;
     }
     .cnt_historyN .year_list dl {
         padding-top: 0;
     }
-    .cnt_historyN .year_list dl dt {
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 1.3;
-    } 
-    .cnt_historyN .year_list dl dd {
-        line-height: 1.3;
-        margin-bottom: 0;
-    }
-    .cnt_historyN .year_list dl dd ~dt {
-        padding-top: 0;
-    } 
-    .cnt_historyN .year_list dl dt + dd ~ dt + dd {
-        padding-top: 0;
-    } 
-
-}/* cnt_historyN 반응형 종료 */
+}

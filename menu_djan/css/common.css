@@ -31,7 +31,6 @@ html, body {
         font-size: 13px;
     }
     #wrap {
-        position: relative;
         min-width: 320px;
     }
     .wrapper {
@@ -42,161 +41,158 @@ html, body {
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
 
-/* pc일때디자인 */
-
-.header{
+.header {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 100;
     width: 100%;
     height: 100px;
-    color: #fff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 100;
+    color: #FFF;
 }
-.header .inner{
-    position: relative;
-    z-index: 100;
+.header .inner {
+    position: relative; /* logo와 tnb 정렬의 기준 */
 }
-.header h1{
-    position: absolute;
-    left: 0;
-    top: 23px;
+.header .logo { 
+    position: absolute; 
+    left: 0; 
+    top: 32px;
 }
-.header h1 a{
+.header .logo a {
     display: block;
     font-size: 0;
     line-height: 0;
 }
-.header h1 a img{
-    width: 200px;
+.header .logo a img {
+    width: 175px;
 }
-.header .tnb{
+.header .tnb {
     position: absolute;
     right: 0;
-    top: 35px  ;
+    top: 39px;
     display: flex;
-    width: 100px;
-    z-index: 100;
 }
-.header .tnb a{
+.header .tnb a {
     display: block;
-    margin: 0 0 0 12px;
+    margin: 0 0 0 10px;
 }
-.header .tnb a i{
+.header .tnb a i {
     font-size: 30px;
     font-weight: 300;
 }
-@media screen and (min-width:641px){
-    .header .gnb .gnb_open{
+
+@media screen and (min-width:641px){ /* 641px이상 즉 pc일때만 적용 */
+    .header .gnb .gnb_open {
         display: none;
     }
-    .header .gnb .gnb_close{
+    .header .gnb .gnb_close {
         display: none;
     }
-    .header .gnb>ul{
+    .header .gnb > ul {
         display: flex;
         justify-content: center;
     }
-    .header .gnb>ul>li{
+    .header .gnb > ul > li {
         position: relative;
-        width: 220px;
+        width: 230px;
         text-align: center;
     }
-    .header .gnb>ul>li>a{
+    .header .gnb > ul > li > a {
         display: block;
-        line-height: 100px;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 700;
+        line-height: 100px;
     }
-    .header .gnb>ul>li:hover>a{
+    .header .gnb > ul > li:hover > a {
         color: #00AE4D;
     }
-    .header .gnb>ul>li>ul{
+    .header .gnb > ul > li > ul { /* 2차메뉴 */
         display: none;
         position: absolute;
         left: 0;
         top: 100px;
         width: 100%;
-        padding: 20px 0 0 0;
-        height: 220px;
+        height: 210px;
+        padding: 2px 0 0 0;
     }
-    .header .gnb>ul>li>ul>li>a{
+    .header .gnb > ul > li > ul > li > a {
         display: block;
-        line-height: 2;
+        font-size: 17px;
+        line-height: 35px;
     }
+    .header .gnb > ul > li > ul > li > a:hover {
+        color: #00AE4D;
+        font-weight: 700;
+    }
+
     /* 하위메뉴가 나타날때 */
-    .header.menu_open{
-        border-bottom: 0;
-    }
-    .header.menu_open::before{
+    .header.menu_open::before {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 320px;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 50;
+        background-color: rgba(0,0,0,0.6);
         content: "";
     }
-    .header.menu_open .gnb>ul>li>ul{
+    .header.menu_open .gnb > ul > li > ul { /* 2차메뉴 */
         display: block;
     }
-    .header.menu_open .gnb>ul>li>ul>li:hover>a{
-        color: #00AE4D;
-    }
-    
-}
+}/* gnb pc형 스타일 */
+
 @media screen and (max-width:640px){
-    .header{
+    .header {
         height: 45px;
     }
-    .header .inner{
+    .header .logo { 
+        top: 15px;
     }
-    .header h1{
-        top: 14px;
+    .header .logo a img {
+        width: 80px;
     }
-    .header h1 a img{
-        width: 91px;
-    }
-    .header .tnb{
+    .header .tnb {
         display: none;
     }
-    .header .gnb .gnb_open{
+    .header .gnb .gnb_open {
         float: right;
         height: 45px;
     }
-    .header .gnb .gnb_open i{
+    .header .gnb .gnb_open i {
         margin: 3px 0 0 0;
         font-size: 20px;
         font-weight: 300;
     }
-    .header .gnb .gnb_close{
+    .header .gnb .gnb_close {
         display: none;
         position: absolute;
         right: 0;
         top: 0;
         height: 45px;
     }
-    .header .gnb>ul{
+    .header .gnb .gnb_close i {
+        margin: 3px 0 0 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .header .gnb > ul {
         display: none;
         padding: 48px 0 0 0;
     }
-    .header .gnb>ul>li>a{
+    .header .gnb > ul > li > a {
         display: block;
-        font-size: 20px;
-        line-height: 45px;
-        font-weight: 700;
+        position: relative;
+        font-size: 17px;
+        line-height: 54px;
     }
-    .header .gnb>ul>li>a::after{
+    .header .gnb > ul > li > a::after {
         position: absolute;
         right: 0;
         top: 14px;
-        color: #666;
+        color: #666666;
         font-family: 'Material Symbols Rounded';
         font-weight: normal;
         font-style: normal;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 1;
         letter-spacing: normal;
         text-transform: none;
@@ -208,33 +204,31 @@ html, body {
         -webkit-font-smoothing: antialiased;
         content: "\e5cf";
     }
-    /* 2차메뉴 */
-    .header .gnb>ul>li>ul{
+    .header .gnb > ul > li > ul { /* 2차메뉴 */
         display: none;
     }
-    .header.menu_mobile{
-        color: #1d1d1d;
-
+    .header.menu_mobile {
+        color: #1D1D1D;
     }
-    .header.menu_mobile::before{
+    .header.menu_mobile::before {
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
+        background-color: #FFF;
         content: "";
     }
-    .header.menu_mobile h1{
+    .header.menu_mobile .logo {
         display: none;
     }
-    .header.menu_mobile .gnb .gnb_open{
+    .header.menu_mobile .gnb .gnb_open {
         display: none;
     }
-    .header.menu_mobile .gnb>ul{
+    .header.menu_mobile .gnb .gnb_close {
         display: block;
     }
-    .header.menu_mobile .gnb .gnb_close{
+    .header.menu_mobile .gnb > ul {
         display: block;
     }
-}
+}/* header의 모바일 스타일 */
