@@ -1,0 +1,48 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+html, body {
+    color: #3D3D3D;
+    line-height: 1.2;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    /* 폰트 적용 우선순위
+       을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
+       apple sd gothic - 아이폰에서 지원하는 폰트 */
+    font-size: 15px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
+}
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 1400px;
+    /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
+       최소 넓이를 줌 */
+}
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+    width: 1400px;
+    margin: 0 auto;
+}
+@media screen and (max-width:640px){
+    /* 640px 이하의 디바이스에서만 아래 css가 적용
+      pc에서는 1280px이라는 콘텐츠 고정 넓이가 존재했지만
+      모바일에서는 디바이스 넓이에 맞춰서 꽉차게 구현
+      구현방식이 달라서 고정값을 모두 삭제 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 350px;
+    }
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+/* wrapper와 동일한 사이즈를 갖는 position:relative를 요소는 cnt_wrap 클래스를줌 */
+.cnt_wrap{
+    position: relative;
+}
