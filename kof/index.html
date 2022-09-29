@@ -4,17 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94a48106d1.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <title>한국해양재단</title>
 </head>
 <body>
     <div id="wrap">
         <header class="header">
-
+            
         </header>
         <section class="visual">
-            
+            <!-- visual은 높이가 100% 그안에 들어가는 텍스트는 위아래 가운데 일때
+                 visual의 자식으로 텍스트를 감싼 div가 있는게 좋다.
+                 그래야 visual 높이의 위아래 가운데 계산하기 좋음
+                 (wrapper 사용X)
+            -->
+            <div class="visual_wrap">
+                <h2>무한한 잠재력과 가능성으로 <br />
+                    하늘만큼 높고 육지보다 넓은 곳<br />
+                    <strong>해양은 우리의 미래</strong></h2>
+                <div class="search">
+                    <form>
+                        <fieldset>
+                            <legend>검색</legend>
+                            <label for="keyword">검색어</label>
+                            <input type="text" id="keyword" placeholder="검색어를 입력하세요" autocomplete="off" />
+                            <!-- input type="text", password는 반드시  
+                            무엇을 입력하는 항목인지 label을 써줘야함 (웹접근성)
+                            label의 for 값과 input의 id값을 동일하게 입력하면 연결  
+                            
+                            검색버튼은 type="submit" 또는 type="button" 또는 button태그일 수도 있음
+                            어떤 버튼을 사용하더라도 동일하게 구현되도록 코딩
+                            모든 코딩에서도 마찬가지로 a태그와 button는 혼용되는 경우가 많아서
+                            둘중에 어떤 태그를 쓰더라도 동일하게 구현되도록 하는게 좋음 -->
+                            <input type="submit" value="검색" class="btn" />
+                            <!-- <input type="button" value="검색" class="btn" /> -->
+                            <!-- <button class="btn"><span>검색</span><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </section>
+        <section class="part"></section>
+        <section class="notice"></section>
+        <section class="book"></section>
+        <section class="banner"></section>
+        <footer class="footer"></footer>
     </div>
 </body>
 </html>

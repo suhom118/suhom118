@@ -2,7 +2,7 @@
 /* 모든 태그의 스타일 초기화 */
 
 /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
-body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd {
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd, form, fieldset, legend, input, textarea, select {
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
@@ -19,12 +19,11 @@ em, address {
     font-style: normal;
 }
 /* 항목 앞에 동그라미 삭제 */
-ul, ol, li,dl, dt, dd {
+ul, ol, li {
     list-style: none;
 }
-button {
-    background-color: transparent; /* 투명 */
-    border: 0;
+/* form태그가 문자 스타일을 상속받지 않아서 상속받게 하기 */
+form, input, select, textarea, button {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
@@ -33,6 +32,16 @@ button {
     letter-spacing: inherit;
     /* 서체 상속 - button은 body에서 적용한 서체를 
        자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
+}
+fieldset {
+    border: 0;
+}
+legend {
+    display: none; /* form 태그의 legend은 타이틀로 숨김처리 */
+}
+button {
+    background-color: transparent; /* 투명 */
+    border: 0;    
     cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
 }
 

@@ -18,23 +18,20 @@ $(document).ready(function(){
     });
 
     /*
-    .biz .list ul li 에 마우스를 오버하면
-    .biz .list ul 에 over클래스추가
-    .biz .list ul li에 active 클래스 추가
+        .biz .list ul li 에 마우스를 오버하면 
+        .biz .list ul에 over 클래스를 추가
+        마우스를 오버한 li에만 active클래스를 추가
 
-     .biz .list ul li 에 마우스를 아웃하면
-    .biz .list ul 에 over클래스삭제
-    .biz .list ul li에 active 클래스 삭제
-     */
-    
+        --> 아웃 : 반대로 실행
+    */
     $('.biz .list ul li').on('mouseenter', function(){
-        $('.biz .list ul').addClass('over')
-        $(this).addClass('active')
-    })
-    $('.biz .list ul li').on('mouseleave', function(){
-        $('.biz .list ul').removeClass('over')
-        $(this).removeClass('active')
-    })
+        $('.biz .list ul').addClass('over');
+        $(this).addClass('active');
+    });
 
-})
-//document.ready 종료
+    $('.biz .list ul li').on('mouseleave', function(){
+        $('.biz .list ul').removeClass('over');
+        $(this).removeClass('active');
+    });
+
+});//document.ready 종료
