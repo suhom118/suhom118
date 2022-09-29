@@ -82,6 +82,7 @@ html, body {
     line-height: 0;
 }
 @media screen and (min-width:641px){
+   
     .header .gnb{
         float: right;
         margin: 0 26px 0 0;
@@ -173,6 +174,7 @@ html, body {
         
     }
     /* 오버스타일 */
+    
     .header .gnb>ul>li:hover>a,
     .header .gnb>ul>li>a:focus{
         color: #3d3d3d;
@@ -193,6 +195,12 @@ html, body {
 
 
 @media screen and (max-width:640px){
+    .visual h2{
+        display: none;
+    }
+    .visual .search{
+        display: none;
+    }
     .header{
         height: 60px;
     }

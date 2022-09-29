@@ -2,7 +2,7 @@
 $(document).ready(function(){
     let pcMo//pc일때 pc 모바일일때는 모바일
     let winW
-    pcChk
+    pcChk()
     
     if(winW>640){
         pcMo='pc'
