@@ -48,3 +48,286 @@ html, body {
 .cnt_wrap {
     position: relative;
 }
+
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    content: "";
+    color: #fff;
+    /*  header와 서브메뉴 lnb와 footer에서 풀다운 메뉴가 중복될때 
+    header가 맨위에 올라가려고 제일 높은 숫자
+    header-300
+    lnb-200
+    footer-100
+     */
+    z-index: 300;
+}
+.header .logo{
+    float: left;
+    margin: 30px 0 0 26px;
+}
+.header .logo a{
+    display: block;
+    width: 213px;
+    height: 47px;
+    background-image: url(../images/common/logo_w.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
+}
+@media screen and (min-width:641px){
+    .header .gnb{
+        float: right;
+        margin: 0 26px 0 0;
+    }
+    .header .gnb .gnb_open{
+        /* 모바일에서만보임 */
+        display: none;
+    }
+    .header .gnb .gnb_close{
+        /* 모바일에서만보임 */
+        display: none;
+    }
+    .header .gnb>ul{
+        margin: 0 0 0 0;
+    }
+    .header .gnb>ul>li{
+        float: left;
+        width: 220px;
+
+    }
+    .header .gnb>ul>li{
+        /* 2차메뉴 정렬의 중심 */
+        position: relative;
+
+    }
+    .header .gnb>ul>li>a{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        line-height: 100px;
+    }
+        /* 2차메뉴 */
+    .header .gnb>ul>li>ul{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 430px;
+        border-left: 1px solid #eee;
+        text-align: center;
+        font-size: 18px;
+        line-height: 2.5;
+        padding: 15px 0 0 0;
+    }
+    .header .gnb>ul>li>ul>li>a{
+        display: block;
+
+    }
+    /* header가 고정됐을때 */
+    .header.fixed{
+    /* 무조건body와 정렬  */
+        position: fixed;
+        min-width: 1400px;
+        background-color: #fff;
+        color: #3D3D3D;
+        box-shadow: 0 5px 10px rgba(0,0,0, 0.1);
+    }
+    .header.fixed, 
+    .header.menu_open{
+        color: #3D3D3D;
+    }
+    .header.fixed .logo a,
+    .header.menu_open .logo a{
+        background-image: url(../images/common/logo.svg);
+    }
+     /* 2차메뉴 */
+     .header.menu_open::before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 530px;
+        background-color: #fff;
+        content: "";
+        z-index: -1;
+     }
+     .header.menu_open::after{
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: 1px;
+        background-color: #eee;
+        content: "";
+     }
+     .header.menu_open .gnb>ul>li>ul{
+        display: block;
+        
+    }
+    /* 오버스타일 */
+    .header .gnb>ul>li:hover>a,
+    .header .gnb>ul>li>a:focus{
+        color: #3d3d3d;
+        font-weight: bold;
+    }
+    .header .gnb>ul>li:hover>a>span{
+        position: relative;
+    }
+    .header .gnb>ul>li:hover>ul{
+        background-color: #0057C1;
+        color: #fff;
+    }
+    .header .gnb>ul>li>ul>li:hover{
+        color: #0BB7F8;
+    }
+}
+/* gnb의 pc스타일 */
+
+
+@media screen and (max-width:640px){
+    .header{
+        height: 60px;
+    }
+    .header .logo{
+        margin: 20px 0 0 20px;
+    }
+    .header .logo a{
+        width: 90px;
+        height: 20px;
+    }
+    .header .gnb{
+        float: right;
+        color: rgba(255, 255, 255, 0.6);
+        /* 모바일 메뉴가 길어지면 스크롤되게하는값 */
+        overflow-y: auto;
+    }
+    .header .gnb button {
+        font-size: 20px;
+        height: 60px;
+        padding: 0 20px;
+    }
+    .header .gnb .gnb_open{
+        position: absolute;
+        right: 13px;
+        top: 5px;
+        content: "";
+        color: rgba(255,255,255,0.8);
+    }
+    .header .gnb button span{
+        display: none;
+    }
+    .header .gnb>ul{
+        display: none;
+        margin: 60px 20px 20px 20px;
+        
+    }
+    .header .gnb>ul>li{
+        border-bottom: 1px solid #ccc;
+    }
+    .header .gnb>ul>li:first-child{
+        border-top: 1px solid #ccc;
+    }
+    .header .gnb>ul>li>a{
+        display: block;
+        position: relative;
+        font-size: 20px;
+        line-height: 60px;
+        padding: 0 0 0 20px;
+    }
+    .header .gnb>ul>li>a::after{
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        content: "\f107";
+        font-weight: 900;
+        font-family: "Font Awesome 6 Free";
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: var(--fa-display,inline-block);
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+
+    }
+    /* 2차메뉴 */
+    .header .gnb>ul>li>ul{
+        /* display: none; */
+        color: #fff;
+        background-color: #0057C1;
+    }
+    .header .gnb>ul>li>ul>li>a{
+        display: block;
+        line-height: 40px;
+        padding: 0 0 0 30px;
+        font-size: 17px;
+    }
+    .header .gnb .gnb_close{
+        display: none;
+        position: fixed;
+        right: 13px;
+        top: 5px;
+        content: "";
+    }
+    
+
+    /* 메뉴가 열렸을때  */
+    .header.menu_mobile .gnb{
+        /* fixed는 body와 정렬 */
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        color: #3D3D3D;
+    }
+    .header.menu_mobile .gnb .gnb_open{
+        display: none;
+    }
+    .header.menu_mobile .gnb ul{
+        display: block;
+    }
+    .header.menu_mobile .gnb>ul>li>ul{
+        display: none;
+    }
+    .header.menu_mobile .gnb .gnb_close{
+        display: block;
+    }
+   /* 서브메뉴가열렸을때 */
+   .header .gnb>ul>li.sub_open>a{
+        color:#0057C1;
+        font-weight: 700;
+   }
+   .header .gnb>ul>li.sub_open>a::after{
+    color:#0057C1;
+    content: "\f106";
+   }
+   .header .gnb>ul>li.sub_open>ul{
+    display: block;
+   }
+
+    /* header 고정 */
+    .header.fixed{
+        background-color: #fff;
+        position: fixed;
+        min-width: 350px;
+        color: #3D3D3D;
+        box-shadow: 0 5px 10px rgba(0,0,0, 0.1);
+    }
+    .header.fixed .gnb .gnb_open{
+        color: #3D3D3D;
+    }
+    .header.fixed .logo a {
+        background-image: url(../images/common/logo.svg);
+    }
+}
+/* gnb의 모바일스타일 */

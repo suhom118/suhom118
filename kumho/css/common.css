@@ -11,6 +11,7 @@ html, body {
     font-weight: 400;
     /* letter-spacing: -0.05em; */
     word-break: keep-all; /* 단어별 줄바꿈 */
+    -webkit-font-smoothing: antialiased;
 }
 #wrap { /* id="wrap" */
     overflow: hidden;
