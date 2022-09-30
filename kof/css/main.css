@@ -396,7 +396,7 @@
         margin: 56px 0 80px 0;
         /* 가장큰요소인 공지사항 리스트가 absolute라
         높이 계산을 하기위해 notice에 높이를 줌 */
-        height: 340px;
+        height: 320px;
     }
     .notice ul li{
         margin: 0 20px 0 0;
@@ -448,7 +448,7 @@
     }
     .notice ul li .detail ul li{
         width: 226px;
-        height: 200px;
+        height: 180px;
         margin: 0 22px 0 0 ;
     }
     .notice ul li .detail ul li:last-child{
