@@ -10,7 +10,8 @@ html, body {
     font-size: 15px;
     font-weight: 400;
     /* letter-spacing: -0.05em; */
-    word-break: keep-all; /* 단어별 줄바꿈 */
+    word-break: keep-all; 
+    /* 단어별 줄바꿈 */
 }
 #wrap { /* id="wrap" */
     overflow: hidden;
