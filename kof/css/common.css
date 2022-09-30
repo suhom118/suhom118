@@ -345,5 +345,28 @@ top이라고 클래스명을 주면 해당스타일이 적용됨
 절대 컨텐츠 페이지에서 사용하지 않을 이름으로 줘야함
 aside 태그가 거의 사용하지 않는 태그라 aside.top이라고함 */
 aside.top{
+    display: none;
+    width: 40px;
+    height: 40px;
     position: fixed;
+    right: 95px;
+    bottom: 95px;
+    z-index: 250;
+}
+aside.top button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 20px;
+    background-color: #0BB7F8;
+    color: rgba(255,255,255,0.8);
+}
+aside.top button span{
+    display: none;
+}
+aside.top button i{
+    font-size: 20px;
 }

@@ -5,9 +5,10 @@ $(document).ready(function(){
     let pcMo; //pc일때 pc, 모바일때는 mobile 
     let winW;
     pcChk(); //함수실행
-
+    topShow();
     $(window).resize(function(){ // 브라우저가 리사이즈 될때마다 실행
         pcChk(); //함수실행
+        topShow();
     });//window.resize 종료
 
     function pcChk(){ //함수 선언
@@ -64,5 +65,23 @@ $(document).ready(function(){
             $(this).parents('li').toggleClass('sub_open');
         }
     });
+
+    // top버튼이 스크롤을 제법 내렸을때 나오게 다시상단으로 올라가면 사라지게
+    function topShow(){ //함수의 선언
+        scrolling = $(window).scrollTop();
+        console.log(scrolling);
+        if(scrolling > 100){
+            $('.aside.top').show();
+            }    else{
+                
+            $('.aside.top').hide();
+            }
+    }
+    // top버튼을 누르면 상단으로 스크롤
+    $('aside.top').on('click', function(){
+        $('html,body').animate({
+            scrollTop:0
+        }, 500)
+    })
 
 });//document.ready 종료
