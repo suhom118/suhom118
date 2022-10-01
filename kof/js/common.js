@@ -33,9 +33,7 @@ $(document).ready(function(){
         $('.header').removeClass('menu_open');
     });
 
-
-
-    let scrolling;
+  let scrolling;
     scrollChk();//함수실행
 
     $(window).scroll(function(){
@@ -83,5 +81,3 @@ $(document).ready(function(){
             scrollTop:0
         }, 500)
     })
-
-});//document.ready 종료
