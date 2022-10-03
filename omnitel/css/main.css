@@ -1,216 +1,240 @@
-@import url('default.css');
+@import url("default.css");
 
 .visual {
-    height: 850px;
-    background: url(../images/visual_bg.png) no-repeat center center / cover;
-    color: #FFF;
+  margin: 500px 0 0 0;
+  height: 850px;
+  background: url(../images/visual_bg.png) no-repeat center center / cover;
+  color: #fff;
 }
 .visual h2 {
-    padding: 298px 0 0 0;
-    font-size: 75px;
-    font-weight: 400;
-    line-height: 1;
+  position: relative;
+  padding: 298px 0 0 0;
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 1;
+  animation: slide 2s ease-out;
 }
-.visual h2 strong {
-    font-weight: 700;
+@keyframes slide {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -500px;
+    opacity: 0;
+  }
 }
 
-@media screen and (max-width:640px){
-    .visual {
-        height: auto;
-    }
-    .visual h2 {
-        padding: 107px 0 138px 0;
-        font-size: 35px;
-    }
-}/* visual 반응형 종료 */
+.visual h2 strong {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 640px) {
+  .visual {
+    height: auto;
+  }
+  .visual h2 {
+    padding: 107px 0 138px 0;
+    font-size: 35px;
+  }
+} /* visual 반응형 종료 */
 
 .works {
-    color: #FFF;
-    text-align: center;
-    background-color: #F39800;
+  color: #fff;
+  text-align: center;
+  background-color: #f39800;
 }
 .works .tit h2 {
-    padding: 54px 0 10px 0;
-    font-size: 50px;
-    font-weight: 700;
+  padding: 54px 0 10px 0;
+  font-size: 50px;
+  font-weight: 700;
 }
 .works .tit p span {
-    display: block;
+  display: block;
 }
 .works ul {
-    margin: 67px 0 0 0;
+  margin: 67px 0 0 0;
 }
 .works ul li {
-    float: left;
-    width: 33.33%;
+  float: left;
+  width: 33.33%;
 }
 .works ul li a {
-    display: block;
-    height: 300px;
+  display: block;
+  height: 300px;
 }
 .works ul li.marketing a {
-    background: url(../images/works_marketing.png) no-repeat center center / cover;
+  background: url(../images/works_marketing.png) no-repeat center center / cover;
 }
 .works ul li.commerce a {
-    background: url(../images/works_commerce.png) no-repeat center center / cover;
+  background: url(../images/works_commerce.png) no-repeat center center / cover;
 }
 .works ul li.biz a {
-    background: url(../images/works_biz.png) no-repeat center center / cover;
+  background: url(../images/works_biz.png) no-repeat center center / cover;
 }
 .works ul li a i {
-    margin: 82px 0 14px 0;
-    color: rgba(255,255,255,0.8);
-    font-size: 50px;
+  margin: 82px 0 14px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 50px;
 }
 .works ul li a strong {
-    display: block;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.2;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
 }
-@media screen and (max-width:640px){
-    .works {
-        padding: 0 20px 20px 20px;
-    }
-    .works .tit h2 {
-        padding: 36px 0 13px 0;
-        font-size: 25px;
-    }
-    .works .tit p span {
-        display: inline;
-    }
-    .works ul {
-        margin: 25px 0 0 0;
-    }
-    .works ul li {
-        float: none;
-        width: auto;
-    }
-    .works ul li a {
-        height: auto;
-    }
-    .works ul li a i {
-        margin: 29px 0 6px 0;
-        font-size: 30px;
-    }
-    .works ul li a strong {
-        padding: 0 0 37px 0;
-        font-size: 20px;
-    }
-}/* works 반응형 종료 */
+@media screen and (max-width: 640px) {
+  .works {
+    padding: 0 20px 20px 20px;
+  }
+  .works .tit h2 {
+    padding: 36px 0 13px 0;
+    font-size: 25px;
+  }
+  .works .tit p span {
+    display: inline;
+  }
+  .works ul {
+    margin: 25px 0 0 0;
+  }
+  .works ul li {
+    float: none;
+    width: auto;
+  }
+  .works ul li a {
+    height: auto;
+  }
+  .works ul li a i {
+    margin: 29px 0 6px 0;
+    font-size: 30px;
+  }
+  .works ul li a strong {
+    padding: 0 0 37px 0;
+    font-size: 20px;
+  }
+} /* works 반응형 종료 */
 
 .news h2 {
-    margin: 51px 0 36px 0;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
+  margin: 51px 0 36px 0;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
 }
 .news ul li {
-    float: left;
-    width: 400px;
-    margin: 0 40px 0 0;
+  float: left;
+  width: 400px;
+  margin: 0 40px 0 0;
 }
 .news ul li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 .news ul li a {
-    display: block;
+  display: block;
 }
 .news ul li a .subject {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    /* 2줄고정 */
-    overflow: hidden;
-    line-height: 1.5;
-    height: 3em;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  /* 2줄고정 */
+  overflow: hidden;
+  line-height: 1.5;
+  height: 3em;
 }
 .news ul li a .date {
-    display: block;
-    margin: 10px 0;
-    color: #666666;
+  display: block;
+  margin: 10px 0;
+  color: #666666;
 }
 .news ul li a .cnt {
-    display: block;
-    /* 7줄고정 */
-    overflow: hidden;
-    line-height: 1.5;
-    height: 10.5em;
+  display: block;
+  /* 7줄고정 */
+  overflow: hidden;
+  line-height: 1.5;
+  height: 10.5em;
 }
-@media screen and (max-width:640px){
-    .news h2 {
-        margin: 39px 0 29px 0;
-        font-size: 25px;
-    }
-    .news ul li {
-        float: none;
-        width: auto;
-        margin: 0 0 21px 0;
-        border-bottom: 1px solid #CCCCCC;
-    }
-    .news ul li:last-child {
-        margin-bottom: 0;
-        border-bottom: 0;
-    }
-    .news ul li a .subject {
-        font-size: 17px;
-        /* 2줄고정 -> 줄수 제한 없음 */
-        overflow: visible;
-        height: auto;
-    }
-    .news ul li a .cnt {
-        margin: 0 0 21px 0;
-        /* 7줄고정 -> 4줄 고정 */
-        height: 6em;
-    }
-}/* news 반응형 종료 */
+@media screen and (max-width: 640px) {
+  .news h2 {
+    margin: 39px 0 29px 0;
+    font-size: 25px;
+  }
+  .news ul li {
+    float: none;
+    width: auto;
+    margin: 0 0 21px 0;
+    border-bottom: 1px solid #cccccc;
+  }
+  .news ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  .news ul li a .subject {
+    font-size: 17px;
+    /* 2줄고정 -> 줄수 제한 없음 */
+    overflow: visible;
+    height: auto;
+  }
+  .news ul li a .cnt {
+    margin: 0 0 21px 0;
+    /* 7줄고정 -> 4줄 고정 */
+    height: 6em;
+  }
+} /* news 반응형 종료 */
 
 .footer {
-    margin: 96px 0 0 0;
-    background: #3D3D3D;
-    color: rgba(255,255,255,0.8);
+  margin: 96px 0 0 0;
+  background: #3d3d3d;
+  color: rgba(255, 255, 255, 0.8);
 }
 .footer .finfo {
-    padding: 61px 0 17px 0;
-    line-height: 1.8;
+  padding: 61px 0 17px 0;
+  line-height: 1.8;
 }
 .footer .finfo span {
-    display: inline-block;
+  display: inline-block;
 }
 .footer .finfo span.line {
-    position: relative;
-    margin: 0 30px 0 0;
+  position: relative;
+  margin: 0 30px 0 0;
 }
 .footer .finfo span.line::after {
-    position: absolute;
-    right: -17px;
-    top: 9px;
-    width: 1px;
-    height: 10px;
-    background-color: rgba(255,255,255,0.2);
-    content: "";
+  position: absolute;
+  right: -17px;
+  top: 9px;
+  width: 1px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  content: "";
 }
 .footer .copyright {
-    padding: 0 0 90px 0;
-    color: rgba(255,255,255,0.6);
+  padding: 0 0 90px 0;
+  color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width:640px){
-    .footer {
-        margin: 59px 0 0 0;
-    }
-    .footer .finfo {
-        padding: 45px 0 17px 0;
-    }
-    .footer .finfo span.line {
-        margin: 0 26px 0 0;
-    }
-    .footer .finfo span.line::after {
-        right: -15px;
-        top: 8px;
-        height: 8px;
-    }
-    .footer .copyright {
-        padding: 0 0 47px 0;
-    }
-}/* footer 반응형 종료 */
+@media screen and (max-width: 640px) {
+  .footer {
+    margin: 59px 0 0 0;
+  }
+  .footer .finfo {
+    padding: 45px 0 17px 0;
+  }
+  .footer .finfo span.line {
+    margin: 0 26px 0 0;
+  }
+  .footer .finfo span.line::after {
+    right: -15px;
+    top: 8px;
+    height: 8px;
+  }
+  .footer .copyright {
+    padding: 0 0 47px 0;
+  }
+} /* footer 반응형 종료 */

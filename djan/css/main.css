@@ -1,217 +1,230 @@
-@import url('default.css');
+@import url("default.css");
 
 header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    height: 100px;
-    color: #FFF;
-    transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  transition: 0.5s;
 }
 header .logo {
-    float: left;
-    margin: 32px 128px 0 0;
-    font-size: 0;
-    line-height: 0;
-    transition: 0.5s;
+  float: left;
+  margin: 32px 128px 0 0;
+  font-size: 0;
+  line-height: 0;
+  transition: 0.5s;
 }
 header .gnb {
-    float: left;
+  float: left;
 }
 header .gnb > ul > li {
-    float: left;
-    width: 230px;
-    text-align: center;
+  float: left;
+  width: 230px;
+  text-align: center;
 }
 header .gnb > ul > li > a {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 100px;
-    /* header의 높이가 100px - 글자를 header 위아래 가운데 배치 */
-    white-space: nowrap;
-    /* 행간으로 위아래 여백을 처리해버리는 경우
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100px;
+  /* header의 높이가 100px - 글자를 header 위아래 가운데 배치 */
+  white-space: nowrap;
+  /* 행간으로 위아래 여백을 처리해버리는 경우
        절대 2줄이 되지 못하도록 white-space:nowrap(줄바꿈금지)을 준다 */
-    transition: 0.5s;
+  transition: 0.5s;
 }
 header .gnb > ul > li > ul {
-    /* 2차메뉴 */
-    display: none;
+  /* 2차메뉴 */
+  display: none;
 }
 header .gnb .gnb_open {
-    display: none; /* 모바일 버튼 */
+  display: none; /* 모바일 버튼 */
 }
 header .gnb .gnb_close {
-    display: none; /* 모바일 버튼 */
+  display: none; /* 모바일 버튼 */
 }
 header .tnb {
-    float: right;
-    margin: 35px 0 0 0;
-    transition: 0.5s;
+  float: right;
+  margin: 35px 0 0 0;
+  transition: 0.5s;
 }
 header .tnb a {
-    display: block;
-    float: left;
-    margin: 0 0 0 10px;
+  display: block;
+  float: left;
+  margin: 0 0 0 10px;
 }
 header .tnb a span {
-    display: none;
+  display: none;
 }
 header .tnb a i {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 header.fixed {
-    position: fixed;
-    height: 80px;
-    background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 header.fixed .logo {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 header.fixed .gnb > ul > li > a {
-    line-height: 80px;
+  line-height: 80px;
 }
 header.fixed .tnb {
-    margin: 25px 0 0 0;
+  margin: 25px 0 0 0;
+}
+#horizontal-underline {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 0;
+  border-radius: 3px;
+  transition: 0.5s;
+  background-color: pink;
+  top: 0;
+  z-index: 2000;
 }
 
-@media screen and (max-width:640px){
-    header {
-        height: 45px;
-    }
-    header .logo {
-        margin: 15px 0 0 0;
-    }
-    header .logo a img {
-        width: 80px;
-    }
-    header .gnb {
-        float: right;
-        margin: 13px 0 0 0;
-    }
-    header .gnb > ul {
-        display: none;
-    }
-    header .gnb .gnb_open {
-        display: block; /* 모바일 버튼 */
-    }
-    header .gnb .gnb_open span {
-        display: none;
-    }
-    header .gnb .gnb_open i {
-        font-size: 20px;
-    }
-    header .tnb {
-        display: none;
-    }
-    header.fixed {
-        height: 45px;
-    }
-    header.fixed .logo {
-        margin-top: 15px;
-    }
-}/* header media 종료 */
+@media screen and (max-width: 640px) {
+  header {
+    height: 45px;
+  }
+  header .logo {
+    margin: 15px 0 0 0;
+  }
+  header .logo a img {
+    width: 80px;
+  }
+  header .gnb {
+    float: right;
+    margin: 13px 0 0 0;
+  }
+  header .gnb > ul {
+    display: none;
+  }
+  header .gnb .gnb_open {
+    display: block; /* 모바일 버튼 */
+  }
+  header .gnb .gnb_open span {
+    display: none;
+  }
+  header .gnb .gnb_open i {
+    font-size: 20px;
+  }
+  header .tnb {
+    display: none;
+  }
+  header.fixed {
+    height: 45px;
+  }
+  header.fixed .logo {
+    margin-top: 15px;
+  }
+} /* header media 종료 */
 
 .visual {
-    position: relative;
-    height: 1000px;
-    background: url(../images/visual_bg.png) no-repeat center center / cover;
-    background-attachment: fixed;
-    color: #FFF;
+  position: relative;
+  height: 1000px;
+  background: url(../images/visual_bg.png) no-repeat center center / cover;
+  background-attachment: fixed;
+  color: #fff;
 }
 .visual .inner {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    /* margin: -188px 0 0 0; */
-    transform: translate(0, -188px);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  /* margin: -188px 0 0 0; */
+  transform: translate(0, -188px);
 }
 .visual h2 {
-    margin: 0 0 36px 0;
-    font-size: 60px;
-    font-weight: 100;
-    line-height: 1.25;
+  margin: 0 0 36px 0;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1.25;
 }
 .visual h2 strong {
-    font-weight: 700;
+  font-weight: 700;
 }
 .visual a {
-    display: inline-block;
-    padding: 2px 5px 2px 0;
-    font-weight: 700;
-    border-bottom: 1px solid #FFF;
+  display: inline-block;
+  padding: 2px 5px 2px 0;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
 }
 
-@media screen and (max-width:640px){
-    .visual {
-        height: 760px;
-    }
-    .visual .inner {
-        transform: translate(0, -160px);
-    }
-    .visual h2 {
-        margin: 0 0 20px 0;
-        font-size: 30px;
-    }
-}/* visual media 종료 */
+@media screen and (max-width: 640px) {
+  .visual {
+    height: 760px;
+  }
+  .visual .inner {
+    transform: translate(0, -160px);
+  }
+  .visual h2 {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+  }
+} /* visual media 종료 */
 
 .care .inner {
-    position: relative;/* more정렬의 기준 */
+  position: relative; /* more정렬의 기준 */
 }
 .care .tit {
-    margin: 124px 0 66px 0;
+  margin: 124px 0 66px 0;
 }
 .care .tit h2 {
-    float: left;
-    color: #1d1d1d;
-    font-size: 60px;
-    font-weight: 700;
+  float: left;
+  color: #1d1d1d;
+  font-size: 60px;
+  font-weight: 700;
 }
 .care .tit p {
-    float: left;
-    margin: 55px 0 0 30px;
+  float: left;
+  margin: 55px 0 0 30px;
 }
 .care .more {
-    position: absolute;
-    right: 0;
-    top: 49px;
+  position: absolute;
+  right: 0;
+  top: 49px;
 }
 .care .more a {
-    display: block;
-    width: 120px;
-    height: 24px;
-    line-height: 24px;
-    border-bottom: 1px solid #3D3D3D;
+  display: block;
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid #3d3d3d;
 }
 .care .more a span {
-    float: left;
+  float: left;
 }
 .care .more a i {
-    float: right;
-    margin: 6px 0 0 0;
-    font-size: 18px;
+  float: right;
+  margin: 6px 0 0 0;
+  font-size: 18px;
 }
 .care .more a:hover {
-    color: #00AE4D;
-    border-bottom-color: #00AE4D;
+  color: #00ae4d;
+  border-bottom-color: #00ae4d;
 }
 .care ul li {
-    float: left;
-    width: 440px;
-    margin: 0 40px 88px 0;
+  float: left;
+  width: 440px;
+  margin: 0 40px 88px 0;
 }
-.care ul li:nth-child(3), .care ul li:nth-child(6) {
-    margin-right: 0;
+.care ul li:nth-child(3),
+.care ul li:nth-child(6) {
+  margin-right: 0;
 }
-.care ul li:nth-child(2), .care ul li:nth-child(5) {
-    margin-top: 40px;
+.care ul li:nth-child(2),
+.care ul li:nth-child(5) {
+  margin-top: 40px;
 }
 .care ul li a {
-    display: block;
+  display: block;
 }
 /*
     마우스 오버 시 이미지 확대
@@ -224,588 +237,591 @@ header.fixed .tnb {
     5. 오버후 이미지를 transform:scale3d(확대값,확대값,1)을 준다.
 */
 .care ul li a span {
-    display: block;
-    overflow: hidden;
-    height: 100%;
-    border-radius: 20px;
-    /* 이미지도 하단에 행간이 적용되어 여백이 발생함
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 20px;
+  /* 이미지도 하단에 행간이 적용되어 여백이 발생함
        이미지 하단 행간을 삭제하려면 감싸는 요소에 글자크기/행간을 0 줘야함 */
-    font-size: 0;
-    line-height: 0;
+  font-size: 0;
+  line-height: 0;
 }
 .care ul li a span img {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 .care ul li a:hover span img {
-    transform: scale3d(1.2, 1.2, 1);
-    /* scale3d에서 1.2는 좌우 넓이 배율 
+  transform: scale3d(1.2, 1.2, 1);
+  /* scale3d에서 1.2는 좌우 넓이 배율 
        마지막 1은 축 - 1일 줘야 가운데에서 늘어남 */
 }
 .care ul li a:hover span {
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .care ul li a dl {
-    margin: 13px 0 0 20px;
-    font-size: 17px;
-    line-height: 30px;
+  margin: 13px 0 0 20px;
+  font-size: 17px;
+  line-height: 30px;
 }
 .care ul li a dl dt {
-    font-weight: 700;
-    float: left;
+  font-weight: 700;
+  float: left;
 }
 .care ul li a dl dd {
-    display: block;
-    position: relative;
-    margin: 0 0 0 90px;
+  display: block;
+  position: relative;
+  margin: 0 0 0 90px;
 }
 .care ul li a dl dd::before {
-    position: absolute;
-    left: -8px;
-    top: 11px;
-    width: 1px;
-    height: 13px;
-    background-color: #CCCCCC;
-    content: "";
+  position: absolute;
+  left: -8px;
+  top: 11px;
+  width: 1px;
+  height: 13px;
+  background-color: #cccccc;
+  content: "";
 }
 
-@media screen and (max-width:640px){
-    .care .tit {
-        margin: 47px 0 30px 0;
-    }
-    .care .tit h2 {
-        float: none;
-        font-size: 30px;
-    }
-    .care .tit p {
-        float: none;
-        margin: 2px 0 0 0;
-    }
-    .care .more {
-        position: relative;
-        right: auto;
-        top: auto;
-        text-align: center;
-    }
-    .care .more a {
-        display: inline-block;
-        width: 145px;
-        height: 35px;
-        line-height: 35px;
-        border: 1px solid #3D3D3D;
-        border-radius: 18px;
-        padding: 0 10px 0 15px;
-    }
-    .care .more a i {
-        margin: 9px 0 0 0;
-    }
-    .care ul li {
-        float: none;
-        width: auto;
-        margin: 0 0 40px 0;
-    }
-    .care ul li:nth-child(2), .care ul li:nth-child(5) {
-        margin-top: 0;
-    }
-    .care ul li:nth-child(4), .care ul li:nth-child(5), .care ul li:nth-child(6) {
-        display: none;
-    }
-    .care ul li a span img {
-        width: 100%;
-    }
-    .care ul li a dl {
-        margin: 10px 0 0 21px;
-        font-size: 15px;
-        line-height: 25px;
-    }
-    .care ul li a dl dd {
-        margin: 0 0 0 78px;
-    }
-    .care ul li a dl dd::before {
-        left: -7px;
-        top: 9px;
-        height: 10px;
-    }
-}/* care media 종료 */
+@media screen and (max-width: 640px) {
+  .care .tit {
+    margin: 47px 0 30px 0;
+  }
+  .care .tit h2 {
+    float: none;
+    font-size: 30px;
+  }
+  .care .tit p {
+    float: none;
+    margin: 2px 0 0 0;
+  }
+  .care .more {
+    position: relative;
+    right: auto;
+    top: auto;
+    text-align: center;
+  }
+  .care .more a {
+    display: inline-block;
+    width: 145px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #3d3d3d;
+    border-radius: 18px;
+    padding: 0 10px 0 15px;
+  }
+  .care .more a i {
+    margin: 9px 0 0 0;
+  }
+  .care ul li {
+    float: none;
+    width: auto;
+    margin: 0 0 40px 0;
+  }
+  .care ul li:nth-child(2),
+  .care ul li:nth-child(5) {
+    margin-top: 0;
+  }
+  .care ul li:nth-child(4),
+  .care ul li:nth-child(5),
+  .care ul li:nth-child(6) {
+    display: none;
+  }
+  .care ul li a span img {
+    width: 100%;
+  }
+  .care ul li a dl {
+    margin: 10px 0 0 21px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .care ul li a dl dd {
+    margin: 0 0 0 78px;
+  }
+  .care ul li a dl dd::before {
+    left: -7px;
+    top: 9px;
+    height: 10px;
+  }
+} /* care media 종료 */
 
 .step {
-    height: 706px;
-    margin: 40px 0 0 0;
-    background: url(../images/step_bg.png) no-repeat center center / cover;
-    color: #fff;
+  height: 706px;
+  margin: 40px 0 0 0;
+  background: url(../images/step_bg.png) no-repeat center center / cover;
+  color: #fff;
 }
 .step .tit {
-    padding: 153px 0 75px 0;
+  padding: 153px 0 75px 0;
 }
 .step .tit h2 {
-    float: left;
-    font-size: 60px;
-    font-weight: 700;
+  float: left;
+  font-size: 60px;
+  font-weight: 700;
 }
 .step .tit p {
-    float: left;
-    margin: 55px 0 0 30px;
+  float: left;
+  margin: 55px 0 0 30px;
 }
 .step .ctrl {
-    display: none;
+  display: none;
 }
 .step .list ol li {
-    float: left;
-    width: 200px;
-    height: 200px;
-    padding: 25px 20px 0 20px;
-    margin: 0 40px 0 0;
-    border:1px solid rgba(255,255,255,0.2)
+  float: left;
+  width: 200px;
+  height: 200px;
+  padding: 25px 20px 0 20px;
+  margin: 0 40px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .step .list ol li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 .step .list ol li strong {
-    display: block;
-    color: rgba(255,255,255,0.6);
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1;
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
 }
 .step .list ol li h3 {
-    margin: 5px 0 21px 0;
-    font-size: 20px;
-    font-weight: 700;
+  margin: 5px 0 21px 0;
+  font-size: 20px;
+  font-weight: 700;
 }
 .step .list ol li p {
-    color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width:640px){
-    .step {
-        height: auto;
-        padding: 0 0 66px 0;
-        margin: 48px 0 0 0;
-    }
-    .step .tit {
-        padding: 54px 0 42px 0;
-    }
-    .step .tit h2 {
-        float: none;
-        font-size: 30px;
-    }
-    .step .tit p {
-        float: none;
-        margin: 0;
-    }
-    .step .ctrl {
-        display: block;
-        margin: 0 0 25px 0;
-        text-align: center;
-    }
-    .step .ctrl button {
-        width: 35px;
-        height: 35px;
-        margin: 0 3px;
-        border-radius: 18px;
-        border: 1px solid rgba(255,255,255,0.6);
-    }
-    .step .ctrl button span {
-        display: none;
-    }
-    .step .ctrl button i {
-        margin: 3px 0 0 0;
-        font-size: 18px;
-        color: rgba(255,255,255,0.6);
-    }
-    .step .list {
-        overflow: hidden;
-        position: relative;
-        height: 183px;
-    }
-    /*
+@media screen and (max-width: 640px) {
+  .step {
+    height: auto;
+    padding: 0 0 66px 0;
+    margin: 48px 0 0 0;
+  }
+  .step .tit {
+    padding: 54px 0 42px 0;
+  }
+  .step .tit h2 {
+    float: none;
+    font-size: 30px;
+  }
+  .step .tit p {
+    float: none;
+    margin: 0;
+  }
+  .step .ctrl {
+    display: block;
+    margin: 0 0 25px 0;
+    text-align: center;
+  }
+  .step .ctrl button {
+    width: 35px;
+    height: 35px;
+    margin: 0 3px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .step .ctrl button span {
+    display: none;
+  }
+  .step .ctrl button i {
+    margin: 3px 0 0 0;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .step .list {
+    overflow: hidden;
+    position: relative;
+    height: 183px;
+  }
+  /*
         jquery에서 ol을 움직일 예정 
         그럼 반드시 ol이 absolute여야 합니다.
         감싸는 요소는 overflow가 들어감. 긴 ol을 일부만 보이게 하기 위해서
         ol이 absolute면 감싸는 요소가 절대 인식을 못함
         그래서 감싸는 요소는 반드시 ol의 높이값을 가지고 있어야함
     */
-    .step .list ol {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .step .list ol li {
-        width: 200px;
-        height: 183px;
-        padding: 18px 10px 0 10px;
-        margin: 0 16px 0 0;
-    }
-    .step .list ol li strong {
-        font-size: 30px;
-    }
-    .step .list ol li h3 {
-        margin: 5px 0 25px 0;
-        font-size: 17px;
-    }
-}/* step media 종료 */
+  .step .list ol {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .step .list ol li {
+    width: 200px;
+    height: 183px;
+    padding: 18px 10px 0 10px;
+    margin: 0 16px 0 0;
+  }
+  .step .list ol li strong {
+    font-size: 30px;
+  }
+  .step .list ol li h3 {
+    margin: 5px 0 25px 0;
+    font-size: 17px;
+  }
+} /* step media 종료 */
 .news {
-    padding: 0 0 123px 0;
-    background-color: #f4f4f4;
+  padding: 0 0 123px 0;
+  background-color: #f4f4f4;
 }
 .news .inner {
-    position: relative;
+  position: relative;
 }
 .news .tit {
-    padding: 124px 0 66px 0;
+  padding: 124px 0 66px 0;
 }
 .news .tit h2 {
-    float: left;
-    color: #1d1d1d;
-    font-size: 60px;
-    font-weight: 700;
+  float: left;
+  color: #1d1d1d;
+  font-size: 60px;
+  font-weight: 700;
 }
 .news .tit p {
-    float: left;
-    margin: 55px 0 0 30px;
+  float: left;
+  margin: 55px 0 0 30px;
 }
 .news .more {
-    position: absolute;
-    right: 0;
-    top: 160px;
+  position: absolute;
+  right: 0;
+  top: 160px;
 }
 .news .more a {
-    display: block;
-    width: 120px;
-    height: 24px;
-    line-height: 24px;
-    border-bottom: 1px solid #3D3D3D;
+  display: block;
+  width: 120px;
+  height: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid #3d3d3d;
 }
 .news .more a span {
-    float: left;
+  float: left;
 }
 .news .more a i {
-    float: right;
-    margin: 6px 0 0 0;
-    font-size: 18px;
+  float: right;
+  margin: 6px 0 0 0;
+  font-size: 18px;
 }
 .news .more a:hover {
-    color: #00AE4D;
-    border-bottom-color: #00AE4D;
+  color: #00ae4d;
+  border-bottom-color: #00ae4d;
 }
 .news ul li {
-    float: left;
-    width: 560px;
+  float: left;
+  width: 560px;
 }
 .news ul li a {
-    display: block;
-    height: 160px;
-    padding: 40px 40px 0 40px;
-    background-color: #fff;
+  display: block;
+  height: 160px;
+  padding: 40px 40px 0 40px;
+  background-color: #fff;
 }
 .news ul li a:hover {
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .news ul li a .pic {
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
 }
 .news ul li a .pic img {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 .news ul li a:hover .pic img {
-    transform: scale3d(1.2,1.2,1);
+  transform: scale3d(1.2, 1.2, 1);
 }
 .news ul li a .subject {
-    display: block;
-    margin: 0 0 22px 0;
-    font-size: 20px;
-    font-weight: 700;
-    /* 1줄 */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: block;
+  margin: 0 0 22px 0;
+  font-size: 20px;
+  font-weight: 700;
+  /* 1줄 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-    /* 2줄 */
-    /* line-height: 1.5;
+  /* 2줄 */
+  /* line-height: 1.5;
     height: 3em;
     overflow: hidden; */
 }
 .news ul li a .date {
-    display: block;
-    color: #666;
+  display: block;
+  color: #666;
 }
 .news ul li a .date span:first-child {
-    position: relative;
-    margin: 0 30px 0 0;
+  position: relative;
+  margin: 0 30px 0 0;
 }
 .news ul li a .date span:first-child::after {
-    position: absolute;
-    right: -19px;
-    top: 6px;
-    width: 1px;
-    height: 11px;
-    background-color: #CCC;
-    content: "";
+  position: absolute;
+  right: -19px;
+  top: 6px;
+  width: 1px;
+  height: 11px;
+  background-color: #ccc;
+  content: "";
 }
 .news ul li:first-child {
-    width: 800px;
-    margin: 0 40px 0 0 ;
+  width: 800px;
+  margin: 0 40px 0 0;
 }
 .news ul li:first-child a {
-    height: 360px;
+  height: 360px;
 }
 .news ul li:first-child a .pic {
-    float: left;
+  float: left;
 }
 .news ul li:first-child a .inner2 {
-    float: right;
-    width: 300px;
+  float: right;
+  width: 300px;
 }
 .news ul li:first-child a .subject {
-    /* 1줄 -> 2줄 */
-    white-space: normal;
-    line-height: 1.5;
-    height: 3em;
+  /* 1줄 -> 2줄 */
+  white-space: normal;
+  line-height: 1.5;
+  height: 3em;
 }
 .news ul li:first-child a .content {
-    display: block;
-    margin: 0 0 37px 0;
-    /* 6줄 */
-    line-height: 1.5;
-    height: 9em;
-    overflow: hidden;
+  display: block;
+  margin: 0 0 37px 0;
+  /* 6줄 */
+  line-height: 1.5;
+  height: 9em;
+  overflow: hidden;
 }
 
-.news ul li:nth-child(2){
-    margin: 0 0 40px 0;
+.news ul li:nth-child(2) {
+  margin: 0 0 40px 0;
 }
-@media screen and (max-width:640px){
-    .news {
-        padding: 0 0 64px 0;
-    }
-    .news .tit {
-        padding: 49px 0 8px 0;
-    }
-    .news .tit h2 {
-        float: none;
-        font-size: 30px;
-    }
-    .news .tit p {
-        float: none;
-        margin: 0;
-    }
-    .news .more {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin: 25px 0 0 0;
-        text-align: center;
-    }
-    .news .more a {
-        display: inline-block;
-        width: 145px;
-        height: 35px;
-        padding: 0 10px 0 15px;
-        line-height: 35px;
-        border: 1px solid #3D3D3D;
-        border-radius: 18px;
-    }
-    .news .more a i {
-        margin: 7px 0 0 0;
-    }
-    .news ul li {
-        float: none;
-        width: auto;
-        border-bottom: 1px solid #CCC;
-    }
-    .news ul li:last-child {
-        border-bottom: 0;
-    }
-    .news ul li a {
-        height: auto;
-        padding: 22px 0;
-        background-color: transparent;
-    }
-    .news ul li a .pic {
-        display: block;
-        margin: 0 0 13px 0;
-    }
-    .news ul li a .pic img {
-        width: 100%;
-    }
-    .news ul li a .subject {
-        margin: 0 0 16px 0;
-        font-size: 17px;
-        /* 1줄 */
-        white-space: normal;
-        overflow: visible;
-    
-        /* 2줄 */
-        /* height: auto;
+@media screen and (max-width: 640px) {
+  .news {
+    padding: 0 0 64px 0;
+  }
+  .news .tit {
+    padding: 49px 0 8px 0;
+  }
+  .news .tit h2 {
+    float: none;
+    font-size: 30px;
+  }
+  .news .tit p {
+    float: none;
+    margin: 0;
+  }
+  .news .more {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 25px 0 0 0;
+    text-align: center;
+  }
+  .news .more a {
+    display: inline-block;
+    width: 145px;
+    height: 35px;
+    padding: 0 10px 0 15px;
+    line-height: 35px;
+    border: 1px solid #3d3d3d;
+    border-radius: 18px;
+  }
+  .news .more a i {
+    margin: 7px 0 0 0;
+  }
+  .news ul li {
+    float: none;
+    width: auto;
+    border-bottom: 1px solid #ccc;
+  }
+  .news ul li:last-child {
+    border-bottom: 0;
+  }
+  .news ul li a {
+    height: auto;
+    padding: 22px 0;
+    background-color: transparent;
+  }
+  .news ul li a .pic {
+    display: block;
+    margin: 0 0 13px 0;
+  }
+  .news ul li a .pic img {
+    width: 100%;
+  }
+  .news ul li a .subject {
+    margin: 0 0 16px 0;
+    font-size: 17px;
+    /* 1줄 */
+    white-space: normal;
+    overflow: visible;
+
+    /* 2줄 */
+    /* height: auto;
         overflow: visible; */
-    }
-    .news ul li a .date span:first-child {
-        margin: 0 26px 0 0;
-    }
-    .news ul li a .date span:first-child::after {
-        right: -16px;
-        height: 9px;
-    }    
-    .news ul li:first-child {
-        width: auto;
-        margin: 0;
-    }
-    .news ul li:first-child a {
-        height: auto;
-    }
-    .news ul li:first-child a .pic {
-        float: none;
-    }
-    .news ul li:first-child a .inner2 {
-        float: none;
-        width: auto;
-    }
-    .news ul li:first-child a .subject {
-        /* 1줄 -> 2줄 */
-        height: auto;
-    }
-    .news ul li:first-child a .content {
-        display: block;
-        margin: 0 0 15px 0;
-        /* 4줄 */
-        height: 6em;
-    }
-    .news ul li:nth-child(2){
-        margin: 0;
-    }
-}/* news media 종료 */
+  }
+  .news ul li a .date span:first-child {
+    margin: 0 26px 0 0;
+  }
+  .news ul li a .date span:first-child::after {
+    right: -16px;
+    height: 9px;
+  }
+  .news ul li:first-child {
+    width: auto;
+    margin: 0;
+  }
+  .news ul li:first-child a {
+    height: auto;
+  }
+  .news ul li:first-child a .pic {
+    float: none;
+  }
+  .news ul li:first-child a .inner2 {
+    float: none;
+    width: auto;
+  }
+  .news ul li:first-child a .subject {
+    /* 1줄 -> 2줄 */
+    height: auto;
+  }
+  .news ul li:first-child a .content {
+    display: block;
+    margin: 0 0 15px 0;
+    /* 4줄 */
+    height: 6em;
+  }
+  .news ul li:nth-child(2) {
+    margin: 0;
+  }
+} /* news media 종료 */
 
 footer {
-    background-color: #2D2D2D;
-    color: rgba(255,255,255,0.8);
+  background-color: #2d2d2d;
+  color: rgba(255, 255, 255, 0.8);
 }
 footer .inner {
-    position: relative;
+  position: relative;
 }
 footer .family {
-    position: absolute;
-    right: 0;
-    top: 60px;
+  position: absolute;
+  right: 0;
+  top: 60px;
 }
 footer .family button {
-    width: 200px;
-    height: 37px;
-    padding: 0 5px 0 10px;
-    border: 1px solid rgba(255,255,255,0.6);
+  width: 200px;
+  height: 37px;
+  padding: 0 5px 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 footer .family button span {
-    float: left;
+  float: left;
 }
 footer .family button i {
-    float: right;
-    margin: 3px 0 0 0;
-    font-size: 18px;
+  float: right;
+  margin: 3px 0 0 0;
+  font-size: 18px;
 }
 footer .family button.close {
-    display: none;
+  display: none;
 }
 footer .family ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: 37px;
-    width: 100%;
-    box-shadow: -3px -3px 10px rgba(0,0,0,0.05);
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 37px;
+  width: 100%;
+  box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.05);
 }
 footer .family.fa_open ul {
-    display: block;
+  display: block;
 }
 footer .family.fa_open button.close {
-    display: block;
+  display: block;
 }
 footer .family.fa_open button.open {
-    display: none;
+  display: none;
 }
 
 footer .family ul li {
-    border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 footer .family ul li:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 footer .family ul li a {
-    display: block;
-    padding: 0 0 0 10px;
-    line-height: 45px;
-    background-color: #FFF;
-    color: #3D3D3D;
+  display: block;
+  padding: 0 0 0 10px;
+  line-height: 45px;
+  background-color: #fff;
+  color: #3d3d3d;
 }
 footer .family ul li a:hover {
-    background-color: #00AE4D;
-    color: #FFF;
+  background-color: #00ae4d;
+  color: #fff;
 }
 
 footer .fnav {
-    padding: 66px 0 0 0;
+  padding: 66px 0 0 0;
 }
 footer .fnav li {
-    position: relative;
-    float: left;
-    margin: 0 30px 0 0;
+  position: relative;
+  float: left;
+  margin: 0 30px 0 0;
 }
 footer .fnav li::after {
-    position: absolute;
-    right: -17px;
-    top: 5px;
-    width: 1px;
-    height: 12px;
-    background-color: rgba(255,255,255,0.3);
-    content: "";
+  position: absolute;
+  right: -17px;
+  top: 5px;
+  width: 1px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+  content: "";
 }
 footer .fnav li:last-child::after {
-    display: none;
+  display: none;
 }
 footer .fnav li.privacy {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 footer .finfo {
-    margin: 33px 0 6px 0;
+  margin: 33px 0 6px 0;
 }
 footer .copyright {
-    padding: 0 0 70px 0;
-    color: rgba(255,255,255,0.6);
+  padding: 0 0 70px 0;
+  color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width:640px){
-    footer .family {
-        position: relative;
-        right: auto;
-        top: auto;
-        width: 188px;
-        margin: 0 auto;
-        padding: 44px 0 0 0;
-    }
-    footer .family button {
-        width: 188px;
-        height: 31px;
-    }
-    footer .family button i {
-        margin: 3px 0 0 0;
-    }
-    footer .family ul {
-        bottom: 31px;
-    }
-    
-    footer .fnav {
-        padding: 37px 0 0 0;
-    }
-    footer .fnav li {
-        margin: 0 28px 0 0;
-    }
-    footer .fnav li::after {
-        right: -16px;
-        height: 10px;
-    }
-    
-    footer .finfo {
-        margin: 32px 0 6px 0;
-    }
-    footer .copyright {
-        padding: 0 0 60px 0;
-    }
-}/* footer media */
+@media screen and (max-width: 640px) {
+  footer .family {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 188px;
+    margin: 0 auto;
+    padding: 44px 0 0 0;
+  }
+  footer .family button {
+    width: 188px;
+    height: 31px;
+  }
+  footer .family button i {
+    margin: 3px 0 0 0;
+  }
+  footer .family ul {
+    bottom: 31px;
+  }
+
+  footer .fnav {
+    padding: 37px 0 0 0;
+  }
+  footer .fnav li {
+    margin: 0 28px 0 0;
+  }
+  footer .fnav li::after {
+    right: -16px;
+    height: 10px;
+  }
+
+  footer .finfo {
+    margin: 32px 0 6px 0;
+  }
+  footer .copyright {
+    padding: 0 0 60px 0;
+  }
+} /* footer media */
