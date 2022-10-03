@@ -1,781 +1,804 @@
-@import url('default.css');
-@import url('common.css');
+@import url("default.css");
+@import url("common.css");
 
 /* 메인에 있는 스타일만 정의 */
 
 .visual {
-    position: relative;
-    height: 100vh; /* 브라우저 높이의 100% */
-    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
-    color: #FFF;
+  position: relative;
+  height: 100vh; /* 브라우저 높이의 100% */
+  background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+  color: #fff;
 }
+.visual::before {
+  background: linear-gradient(to right, black, transparent);
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .visual .visual_wrap {
-    position: absolute;
-    left: calc(50% - 700px);
-    top: 50%;
-    transform: translate(0, -50%); 
-    /* 해당요소의 넓이와 높이를 계산해서 그 값의 50%를 왼쪽 오른쪽으로 이동 
+  position: absolute;
+  left: calc(50% - 700px);
+  top: 50%;
+  transform: translate(0, -50%);
+  /* 해당요소의 넓이와 높이를 계산해서 그 값의 50%를 왼쪽 오른쪽으로 이동 
        top: 50%;을 주면 위아래 가운데에서 시작해서 아래로 콘텐츠가 배치됨
        콘텐츠의 위아래 여백을 동일하게 주려면 (즉, 콘텐츠가 자기 높이의 절반이 위로 이동)
        transform: translate(좌우이동값, 위아래이동값:-50%)을 주면 됨.
     */
 }
 .visual h2 {
-    margin: 0 0 44px 0;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.2;
+  margin: 0 0 44px 0;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 .visual h2 strong {
-    display: block;
-    margin: 17px 0 0 0;
-    font-weight: 700;
+  display: block;
+  margin: 17px 0 0 0;
+  font-weight: 700;
 }
 .visual .search {
-    width: 460px;
-    height: 60px;
-    border: 2px solid #FFF;
-    border-radius: 30px;
+  width: 460px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 30px;
 }
 .visual .search label {
-    display: none; /* 접근성 때문에 준 태그 */
+  display: none; /* 접근성 때문에 준 태그 */
 }
 .visual .search input[type="text"] {
-    /* <input type="text" />라고 되어 있는 태그만 지칭 */
-    float: left;
-    width: 370px;
-    height: 55px;
-    margin: 0 0 0 30px;
-    border: 0;
-    outline: 0; /* focus가 되었을때 테두리 생성되는 것 삭제 */
-    background-color: transparent;
-    font-size: 20px;
+  /* <input type="text" />라고 되어 있는 태그만 지칭 */
+  float: left;
+  width: 370px;
+  height: 55px;
+  margin: 0 0 0 30px;
+  border: 0;
+  outline: 0; /* focus가 되었을때 테두리 생성되는 것 삭제 */
+  background-color: transparent;
+  font-size: 20px;
 }
 .visual .search input[type="text"]::placeholder {
-    color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 .visual .search .btn {
-    float: left; /* 키워드입력란하고 버튼 사이여백 삭제 */
-    width: 55px;
-    height: 55px;
+  float: left; /* 키워드입력란하고 버튼 사이여백 삭제 */
+  width: 55px;
+  height: 55px;
 }
 .visual .search input.btn {
-    border: 0; 
-    background-color: transparent;
-    background-image: url(../images/main/search_ico.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    font-size: 0; /* 버튼 글자 없애기 */
-    cursor: pointer; /* 마우스 오버시 손바닥 모양 */
+  border: 0;
+  background-color: transparent;
+  background-image: url(../images/main/search_ico.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 0; /* 버튼 글자 없애기 */
+  cursor: pointer; /* 마우스 오버시 손바닥 모양 */
 }
 .visual .search button.btn span {
-    display: none;
+  display: none;
 }
 .visual .search button.btn i {
-    margin: 3px 0 0 0;
-    font-size: 21px;
+  margin: 3px 0 0 0;
+  font-size: 21px;
 }
 
-@media screen and (max-width:640px){
-    .visual {
-        height: 346px;
-    }
-    .visual .visual_wrap {
-        left: 20px;
-    }
-    .visual h2 {
-        margin: 0 0 25px 0;
-        font-size: 20px;
-    }
-    .visual h2 strong {
-        margin: 8px 0 0 0;
-    }
-    .visual .search {
-        width: 224px;
-        height: 39px;
-        border-radius: 20px;
-    }
-    .visual .search input[type="text"] {
-        /* <input type="text" />라고 되어 있는 태그만 지칭 */
-        width: 170px;
-        height: 35px; /* search 높이 - border값 */
-        margin: 0 0 0 17px;
-        font-size: 13px;
-    }
-    .visual .search .btn {
-        width: 31px;
-        height: 35px;
-    }
-    .visual .search input.btn {
-        background-size: 13px; 
-        /* 사이즈를 하나만 입력하면 넓이가 조정됨 - 높이는 비율에 맞게 알아서 조절 */
-    }
-    .visual .search button.btn i {
-        margin: 4px 0 0 0;
-        font-size: 13px;
-    }
+@media screen and (max-width: 640px) {
+  .visual {
+    height: 346px;
+  }
+  .visual .visual_wrap {
+    left: 20px;
+  }
+  .visual h2 {
+    margin: 0 0 25px 0;
+    font-size: 20px;
+  }
+  .visual h2 strong {
+    margin: 8px 0 0 0;
+  }
+  .visual .search {
+    width: 224px;
+    height: 39px;
+    border-radius: 20px;
+  }
+  .visual .search input[type="text"] {
+    /* <input type="text" />라고 되어 있는 태그만 지칭 */
+    width: 170px;
+    height: 35px; /* search 높이 - border값 */
+    margin: 0 0 0 17px;
+    font-size: 13px;
+  }
+  .visual .search .btn {
+    width: 31px;
+    height: 35px;
+  }
+  .visual .search input.btn {
+    background-size: 13px;
+    /* 사이즈를 하나만 입력하면 넓이가 조정됨 - 높이는 비율에 맞게 알아서 조절 */
+  }
+  .visual .search button.btn i {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+  }
 }
-.part{
-    margin: 120px 0 0 0;
+.part {
+  margin: 120px 0 0 0;
 }
-.part h2{
-    color: #1d1d1d;
-    font-size: 50px;
-    font-weight: 700;
-    position: relative;
+.part h2 {
+  color: #1d1d1d;
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
 }
-.part h2::before{
-    position: absolute;
-    left: 0;
-    top: -5px;
-    width: 50px;
-    height: 3px;
-    background-color: #1d1d1d;
-    content: "";
+.part h2::before {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 50px;
+  height: 3px;
+  background-color: #1d1d1d;
+  content: "";
 }
-.part .list ul{
-    /* 모든li의 넓이 +여백을 합한 넓이
+.part .list ul {
+  /* 모든li의 넓이 +여백을 합한 넓이
     (440px +40px )X5 */
-    width: 2400px;
-    margin: 60px 0 0 -480px;
+  width: 2400px;
+  margin: 60px 0 0 -480px;
 }
-.part .list ul li{
-    float: left;
-    width: 440px;
-    margin: 0 40px 0 0;
+.part .list ul li {
+  float: left;
+  width: 440px;
+  margin: 0 40px 0 0;
 }
-.part .list ul li a{
-    display: block;
+.part .list ul li a {
+  display: block;
 }
-.part .list ul li a .pic{
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
+.part .list ul li a .pic {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
 }
-.part .list ul li a .pic img{
-    transition: 0.5s;
-    width: 100%;
+.part .list ul li a .pic img {
+  transition: 0.5s;
+  width: 100%;
 }
 
 /* 마우스를 오버했을때 */
-.part .list ul li a:hover .pic img{
-    transform: scale3d(1.2,1.2,1);
+.part .list ul li a:hover .pic img {
+  transform: scale3d(1.2, 1.2, 1);
 }
-.part .list ul li a h3{
-    margin: 25px 0 15px 0;
+.part .list ul li a h3 {
+  margin: 25px 0 15px 0;
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.part .list ul li a p {
+  line-height: 1.5;
+  height: 3em;
+  overflow: hidden;
+}
+.part .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 38px;
+  border: 1px solid #666;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0 0 0;
+}
+.part .more:hover {
+  border: 1px solid #0095cd;
+  background-color: #0095cd;
+  color: #fff;
+}
+.part .more:hover i {
+  color: rgba(255, 255, 255, 0.8);
+}
+.part .more i {
+  font-size: 20px;
+  color: #666;
+}
+@media screen and (max-width: 640px) {
+  .part {
+    margin: 55px 0 0 0;
+  }
+  .part h2 {
     font-size: 30px;
-    font-weight: 700;
-    white-space:nowrap;        overflow:hidden;          text-overflow:ellipsis;
-}
-.part .list ul li a p{
-    line-height: 1.5;
-    height: 3em;
-    overflow: hidden;
-}
-.part .more{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 120px;
-    height: 38px;
-    border: 1px solid #666;
-    border-radius: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px 0 0 0;
-}
-.part .more:hover{
-    border: 1px solid #0095CD;
-    background-color: #0095CD;
-    color: #fff;
-}
-.part .more:hover i{
-    color: rgba(255,255,255,0.8);
-}
-.part .more i{
-    font-size: 20px;
-    color: #666;
-}
-@media screen and (max-width:640px){
-    .part{
-        margin: 55px 0 0 0;
-    }
-    .part h2{
-        font-size: 30px;
-    }
-    .part h2::before{
-        top: -5px;
-        width: 30px;
-        height: 1px;
-    }
-    .part .list{
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-    .part .list ul{
-        /* 모든li의 넓이 +여백을 합한 넓이
+  }
+  .part h2::before {
+    top: -5px;
+    width: 30px;
+    height: 1px;
+  }
+  .part .list {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .part .list ul {
+    /* 모든li의 넓이 +여백을 합한 넓이
         (440px +40px )X5 */
-        width: 1064px;
-        margin: 35px 0 0 0;
-    }
-    .part .list ul li{
-        width: 200px;
-        margin: 0 16px 0 0;
-        padding-bottom: 10px;
-    }
-    .part .list ul li:last-child{
-        margin: 0;
-    }
-    .part .list ul li a{
-        display: block;
-    }
-    .part .list ul li a h3{
-        margin: 10px 0 5px 0;
-        font-size: 20px;
-        font-weight: 700;
-    }
-    .part .more{
-        top: 0;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        justify-content: center;
-        margin: 10px 0 0 0;
-    }
-    .part .more span{
-        display: none;
-    }
+    width: 1064px;
+    margin: 35px 0 0 0;
+  }
+  .part .list ul li {
+    width: 200px;
+    margin: 0 16px 0 0;
+    padding-bottom: 10px;
+  }
+  .part .list ul li:last-child {
+    margin: 0;
+  }
+  .part .list ul li a {
+    display: block;
+  }
+  .part .list ul li a h3 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .part .more {
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  .part .more span {
+    display: none;
+  }
 }
 /* part반응형 종료 */
-.notice{
-    margin: 150px 0 0 0;
-    /* 가장큰요소인 공지사항 리스트가 absolute라
+.notice {
+  margin: 150px 0 0 0;
+  /* 가장큰요소인 공지사항 리스트가 absolute라
     높이 계산을 하기위해 notice에 높이를 줌 */
-    height: 626px;
+  height: 626px;
 }
-.notice ul.notice_wrap{
-    /* detail과 more의 정렬의 기준 */
-    position: relative;
+.notice ul.notice_wrap {
+  /* detail과 more의 정렬의 기준 */
+  position: relative;
 }
-.notice ul.notice_wrap>li{
-    float: left;
+.notice ul.notice_wrap > li {
+  float: left;
 }
-.notice ul li{
-    margin: 0 48px 0 0;
+.notice ul li {
+  margin: 0 48px 0 0;
 }
-.notice ul li h2{
-    color: #999;
-    font-size: 50px;
-    font-weight: 700;
+.notice ul li h2 {
+  color: #999;
+  font-size: 50px;
+  font-weight: 700;
 }
 /* 선택된 active클래스 */
-.notice ul li.active h2{
-    position: relative;
-    color: #1d1d1d;
+.notice ul li.active h2 {
+  position: relative;
+  color: #1d1d1d;
 }
-.notice ul li.active h2::before{
-    position: absolute;
-    left: 0;
-    top: -5px;
-    width: 50px;
-    height: 3px;
-    background-color: #1d1d1d;
-    content: "";
+.notice ul li.active h2::before {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 50px;
+  height: 3px;
+  background-color: #1d1d1d;
+  content: "";
 }
-.notice ul li.active .detail{
-    display: block;
+.notice ul li.active .detail {
+  display: block;
 }
-.notice ul li.active .more{
-    display: flex;
+.notice ul li.active .more {
+  display: flex;
 }
 
-
-
-
-
-
-
-.notice ul li .detail{
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 122px;
-    width: 100%;
+.notice ul li .detail {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 122px;
+  width: 100%;
 }
-.notice ul li .more{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 120px;
-    height: 38px;
-    border: 1px solid #666;
-    border-radius: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px 0 0 0;
+.notice ul li .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 38px;
+  border: 1px solid #666;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0 0 0;
 }
-.notice ul li .more i{
-    font-size: 20px;
-    color: #666;
+.notice ul li .more i {
+  font-size: 20px;
+  color: #666;
 }
-.notice ul li .more:hover{
-    border: 1px solid #0095CD;
-    background-color: #0095CD;
-    color: #fff;
+.notice ul li .more:hover {
+  border: 1px solid #0095cd;
+  background-color: #0095cd;
+  color: #fff;
 }
-.notice ul li .more:hover i{
-    color: rgba(255,255,255,0.8);
+.notice ul li .more:hover i {
+  color: rgba(255, 255, 255, 0.8);
 }
-.notice ul li .detail ul{
-    width: 2400px;
-    margin: 0 0 0 -480px;
+.notice ul li .detail ul {
+  width: 2400px;
+  margin: 0 0 0 -480px;
 }
-.notice ul li .detail ul li{
-    float: left;
-    width: 440px;
-    height: 350px;
-    margin: 0 40px 0 0 ;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    word-break: normal;
-    transition: transform 0.5s;
-    /* transition 자연스럽게 변하는 효과를
+.notice ul li .detail ul li {
+  float: left;
+  width: 440px;
+  height: 350px;
+  margin: 0 40px 0 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  word-break: normal;
+  transition: transform 0.5s;
+  /* transition 자연스럽게 변하는 효과를
     하나의 속성에만 적용 */
 }
-.notice ul li .detail ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 44px 22px 0 30px ;
+.notice ul li .detail ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 44px 22px 0 30px;
 }
-.notice ul li .detail ul li a .date{
-    display: block;
-    color: #666;
+.notice ul li .detail ul li a .date {
+  display: block;
+  color: #666;
 }
-.notice ul li .detail ul li a h3{
-    font-size: 25px;
-    font-weight: 700;
-    /* 무조건2줄 */
-    line-height: 1.2;
-    height: 2.4em;
-    overflow: hidden;
-    margin: 6px 0 19px 0;
+.notice ul li .detail ul li a h3 {
+  font-size: 25px;
+  font-weight: 700;
+  /* 무조건2줄 */
+  line-height: 1.2;
+  height: 2.4em;
+  overflow: hidden;
+  margin: 6px 0 19px 0;
 }
-.notice ul li .detail ul li a p{
-    line-height: 1.5;
-    height: 7.5em;
-    overflow: hidden;
+.notice ul li .detail ul li a p {
+  line-height: 1.5;
+  height: 7.5em;
+  overflow: hidden;
 }
-.notice ul li .detail ul li .btn{
-    display: flex;
-    align-items: center;
-    width: 101px;
-    justify-content: space-between;
-    margin: 34px 0 0 0;
+.notice ul li .detail ul li .btn {
+  display: flex;
+  align-items: center;
+  width: 101px;
+  justify-content: space-between;
+  margin: 34px 0 0 0;
 }
-.notice ul li .detail ul li .btn i{
-    font-size: 15px;
+.notice ul li .detail ul li .btn i {
+  font-size: 15px;
 }
 
 /* 오버했을때  */
-.notice ul li .detail ul li:hover{
-    background-color: #0095CD;
-    color: #fff;
-    /* 오버했을때 왼쪽상단으로 이동 */
-    transform: translate(-10px, -10px);
+.notice ul li .detail ul li:hover {
+  background-color: #0095cd;
+  color: #fff;
+  /* 오버했을때 왼쪽상단으로 이동 */
+  transform: translate(-10px, -10px);
 }
-.notice ul li .detail ul li:hover a .date{
-    color: rgba(255,255,255,0.8);
+.notice ul li .detail ul li:hover a .date {
+  color: rgba(255, 255, 255, 0.8);
 }
-.notice ul li .detail ul li:hover a .btn i{
-    color:rgba(255,255,255,0.8)
+.notice ul li .detail ul li:hover a .btn i {
+  color: rgba(255, 255, 255, 0.8);
 }
-@media screen and (max-width:640px){
-    .notice{
-        margin: 56px 0 80px 0;
-        /* 가장큰요소인 공지사항 리스트가 absolute라
+@media screen and (max-width: 640px) {
+  .notice {
+    margin: 56px 0 80px 0;
+    /* 가장큰요소인 공지사항 리스트가 absolute라
         높이 계산을 하기위해 notice에 높이를 줌 */
-        height: 320px;
-    }
-    .notice ul li{
-        margin: 0 20px 0 0;
-    }
-    .notice ul li h2{
-        font-size: 30px;
-    }
-    /* 선택된 active클래스 */
+    height: 320px;
+  }
+  .notice ul li {
+    margin: 0 20px 0 0;
+  }
+  .notice ul li h2 {
+    font-size: 30px;
+  }
+  /* 선택된 active클래스 */
 
-    .notice ul li.active h2::before{
-        top: -5px;
-        width: 30px;
-        height: 1px;
-    }
-   
-    .notice ul li .detail{
-        top: 70px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 0 0 10px 0;
-    }
-    .notice ul li .more{
-        top: 0;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        justify-content: center;
-        margin: 10px 0 0 0;
-    }
-    .notice ul li .more span{
-        display: none;
-    }
-    .notice ul li .more i{
-        font-size: 20px;
-        color: #666;
-    }
-    .notice ul li .more:hover{
-        border: 1px solid #0095CD;
-        background-color: #0095CD;
-        color: #fff;
-    }
-    .notice ul li .more:hover i{
-        color: rgba(255,255,255,0.8);
-    }
+  .notice ul li.active h2::before {
+    top: -5px;
+    width: 30px;
+    height: 1px;
+  }
 
-    .notice ul li .detail ul{
-        width: 1218px;
-        margin: 0 ;
-    }
-    .notice ul li .detail ul li{
-        width: 226px;
-        height: 190px;
-        margin: 0 22px 0 0 ;
-    }
-    .notice ul li .detail ul li:last-child{
-        margin: 0;
-    }
-    .notice ul li .detail ul li a{
-        padding: 22px 22px 0 22px ;
-    }
-    .notice ul li .detail ul li a .date{
-        display: block;
-        color: #666;
-    }
-    .notice ul li .detail ul li a h3{
-        font-size: 18px;
-        height: 3.6em;
-        margin: 6px 0 10px 0;
-    }
-    .notice ul li .detail ul li a p{
-        height: 3em;
-    }
-    .notice ul li .detail ul li .btn{
-        display: none
-    }
+  .notice ul li .detail {
+    top: 70px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 10px 0;
+  }
+  .notice ul li .more {
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  .notice ul li .more span {
+    display: none;
+  }
+  .notice ul li .more i {
+    font-size: 20px;
+    color: #666;
+  }
+  .notice ul li .more:hover {
+    border: 1px solid #0095cd;
+    background-color: #0095cd;
+    color: #fff;
+  }
+  .notice ul li .more:hover i {
+    color: rgba(255, 255, 255, 0.8);
+  }
 
-   
-    
-    /* 오버했을때  */
-    .notice ul li .detail ul li:hover{
-        transform: translate(0, 0);
-    }
+  .notice ul li .detail ul {
+    width: 1218px;
+    margin: 0;
+  }
+  .notice ul li .detail ul li {
+    width: 226px;
+    height: 190px;
+    margin: 0 22px 0 0;
+  }
+  .notice ul li .detail ul li:last-child {
+    margin: 0;
+  }
+  .notice ul li .detail ul li a {
+    padding: 22px 22px 0 22px;
+  }
+  .notice ul li .detail ul li a .date {
+    display: block;
+    color: #666;
+  }
+  .notice ul li .detail ul li a h3 {
+    font-size: 18px;
+    height: 3.6em;
+    margin: 6px 0 10px 0;
+  }
+  .notice ul li .detail ul li a p {
+    height: 3em;
+  }
+  .notice ul li .detail ul li .btn {
+    display: none;
+  }
 
+  /* 오버했을때  */
+  .notice ul li .detail ul li:hover {
+    transform: translate(0, 0);
+  }
 }
 /* notice반응형종료 */
-.book{
-    position: relative;
-    padding: 82px 0 0 0;
+.book {
+  position: relative;
+  padding: 82px 0 0 0;
 }
-.book::before{
+.book::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 403px;
+  background-color: #52ccc2;
+  content: "";
+  z-index: -1;
+}
+.book h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  position: relative;
+  margin: 0 0 36px 0;
+}
+.book h2::before {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 50px;
+  height: 3px;
+  background-color: #fff;
+  content: "";
+}
+.book .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0 0 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.book .more:hover {
+  border: 1px solid #0095cd;
+  background-color: #0095cd;
+  color: #fff;
+}
+.book .more:hover i {
+  color: rgba(255, 255, 255, 0.8);
+}
+.book .more i {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.book .list ul {
+  width: 1685px;
+}
+.book .list ul li {
+  float: left;
+  width: 200px;
+  margin: 60px 0 0 20px;
+}
+.book .list ul li a {
+  display: block;
+}
+.book .list ul li a .pic {
+  font-size: 0;
+  line-height: 0;
+
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.book .list ul li a .pic img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.book .list ul li a:hover .pic img {
+  transform: scale3d(1.2, 1.2, 1);
+}
+.book .list ul li a .cnt h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 0 0;
+  overflow: hidden;
+  line-height: 1.5;
+  height: 3em;
+}
+.book .list ul li a .cnt p {
+  display: none;
+}
+.book .list ul li:first-child {
+  width: 509px;
+  margin: 0;
+}
+.book .list ul li:first-child a .pic {
+  float: left;
+  width: 300px;
+  height: 360px;
+}
+.book .list ul li:first-child a .cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 27px 0 0 20px;
+  color: #fff;
+}
+.book .list ul li:first-child a .cnt h3 {
+  font-weight: 700;
+  font-size: 25px;
+  overflow: hidden;
+  line-height: 1.2;
+  height: 2.4em;
+  margin: 0 0 30px 0;
+}
+.book .list ul li:first-child a .cnt p {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 640px) {
+  .book {
+    padding: 36px 0 0 0;
+  }
+  .book::before {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -50px;
     width: 100%;
-    height: 403px;
-    background-color: #52CCC2;
+    height: 330px;
+    background-color: #52ccc2;
     content: "";
     z-index: -1;
-}
-.book h2{
-    color: #fff;
-    font-size: 50px;
-    font-weight: 700;
-    position: relative;
-    margin: 0 0 36px 0;
-}
-.book h2::before{
-    position: absolute;
-    left: 0;
+  }
+  .book h2 {
+    font-size: 30px;
+  }
+  .book h2::before {
     top: -5px;
-    width: 50px;
-    height: 3px;
-    background-color: #fff;
-    content: "";
-}
-.book .more{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 120px;
-    height: 38px;
-    border: 1px solid rgba(255,255,255,0.8);
-    border-radius: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px 0 0 0;
-    color: rgba(255,255,255,0.8);
-}
-.book .more:hover{
-    border: 1px solid #0095CD;
-    background-color: #0095CD;
-    color: #fff;
-}
-.book .more:hover i{
-    color: rgba(255,255,255,0.8);
-}
-.book .more i{
-    font-size: 20px;
-    color: rgba(255,255,255,0.8);
-}
-.book .list ul{
-    width: 1685px;
-}
-.book .list ul li{
-    float: left;
-    width: 200px;
-    margin: 60px 0 0 20px;
-}
-.book .list ul li a{
-    display: block;
-}
-.book .list ul li a .pic{
-    font-size: 0;
-    line-height: 0;
+    width: 30px;
+    height: 1px;
+  }
 
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.8);
-}
-.book .list ul li a .pic img{
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-}
-.book .list ul li a:hover .pic img{
-    transform: scale3d(1.2,1.2,1);
-}
-.book .list ul li a .cnt h3{
-    font-size: 20px;
-    font-weight: 700;
-    margin: 15px 0 0 0;
-    overflow: hidden;
-    line-height: 1.5;
-    height: 3em;
-}
-.book .list ul li a .cnt p{
+  .book .more {
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  .book .more span {
     display: none;
-}
-.book .list ul li:first-child{
-    width: 509px;
+  }
+  .book .list {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .book .list ul {
+    width: 1080px;
+    padding-bottom: 20px;
+  }
+  .book .list ul li {
+    margin: 0 0 0 20px;
+  }
+  .book .list ul li a .cnt h3 {
+    font-size: 15px;
+    margin: 20px 0 0 0;
+  }
+  .book .list ul li a .cnt p {
+    display: none;
+  }
+  .book .list ul li:first-child {
+    width: 200px;
     margin: 0;
-}
-.book .list ul li:first-child a .pic{
-    float: left;
-    width: 300px;
-    height: 360px;
-}
-.book .list ul li:first-child a .cnt{
-    display: flex;
+  }
+  .book .list ul li:first-child a .pic {
+    float: none;
+    width: 200px;
+    height: 230px;
+  }
+  .book .list ul li:first-child a .pic img {
+    height: 100%;
+  }
+  .book .list ul li:first-child a .cnt {
+    display: block;
     flex-direction: column;
     justify-content: start;
-    padding: 27px 0 0 20px;
-    color: #fff;
-}
-.book .list ul li:first-child a .cnt h3{
+    padding: 0;
+    color: #3d3d3d;
+    font-size: 25px;
+  }
+  .book .list ul li:first-child a .cnt h3 {
     font-weight: 700;
     font-size: 25px;
     overflow: hidden;
+    font-size: 15px;
     line-height: 1.2;
     height: 2.4em;
-    margin: 0 0 30px 0;
-}
-.book .list ul li:first-child a .cnt p{
-    display: block;
-    color: rgba(255,255,255,0.8);
-}
-@media screen and (max-width:640px){
-    .book{
-        padding: 36px 0 0 0;
-    }
-    .book::before{
-        position: absolute;
-        left: 0;
-        top: -50px;
-        width: 100%;
-        height: 330px;
-        background-color: #52CCC2;
-        content: "";
-        z-index: -1;
-    }
-    .book h2{
-        font-size: 30px;
-    }
-    .book h2::before{
-        top: -5px;
-        width: 30px;
-        height: 1px;
-    }
-    
-    .book .more{
-        top: 0;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        justify-content: center;
-        margin: 10px 0 0 0;
-    }
-    .book .more span{
-        display: none;
-    }
-    .book .list{
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-    .book .list ul{
-        width: 1080px;
-        padding-bottom: 20px;
-    }
-    .book .list ul li{
-        margin: 0 0 0 20px;
-    }
-    .book .list ul li a .cnt h3{
-        font-size: 15px;
-        margin: 20px 0 0 0;
-    }
-    .book .list ul li a .cnt p{
-        display: none;
-    }
-    .book .list ul li:first-child{
-        width: 200px;
-        margin: 0;
-    }
-    .book .list ul li:first-child a .pic{
-        float: none;
-        width: 200px;
-        height: 230px;
-    }
-    .book .list ul li:first-child a .pic img{
-        height: 100%;
-    }
-    .book .list ul li:first-child a .cnt{
-        display: block;
-        flex-direction: column;
-        justify-content: start;
-        padding: 0;
-        color: #3d3d3d;
-        font-size: 25px;
-    }
-    .book .list ul li:first-child a .cnt h3{
-        font-weight: 700;
-        font-size: 25px;
-        overflow: hidden;
-        font-size: 15px;
-        line-height: 1.2;
-        height: 2.4em;
-        margin: 20px 0 0 0;
-    }
-    .book .list ul li:first-child a .cnt p{
-        display: none;
-    }
+    margin: 20px 0 0 0;
+  }
+  .book .list ul li:first-child a .cnt p {
+    display: none;
+  }
 }
 /* book반응형 종료 */
-.banner{
-    margin: 101px 0 48px 0;
+.banner {
+  margin: 101px 0 48px 0;
 }
-.banner ul li{
-    width: 680px;
-    margin: 0 40px 0 0;
-    float: left;
-    color:#fff;
-    height: 200px;
+.banner ul li {
+  width: 680px;
+  margin: 0 40px 0 0;
+  float: left;
+  color: #fff;
+  height: 200px;
+  position: relative;
 }
-.banner ul li:last-child{
-    margin: 0;
+.banner ul li.edu::before {
+  background: linear-gradient(to right, black, transparent);
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-.banner ul li.edu{
-    background-color: #0095CD;
+.banner ul li.people:before {
+  background: linear-gradient(to right, #444, transparent);
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-.banner ul li.people{
-    background-color: #0057C1;
+.banner ul li:last-child {
+  margin: 0;
 }
-.banner ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 46px 0 0 62px;
-    position: relative;
+.banner ul li.edu {
+  background-color: #0095cd;
 }
-.banner ul li a i{
-    position: absolute;
-    right: 55px;
-    top: 60px;
-    font-size: 70px;
-    color: rgba(255,255,255,0.8);
+.banner ul li.people {
+  background-color: #0057c1;
 }
-.banner ul li a h2{
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0 0 20px 0;
+.banner ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 46px 0 0 62px;
+  position: relative;
 }
-@media screen and (max-width:640px){
-    .banner{
-        margin: 39px 0;
-    }
-    .banner ul li{
-        width: calc(50% - 8px);
-        margin: 0 16px 0 0;
-        float: left;
-        color:#fff;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    }
-    .banner ul li.edu{
-        background-color: #fff;
-        
-    }
-    .banner ul li.edu i{
-        color: #0095CD;
-    }
-    .banner ul li.edu p{
-        color: #0095CD;
-    }
-    .banner ul li.edu a h2{
-        color: #0095CD;
-    }
-    .banner ul li.people{
-        background-color: #fff;
-       
+.banner ul li a i {
+  position: absolute;
+  right: 55px;
+  top: 60px;
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.banner ul li a h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+@media screen and (max-width: 640px) {
+  .banner {
+    margin: 39px 0;
   }
-    .banner ul li.people i{
-        color: #0057C1;
-    }
-    .banner ul li.people a h2{
-        color: #0057C1;
-    }
-    .banner ul li a{
-        padding: 60px 0 0 0;
-        text-align: center;
-    }
-    .banner ul li a i{
-        position: relative;
-        right: auto;
-        top: auto;
-        font-size: 50px;
-    }
-    .banner ul li a h2{
-        font-size: 20px;
-    }
-    .banner ul li a p{
-        display: none;
-    }
+  .banner ul li {
+    width: calc(50% - 8px);
+    margin: 0 16px 0 0;
+    float: left;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .banner ul li.edu {
+    background-color: #fff;
+  }
+  .banner ul li.edu i {
+    color: #0095cd;
+  }
+  .banner ul li.edu p {
+    color: #0095cd;
+  }
+  .banner ul li.edu a h2 {
+    color: #0095cd;
+  }
+  .banner ul li.people {
+    background-color: #fff;
+  }
+  .banner ul li.people i {
+    color: #0057c1;
+  }
+  .banner ul li.people a h2 {
+    color: #0057c1;
+  }
+  .banner ul li a {
+    padding: 60px 0 0 0;
+    text-align: center;
+  }
+  .banner ul li a i {
+    position: relative;
+    right: auto;
+    top: auto;
+    font-size: 50px;
+  }
+  .banner ul li a h2 {
+    font-size: 20px;
+  }
+  .banner ul li a p {
+    display: none;
+  }
+  .banner ul li.edu::before {
+    display: none;
+  }
+  .banner ul li.people:before {
+    display: none;
+  }
 }
 /* banner종료 */
