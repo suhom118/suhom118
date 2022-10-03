@@ -701,7 +701,6 @@
 }
 .banner ul li:last-child{
     margin: 0;
-
 }
 .banner ul li.edu{
     background-color: #0095CD;
@@ -755,7 +754,7 @@
     .banner ul li.people{
         background-color: #fff;
        
-    }
+  }
     .banner ul li.people i{
         color: #0057C1;
     }
