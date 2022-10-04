@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/94a48106d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+
+    <title>인사말 | 소개의장 | 한국해양재단</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- 스크롤을내려서 header고정될때 fixed클래스추가
+             메뉴에 마우스를 올리면 header에 menu_open 클래스추가
+             모바일에서 메뉴를 열었을때 header에 menu_mobile 클래스 추가-->
+      <header class="header">
+        <h1 class="logo">
+          <a href="index.html">한국해양재단 korea ocean foundation</a>
+        </h1>
+        <nav class="gnb">
+          <button class="gnb_open">
+            <i class="fa-solid fa-bars"><span>메뉴열기</span></i>
+          </button>
+          <ul>
+            <li>
+              <a href="info01.html"><span>정보의장</span></a>
+              <ul>
+                <li><a href="info01.html">해양산업과 경제</a></li>
+                <li><a href="info02.html">해양산업과 기술</a></li>
+                <li><a href="info03.html">해양산업과 기후</a></li>
+                <li><a href="info04.html">해양산업과 관광</a></li>
+                <li><a href="info05.html">해양영토</a></li>
+                <li><a href="info06.html">해운과 항만</a></li>
+                <li><a href="info07.html">해양문화</a></li>
+                <li><a href="info08.html">수산과 어업</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="greeting.html"><span>소개의장</span></a>
+              <ul>
+                <li><a href="greeting.html">인사말</a></li>
+                <li><a href="introduce.html">재단소개</a></li>
+                <li><a href="logo.html">로고소개</a></li>
+                <li><a href="business.html">사업소개</a></li>
+                <li><a href="org.html">조직구성</a></li>
+                <li><a href="law.html">재단정관</a></li>
+                <li><a href="contact.html">찾아오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="part01.html"><span>참여의장</span></a>
+              <ul>
+                <li><a href="part01.html">해양영토대장정</a></li>
+                <li><a href="part02.html">해양문학상</a></li>
+                <li><a href="part03.html">해양사진대전</a></li>
+                <li><a href="part04.html">유적지답사</a></li>
+                <li><a href="part05.html">해양교육관계자워크숍</a></li>
+                <li><a href="part06.html">해양교육동아리</a></li>
+                <li><a href="part07.html">해안누리길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="notice.html"><span>소통의장</span></a>
+              <ul>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="board.html">자유게시판</a></li>
+                <li><a href="faq.html">자주하는질문</a></li>
+                <li><a href="survey.html">설문조사</a></li>
+                <li><a href="event.html">이벤트</a></li>
+                <li><a href="propose.html">사업제안</a></li>
+                <li><a href="press.html">보도자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="search.html"><span>해양학술정보DB센터</span></a>
+              <ul>
+                <li><a href="search.html">통합검색</a></li>
+                <li><a href="data.html">기초자료</a></li>
+                <li><a href="book.html">발간단행본자료</a></li>
+                <li><a href="research.html">연구논문자료</a></li>
+                <li><a href="paper.html">학위논문자료</a></li>
+                <li><a href="continue.html">연속간행물자료</a></li>
+                <li><a href="edu.html">해양교육자료</a></li>
+                <li><a href="etc.html">기타자료</a></li>
+                <li><a href="use.html">이용안내</a></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="gnb_close">
+            <i class="fa-solid fa-xmark"><span>메뉴닫기</span></i>
+          </button>
+        </nav>
+      </header>
+      <!-- 1차메뉴별로 배경이미지 
+      첫번째 1차메뉴 소개의장-->
+      <div class="sub_visual sub_bg2">
+        <div class="wrapper">
+          <strong> 소개의장 </strong>
+        </div>
+      </div>
+      <!-- lnb서브메뉴 -->
+      <nav class="lnb">
+        <div class="wrapper">
+          <div class="menu">
+            <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+              <span>home </span>
+            </a>
+            <!-- depth에 open클래스가 들어가있으면 열린상태
+            하나의 버튼이 두개의 기능을 할때는 button에 title로
+          현재의 기능을 입력해야함 -->
+            <div class="depth">
+              <button title="1차메뉴열기">
+                <span>소개의장</span>
+                <i class="fa-solid fa-angle-down">메뉴열기</i>
+              </button>
+              <ul>
+                <li>
+                  <a href="info01.html"><span>정보의장</span></a>
+                </li>
+                <li>
+                  <a href="greeting.html"><span>소개의장</span></a>
+                </li>
+                <li>
+                  <a href="part01.html"><span>참여의장</span></a>
+                </li>
+                <li>
+                  <a href="notice.html"><span>소통의장</span></a>
+                </li>
+                <li>
+                  <a href="search.html"><span>해양학술정보DB센터</span></a>
+                </li>
+              </ul>
+              <div class="depth">
+                <button title="2차메뉴열기">
+                  <span>인사말</span>
+                  <i class="fa-solid fa-angle-down-solid">메뉴열기</i>
+                </button>
+                <ul>
+                  <li><a href="greeting.html">인사말</a></li>
+                  <li><a href="introduce.html">재단소개</a></li>
+                  <li><a href="logo.html">로고소개</a></li>
+                  <li><a href="business.html">사업소개</a></li>
+                  <li><a href="org.html">조직구성</a></li>
+                  <li><a href="law.html">재단정관</a></li>
+                  <li><a href="contact.html">찾아오시는길</a></li>
+                </ul>
+              </div>
+            </div>
+            <button class="print">
+              <i class="fa-solid fa-print">인쇄</i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <aside class="top">
+        <button>
+          <!-- 버튼태그안에는 텍스트가필요 -->
+
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </aside>
+      <footer class="footer">
+        <div class="wrapper cnt_wrap">
+          <div class="sns">
+            <ul class="clearfix">
+              <li>
+                <a
+                  href="https://www.facebook.com/Koreaocean.Found/"
+                  target="_blank"
+                  title="새창으로 이동합니다"
+                >
+                  <img src="../images/common/facebook.svg" alt="페이스북" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UC8s0tvXtLB4KY8Bt2rjqtEg"
+                  target="_blank"
+                  title="새창으로 이동합니다"
+                >
+                  <img src="../images/common/youtube.svg" alt="유튜브" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/koreaoceanfoundation/"
+                  target="_blank"
+                  title="새창으로 이동합니다"
+                >
+                  <img src="../images/common/insta.svg" alt="인스타그램" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flogo">
+            <img src="../images/common/logo_w.svg" alt="한국해양재단로고" />
+          </div>
+          <div class="inner">
+            <ul class="fnav clearfix">
+              <li class="privacy">
+                <a href="#n">개인정보처리방침</a>
+              </li>
+              <li>
+                <a href="#n">이용약관</a>
+              </li>
+              <li>
+                <a href="#n">이메일수집거부</a>
+              </li>
+              <li>
+                <a href="#n">자주하는질문</a>
+              </li>
+              <li>
+                <a href="#n">사이트맵</a>
+              </li>
+              <li>
+                <a href="#n">찾아오시는길</a>
+              </li>
+            </ul>
+            <div class="finfo">
+              <span
+                >주소: 서울시 종로구 창경궁로 112-7(인의동) 인의빌딩 4층 </span
+              ><span>전화 02-741-5278 </span><span>팩스 02-367-33312</span>
+            </div>
+            <div class="copyright">
+              <span>
+                Copyright ⓒ korea maritime foundation. All Right Reserved.
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

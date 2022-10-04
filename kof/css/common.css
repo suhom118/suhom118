@@ -4,9 +4,9 @@ html,
 body {
   color: #3d3d3d;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto,
-    'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   /* 폰트 적용 우선순위
        을유 웹폰트 우선적용, - 만약에 웹폰트가 지원되지 않으면 그 다음에 선언된 폰트가 적용됨
        apple sd gothic - 아이폰에서 지원하는 폰트 */
@@ -378,12 +378,12 @@ aside.top button i {
 
 @media screen and (max-width: 640px) {
   aside.top {
-    display: none;
+    display: block;
     width: 40px;
     height: 40px;
     position: absolute;
-    right: 95px;
-    bottom: 95px;
+    right: 20px;
+    bottom: 50px;
     z-index: 250;
   }
   aside.top button {
@@ -402,5 +402,145 @@ aside.top button i {
   }
   aside.top button i {
     font-size: 20px;
+  }
+}
+.footer {
+  height: 230px;
+  background-color: #666;
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer .sns {
+  position: absolute;
+  right: 0;
+  top: 28px;
+}
+.footer .sns ul {
+  display: flex;
+}
+.footer .sns ul li {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.footer .sns ul li:nth-child(2) {
+  border-right: 0;
+  border-left: 0;
+}
+.footer .sns ul li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.footer .flogo {
+  float: left;
+  padding: 22px 61px 0 0;
+}
+.footer .flogo .img {
+  width: 120px;
+}
+.footer .inner {
+  float: left;
+  padding: 22px 0 0 0;
+}
+.footer .fnav {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+.footer .fnav li {
+  width: 100px;
+  position: relative;
+}
+.footer .fnav li.privacy {
+  font-weight: 700;
+}
+
+.footer .finfo {
+  margin: 0 0 20px 0;
+}
+.footer .finfo span {
+  display: inline-block;
+}
+.footer .copyright {
+  color: #999;
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    height: 350px;
+  }
+  .footer .sns {
+    position: relative;
+    right: auto;
+    top: auto;
+    height: 64px;
+  }
+  .footer .sns::after {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: calc(100% + 40px);
+    height: 1px;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .footer .sns ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .footer .sns ul li {
+    width: 80px;
+    height: 64px;
+    border: 0;
+  }
+
+  .footer .sns ul li a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .flogo {
+    float: left;
+    padding: 12px 0 0 0;
+    margin: 0 0 20px 0;
+  }
+  .footer .flogo .img {
+    transform: scale(1.4, 1.4);
+  }
+  .footer .inner {
+    padding: 0;
+  }
+  .footer .fnav {
+    display: block;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+    text-align: left;
+    flex-wrap: nowrap;
+    justify-content: start;
+    text-align: center;
+  }
+  .footer .fnav li {
+    float: left;
+    width: auto;
+    position: relative;
+    margin: 0 38px 5px 0;
+  }
+
+  .footer .finfo {
+    margin: 0 0 29px 0;
+  }
+  .footer .finfo span {
+    display: inline-block;
+  }
+  .footer .copyright {
+    color: rgba(255, 255, 255, 0.4);
   }
 }

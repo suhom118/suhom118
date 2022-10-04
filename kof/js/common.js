@@ -31,9 +31,12 @@ $(document).ready(function () {
   $('.header').on('mouseleave', function () {
     $('.header').removeClass('menu_open');
   });
-  $('.header .gnb>ul>li:last-child>ul>li:last-child>a').on('focusout', function () {
-    $('.header').removeClass('menu_open');
-  });
+  $('.header .gnb>ul>li:last-child>ul>li:last-child>a').on(
+    'focusout',
+    function () {
+      $('.header').removeClass('menu_open');
+    }
+  );
 
   let scrolling;
   scrollChk(); //함수실행
@@ -84,10 +87,12 @@ $(document).ready(function () {
     //함수의 선언
     scrolling = $(window).scrollTop();
     console.log(scrolling);
-    if (scrolling > 400) {
-      $('aside.top').fadeIn();
-    } else {
-      $('aside.top').fadeOut();
+    if (pcMo == 'pc') {
+      if (scrolling > 400) {
+        $('aside.top').fadeIn();
+      } else {
+        $('aside.top').fadeOut();
+      }
     }
   }
 }); //document.ready 종료

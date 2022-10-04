@@ -1,0 +1,32 @@
+@import url('default.css');
+@import url('common.css');
+@import url('contents.css');
+.sub_visual {
+  height: 380px;
+  background-image: url(../images/sub/sub_visual01.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.sub_visual.sub_bg1 {
+  background-image: url(../images/sub/sub_visual01.png);
+}
+.sub_visual.sub_bg2 {
+  background-image: url(../images/sub/sub_visual02.png);
+}
+.sub_visual.sub_bg3 {
+  background-image: url(../images/sub/sub_visual03.png);
+}
+.sub_visual.sub_bg4 {
+  background-image: url(../images/sub/sub_visual04.png);
+}
+.sub_visual.sub_bg5 {
+  background-image: url(../images/sub/sub_visual05.png);
+}
+.sub_visual strong {
+  display: block;
+  font-size: 50px;
+  padding: 206px 0 0 0;
+  font-weight: 400;
+}
