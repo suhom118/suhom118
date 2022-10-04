@@ -170,12 +170,11 @@ html, body {
         background-color: #eee;
         content: "";
      }
-     .header.menu_open .gnb>ul>li>ul{
-        display: block;
-        
-    }
-    /* 오버스타일 */
-    
+  .header.menu_open .gnb > ul > li > ul {
+    display: block;
+  }
+  /* 오버스타일 */
+
     .header .gnb>ul>li:hover>a,
     .header .gnb>ul>li>a:focus{
         color: #3d3d3d;
