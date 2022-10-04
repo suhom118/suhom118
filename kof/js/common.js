@@ -16,23 +16,23 @@ $(document).ready(function () {
     //함수 선언
     winW = $(window).width();
     if (winW > 640) {
-      pcMo = "pc";
+      pcMo = 'pc';
     } else {
-      pcMo = "mobile";
+      pcMo = 'mobile';
     }
     //console.log(pcMo);
   }
 
-  $(".header .gnb>ul>li").on("mouseenter focusin", function () {
-    if (pcMo == "pc") {
-      $(".header").addClass("menu_open");
+  $('.header .gnb>ul>li').on('mouseenter focusin', function () {
+    if (pcMo == 'pc') {
+      $('.header').addClass('menu_open');
     }
   });
-  $(".header").on("mouseleave", function () {
-    $(".header").removeClass("menu_open");
+  $('.header').on('mouseleave', function () {
+    $('.header').removeClass('menu_open');
   });
-  $(".header .gnb>ul>li:last-child>ul>li:last-child>a").on("focusout", function () {
-    $(".header").removeClass("menu_open");
+  $('.header .gnb>ul>li:last-child>ul>li:last-child>a').on('focusout', function () {
+    $('.header').removeClass('menu_open');
   });
 
   let scrolling;
@@ -48,29 +48,29 @@ $(document).ready(function () {
     scrolling = $(window).scrollTop();
     console.log(scrolling);
     if (scrolling > 0) {
-      $(".header").addClass("fixed");
+      $('.header').addClass('fixed');
     } else {
-      $(".header").removeClass("fixed");
+      $('.header').removeClass('fixed');
     }
   }
 
-  $(".header .gnb .gnb_open").on("click", function () {
-    $(".header").addClass("menu_mobile");
+  $('.header .gnb .gnb_open').on('click', function () {
+    $('.header').addClass('menu_mobile');
   });
-  $(".header .gnb .gnb_close").on("click", function () {
-    $(".header").removeClass("menu_mobile");
+  $('.header .gnb .gnb_close').on('click', function () {
+    $('.header').removeClass('menu_mobile');
   });
 
-  $(".header .gnb>ul>li>a").on("click", function (e) {
-    if (pcMo == "mobile") {
+  $('.header .gnb>ul>li>a').on('click', function (e) {
+    if (pcMo == 'mobile') {
       e.preventDefault();
-      $(this).parents("li").toggleClass("sub_open");
+      $(this).parents('li').toggleClass('sub_open');
     }
   });
 
   /* top 버튼을 누르면 상단으로 스크롤 */
-  $("aside.top").on("click", function () {
-    $("html, body").animate(
+  $('aside.top').on('click', function () {
+    $('html, body').animate(
       {
         scrollTop: 0,
       },
@@ -85,9 +85,9 @@ $(document).ready(function () {
     scrolling = $(window).scrollTop();
     console.log(scrolling);
     if (scrolling > 400) {
-      $("aside.top").fadeIn();
+      $('aside.top').fadeIn();
     } else {
-      $("aside.top").fadeOut();
+      $('aside.top').fadeOut();
     }
   }
 }); //document.ready 종료

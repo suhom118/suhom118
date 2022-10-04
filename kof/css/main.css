@@ -1,5 +1,5 @@
-@import url("default.css");
-@import url("common.css");
+@import url('default.css');
+@import url('common.css');
 
 /* 메인에 있는 스타일만 정의 */
 
@@ -12,7 +12,7 @@
 .visual::before {
   background: linear-gradient(to right, black, transparent);
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   height: 100%;
   width: 100%;
@@ -49,7 +49,7 @@
 .visual .search label {
   display: none; /* 접근성 때문에 준 태그 */
 }
-.visual .search input[type="text"] {
+.visual .search input[type='text'] {
   /* <input type="text" />라고 되어 있는 태그만 지칭 */
   float: left;
   width: 370px;
@@ -60,7 +60,7 @@
   background-color: transparent;
   font-size: 20px;
 }
-.visual .search input[type="text"]::placeholder {
+.visual .search input[type='text']::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 .visual .search .btn {
@@ -104,7 +104,7 @@
     height: 39px;
     border-radius: 20px;
   }
-  .visual .search input[type="text"] {
+  .visual .search input[type='text'] {
     /* <input type="text" />라고 되어 있는 태그만 지칭 */
     width: 170px;
     height: 35px; /* search 높이 - border값 */
@@ -140,7 +140,7 @@
   width: 50px;
   height: 3px;
   background-color: #1d1d1d;
-  content: "";
+  content: '';
 }
 .part .list ul {
   /* 모든li의 넓이 +여백을 합한 넓이
@@ -292,7 +292,7 @@
   width: 50px;
   height: 3px;
   background-color: #1d1d1d;
-  content: "";
+  content: '';
 }
 .notice ul li.active .detail {
   display: block;
@@ -495,7 +495,7 @@
   width: 100%;
   height: 403px;
   background-color: #52ccc2;
-  content: "";
+  content: '';
   z-index: -1;
 }
 .book h2 {
@@ -512,7 +512,7 @@
   width: 50px;
   height: 3px;
   background-color: #fff;
-  content: "";
+  content: '';
 }
 .book .more {
   position: absolute;
@@ -616,7 +616,7 @@
     width: 100%;
     height: 330px;
     background-color: #52ccc2;
-    content: "";
+    content: '';
     z-index: -1;
   }
   .book h2 {
@@ -705,7 +705,7 @@
 .banner ul li.edu::before {
   background: linear-gradient(to right, black, transparent);
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   height: 100%;
   width: 100%;
@@ -713,7 +713,7 @@
 .banner ul li.people:before {
   background: linear-gradient(to right, #444, transparent);
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   height: 100%;
   width: 100%;
@@ -745,6 +745,16 @@
   font-size: 30px;
   font-weight: 700;
   margin: 0 0 20px 0;
+}
+/* pc에서만 */
+@media screen and (min-width: 641px) {
+  .banner ul li {
+    transition: 0.5s;
+  }
+  .banner ul li:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 @media screen and (max-width: 640px) {
   .banner {
