@@ -9,21 +9,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.visual .tit{
-    width: 50%;
+.visual .tit.right {
+  background-image: url(../images/visual_bg02.png);
+  padding: 172px 0 0 0;
 }
-.visual .tit.right{
-    background-image: url(../images/visual_bg02.png);
-    padding: 172px 0 0 0;
-  
-}
-.visual .tit.left{
-    background-image: url(../images/visual_bg01.png);
-    padding: 330px 0 0 0;
-    text-align: right;
-    display: flex;
-    justify-content: end;
-    
+.visual .tit.left {
+  background-image: url(../images/visual_bg01.png);
+  padding: 330px 0 0 0;
+  text-align: right;
+  display: flex;
+  justify-content: end;
 }
 .visual .tit .inner{
     width: 500px;
@@ -230,15 +225,15 @@
 }
 .recruit ul li{
     background-color: #fff;
-    height: 316px ;
-    width: calc(20% - 30px);
+  height: 316px;
+  width: calc(20% - 30px);
    
 }
-.recruit ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 55px 0 0 34px;
+.recruit ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 55px 0 0 34px;
     
 }
 .recruit ul li:first-child{
