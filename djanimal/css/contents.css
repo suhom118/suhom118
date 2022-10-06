@@ -84,7 +84,7 @@
 }
 @media screen and (max-width: 640px) {
   .cnt_introduce .intro1 {
-    height: 800px;
+    height: 750px;
     width: auto;
     display: block;
     align-items: center;
