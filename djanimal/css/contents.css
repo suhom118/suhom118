@@ -84,7 +84,7 @@
 }
 @media screen and (max-width: 640px) {
   .cnt_introduce .intro1 {
-    height: auto;
+    height: 800px;
     width: auto;
     display: block;
     align-items: center;
@@ -96,7 +96,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     top: 0;
     left: 0;
-    padding: 40px 5% 60px 5%;
+    padding: 40px 5% 0 5%;
   }
   .cnt_introduce .intro1 .cnt p {
     width: 100%;
