@@ -1,0 +1,563 @@
+@import url('default.css');
+@import url('common.css');
+
+
+.visual {
+    position: relative;
+    height: 1000px;
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+    background-attachment: fixed;
+    color: #FFF;
+}
+.visual .inner {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    /* margin: -188px 0 0 0; */
+    transform: translate(0, -188px);
+}
+.visual h2 {
+    margin: 0 0 36px 0;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1.25;
+}
+.visual h2 strong {
+    font-weight: 700;
+}
+.visual a {
+    display: inline-block;
+    padding: 2px 5px 2px 0;
+    font-weight: 700;
+    border-bottom: 1px solid #FFF;
+}
+
+@media screen and (max-width:640px){
+    .visual {
+        height: 760px;
+    }
+    .visual .inner {
+        transform: translate(0, -160px);
+    }
+    .visual h2 {
+        margin: 0 0 20px 0;
+        font-size: 30px;
+    }
+}/* visual media 종료 */
+
+.care .inner {
+    position: relative;/* more정렬의 기준 */
+}
+.care .tit {
+    margin: 124px 0 66px 0;
+}
+.care .tit h2 {
+    float: left;
+    color: #1d1d1d;
+    font-size: 60px;
+    font-weight: 700;
+}
+.care .tit p {
+    float: left;
+    margin: 55px 0 0 30px;
+}
+.care .more {
+    position: absolute;
+    right: 0;
+    top: 49px;
+}
+.care .more a {
+    display: block;
+    width: 120px;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px solid #3D3D3D;
+}
+.care .more a span {
+    float: left;
+}
+.care .more a i {
+    float: right;
+    margin: 6px 0 0 0;
+    font-size: 18px;
+}
+.care .more a:hover {
+    color: #00AE4D;
+    border-bottom-color: #00AE4D;
+}
+.care ul li {
+    float: left;
+    width: 440px;
+    margin: 0 40px 88px 0;
+}
+.care ul li:nth-child(3), .care ul li:nth-child(6) {
+    margin-right: 0;
+}
+.care ul li:nth-child(2), .care ul li:nth-child(5) {
+    margin-top: 40px;
+}
+.care ul li a {
+    display: block;
+}
+/*
+    마우스 오버 시 이미지 확대
+    1. 이미지만 감싸는 별도의 영역이 필요
+    2. 해당 영역은 overflow:hidden;과 높이 설정이 필요 
+       (높이는 100%)
+    3. 감싸는 영역에서 font-size:0; line-height:0;으로 이미지 하단에 발생하는 
+        행간을 삭제해야함
+    4. 이미지에 미리 (오버전) transition을 줘서 자연스럽게 확대되도록 해야함
+    5. 오버후 이미지를 transform:scale3d(확대값,확대값,1)을 준다.
+*/
+.care ul li a span {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 20px;
+    /* 이미지도 하단에 행간이 적용되어 여백이 발생함
+       이미지 하단 행간을 삭제하려면 감싸는 요소에 글자크기/행간을 0 줘야함 */
+    font-size: 0;
+    line-height: 0;
+}
+.care ul li a span img {
+    transition: 0.5s;
+}
+.care ul li a:hover span img {
+    transform: scale3d(1.2, 1.2, 1);
+    /* scale3d에서 1.2는 좌우 넓이 배율 
+       마지막 1은 축 - 1일 줘야 가운데에서 늘어남 */
+}
+.care ul li a:hover span {
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+.care ul li a dl {
+    margin: 13px 0 0 20px;
+    font-size: 17px;
+    line-height: 30px;
+}
+.care ul li a dl dt {
+    font-weight: 700;
+    float: left;
+}
+.care ul li a dl dd {
+    display: block;
+    position: relative;
+    margin: 0 0 0 90px;
+}
+.care ul li a dl dd::before {
+    position: absolute;
+    left: -8px;
+    top: 11px;
+    width: 1px;
+    height: 13px;
+    background-color: #CCCCCC;
+    content: "";
+}
+
+@media screen and (max-width:640px){
+    .care .tit {
+        margin: 47px 0 30px 0;
+    }
+    .care .tit h2 {
+        float: none;
+        font-size: 30px;
+    }
+    .care .tit p {
+        float: none;
+        margin: 2px 0 0 0;
+    }
+    .care .more {
+        position: relative;
+        right: auto;
+        top: auto;
+        text-align: center;
+    }
+    .care .more a {
+        display: inline-block;
+        width: 145px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #3D3D3D;
+        border-radius: 18px;
+        padding: 0 10px 0 15px;
+    }
+    .care .more a i {
+        margin: 9px 0 0 0;
+    }
+    .care ul li {
+        float: none;
+        width: auto;
+        margin: 0 0 40px 0;
+    }
+    .care ul li:nth-child(2), .care ul li:nth-child(5) {
+        margin-top: 0;
+    }
+    .care ul li:nth-child(4), .care ul li:nth-child(5), .care ul li:nth-child(6) {
+        display: none;
+    }
+    .care ul li a span img {
+        width: 100%;
+    }
+    .care ul li a dl {
+        margin: 10px 0 0 21px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .care ul li a dl dd {
+        margin: 0 0 0 78px;
+    }
+    .care ul li a dl dd::before {
+        left: -7px;
+        top: 9px;
+        height: 10px;
+    }
+}/* care media 종료 */
+
+.step {
+    height: 706px;
+    margin: 40px 0 0 0;
+    background: url(../images/main/step_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.step .tit {
+    padding: 153px 0 75px 0;
+}
+.step .tit h2 {
+    float: left;
+    font-size: 60px;
+    font-weight: 700;
+}
+.step .tit p {
+    float: left;
+    margin: 55px 0 0 30px;
+}
+.step .ctrl {
+    display: none;
+}
+.step .list ol li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    padding: 25px 20px 0 20px;
+    margin: 0 40px 0 0;
+    border:1px solid rgba(255,255,255,0.2)
+}
+.step .list ol li:last-child {
+    margin-right: 0;
+}
+.step .list ol li strong {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+}
+.step .list ol li h3 {
+    margin: 5px 0 21px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.step .list ol li p {
+    color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:640px){
+    .step {
+        height: auto;
+        padding: 0 0 66px 0;
+        margin: 48px 0 0 0;
+    }
+    .step .tit {
+        padding: 54px 0 42px 0;
+    }
+    .step .tit h2 {
+        float: none;
+        font-size: 30px;
+    }
+    .step .tit p {
+        float: none;
+        margin: 0;
+    }
+    .step .ctrl {
+        display: block;
+        margin: 0 0 25px 0;
+        text-align: center;
+    }
+    .step .ctrl button {
+        width: 35px;
+        height: 35px;
+        margin: 0 3px;
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.6);
+    }
+    .step .ctrl button span {
+        display: none;
+    }
+    .step .ctrl button i {
+        margin: 3px 0 0 0;
+        font-size: 18px;
+        color: rgba(255,255,255,0.6);
+    }
+    .step .list {
+        overflow: hidden;
+        position: relative;
+        height: 183px;
+    }
+    /*
+        jquery에서 ol을 움직일 예정 
+        그럼 반드시 ol이 absolute여야 합니다.
+        감싸는 요소는 overflow가 들어감. 긴 ol을 일부만 보이게 하기 위해서
+        ol이 absolute면 감싸는 요소가 절대 인식을 못함
+        그래서 감싸는 요소는 반드시 ol의 높이값을 가지고 있어야함
+    */
+    .step .list ol {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .step .list ol li {
+        width: 200px;
+        height: 183px;
+        padding: 18px 10px 0 10px;
+        margin: 0 16px 0 0;
+    }
+    .step .list ol li strong {
+        font-size: 30px;
+    }
+    .step .list ol li h3 {
+        margin: 5px 0 25px 0;
+        font-size: 17px;
+    }
+}/* step media 종료 */
+.news {
+    padding: 0 0 123px 0;
+    background-color: #f4f4f4;
+}
+.news .inner {
+    position: relative;
+}
+.news .tit {
+    padding: 124px 0 66px 0;
+}
+.news .tit h2 {
+    float: left;
+    color: #1d1d1d;
+    font-size: 60px;
+    font-weight: 700;
+}
+.news .tit p {
+    float: left;
+    margin: 55px 0 0 30px;
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 160px;
+}
+.news .more a {
+    display: block;
+    width: 120px;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px solid #3D3D3D;
+}
+.news .more a span {
+    float: left;
+}
+.news .more a i {
+    float: right;
+    margin: 6px 0 0 0;
+    font-size: 18px;
+}
+.news .more a:hover {
+    color: #00AE4D;
+    border-bottom-color: #00AE4D;
+}
+.news ul li {
+    float: left;
+    width: 560px;
+}
+.news ul li a {
+    display: block;
+    height: 160px;
+    padding: 40px 40px 0 40px;
+    background-color: #fff;
+}
+.news ul li a:hover {
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+.news ul li a .pic {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.news ul li a .pic img {
+    transition: 0.5s;
+}
+.news ul li a:hover .pic img {
+    transform: scale3d(1.2,1.2,1);
+}
+.news ul li a .subject {
+    display: block;
+    margin: 0 0 22px 0;
+    font-size: 20px;
+    font-weight: 700;
+    /* 1줄 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* 2줄 */
+    /* line-height: 1.5;
+    height: 3em;
+    overflow: hidden; */
+}
+.news ul li a .date {
+    display: block;
+    color: #666;
+}
+.news ul li a .date span:first-child {
+    position: relative;
+    margin: 0 30px 0 0;
+}
+.news ul li a .date span:first-child::after {
+    position: absolute;
+    right: -19px;
+    top: 6px;
+    width: 1px;
+    height: 11px;
+    background-color: #CCC;
+    content: "";
+}
+.news ul li:first-child {
+    width: 800px;
+    margin: 0 40px 0 0 ;
+}
+.news ul li:first-child a {
+    height: 360px;
+}
+.news ul li:first-child a .pic {
+    float: left;
+}
+.news ul li:first-child a .inner2 {
+    float: right;
+    width: 300px;
+}
+.news ul li:first-child a .subject {
+    /* 1줄 -> 2줄 */
+    white-space: normal;
+    line-height: 1.5;
+    height: 3em;
+}
+.news ul li:first-child a .content {
+    display: block;
+    margin: 0 0 37px 0;
+    /* 6줄 */
+    line-height: 1.5;
+    height: 9em;
+    overflow: hidden;
+}
+
+.news ul li:nth-child(2){
+    margin: 0 0 40px 0;
+}
+@media screen and (max-width:640px){
+    .news {
+        padding: 0 0 64px 0;
+    }
+    .news .tit {
+        padding: 49px 0 8px 0;
+    }
+    .news .tit h2 {
+        float: none;
+        font-size: 30px;
+    }
+    .news .tit p {
+        float: none;
+        margin: 0;
+    }
+    .news .more {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 25px 0 0 0;
+        text-align: center;
+    }
+    .news .more a {
+        display: inline-block;
+        width: 145px;
+        height: 35px;
+        padding: 0 10px 0 15px;
+        line-height: 35px;
+        border: 1px solid #3D3D3D;
+        border-radius: 18px;
+    }
+    .news .more a i {
+        margin: 7px 0 0 0;
+    }
+    .news ul li {
+        float: none;
+        width: auto;
+        border-bottom: 1px solid #CCC;
+    }
+    .news ul li:last-child {
+        border-bottom: 0;
+    }
+    .news ul li a {
+        height: auto;
+        padding: 22px 0;
+        background-color: transparent;
+    }
+    .news ul li a .pic {
+        display: block;
+        margin: 0 0 13px 0;
+    }
+    .news ul li a .pic img {
+        width: 100%;
+    }
+    .news ul li a .subject {
+        margin: 0 0 16px 0;
+        font-size: 17px;
+        /* 1줄 */
+        white-space: normal;
+        overflow: visible;
+    
+        /* 2줄 */
+        /* height: auto;
+        overflow: visible; */
+    }
+    .news ul li a .date span:first-child {
+        margin: 0 26px 0 0;
+    }
+    .news ul li a .date span:first-child::after {
+        right: -16px;
+        height: 9px;
+    }    
+    .news ul li:first-child {
+        width: auto;
+        margin: 0;
+    }
+    .news ul li:first-child a {
+        height: auto;
+    }
+    .news ul li:first-child a .pic {
+        float: none;
+    }
+    .news ul li:first-child a .inner2 {
+        float: none;
+        width: auto;
+    }
+    .news ul li:first-child a .subject {
+        /* 1줄 -> 2줄 */
+        height: auto;
+    }
+    .news ul li:first-child a .content {
+        display: block;
+        margin: 0 0 15px 0;
+        /* 4줄 */
+        height: 6em;
+    }
+    .news ul li:nth-child(2){
+        margin: 0;
+    }
+}/* news media 종료 */

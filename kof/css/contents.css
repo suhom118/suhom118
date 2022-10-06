@@ -87,3 +87,62 @@
     margin: 42px 0 0 0;
   }
 }
+.cnt_org {
+  margin: 0 0 100px 0;
+}
+
+/* 통합검색 | 해양학술정보DB센터 | 한국해양재단 */
+.cnt_search {
+  margin: 0 0 100px 0;
+}
+
+.cnt_search ul li a {
+  display: block;
+}
+.cnt_search ul li a h3 {
+  color: #0057c1;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.cnt_search ul li a p {
+  margin: 5px 0 15px 0;
+}
+.cnt_search ul li a span {
+  display: block;
+  color: #666;
+}
+/* float코딩 */
+
+/* .cnt_search ul li {
+  float: left;
+  width: 25%;
+  height: 300px;
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #ccc;
+}
+.cnt_search ul li:first-child {
+  border-left-width: 1px;
+}
+.cnt_search ul li a {
+  padding: 70px 0 0 30px;
+} */
+
+/* table코딩 */
+
+.cnt_search ul {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+.cnt_search ul li {
+  display: table-cell;
+  width: 25%;
+  border: 1px solid #ccc;
+  height: 300px;
+  vertical-align: middle;
+}
+.cnt_search ul li a {
+  padding: 0 0 0 30px;
+}

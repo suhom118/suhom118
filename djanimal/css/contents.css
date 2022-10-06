@@ -1,0 +1,150 @@
+.cnt_introduce {
+  color: #fff;
+}
+.cnt_introduce .intro1 {
+  background-image: url(../images/contents/intro1_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 744px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.cnt_introduce .intro1 .cnt {
+  position: absolute;
+  width: 1400px;
+  height: 480px;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 126px;
+  left: 14%;
+  padding: 70px 10% 0 10%;
+}
+.cnt_introduce .intro1 .cnt p {
+  width: 40%;
+  height: 500px;
+  word-break: normal;
+  text-align: justify;
+  float: left;
+}
+.cnt_introduce .intro1 .cnt p.left {
+  margin: 0 60px 0 0;
+}
+.cnt_introduce .intro2 {
+  height: 568px;
+  background-color: #000;
+  margin: 100px 0;
+}
+.cnt_introduce .intro2 .bg ul {
+  display: flex;
+  padding: 118px 0 0 0;
+}
+.cnt_introduce .intro2 .bg ul li {
+  width: calc((100% - 80px) / 3);
+  height: 360px;
+  margin: 0 40px 0 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/contents/intro2_img1.png);
+
+  padding: 53px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cnt_introduce .intro2 .bg ul li:last-child {
+  margin: 0;
+}
+.cnt_introduce .intro2 .bg ul li.care {
+  background-image: url(../images/contents/intro2_img1.png);
+}
+.cnt_introduce .intro2 .bg ul li.bel {
+  background-image: url(../images/contents/intro2_img2.png);
+}
+.cnt_introduce .intro2 .bg ul li.prou {
+  background-image: url(../images/contents/intro2_img3.png);
+}
+.cnt_introduce .intro2 .bg ul li h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 35px 0;
+  line-height: 1.2;
+  max-height: 1.2em;
+  overflow: hidden;
+}
+.cnt_introduce .intro2 .bg ul li p {
+  word-break: normal;
+  width: 70%;
+  line-height: 1.5;
+  max-height: 10.5em;
+  overflow: hidden;
+}
+@media screen and (max-width: 640px) {
+  .cnt_introduce .intro1 {
+    height: auto;
+    width: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  .cnt_introduce .intro1 .cnt {
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    padding: 40px 5% 60px 5%;
+  }
+  .cnt_introduce .intro1 .cnt p {
+    width: 100%;
+    height: auto;
+    word-break: normal;
+    text-align: justify;
+    float: none;
+  }
+  .cnt_introduce .intro1 .cnt p.left {
+    margin: 0 0 0 0;
+  }
+  .cnt_introduce .intro2 {
+    height: auto;
+
+    margin: 0;
+  }
+  .cnt_introduce .intro2 .bg ul {
+    display: block;
+    padding: 27px 0 0 0;
+  }
+  .cnt_introduce .intro2 .bg ul li {
+    width: auto;
+    height: 360px;
+    margin: 0 0 40px 0;
+
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cnt_introduce .intro2 .bg ul li:last-child {
+    margin: 0;
+  }
+  .cnt_introduce .intro2 .bg ul li.care {
+    background-image: url(../images/contents/intro2_img1.png);
+  }
+  .cnt_introduce .intro2 .bg ul li.bel {
+    background-image: url(../images/contents/intro2_img2.png);
+  }
+  .cnt_introduce .intro2 .bg ul li.prou {
+    background-image: url(../images/contents/intro2_img3.png);
+  }
+  .cnt_introduce .intro2 .bg ul li h3 {
+    font-size: 25px;
+    margin: 0 0 11px 0;
+  }
+  .cnt_introduce .intro2 .bg ul li p {
+    width: 70%;
+  }
+}

@@ -225,6 +225,7 @@
   width: 100%;
   /* th td에 준 선을 겹쳐서 표현하는 방법 */
   border-collapse: collapse;
+  border-top: 3px solid #ccc;
 }
 .contents .table_wrap table th,
 .contents .table_wrap table td {
@@ -242,7 +243,7 @@
 .contents .table_wrap table thead td {
   background-color: #f4f4f4;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   padding: 20px 0;
 }
@@ -254,7 +255,58 @@
   padding: 7px 5px;
   text-align: center;
 }
-.contents .table_wrap table tbody td ul li {
+.contents .table_wrap table tbody td ul {
   padding: 15px 10px 15px 50px;
   text-align: left;
 }
+.contents .table_wrap table tbody td ul li {
+  position: relative;
+}
+.contents .table_wrap table tbody td ul li::before {
+  position: absolute;
+  left: -10px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #ccc;
+  content: '';
+}
+@media screen and (max-width: 640px) {
+  .contents .table_wrap {
+    overflow-x: scroll;
+    padding: 0 0 10px 0;
+  }
+  .contents .table_wrap table {
+    min-width: 500px;
+  }
+  .contents .table_wrap table thead th,
+  .contents .table_wrap table thead td {
+    font-size: 15px;
+    font-weight: 400;
+
+    padding: 5px 0;
+  }
+  .contents .table_wrap table tbody th {
+    font-weight: 400;
+  }
+  .contents .table_wrap table tbody th,
+  .contents .table_wrap table tbody td {
+    padding: 5px;
+  }
+  .contents .table_wrap table tbody td ul {
+    padding: 5px 5px 5px 10px;
+  }
+  .contents .table_wrap table tbody td ul li {
+    position: relative;
+  }
+  .contents .table_wrap table tbody td ul li::before {
+    position: absolute;
+    left: -5px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+  }
+}
+/* table종료 */

@@ -9,25 +9,16 @@
   background: url(../images/main/visual_bg.png) no-repeat center center / cover;
   color: #fff;
 }
-.visual::before {
-  background: linear-gradient(to right, black, transparent);
-  position: absolute;
-  content: '';
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .visual .visual_wrap {
   position: absolute;
   left: calc(50% - 700px);
   top: 50%;
   transform: translate(0, -50%);
   /* 해당요소의 넓이와 높이를 계산해서 그 값의 50%를 왼쪽 오른쪽으로 이동 
-       top: 50%;을 주면 위아래 가운데에서 시작해서 아래로 콘텐츠가 배치됨
-       콘텐츠의 위아래 여백을 동일하게 주려면 (즉, 콘텐츠가 자기 높이의 절반이 위로 이동)
-       transform: translate(좌우이동값, 위아래이동값:-50%)을 주면 됨.
-    */
+     top: 50%;을 주면 위아래 가운데에서 시작해서 아래로 콘텐츠가 배치됨
+     콘텐츠의 위아래 여백을 동일하게 주려면 (즉, 콘텐츠가 자기 높이의 절반이 위로 이동)
+     transform: translate(좌우이동값, 위아래이동값:-50%)을 주면 됨.
+  */
 }
 .visual h2 {
   margin: 0 0 44px 0;
@@ -124,6 +115,7 @@
     font-size: 13px;
   }
 }
+
 .part {
   margin: 120px 0 0 0;
 }
