@@ -1,0 +1,33 @@
+@import url('default.css');
+@import url('common.css');
+.event h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 2em 0;
+}
+.event ul li {
+  float: left;
+  width: 47%;
+  margin: 0 6% 0 0;
+}
+
+/* 여백을 고정으로 주는 경우 px로*/
+/* .event ul li { 
+  float: left;
+  width: calc(50% - 40px);
+  margin: 0 80px 0 0;
+}*/
+.event ul li:nth-child(2n) {
+  margin: 0;
+}
+.event ul li img {
+  width: 100%;
+}
+@media screen and (max-width: 640px) {
+  .event h2 {
+    font-size: 30px;
+
+    margin: 2em 0;
+  }
+}
