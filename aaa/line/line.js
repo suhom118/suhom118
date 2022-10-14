@@ -1,7 +1,7 @@
 //언더라인만들기
 
 let horizontalBar = document.getElementById("horizontal-underline");
-let horizontalMenus = document.querySelectorAll(".header .gnb>ul>li>a");
+let horizontalMenus = document.querySelectorAll("nav a");
 
 function horizontalIndicator(e) {
   horizontalBar.style.left = e.offsetLeft + "px";
