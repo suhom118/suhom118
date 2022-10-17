@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li {
+    list-style: none;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 100px;
+    background-color: #ededed;
+}
+.popup {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    background-color: #f4f4f4;
+}
+.popup ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3600px;
+}
+.popup ul li {
+    float: left;
+}
+.container {
+    height: 200px;
+}
+.container .notice {
+    float: left;
+    width: 400px;
+    height: 200px;
+    padding: 20px 20px 0 0;
+    background-color: #ededed;
+}
+.container .banner {
+    float: left;
+    width: 400px;
+    height: 200px;
+    padding: 20px 20px 0 20px;
+    background-color: #ededed;
+}
+.container .link {
+    float: left;
+    width: 400px;
+    height: 200px;
+    padding: 20px 0 0 20px;
+    background-color: #ededed;
+}
+.footer {
+    height: 100px;
+    background-color: #f4f4f4;
+}
