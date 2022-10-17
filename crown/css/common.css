@@ -156,8 +156,8 @@ body {
 }
 .footer .family {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15%;
+  top: 98px;
 }
 .footer .family button {
   border: 1px solid #ccc;
@@ -180,10 +180,10 @@ body {
 .footer .ftop .fnav li::after {
   position: absolute;
   right: -25px;
-  top: 33px;
+  top: 30px;
   width: 1px;
   height: 12px;
-  background-color: #ededed;
+  background-color: #ccc;
   content: "";
 }
 .footer .ftop .fnav li:last-child:after {
@@ -211,4 +211,60 @@ body {
 .footer .fsub .copyright {
   margin-top: 10px;
   color: #999;
+}
+@media screen and (max-width: 1120px) {
+  .footer .family {
+    right: 5%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .footer .family {
+    top: 20px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer .family {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 36px 0 20px 20px;
+  }
+  .footer .family button {
+    width: 130px;
+    height: 24px;
+  }
+  .footer .ftop {
+    border-bottom: 0;
+    height: auto;
+  }
+
+  .footer .ftop .fnav li {
+    margin-right: 30px;
+
+    float: left;
+  }
+  .footer .ftop .fnav li::after {
+    right: -15px;
+    top: 15px;
+  }
+  .footer .ftop .fnav li:last-child:after {
+    display: none;
+  }
+  .footer .ftop .fnav li a {
+    display: block;
+    line-height: 40px;
+  }
+  .footer .fsub .flogo {
+    display: none;
+  }
+
+  .footer .fsub .inner {
+    margin: 10px 0 0 0;
+  }
+
+  .footer .fsub .copyright {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
 }
