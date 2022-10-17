@@ -30,3 +30,119 @@
   height: 100%;
   object-fit: cover;
 }
+.popup .btn_prev,
+.popup .btn_next {
+  position: absolute;
+  top: calc(50% - 20px);
+  z-index: 10;
+  font-size: 0;
+  line-height: 0;
+}
+.popup .btn_prev {
+  left: 5%;
+}
+.popup .btn_next {
+  right: 5%;
+}
+.popup .btn_prev::before,
+.popup .btn_next::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 80px;
+  background: url(../images/pop_arrow.svg) no-repeat center center / contain;
+  content: '';
+  opacity: 0.5;
+}
+
+.popup .btn_next::before {
+  transform: rotate(180deg);
+}
+.popup .ctrl_wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  z-index: 10;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transform: translate(-50%, 0);
+}
+/* 속성이 적용되지않을때 !important로 무조건 적용되게 */
+
+.popup .ctrl_wrap .btn_paging span {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 0 10px 0 0;
+  opacity: 1;
+}
+.popup .ctrl_wrap .btn_paging span.swiper-pagination-bullet-active {
+  background-color: #fb0e57;
+}
+.popup .ctrl_wrap .btn_stop {
+  font-size: 0;
+  line-height: 0;
+  width: 14px;
+  height: 14px;
+  background-image: url(../images/pop_stop.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 20px;
+}
+.popup .ctrl_wrap .btn_stop.play {
+  background-image: url(../images/pop_play.svg);
+}
+@media screen and (max-width: 890px) {
+  .popup ul li .txt strong {
+    font-size: 30px;
+  }
+  .popup .btn_prev,
+  .popup .btn_next {
+    top: calc(50% - 30px);
+  }
+  .popup .btn_prev::before,
+  .popup .btn_next::before {
+    width: 30px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .popup {
+    height: 400px;
+  }
+  .popup .btn_prev,
+  .popup .btn_next {
+    display: none;
+  }
+  .popup ul li .txt strong {
+    font-size: 20px;
+  }
+}
+h1 {
+  margin: 50px 0 10px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+.banner1 ul li img {
+  width: 100%;
+}
+.banner1 ul li strong {
+  display: block;
+  font-size: 20px;
+}
+.banner2 ul li {
+  width: 320px;
+}
+@media screen and (max-width: 1024px) {
+  .banner2 ul li {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .banner2 ul li {
+    width: 170px;
+  }
+}
