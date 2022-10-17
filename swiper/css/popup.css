@@ -1,0 +1,66 @@
+@import url(default.css);
+@import url(common.css);
+
+
+.popup ul li { position:relative; }
+.popup ul li .txt {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    color: #FFF;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.popup ul li .txt span {
+    display: block;
+}
+.popup ul li .txt strong {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.visual1 .ctrl_prev, 
+.visual1 .ctrl_next {
+    position: absolute;
+    top: calc(50% - 60px);
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+}
+.visual1 .ctrl_prev {
+    left: 5%;
+}
+.visual1 .ctrl_next {
+    right: 5%;
+}
+.visual1 .ctrl_prev::before, 
+.visual1 .ctrl_next::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.6;
+    width: 60px;
+    height: 120px;
+    background: url(../images/pop_arrow.svg) no-repeat center center / contain;
+    content: "";
+}
+.visual1 .ctrl_next::before {
+    left: auto;
+    right: 0;
+    transform: rotate(180deg);
+}
+.visual1 .ctrl_group {
+    position: absolute;
+    left: calc(50% - 61px); /* 넓이의 절반 */
+    bottom: 5%;
+    z-index: 10;
+    width: 123px;
+    height: 32px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 16px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

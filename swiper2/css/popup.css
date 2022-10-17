@@ -1,0 +1,32 @@
+@import url(default.css);
+@import url(common.css);
+.popup {
+  height: 800px;
+}
+.popup ul li {
+  position: relative;
+}
+.popup ul li .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.popup ul li .txt span {
+  display: block;
+  line-height: 1.2;
+}
+.popup ul li .txt strong {
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.popup ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
