@@ -1,96 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>크라운제과</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="wrap">
-        <section class="event">
-            <div class="wrapper cnt_wrap">
-                <h2>CROWN<br>EVENT</h2>
-                <ul class="clearfix">
-                    <li>
-                        <a href="#n">
-                            <strong>
-                                <span>죠리퐁없인 재미없어 어쩌지</span>
-                                크라운제과 가을을 물들이다
-                            </strong>
-                            <img src="images/main/event1.png" alt="크라운제과 가을을 물들이다 이벤트 이미지">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#n">
-                            <strong>
-                                <span>죠리퐁 50주년 기념 역대급 콜라보 </span>
-                                신세계베이커리와 죠리퐁이 만나 죠리퐁 크로와상이 탄생! 
-                            </strong>
-                            <img src="images/main/event2.png" alt="죠리퐁 50주년 이벤트 이미지">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#n">
-                            <strong>
-                                <span>빅파이 마시멜로 출시 기념</span>
-                                빅파이 + 마시멜로가 만나면 모다
-                            </strong>
-                            <img src="images/main/event3.png" alt="빅파이 마시멜로 출시 기념 이벤트 이미지">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#n">
-                            <strong>
-                                <span>아기 빅토의 세상 나들이</span>
-                                아기 빅토가 찍은 포즈로 지금 당장 네컷사진 찍으러 GABOJAGO~
-                            </strong>
-                            <img src="images/main/event4.png" alt="아기 빅토의 세상 나들이 이벤트 이미지">
-                        </a>
-                    </li>
-                </ul>
-                <a href="#n" class="more"><img src="images/main/event_more.png" alt="이벤트 더보기"></a>
+      <header class="header">
+        <div class="wrapper inner">
+          <h1 class="logo">
+            <a href="index.html"><img src="images/common/logo.svg" alt="크라운제과로고" /></a>
+          </h1>
+          <nav class="gnb">
+            <button class="gnb_open"><img src="images/main/btn_menu.svg" alt="메뉴열기" /></button>
+            <ul>
+              <li><a href="#n">제품소개</a></li>
+              <li><a href="#n">이벤트 </a></li>
+              <li><a href="#n">고객센터 </a></li>
+              <li><a href="#n">회사소개</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="popup swiper">
+        <h2>팝업</h2>
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#n">
+              <img
+                src="images/main/popup2.png"
+                alt="메리추석에도 내가 제일 귀여워 달토끼 백팩과 함께라면 이번 명절, 
+              어른이들도 용돈받기 SSAP가넝"
+                class="pc"
+              />
+              <img
+                src="images/main/popup2_m.png"
+                alt="메리추석에도 내가 제일 귀여워 달토끼 백팩과 함께라면 이번 명절, 
+              어른이들도 용돈받기 SSAP가넝"
+                class="mobile"
+              />
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n">
+              <img
+                src="images/main/popup1.png"
+                alt="빅파이 마시멜로 출시 기념
+                기대평 이벤트참여기간 : 8월 19일 (금) ~ 8월 25일 (목)빅파이 마시멜로 먹고 싶은 마음 듬~뿍 
+                담아서 댓글달고, 친구를 태그하면 선물이 갈지도..?"
+                class="pc"
+              />
+              <img
+                src="images/main/popup1_m.png"
+                alt="빅파이 마시멜로 출시 기념
+                기대평 이벤트참여기간 : 8월 19일 (금) ~ 8월 25일 (목)빅파이 마시멜로 먹고 싶은 마음 듬~뿍 
+                담아서 댓글달고, 친구를 태그하면 선물이 갈지도..?"
+                class="mobile"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="event">
+        <div class="wrapper cnt_wrap">
+          <h2>CROWN<br />EVENT</h2>
+          <ul class="clearfix">
+            <li>
+              <a href="#n">
+                <strong>
+                  <span>죠리퐁없인 재미없어 어쩌지</span>
+                  크라운제과 가을을 물들이다
+                </strong>
+                <img src="images/main/event1.png" alt="크라운제과 가을을 물들이다 이벤트 이미지" />
+              </a>
+            </li>
+            <li>
+              <a href="#n">
+                <strong>
+                  <span>죠리퐁 50주년 기념 역대급 콜라보 </span>
+                  신세계베이커리와 죠리퐁이 만나 죠리퐁 크로와상이 탄생!
+                </strong>
+                <img src="images/main/event2.png" alt="죠리퐁 50주년 이벤트 이미지" />
+              </a>
+            </li>
+            <li>
+              <a href="#n">
+                <strong>
+                  <span>빅파이 마시멜로 출시 기념</span>
+                  빅파이 + 마시멜로가 만나면 모다
+                </strong>
+                <img src="images/main/event3.png" alt="빅파이 마시멜로 출시 기념 이벤트 이미지" />
+              </a>
+            </li>
+            <li>
+              <a href="#n">
+                <strong>
+                  <span>아기 빅토의 세상 나들이</span>
+                  아기 빅토가 찍은 포즈로 지금 당장 네컷사진 찍으러 GABOJAGO~
+                </strong>
+                <img src="images/main/event4.png" alt="아기 빅토의 세상 나들이 이벤트 이미지" />
+              </a>
+            </li>
+          </ul>
+          <a href="#n" class="more"><img src="images/main/event_more.png" alt="이벤트 더보기" /></a>
+        </div>
+      </section>
+      <section class="product">
+        <div class="wrapper">
+          <h2>크라운제과 제품 목록</h2>
+          <ul class="clearfix">
+            <li class="pro1">
+              <a href="#">
+                <h3><span>SINCE 1983</span>빅파이</h3>
+                <p>
+                  빅파이의 빅을 “Big”으로 알고 있지만 “Victory”의 “Vic”으로 “승리를 기원하는
+                  파이”라는 의미이다.
+                </p>
+                <img src="images/main/product_more.png" alt="더보기" />
+              </a>
+            </li>
+            <li class="pro2">
+              <a href="#">
+                <h3><span>SINCE 2020</span>못말리는신짱</h3>
+                <p>부산의 명물 씨앗호떡맛을 그대로 구현한 못말리는 씨앗호떡 맛집!</p>
+                <img src="images/main/product_more.png" alt="더보기" />
+              </a>
+            </li>
+            <li class="pro3">
+              <a href="#">
+                <h3><span>SINCE 1991</span>하임</h3>
+                <p>하임과 느끼는 로맨틱 감성여행! 얼려먹으면 더욱 맛있는 하임</p>
+                <img src="images/main/product_more.png" alt="더보기" />
+              </a>
+            </li>
+            <li class="pro4">
+              <a href="#">
+                <h3><span>SINCE 2009</span>오곡쿠키</h3>
+                <p>
+                  웰빙트랜드에 걸맞는 크라운제과의 대표 건강 쿠키로, 고소하고 담백한 맛이 특징이다.
+                </p>
+                <img src="images/main/product_more.png" alt="더보기" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="family">
+          <button>FAMILY SITE</button>
+        </div>
+        <div class="ftop">
+          <div class="wrapper">
+            <ul class="fnav">
+              <li class="privacy"><a href="#n">개인정보처리방침 </a></li>
+              <li><a href="#n">이메일무단수집거부</a></li>
+              <li><a href="#n">사이트맵 </a></li>
+              <li><a href="#n"> 회사소개</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fsub">
+          <div class="wrapper">
+            <div class="flogo">
+              <img src="images/common/logo.svg" alt="로고" />
             </div>
-        </section>
-        <section class="product">
-            <div class="wrapper">
-                <h2>크라운제과 제품 목록</h2>
-                <ul class="clearfix">
-                    <li class="pro1">
-                        <a href="#">
-                            <h3><span>SINCE 1983</span>빅파이</h3>
-                            <p>빅파이의 빅을 “Big”으로 알고 있지만 “Victory”의 “Vic”으로 “승리를 기원하는 파이”라는 의미이다.</p>
-                            <img src="images/main/product_more.png" alt="더보기">
-                        </a>
-                    </li>
-                    <li class="pro2">
-                        <a href="#">
-                            <h3><span>SINCE 2020</span>못말리는신짱</h3>
-                            <p>부산의 명물 씨앗호떡맛을 그대로 구현한 못말리는 씨앗호떡 맛집!</p>
-                            <img src="images/main/product_more.png" alt="더보기">
-                        </a>
-                    </li>
-                    <li class="pro3">
-                        <a href="#">
-                            <h3><span>SINCE 1991</span>하임</h3>
-                            <p>하임과 느끼는 로맨틱 감성여행! 얼려먹으면 더욱 맛있는 하임</p>
-                            <img src="images/main/product_more.png" alt="더보기">
-                        </a>
-                    </li>
-                    <li class="pro4">
-                        <a href="#">
-                            <h3><span>SINCE 2009</span>오곡쿠키</h3>
-                            <p>웰빙트랜드에 걸맞는 크라운제과의 대표 건강 쿠키로, 고소하고 담백한 맛이 특징이다.</p>
-                            <img src="images/main/product_more.png" alt="더보기">
-                        </a>
-                    </li>
-                </ul>
+            <div class="inner">
+              <div class="finfo">
+                <span>㈜크라운제과</span>
+                <span> 서울시 용산구 한강대로72길 3 </span>
+                <span> Tel : 02-791-9133 </span>
+                <span> Fax : 02-791-9119 </span><br />
+                <span>대표이사 : 윤석빈 </span>
+                <span> 사업자등록번호 : 411-87-00569</span>
+              </div>
+              <div class="copyright">COPYRIGHT © CROWN ALL RIGHTS RESERVED.</div>
             </div>
-        </section>
+          </div>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
