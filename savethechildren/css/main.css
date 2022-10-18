@@ -1,0 +1,7 @@
+@import url(default.css);
+@import url(common.css);
+.visual {
+}
+.fp-watermark {
+  display: none;
+}
