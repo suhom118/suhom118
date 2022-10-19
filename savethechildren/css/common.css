@@ -81,14 +81,94 @@ body {
   top: 0;
 }
 ::selection {
-  background: #f25100;
+  background: pink;
   color: #fff;
 }
-::-moz-selection {
-  background: #f25100;
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
   color: #fff;
 }
-::-webkit-selection {
-  background: #f25100;
-  color: #fff;
+.header .logo {
+  float: left;
+  margin: 23px 0 0 40px;
+  font-size: 0;
+  line-height: 0;
+}
+.header .logo a {
+  display: block;
+  background-image: url(../images/common/logo_w.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 224px;
+  height: 46px;
+}
+.header .gnb {
+  float: right;
+  margin: 0 2.0833vw 0 0;
+}
+.header .gnb .gnb_open {
+  display: none;
+}
+.header .gnb ul li {
+  float: left;
+}
+.header .gnb ul li a {
+  display: block;
+  padding: 0 2.1875vw;
+  font-size: 25px;
+  line-height: 100px;
+}
+/* header가 고정일때 */
+.header.fixedd {
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  color: #1d1d1d;
+}
+.header.fixedd .gnb ul li {
+}
+.header.black {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 640px) {
+  .header {
+    height: 60px;
+  }
+  .header .logo {
+    float: left;
+    margin: 15px 0 0 20px;
+    font-size: 0;
+    line-height: 0;
+  }
+  .header .logo a {
+    width: 118px;
+    height: 36px;
+  }
+  .header .gnb {
+    float: right;
+    margin: 0 40px 0 0;
+  }
+  .header .gnb .gnb_open {
+    display: block;
+    padding: 20px;
+    margin-right: -40px;
+  }
+  .header .gnb .gnb_open span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    font-size: 0;
+    line-height: 0;
+    margin-bottom: 5px;
+  }
+  .header .gnb ul li {
+    display: none;
+  }
 }

@@ -13,5 +13,14 @@ $(document).ready(function () {
     verticalCentered: true /* 컨텐츠 요소 위아래 가운데 */,
 
     responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
+
+    onLeave: function (origin, destination, direction, trigger) {},
+    beforeLeave: function (origin, destination, direction, trigger) {
+      if (destination.index >= 2) {
+        $(".header").addClass("black");
+      } else {
+        $(".header").removeClass("black");
+      }
+    },
   });
 });
