@@ -293,7 +293,7 @@
 @media screen and (max-width: 640px) {
   .biz {
     background-color: #f9f6f2;
-    margin: 50px 0 0 0;
+    margin: 50px 0 50px 0;
   }
   .biz img {
     float: none;
