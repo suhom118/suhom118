@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script
       src="https://code.jquery.com/jquery-1.12.4.js"
@@ -15,6 +16,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>세이브더칠드런 보건영양</title>
@@ -92,8 +94,8 @@
                 <strong> 보건영양산업 </strong>
                 <h2>모자보건 및 영양개선</h2>
                 <p>
-                  출산 전부터 임신 기간, 출산 시, 출산 이후까지 산모와 아동이 적절한 의료 서비스를 제공받도록 보건 교육, 의료시설 개보수, 의약품 보급
-                  등 지원, 신생아살리기캠페인을 통해 모인 모자 배분
+                  li 출산 전부터 임신 기간, 출산 시, 출산 이후까지 산모와 아동이 적절한 의료 서비스를 제공받도록 보건 교육, 의료시설 개보수, 의약품
+                  보급 등 지원, 신생아살리기캠페인을 통해 모인 모자 배분
                 </p>
                 <p class="exp">* 지원국가 : 방글라데시, 말리, 우간다, 라오스</p>
                 <div class="more"></div>
@@ -102,10 +104,84 @@
           </div>
         </section>
         <section class="section news">
-          <h2>현장소식</h2>
+          <div class="wrapper cnt_wrap">
+            <h2>현장소식과 이야기가<span> 궁금하세요?</span></h2>
+            <div class="list swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="#n"
+                    ><span> <img src="images/main/news01.png" alt="사진" /> </span
+                    ><strong>에티오피아 파견직원의 일기 '메마른 땅에도 싹트는 희망'</strong></a
+                  >
+                </li>
+                <li class="swiper-slide">
+                  <a href="#n"
+                    ><span> <img src="images/main/news02.png" alt="사진" /> </span
+                    ><strong>1000일 가정방문 봉사활동으로 라오스 아이들이 건강하게 자라가요!</strong></a
+                  >
+                </li>
+                <li class="swiper-slide">
+                  <a href="#n"
+                    ><span> <img src="images/main/news03.png" alt="사진" /> </span
+                    ><strong>베트남 꽝남 옌베이 지역 소수민족아동 교육지원사업⑥</strong></a
+                  >
+                </li>
+                <li class="swiper-slide">
+                  <a href="#n"
+                    ><span> <img src="images/main/news04.png" alt="사진" /> </span
+                    ><strong>서아프리카 작은 나라의 강하고 용기 있는 여학생들의 이야기</strong></a
+                  >
+                </li>
+              </ul>
+              <div class="btn_paging"></div>
+            </div>
+            <a href="#n" class="more">뉴스더보기</a>
+          </div>
         </section>
         <section class="section support">
-          <h2>지원 및 후원</h2>
+          <div class="wrapper">
+            <div class="support_wrap">
+                <div class="inner">
+                  <h2>
+                    <strong> 월 3만 원이면, </strong>
+                    <span> 연간 10명의 아동에게 학용품을 </span>
+                    <span> 지원하고 4명의 산모에게 출산물품을 </span>
+                    지원할 수 있습니다.
+                  </h2>
+                  <p>매월 정기후원을 통해, 더 많은 아이들에게 장기적인 도움을 주실 수 있습니다.</p>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#n">
+                      <span>월 3만원 정기후원</span>
+                      <strong>후원하기</strong>
+                      <img src="images/main/icon01.svg" alt="아이콘" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <span>아동을 구하는 기빙클럽</span>
+                      <strong>Giving <br/>Club</strong>
+                      <img src="images/main/icon02.svg" alt="아이콘" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <span>#우리가SNS히어로</span>
+                      <strong>골든타임<br/>세이버</strong>
+                      <img src="images/main/icon03.svg" alt="아이콘" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <span>우리의 서명이 이뤄낸 변화</span>
+                      <strong>히든보이스</strong>
+                      <img src="images/main/icon04.svg" alt="아이콘" />
+                    </a>
+                  </li>
+                </ul>
+          </div>
+            
         </section>
         <footer class="section footer fp-auto-height">
           <!-- section과 fp-auto-height를 동시에 선언하면 footer처럼 높이가 낮은 컨텐츠를 배치할 수 있음 -->
