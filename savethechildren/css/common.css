@@ -1,28 +1,26 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
-html,
-body {
-  color: #3d3d3d;
-  line-height: 1.5;
-  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  /* letter-spacing: -0.05em; */
-  word-break: keep-all; /* 단어별 줄바꿈 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+html, body {
+    color: #3D3D3D;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: -0.05em; */
+    word-break: keep-all; /* 단어별 줄바꿈 */
 }
-#wrap {
-  /* id="wrap" */
-  overflow: hidden;
-  position: relative;
-  min-width: 320px;
+#wrap { /* id="wrap" */
+    overflow: hidden;
+    position: relative;
+    min-width: 320px;
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 20px;
-  margin: 0 auto;
-  /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
        1400px 일때에도 좌우에 여백은 유지해야함 
        (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
        부드럽게 여백을 유지하면서 전환
@@ -30,145 +28,151 @@ body {
        1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
        padding으로 좌우에 여백을 20px씩 줌  */
 }
-@media screen and (max-width: 1000px) {
-  html,
-  body {
-    font-size: 14px;
-  }
+@media screen and (max-width:1000px){
+    html, body {
+        font-size: 14px;
+    }
 }
-@media screen and (max-width: 640px) {
-  html,
-  body {
-    font-size: 13px;
-  }
-} /* media 종료 */
-.clearfix::after {
-  display: block;
-  clear: both;
-  content: ".";
-  visibility: hidden;
-  height: 0;
-}
-.clearfix {
-  display: block;
-}
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+}/* media 종료 */
+.clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
 
 /* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
    cnt_wrap 클래스 줌 */
 .cnt_wrap {
-  position: relative;
+    position: relative;
 }
 
 .skip_nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1000000000;
-  width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000000000;
+    width: 100%;
 }
 .skip_nav a {
-  position: absolute;
-  left: 0;
-  top: -1000px;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  background-color: #0059a8;
-  color: #fff;
-  text-align: center;
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #0059A8;
+    color: #FFF;
+    text-align: center;
 }
 .skip_nav a:focus {
-  top: 0;
+    top: 0;
 }
-::selection {
-  background: pink;
-  color: #fff;
-}
+
+/* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
+  -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
+::selection{background:#ED1B2D;color:#fff;}
+::-moz-selection{background:#ED1B2D;color:#fff;}
+::-webkit-selection{background:#ED1B2D;color:#fff;} 
+
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 100;
-  color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    color: #FFF;
 }
 .header .logo {
-  float: left;
-  margin: 23px 0 0 40px;
-  font-size: 0;
-  line-height: 0;
+    float: left;
+    margin: 23px 0 0 40px;
 }
 .header .logo a {
-  display: block;
-  background-image: url(../images/common/logo_w.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  width: 224px;
-  height: 46px;
+    display: block;
+    width: 224px;
+    height: 46px;
+    background-image: url(../images/common/logo_w.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    line-height: 0;
 }
 .header .gnb {
-  float: right;
-  margin: 0 2.0833vw 0 0;
-}
-.header .gnb .gnb_open {
-  display: none;
-}
-.header .gnb ul li {
-  float: left;
-}
-.header .gnb ul li a {
-  display: block;
-  padding: 0 2.1875vw;
-  font-size: 25px;
-  line-height: 100px;
-}
-/* header가 고정일때 */
-.header.fixedd {
-  background-color: #fff;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  color: #1d1d1d;
-}
-.header.fixedd .gnb ul li {
-}
-.header.black {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-@media screen and (max-width: 640px) {
-  .header {
-    height: 60px;
-  }
-  .header .logo {
-    float: left;
-    margin: 15px 0 0 20px;
-    font-size: 0;
-    line-height: 0;
-  }
-  .header .logo a {
-    width: 118px;
-    height: 36px;
-  }
-  .header .gnb {
     float: right;
     margin: 0 40px 0 0;
-  }
-  .header .gnb .gnb_open {
-    display: block;
-    padding: 20px;
-    margin-right: -40px;
-  }
-  .header .gnb .gnb_open span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: #fff;
-    font-size: 0;
-    line-height: 0;
-    margin-bottom: 5px;
-  }
-  .header .gnb ul li {
+}
+.header .gnb .gnb_open {
     display: none;
-  }
+}
+.header .gnb ul li {
+    float: left;
+}
+.header .gnb ul li a {
+    display: block;
+    padding: 0 42px;
+    font-size: 25px;
+    line-height: 100px; /* header의 높이값, 글자를 위아래 가운데 배치 하기 위해*/
+}
+/* header가 고정일때 */
+.header.black {
+    border-bottom: 1px solid #CCC;
+    /* background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); */
+    color: #1d1d1d;
+}
+.header.black .logo a {
+    background-image: url(../images/common/logo.svg);
+}
+
+/*
+    1440 - 
+    1200
+    1000
+    800
+    640
+*/
+@media screen and (max-width:1200px){
+    .header .gnb ul li a {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .header {
+        height: 60px;
+    }
+    .header .logo {
+        margin: 16px 0 0 20px;
+    }
+    .header .logo a {
+        width: 134px;
+        height: 27px;
+    }
+    .header .gnb {
+        margin: 0;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        padding: 26px 20px 16px 20px;
+    }
+    .header .gnb .gnb_open span {
+        display: block;
+        width: 23px;
+        height: 2px;
+        margin-bottom: 4px;
+        border-radius: 1px; /* 높이의 절반 */
+        background-color: #FFF;
+        font-size: 0;
+        line-height: 0;
+    }
+    .header .gnb ul {
+        display: none;
+    }
+    .header.black .gnb .gnb_open span {
+        background-color: #1d1d1d;
+    }
 }

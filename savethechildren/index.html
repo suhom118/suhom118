@@ -10,7 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
-
     <title>세이브더칠드런 보건영양</title>
   </head>
   <body>
@@ -20,47 +19,77 @@
         <nav class="gnb">
           <button class="gnb_open"><span>메뉴열기</span><span></span><span></span></button>
           <ul>
-            <li><a href="#n">기관 </a></li>
-            <li><a href="#n"> 사업 </a></li>
-            <li><a href="#n">후원 </a></li>
+            <li><a href="#n">기관</a></li>
+            <li><a href="#n">사업</a></li>
+            <li><a href="#n">후원</a></li>
             <li><a href="#n">참여</a></li>
             <li><a href="#n">소식</a></li>
           </ul>
         </nav>
       </header>
       <div id="fullpage">
+        <!-- fullpage 효과를 줄 모든 태그를 감싸는 요소 (이름 변경 가능) -->
         <section class="section visual">
+          <!-- 클래스 section을 주면 해당 요소는 1page (이름 변경 불가) -->
           <div class="inner">
-            <h2 class="none">비쥬얼영역 동영상삽입</h2>
+            <h2>
+              모든 아동은<br />
+              건강하게 태어나 자랄<br />
+              권리가 있습니다.
+            </h2>
+            <!-- 비디오 파일이 사용자의 컴퓨터에 다운로드가 완료된 이후에 재생
+                        즉, 용량이 엄청 작아야 함. -->
             <video loop muted data-autoplay playsinline>
               <!-- 비디오 자동실행 무한반복 -->
               <source data-src="images/main/visual1.mp4" type="video/mp4" />
               <!-- 비디오 경로 -->
             </video>
             <div class="bg"></div>
-            <h2>
-              모든 아동은 <br />
-              건강하게 태어나 자랄 <br />
-              권리가 있습니다.
-            </h2>
           </div>
         </section>
-
         <section class="section count">
-          <h2>사망자수 비율</h2>
+          <div class="wrapper">
+            <div class="tit">
+              <h2>
+                <strong>매일 1만 4,200명</strong> 이상의<br />
+                아동이 5살이 되기 전<br />
+                목숨을 잃습니다.
+              </h2>
+              <p>
+                <span>세이브더칠드런은 예방 가능한 질병으로 사망하는 </span>
+                <span>5세 미만 아동이 없도록 산모와 신생아 및 영유아를 위한</span>
+                보건영양 사업을 진행합니다.
+              </p>
+            </div>
+            <ul class="rate">
+              <li>
+                <div class="exp">매일 5세 미만 영유아 사망자수</div>
+                <div class="num"><strong>14,200</strong><span>명</span></div>
+              </li>
+              <li>
+                <div class="exp">매년 5세 미만 영유아 사망수</div>
+                <div class="num"><strong>5,200,000</strong><span>명</span></div>
+              </li>
+              <li>
+                <div class="exp">예방 가능한 질병으로 인한 사망 비율</div>
+                <div class="num"><strong>45.54</strong><span>%</span></div>
+              </li>
+            </ul>
+          </div>
         </section>
-
         <section class="section biz">
           <h2>세이브더칠드런 사업소개</h2>
         </section>
-
         <section class="section news">
           <h2>현장소식</h2>
         </section>
         <section class="section support">
-          <h2>지원및후원</h2>
+          <h2>지원 및 후원</h2>
         </section>
-        <footer class="section footer fp-auto-height"><br /><br /></footer>
+        <footer class="section footer fp-auto-height">
+          <!-- section과 fp-auto-height를 동시에 선언하면 footer처럼 높이가 낮은 컨텐츠를 배치할 수 있음 -->
+          <div><br /><br />footer<br /><br /></div>
+        </footer>
       </div>
     </div>
   </body>
