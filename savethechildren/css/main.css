@@ -35,6 +35,7 @@
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.3);
 }
+/* visual이 로딩됐을때 애니메이션 글자가 밑에서 위로나타남 */
 
 @media screen and (max-width: 1440px) {
   .visual h2 {
@@ -77,6 +78,19 @@
   margin: 0 0 29px 0;
   font-size: 40px;
   line-height: 1.2;
+}
+
+@media screen and (min-width: 641px) {
+  .count .tit h2 {
+    transition: 1s;
+    transition-delay: 0.1s;
+    opacity: 0;
+    transform: translate(0, -200px);
+  }
+  .count.fp-completely .tit h2 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 .count .tit h2 strong {
   font-weight: 700;
@@ -178,8 +192,7 @@
     top: 69px;
     width: 120%;
   }
-  .count .rate li .num strong {
-  }
+
   .count .rate li .num span {
     padding: 0 5px 0 5px;
   }
@@ -230,6 +243,18 @@
   float: left;
   width: 45%;
 }
+
+@media screen and (min-width: 641px) {
+  .biz img {
+    opacity: 0;
+    transform: translate(0, -400px);
+    transition: 1s;
+  }
+  .biz.fp-completely img {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 .biz .inner {
   float: left;
   width: 45%;
@@ -277,7 +302,7 @@
   background-color: #666;
 }
 .biz a:hover .more {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 @media screen and (max-width: 1000px) {
   .biz .inner {
@@ -294,6 +319,7 @@
   .biz {
     background-color: #f9f6f2;
     margin: 50px 0 50px 0;
+    padding: 20px 0 20px 0;
   }
   .biz img {
     float: none;
@@ -318,7 +344,16 @@
   }
 }
 .news {
+  position: relative;
+}
+.news::before {
+  position: absolute;
   background-color: #fbeeed;
+  height: 40%;
+  width: 100%;
+  content: "";
+  left: 0;
+  bottom: 0;
 }
 .news h2 {
   font-size: 40px;
@@ -402,6 +437,8 @@
 @media screen and (max-width: 640px) {
   .news {
     background-color: #fbeeed;
+    padding: 0 0 30px 0;
+    margin: 0 0 50px 0;
   }
   .news h2 {
     font-size: 25px;
@@ -437,7 +474,7 @@
   height: 57.1429vw;
 }
 .support .inner {
-  width: 41%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -455,6 +492,9 @@
 .support h2 span {
   display: block;
 }
+.support .inner .inner2 {
+  width: 85%;
+}
 .support ul {
   display: flex;
   flex-wrap: wrap;
@@ -465,30 +505,154 @@
 .support ul li {
   width: calc(50% - 2.1429vw);
   height: calc(33% - 1.1429vw);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  padding: 3.7143vw 1vw 0 2vw;
+
   position: relative;
 }
-.support ul li img {
+.support ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 3.7143vw 1vw 0 2vw;
+  transition: 1s;
+}
+.support ul li a img {
   position: absolute;
-  right: 30px;
-  top: 50px;
+  right: 2.0833vw;
+  bottom: 3.4722vw;
+  display: block;
+  width: 3.4722vw;
+  height: 3.4722vw;
+  transition: 1s;
 }
-.support ul li:nth-child(1),
-.support ul li:nth-child(2) {
-  margin-bottom: 20px;
-}
+
 .support ul li:nth-child(2n) {
   margin-top: 3vw;
 }
 .support ul li span {
   display: block;
+  font-size: 1.1111vw;
 }
 .support ul li strong {
   font-size: 3.5714vw;
+  line-height: 1.2;
 }
-.footer {
+/* 마우스오버시  */
+.support ul li a:hover,
+.support ul li.active a {
+  background-color: #ed1b2d;
+  color: #fff;
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
 }
+.support ul li:first-child a:hover img,
+.support ul li.active a img {
+  content: url(../images/main/icon01_w.svg);
+}
+.support ul li:nth-child(2) a:hover img {
+  content: url(../images/main/icon02_w.svg);
+}
+.support ul li:nth-child(3) a:hover img {
+  content: url(../images/main/icon03_w.svg);
+}
+.support ul li:nth-child(4) a:hover img {
+  content: url(../images/main/icon04_w.svg);
+}
+@media screen and (max-width: 1500px) {
+  .support .inner {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .support h2 {
+    font-size: 2.8vw;
+    line-height: 1.2;
+    margin: 0 0 1.3vw 0;
+  }
+  .support h2 strong {
+    display: block;
+    font-weight: 700;
+    font-size: 3.571vw;
+  }
+
+  .support ul {
+    margin: 0 30px 0 0;
+    width: 54%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .support {
+    margin: 0 0 50px 0;
+  }
+  .support .support_wrap {
+    display: block;
+
+    height: auto;
+  }
+  .support .inner {
+    width: auto;
+    display: block;
+  }
+  .support h2 {
+    font-size: 25px;
+
+    margin: 0 0 10px 0;
+  }
+  .support h2 strong {
+    font-size: 30px;
+  }
+  .support h2 span {
+    display: inline;
+  }
+  .support .inner {
+    margin: 0 0 25px 0;
+  }
+  .support .inner .inner2 {
+    width: auto;
+  }
+  .support ul {
+    display: block;
+    margin: 0;
+    width: auto;
+  }
+  .support ul li {
+    width: 100%;
+    height: 170px;
+    margin: 25px 0 0 0;
+  }
+  .support ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 42px 0 0 24px;
+    transition: 0;
+  }
+  .support ul li a img {
+    position: absolute;
+    right: 40px;
+    bottom: auto;
+    top: 68px;
+    width: 42px;
+    height: 41px;
+    transition: 0;
+  }
+
+  .support ul li:nth-child(2n) {
+    margin-top: 25px;
+  }
+  .support ul li span {
+    font-size: 13px;
+  }
+  .support ul li strong {
+    font-size: 40px;
+  }
+  /* 마우스오버시  */
+  .support ul li a:hover,
+  .support ul li.active a {
+    transform: translate(0, 0);
+  }
+}
+
 /* 풀페이지 공통사항 */
 
 /* 오른쪽 네비게이션 디자인 변경 
@@ -563,14 +727,20 @@ body #fp-nav.black ul li .fp-tooltip::after {
   display: none;
 }
 
-/* 모바일에서는 fullpage 적용 안하는데 발생하는 오류 수정 */
-body .section .fp-overflow {
-  overflow: hidden;
+element.style {
+  display: block;
 }
-@media screen and (max-width: 640px) {
-  .fp-responsive .fp-is-overflow.fp-section {
-    min-height: auto !important;
-    /* fullpage.js에서 640이하일때는 fullpage 적용하지 않도록 함.
+
+/* 모바일에서는 fullpage 적용 안하는데 발생하는 오류 수정 */
+
+body .section .fp-overflow {
+  overflow: visible;
+  padding: 0;
+}
+/* fullpage.js에서 fullpage를 안할때 */
+.fp-responsive .fp-is-overflow.fp-section {
+  min-height: auto !important;
+  /* fullpage.js에서 640이하일때는 fullpage 적용하지 않도록 함.
            근데 이때 min-height가 해제가 않되서 이전 fullpage 높이가 잡힘ㄴ
            그래서 min-height:auto;를 줘야하는 상황
             visual에 min-height: auto; 적용되지 않음 (css 적용 우선순위에 밀려서)
@@ -579,5 +749,4 @@ body .section .fp-overflow {
 
             이렇게 플러그인을 써서 내가 주지않을 스타일을 고쳐서 쓸때 !important;
         */
-  }
 }

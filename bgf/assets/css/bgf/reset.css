@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+html,
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+small,
+strong,
+pre,
+table,
+tr,
+td,
+th,
+thead,
+tbody,
+tfoot,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+object,
+iframe,
+canvas,
+svg,
+video,
+audio,
+figure,
+img,
+article,
+section,
+nav,
+header,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  font: inherit;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "NotoSansCJkr", sans-serif;
+  font-weight: 200;
+}
+
+/* html, body {min-width: 320px; height: 100%;  min-height: 100%; overflow-x: hidden; overflow-y: scroll;} */
+html,
+body {
+  width: 100%;
+  height: auto;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 1em;
+  -webkit-text-size-adjust: none;
+}
+body {
+  line-height: 1.3;
+  color: #333;
+  overflow-x: hidden;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+sub,
+sup {
+  font-size: small;
+}
+img {
+  display: block;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+li,
+dt,
+dd {
+  list-style: none;
+}
+input::-ms-clear {
+  display: none;
+}
+input:focus::placeholder,
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+video {
+  -webkit-filter: brightness(1);
+  filter: brightness(1);
+}
+input {
+  display: block;
+  width: 100%;
+  border: none;
+}
+button {
+  font-family: "NotoSansCJKkr";
+  display: block;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.clearFix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+li,
+p,
+dt,
+dd,
+div,
+span {
+  word-break: normal;
+}
+
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 200;
+  src: local(※), url("/assets/font/NotoSansCJKkr-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 300;
+  src: local(※), url("/assets/font/NotoSansCJKkr-DemiLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 400;
+  src: local(※), url("/assets/font/NotoSansCJKkr-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 500;
+  src: local(※), url("/assets/font/NotoSansCJKkr-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansCJKkr";
+  font-style: normal;
+  font-weight: 700;
+  src: local(※), url("/assets/font/NotoSansCJKkr-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 300;
+  src: url("/assets/font/NanumSquareL.eot") format("embedded-opentype"), url("/assets/font/NanumSquareL.woff") format("woff"),
+    url("/assets/font/NanumSquareL.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 400;
+  src: url("/assets/font/NanumSquareR.eot") format("embedded-opentype"), url("/assets/font/NanumSquareR.woff") format("woff"),
+    url("/assets/font/NanumSquareR.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  src: url("/assets/font/NanumSquareB.eot") format("embedded-opentype"), url("/assets/font/NanumSquareB.woff") format("woff"),
+    url("/assets/font/NanumSquareB.ttf") format("truetype"); /*Safari, Android, iOS*/
+}
+
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 800;
+  src: url("/assets/font/NanumSquareEB.eot") format("embedded-opentype"), url("/assets/font/NanumSquareEB.woff") format("woff"),
+    url("/assets/font/NanumSquareEB.ttf") format("truetype"); /*Safari, Android, iOS*/
+}
+
+@font-face {
+  font-family: "HancomMalangMalang";
+  font-style: normal;
+  font-weight: 700;
+  src: local(※), url("/assets/font/HancomMalangMalang-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HancomMalangMalang";
+  font-style: normal;
+  font-weight: 400;
+  src: local(※), url("/assets/font/HancomMalangMalang-Regular.ttf") format("truetype");
+}

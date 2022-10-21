@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     afterLoad: function (origin, destination, direction, trigger) {
       //console.log(destination.index);
-      if (destination.index == 2 || destination.index == 3 || destination.index == 4 || destination.index == 5) {
+      if (destination.index >= 2) {
         $(".header").addClass("black");
         $("#fp-nav").addClass("black");
       } else {

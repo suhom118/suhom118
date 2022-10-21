@@ -9,3 +9,4 @@ window.addEventListener("scroll", function () {
     mainText.style.animation = "slide 2s ease-out forwards";
   }
 });
+//eventListner종료
