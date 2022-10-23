@@ -54,29 +54,59 @@ function prependNewLine() {
 }
 function renderBlocks() {
   const { type, direction, top, left } = tempMovingItem;
-  const moveBlock = document.querySelectorAll("moving");
-  moveBlock.forEach((moving) => {});
+  const movingBlocks = document.querySelectorAll(".moving");
+  movingBlocks.forEach((moving) => {
+    moving.classList.remove(type, "moving");
+  });
   BLOCKS[type][direction].forEach((block) => {
     const x = block[0] + left;
     const y = block[1] + top;
 
-    const target = playground.childNodes[y].childNodes[0].childNodes[x];
-    target.classList.add(type, "moving");
+    const target = playground.childNodes[y]
+      ? playground.childNodes[y].childNodes[0].childNodes[x]
+      : null;
+    const isAvailable = checkEmpty(target);
+    if (isAvailable) {
+      target.classList.add(type, "moving");
+    } else {
+      tempMovingItem = { ...movingItem };
+      // setTimeout(() => {
+      //   renderBlocks();
+      // }, 0);
+      renderBlocks;
+    }
   });
+  movingItem.left = left;
+  movingItem.top = top;
+  movingItem.direction = direction;
 }
-
+function checkEmpty(target) {
+  if (!target) {
+    return false;
+  } else {
+    return true;
+  }
+}
 function moveBlock(moveType, amount) {
   tempMovingItem[moveType] += amount;
-  renderBlocks;
+  renderBlocks();
 }
 //event handling
 document.addEventListener("keydown", (e) => {
-  switch (e.keyCode) {
-    case 39:
+  console.log(e);
+  switch (e.key) {
+    case "ArrowRight":
       moveBlock("left", 1);
       break;
-    case 37:
+    case "ArrowLeft":
       moveBlock("left", -1);
+      break;
+    case "ArrowDown":
+      moveBlock("top", 1);
+      break;
+    case "ArrowUp":
+      moveBlock("top", -1);
+      break;
     default:
       break;
   }
