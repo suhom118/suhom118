@@ -2,117 +2,127 @@
 @import url(common.css);
 
 .tour {
-    height: 482px;
-    background-color: #13885E;
-    color: #FFF;
+  height: 482px;
+  background: rgb(19, 136, 94);
+  background: linear-gradient(
+    90deg,
+    rgba(19, 136, 94, 1) 0%,
+    rgba(206, 251, 227, 1) 100%
+  );
+  color: #fff;
+  position: relative;
 }
 .tour h2 {
-    padding: 64px 0 53px 0;
-    font-size: 50px;
-    font-weight: 700;
+  padding: 64px 0 53px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+.tour ul {
+  display: flex;
+  justify-content: start;
 }
 .tour ul li {
-    overflow: hidden;
-    position: relative;
-    float: left;
-    width: 130px;
-    margin: 0 20px;
-    border: 1px solid rgba(255,255,255,0.3);
-    text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  width: 130px;
+  margin: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
 }
 .tour ul li a {
-    display: block;
-    height: 150px;
+  display: block;
+  height: 150px;
 }
 .tour ul li a i {
-    padding: 37px 0 10px 0;
-    font-size: 42px;
+  padding: 37px 0 10px 0;
+  font-size: 42px;
 }
 .tour ul li a strong {
-    display: block;
+  display: block;
 }
 .tour ul li a .btn_wrap {
-    display: block;
+  display: block;
 }
 .tour ul li a .out,
 .tour ul li a .over {
-    display: block;
-    height: 150px; /* a높이와 동일한값 */
+  display: block;
+  height: 150px; /* a높이와 동일한값 */
 }
 .tour ul li a .over {
-    background-color: #FFF;
-    color: #13885E;
+  background-color: #fff;
+  color: #13885e;
 }
 .tour ul li a .up_wrap {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    bottom: 0;  /* bottom 정렬인데 높이가 늘어나면 밑에서부터 위로 늘어남 */
-    width: 100%;
-    height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0; /* bottom 정렬인데 높이가 늘어나면 밑에서부터 위로 늘어남 */
+  width: 100%;
+  height: 0;
 }
 .tour ul li a .up_wrap .up {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 150px; /* a의 높이값 */
-    background-color: #FFF;
-    color: #13885E;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px; /* a의 높이값 */
+  background-color: #fff;
+  color: #13885e;
 }
 /* 오버효과 - transition */
 .tour ul li.ico1 a i {
-    transition: 1s;
-    transition-timing-function: ease-in-out;
+  transition: 1s;
+  transition-timing-function: ease-in-out;
 }
 .tour ul li.ico1 a:hover i {
-    transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 .tour ul li.ico2 a {
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .tour ul li.ico2 a:hover {
-    background-color: #FFF;
-    color: #13885E;
+  background-color: #fff;
+  color: #13885e;
 }
 .tour ul li.ico3 a .btn_wrap {
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .tour ul li.ico3 a:hover .btn_wrap {
-    transform: translate(0, -150px); /* a의 높이값만큼 이동 */
+  transform: translate(0, -150px); /* a의 높이값만큼 이동 */
 }
 .tour ul li.ico4 a .up_wrap {
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .tour ul li.ico4 a:hover .up_wrap {
-    height: 100%;
+  height: 100%;
 }
 
 .slide {
-    margin: 100px 0;
+  margin: 100px 0;
 }
 .slide .slide_wrap {
-    overflow: hidden;
-    width: 0; 
-    /* 넓이가 0 ~ 100%로 변경되는 애니메이션을 줄 예정  
+  overflow: hidden;
+  width: 0;
+  /* 넓이가 0 ~ 100%로 변경되는 애니메이션을 줄 예정  
        첫 설정에서 50%로 넓이를 제한하고 그 내부요소가 slide_cnt가 slide와 영역이 동일해야함 
        slide_cnt의 영역이 짤리면 안됨   */
 }
 .slide .slide_wrap .slide_cnt {
-    position: relative;
-    width: 1400px;
-    height: 389px;
+  position: relative;
+  width: 1400px;
+  height: 389px;
 }
 .slide .slide_wrap .slide_cnt h2 {
-    position: absolute;
-    right: 240px;
-    top: 137px;
-    font-size: 40px;
-    color: #FFF;
-    text-align: right;
+  position: absolute;
+  right: 240px;
+  top: 137px;
+  font-size: 40px;
+  color: #fff;
+  text-align: right;
 }
 /* 애니메이션 -transition : 마우스아웃효과가 무조건 들어감 */
 /*.slide .slide_wrap {
@@ -128,11 +138,53 @@
     해당 클래스가 추가됐을때 animate가 작동됨
 */
 .slide.over .slide_wrap {
-    animation-name: size100;
-    animation-duration: 1s; /* 애니메이션 실행시간 */
-    animation-fill-mode: forwards; /* 애니메이션 종료 후 100% 상태 유지 */
+  animation-name: size100;
+  animation-duration: 1s; /* 애니메이션 실행시간 */
+  animation-fill-mode: forwards; /* 애니메이션 종료 후 100% 상태 유지 */
 }
 @keyframes size100 {
-    0% {width: 0;}
-    100% {width: 100%;}
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.custom-shape-divider-top-1666616140 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1666616140 svg {
+  position: relative;
+  display: block;
+  width: calc(114% + 1.3px);
+  height: 63px;
+}
+
+.custom-shape-divider-top-1666616140 .shape-fill {
+  fill: #ffffff;
+}
+.custom-shape-divider-bottom-1666616714 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1666616714 svg {
+  position: relative;
+  display: block;
+  width: calc(192% + 1.3px);
+  height: 215px;
+}
+
+.custom-shape-divider-bottom-1666616714 .shape-fill {
+  fill: #ffffff;
 }
