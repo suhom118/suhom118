@@ -12,15 +12,15 @@
   font-size: 75px;
   font-weight: 400;
   line-height: 1;
-  animation: slide 5s ease-out;
+  animation: slide 2s ease-out;
 }
 @keyframes slide {
   from {
-    top: -500px;
+    left: -500px;
     opacity: 0;
   }
   to {
-    top: 0;
+    left: 0;
     opacity: 1;
   }
 }
