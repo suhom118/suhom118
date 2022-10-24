@@ -1,5 +1,18 @@
 @import url("default.css");
-
+body {
+  background: rgb(243, 152, 0);
+  background: radial-gradient(
+    circle,
+    rgba(243, 152, 0, 1) 0%,
+    rgba(148, 158, 11, 1) 20%,
+    rgba(61, 146, 70, 1) 40%,
+    rgba(0, 125, 105, 1) 60%,
+    rgba(47, 72, 88, 1) 80%
+  );
+}
+.wrap {
+  position: relative;
+}
 .visual {
   margin: 500px 0 0 0;
   height: 850px;
@@ -34,11 +47,33 @@
     opacity: 0;
   }
 }
+.visual {
+  position: relative;
+}
 
 .visual h2 strong {
   font-weight: 700;
 }
+.custom-shape-divider-bottom-1666588576 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1666588576 svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 186px;
+}
+
+.custom-shape-divider-bottom-1666588576 .shape-fill {
+  fill: #ffffff;
+}
 @media screen and (max-width: 640px) {
   .visual {
     height: auto;
@@ -53,6 +88,7 @@
   color: #fff;
   text-align: center;
   background-color: #f39800;
+  position: relative;
 }
 .works .tit h2 {
   padding: 54px 0 10px 0;
@@ -238,3 +274,59 @@
     padding: 0 0 47px 0;
   }
 } /* footer 반응형 종료 */
+.custom-shape-divider-top-1666572759 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.custom-shape-divider-bottom-1666573580 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1666573580 svg {
+  position: relative;
+  display: block;
+  width: calc(164% + 1.3px);
+  height: 138px;
+}
+
+.custom-shape-divider-bottom-1666573580 .shape-fill {
+  fill: #ffffff;
+}
+.custom-shape-divider-top-1666574559 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  fill: #fff;
+}
+.custom-shape-divider-top-1666582519 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1666582519 svg {
+  position: relative;
+  display: block;
+  width: calc(164% + 1.3px);
+  height: 103px;
+}
+
+.custom-shape-divider-top-1666582519 .shape-fill {
+  fill: #ffffff;
+}

@@ -19,7 +19,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
+  bottom: 10px;
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -34,6 +34,37 @@
   /* top, bottom, left, right를 모두 0으로 주면 width:100%; height:100%;와 동일하게 적용됨 */
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.3);
+}
+.visual .scroll {
+  position: absolute;
+  z-index: 12;
+  color: rgba(255, 255, 255, 0.6);
+  bottom: 10px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-20%, 0);
+}
+.visual .scroll span {
+  margin: 0 0 5px 0;
+  animation: scrollMove 3s infinite ease-in-out;
+}
+.visual .scroll strong {
+  font-size: 12px;
+}
+
+@keyframes scrollMove {
+  0% {
+    transform: translate(0, 0);
+  } /* 애니메이션을 시작할때의 속성 */
+  50% {
+    transform: translate(0, -50%);
+  } /* 중간값은 %를 조절하여 추가/삭제 가능 */
+  100% {
+    transform: translate(0, 0);
+  } /* 애니메이션이 종료될때의 속성 */
 }
 
 @media screen and (max-width: 1440px) {
@@ -72,6 +103,26 @@
        약간 상단여백이 부족해 보임 - 그래서 상단 여백을 추가로 줌 */
   background-color: #926d49;
   color: #fff;
+}
+.custom-shape-divider-bottom-1666588744 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1666588744 svg {
+  position: relative;
+  display: block;
+  width: calc(140% + 1.3px);
+  height: 277px;
+}
+
+.custom-shape-divider-bottom-1666588744 .shape-fill {
+  fill: #ffffff;
 }
 .count .tit {
   margin: 0 0 0 8.6%; /* 120/1400*100 = 1400px영역에서 여백의 비율 */
@@ -206,9 +257,7 @@
   align-items: center;
 }
 .biz img {
-  width: calc(
-    100% - 640px
-  ); /* wrapper 1440, 그안에 이미지가 760 = 760/1440*100 = 52.78% */
+  width: calc(100% - 640px); /* wrapper 1440, 그안에 이미지가 760 = 760/1440*100 = 52.78% */
 }
 .biz .inner {
   width: 390px; /* 390/1440*100 = 27% */
@@ -258,9 +307,7 @@
 }
 @media screen and (max-width: 1200px) {
   .biz img {
-    width: calc(
-      100% - 480px
-    ); /* wrapper 1440, 그안에 이미지가 760 = 760/1440*100 = 52.78% */
+    width: calc(100% - 480px); /* wrapper 1440, 그안에 이미지가 760 = 760/1440*100 = 52.78% */
   }
   .biz .inner {
     width: 400px; /* 390/1440*100 = 27% */
@@ -413,7 +460,10 @@
     font-size: 17px;
   }
 }
-
+.support {
+  background: rgb(255, 229, 221);
+  background: linear-gradient(90deg, rgba(255, 229, 221, 1) 0%, rgba(231, 239, 255, 1) 100%);
+}
 .support .support_wrap {
   display: flex;
   justify-content: space-between;
@@ -685,8 +735,7 @@ body #fp-nav ul li .fp-tooltip {
   border-radius: 5px;
   color: #fff;
   font-size: 15px;
-  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic",
-    "Apple SD Gothic Neo", "Dotum", sans-serif;
+  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
 }
 body #fp-nav ul li .fp-tooltip::after {
   position: absolute;

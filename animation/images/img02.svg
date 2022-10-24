@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="274.164" height="316" viewBox="0 0 274.164 316">
+  <g id="img02" transform="translate(-604.418 -24.5)">
+    <line id="선_1" data-name="선 1" y1="100" transform="translate(741.5 24.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_2" data-name="선 2" x1="86.603" y1="50" transform="translate(604.668 103.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_3" data-name="선 3" x1="86.603" y2="50" transform="translate(604.668 211.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_4" data-name="선 4" y2="100" transform="translate(741.5 240.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_5" data-name="선 5" x2="86.603" y2="50" transform="translate(791.729 211.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_6" data-name="선 6" y1="50" x2="86.603" transform="translate(791.729 103.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_7" data-name="선 7" x1="44" y2="74" transform="translate(754.5 83.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_8" data-name="선 8" x2="42.086" y2="75.105" transform="translate(686.313 84.186)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_9" data-name="선 9" x2="86.086" y2="1.105" transform="translate(630.813 181.686)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_10" data-name="선 10" y1="74" x2="44" transform="translate(687.5 204.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_11" data-name="선 11" x1="42.086" y1="75.105" transform="translate(757.602 202.709)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_12" data-name="선 12" x1="86.086" y1="1.105" transform="translate(769.102 179.209)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
