@@ -96,7 +96,7 @@
 .slide {
   margin: 500px 0 0 0;
 }
-.slide .slide_wrapper {
+.slide.over .slide_wrapper {
   overflow: hidden;
   width: 0;
   animation: size100 1s forwards ease-in-out;
