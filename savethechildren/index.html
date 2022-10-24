@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.js"
-      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/jquery.counterup.min.js"></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>세이브더칠드런 보건영양</title>
@@ -24,9 +25,12 @@
   <body>
     <div id="wrap">
       <header class="header fixed">
+        <!-- fullpage 안들어갔을때만 스크롤 내리면 fixed 추가 -->
         <h1 class="logo"><a href="index.html">세이브더칠드런</a></h1>
         <nav class="gnb">
-          <button class="gnb_open"><span>메뉴열기</span><span></span><span></span></button>
+          <button class="gnb_open">
+            <span>메뉴열기</span><span></span><span></span>
+          </button>
           <ul>
             <li><a href="#n">기관</a></li>
             <li><a href="#n">사업</a></li>
@@ -38,13 +42,14 @@
       </header>
       <div id="fullpage">
         <!-- fullpage 효과를 줄 모든 태그를 감싸는 요소 (이름 변경 가능) -->
+
         <section class="section visual">
           <!-- 클래스 section을 주면 해당 요소는 1page (이름 변경 불가) -->
           <div class="inner">
             <h2>
-              모든 아동은<br />
-              건강하게 태어나 자랄<br />
-              권리가 있습니다.
+              <span class="block"><span>모든 아동은</span></span>
+              <span class="block"><span>건강하게 태어나 자랄</span></span>
+              <span class="block"><span>권리가 있습니다.</span></span>
             </h2>
             <!-- 비디오 파일이 사용자의 컴퓨터에 다운로드가 완료된 이후에 재생
                         즉, 용량이 엄청 작아야 함. -->
@@ -66,7 +71,9 @@
               </h2>
               <p>
                 <span>세이브더칠드런은 예방 가능한 질병으로 사망하는 </span>
-                <span>5세 미만 아동이 없도록 산모와 신생아 및 영유아를 위한</span>
+                <span
+                  >5세 미만 아동이 없도록 산모와 신생아 및 영유아를 위한</span
+                >
                 보건영양 사업을 진행합니다.
               </p>
             </div>
@@ -88,127 +95,142 @@
         </section>
         <section class="section biz">
           <div class="wrapper">
-            <img src="images/main/biz.png" alt="아이사진" />
-            <div class="inner">
-              <a href="#n">
-                <strong> 보건영양산업 </strong>
-                <h2>모자보건 및 영양개선</h2>
-                <p>
-                  li 출산 전부터 임신 기간, 출산 시, 출산 이후까지 산모와 아동이 적절한 의료 서비스를 제공받도록 보건 교육, 의료시설 개보수, 의약품
-                  보급 등 지원, 신생아살리기캠페인을 통해 모인 모자 배분
-                </p>
-                <p class="exp">* 지원국가 : 방글라데시, 말리, 우간다, 라오스</p>
-                <div class="more"></div>
-              </a>
+            <div class="biz_wrap">
+              <img src="images/main/biz.png" alt="공룡옷을 입은 아이 사진" />
+              <div class="inner">
+                <a href="#n">
+                  <strong>보건영양 사업</strong>
+                  <h2>
+                    예방접종을 통한 <br />
+                    면역강화 사업
+                  </h2>
+                  <p>
+                    감벨라 지역주민 및 지역 내 난민캠프 주민 아동 대상으로
+                    예방접종율을 제고하고, 의료 접근성 향상을 위해 보건 교육,
+                    의료장비 및 의약품 지원, 예방접종 권장 홍보
+                  </p>
+                  <p class="exp">* 지원 국가 : 에티오피아</p>
+                  <div class="more"></div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
         <section class="section news">
           <div class="wrapper cnt_wrap">
-            <h2>현장소식과 이야기가<span> 궁금하세요?</span></h2>
+            <h2>현장소식과 이야기가 <span>궁금하세요?</span></h2>
             <div class="list swiper">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <a href="#n"
-                    ><span> <img src="images/main/news01.png" alt="사진" /> </span
-                    ><strong>에티오피아 파견직원의 일기 '메마른 땅에도 싹트는 희망'</strong></a
-                  >
+                  <a href="#n">
+                    <span
+                      ><img src="images/main/news01.png" alt="새싹 사진"
+                    /></span>
+                    <strong
+                      >에티오피아 파견직원의 일기 '메마른 땅에도 싹트는
+                      희망'</strong
+                    >
+                  </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="#n"
-                    ><span> <img src="images/main/news02.png" alt="사진" /> </span
-                    ><strong>1000일 가정방문 봉사활동으로 라오스 아이들이 건강하게 자라가요!</strong></a
-                  >
+                  <a href="#n">
+                    <span
+                      ><img src="images/main/news02.png" alt="인터뷰 사진"
+                    /></span>
+                    <strong
+                      >숫자? 데이터? 진짜 성과는 이런 것이죠 - 해외 아동보호
+                      담당 인터뷰</strong
+                    >
+                  </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="#n"
-                    ><span> <img src="images/main/news03.png" alt="사진" /> </span
-                    ><strong>베트남 꽝남 옌베이 지역 소수민족아동 교육지원사업⑥</strong></a
-                  >
+                  <a href="#n">
+                    <span
+                      ><img
+                        src="images/main/news03.png"
+                        alt="라오스 아이들 사진"
+                    /></span>
+                    <strong
+                      >1000일 가정방문 봉사활동으로 라오스 아이들이 건강하게
+                      자라가요!</strong
+                    >
+                  </a>
                 </li>
                 <li class="swiper-slide">
-                  <a href="#n"
-                    ><span> <img src="images/main/news04.png" alt="사진" /> </span
-                    ><strong>서아프리카 작은 나라의 강하고 용기 있는 여학생들의 이야기</strong></a
-                  >
+                  <a href="#n">
+                    <span
+                      ><img src="images/main/news04.png" alt="아이들 사진"
+                    /></span>
+                    <strong
+                      >[인포그래픽] 라오스의 변화 - 엄마와 아이 모두
+                      건강하게</strong
+                    >
+                  </a>
                 </li>
               </ul>
               <div class="btn_paging"></div>
             </div>
-            <a href="#n" class="more">뉴스더보기</a>
+            <!-- list 종료 -->
+            <a href="#n" class="more">뉴스 더보기</a>
           </div>
+          <!-- wrapper 종료 -->
         </section>
         <section class="section support">
           <div class="wrapper">
             <div class="support_wrap">
-                <div class="inner">
-                  <h2>
-                    <strong> 월 3만 원이면, </strong>
-                    <span> 연간 10명의 아동에게 학용품을 </span>
-                    <span> 지원하고 4명의 산모에게 출산물품을 </span>
-                    지원할 수 있습니다.
-                  </h2>
-                  <div class="inner2">
-                    <p>매월 정기후원을 통해, 더 많은 아이들에게 장기적인 도움을 주실 수 있습니다.</p>
-                  </div>
-                </div>
-                <ul>
-                  <li class="active">
-                    <a href="#n">
-                      <span>월 3만원 정기후원</span>
-                      <strong>후원하기</strong>
-                      <img src="images/main/icon01.svg" alt="아이콘" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#n">
-                      <span>아동을 구하는 기빙클럽</span>
-                      <strong>Giving <br/>Club</strong>
-                      <img src="images/main/icon02.svg" alt="아이콘" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#n">
-                      <span>#우리가SNS히어로</span>
-                      <strong>골든타임<br/>세이버</strong>
-                      <img src="images/main/icon03.svg" alt="아이콘" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#n">
-                      <span>우리의 서명이 이뤄낸 변화</span>
-                      <strong>히든보이스</strong>
-                      <img src="images/main/icon04.svg" alt="아이콘" />
-                    </a>
-                  </li>
-                </ul>
+              <div class="inner">
+                <h2>
+                  <strong>월 3만 원이면,</strong>
+                  <span>연간 10명의 아동에게 학용품을 지원하고</span>
+                  <span>4명의 산모에게 출산물품을 </span>
+                  지원할 수 있습니다.
+                </h2>
+                <p>
+                  매월 정기후원을 통해, 더 많은 아이들에게 장기적인 도움을 주실
+                  수 있습니다.
+                </p>
+              </div>
+              <ul>
+                <li class="list01">
+                  <a href="#n">
+                    <span>세이브더칠드런의 멤버십</span>
+                    <strong>Giving Club</strong>
+                  </a>
+                </li>
+                <li class="list02">
+                  <a href="#n">
+                    <span>#우리가SNS히어로</span>
+                    <strong>골든타임세이버</strong>
+                  </a>
+                </li>
+                <li class="list03 active">
+                  <a href="#n">
+                    <span>매월 3만원 정기후원</span>
+                    <strong>후원하기</strong>
+                  </a>
+                </li>
+                <li class="list04">
+                  <a href="#n">
+                    <span>아동권리캠페인</span>
+                    <strong>히든보이스</strong>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-            
         </section>
         <footer class="section footer fp-auto-height">
           <!-- section과 fp-auto-height를 동시에 선언하면 footer처럼 높이가 낮은 컨텐츠를 배치할 수 있음 -->
-          <div class="wrapper flex_wrapper">
+          <div class="wrapper">
             <ul class="fnav">
-              <li>
-                <a href="#n">
-                  이용약관
-                </a>
-              </li>
-              <li class="privacy">
-                <a href="#n">
-                  개인정보처리방침
-                </a>
-              </li>
-              <li>
-                <a href="#n">
-                  이메일 집단수집거부
-                </a>
-              </li>
+              <li><a href="#n">이용약관</a></li>
+              <li><a href="#n">개인정보처리방침</a></li>
+              <li><a href="#n">이메일 집단수집거부</a></li>
             </ul>
             <div class="inner">
               <div class="flogo"></div>
               <div class="copyright">
-                Copyright © Save the Children Korea All Rights Reserved.
+                COPYRIGHT © SAVE THE CHILDREN KOREA ALL RIGHTS RESERVED.
               </div>
             </div>
           </div>
