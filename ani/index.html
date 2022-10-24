@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>애니메이션 테스트</title>
+</head>
+<body>
+    <div class="tour">
+        <div class="wrapper cnt_wrap">
+            <h2>관광안내</h2>
+            <ul>
+                <li class="ico1">
+                    <a href="#n">
+                        <i class="material-symbols-outlined">directions_bus</i>
+                        <strong>시티투어</strong>
+                    </a>
+                </li>
+                <li class="ico2">
+                    <a href="#n">
+                        <i class="material-symbols-outlined">map</i>
+                        <strong>관광안내지도</strong>
+                    </a>
+                </li>
+                <li class="ico3">
+                    <a href="#n">
+                        <span class="btn_wrap">
+                            <span class="out">
+                                <i class="material-symbols-outlined">restaurant</i>
+                                <strong>맛집</strong>
+                            </span>
+                            <span class="over">
+                                <i class="material-symbols-outlined">restaurant</i>
+                                <strong>맛집</strong>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="ico4">
+                    <a href="#n">
+                        <i class="material-symbols-outlined">restaurant</i>
+                        <strong>맛집</strong>
+                        <span class="up_wrap"> <!-- 높이가 제한되고 높이가 늘어나는 애니메이션을 갖을 요소 -->
+                            <span class="up"> <!-- 사이즈를 유지할 영역 -->
+                                <i class="material-symbols-outlined">restaurant</i>
+                                <strong>맛집</strong>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="fire po1"></div><!-- 불꽃 -->
+            <div class="fire po2"></div>
+            <div class="fire po3"></div>
+            <div class="circle_txt"></div><!-- 시민의 행복을 위한 .. 회전하는 글자 -->
+            <div class="circle"></div><!-- 점선 -->
+        </div>
+    </div>
+    <div class="media">
+        <div class="wrapper">
+
+        </div>
+    </div>
+    <div class="slide">
+        <div class="wrapper">
+            <div class="slide_wrap"> <!-- 보여질 영역이 제한될 요소 (넓이가 애니메이션으로 변할요소) -->
+                <div class="slide_cnt"> <!-- 본래 콘텐츠가 가져야할 넓이값을 유지하고 있는 요소 -->
+                    <h2>충남음악창작소, 농인과 청인이<br>
+                        함께 즐기는 특별한 공연</h2>
+                    <img src="images/slide.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
