@@ -3,7 +3,6 @@
 
 .tour {
   height: 482px;
-  background: rgb(19, 136, 94);
   background: linear-gradient(90deg, rgba(19, 136, 94, 1) 0%, #57be91 100%);
   color: #fff;
   position: relative;
@@ -116,7 +115,7 @@
   top: 40px;
   width: 250px;
   height: 250px;
-  background: url(../images/circle_txt.svg) no-repeat right bottom/ contain;
+  background: url(../images/circle_txt.svg) no-repeat right bottom / contain;
   animation: circle_rotate 10s linear infinite;
 }
 @keyframes circle_rotate {
@@ -228,6 +227,212 @@
   100% {
     width: 100%;
   }
+}
+
+.media h2 {
+  margin: 100px 0 20px 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+.media ul li {
+  float: left;
+  position: relative;
+  width: 440px;
+  margin: 0 40px 0 0;
+  overflow: hidden;
+}
+.media ul li:last-child {
+  margin: 0;
+}
+.media ul li a {
+  display: block;
+}
+.media ul li.list1 {
+  height: 297px;
+  border: 1px solid #ccc;
+  padding: 5px 15px 0 15px;
+}
+.media ul li.list1 a .pic {
+  height: 200px;
+  overflow: hidden;
+}
+.media ul li.list1 a .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media ul li.list1 a h3 {
+  margin: 5px 0 0 0;
+  font-size: 25px;
+}
+.media ul li.list1 a .over {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #2f4858;
+  color: #fff;
+  padding: 30px 20px 0 20px;
+}
+.media ul li.list1 a .over .txt {
+  display: block;
+  overflow: hidden;
+  line-height: 1.5;
+  height: 7.5em;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 20px 0;
+}
+.media ul li.list1 a .over .date {
+  color: rgba(255, 255, 255, 0.6);
+}
+.media ul li.list1 a .over strong {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+/* 애니메이션 */
+.media ul li.list1 a .over {
+  transition: 0.5s;
+}
+.media ul li.list1 a:hover .over {
+  top: 0;
+}
+.media ul li.list2 a .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media ul li.list2 a h3 {
+  position: absolute;
+  left: 20px;
+  top: 197px;
+  width: calc(100% - 40px);
+  color: #fff;
+  font-size: 25px;
+  transition: 0.5s;
+}
+.media ul li.list2 a p {
+  opacity: 0;
+  position: absolute;
+  left: 20px;
+  top: 180px;
+  width: calc(100% - 40px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+
+  line-height: 1.5;
+  height: 7.5em;
+}
+.media ul li.list2 a .pic::after {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  content: "";
+}
+/* 마우스오버효과 */
+.media ul li.list2 a p,
+.media ul li.list2 a h3,
+.media ul li.list2 a .pic,
+.media ul li.list2 a .pic::after {
+  transition: 0.5s;
+}
+
+.media ul li.list2 a:hover .pic::after {
+  opacity: 1;
+}
+
+.media ul li.list2 a:hover h3 {
+  top: 100px;
+}
+.media ul li.list2 a:hover p {
+  opacity: 1;
+}
+.media ul li.list2 a:hover .custom-shape-divider-top-1666616140 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.media ul li.list3 a .pic {
+  overflow: hidden;
+}
+.media ul li.list3 a .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media ul li.list3 a h3 {
+  display: inline;
+  margin: 5px 0;
+  font-size: 25px;
+  position: relative;
+}
+.media ul li.list3 a h3::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #3d3d3d;
+  content: "";
+}
+.media ul li.list3 a p {
+  overflow: hidden;
+  line-height: 1.5;
+  height: 7.5em;
+}
+/* 애니메이션효과 */
+.media ul li.list3 a:hover h3::after {
+  width: 100%;
+}
+.menu {
+  margin: 300px;
+}
+.menu .gnb_open {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #3d3d3d;
+}
+.menu .gnb_open span {
+  position: absolute;
+  left: 20px;
+  width: 160px;
+  height: 10px;
+  background: #fff;
+  transition: 1s;
+}
+.menu .gnb_open span.line1 {
+  top: 60px;
+}
+.menu .gnb_open span.line2 {
+  top: 100px;
+}
+.menu .gnb_open span.line3 {
+  top: 140px;
+}
+/* open클래스 */
+.menu .gnb_open:hover span.line1 {
+  transform: translate(0, 40px) rotate(405deg);
+}
+.menu .gnb_open:hover span.line2 {
+  transform: translate(-200px, 0);
+}
+.menu .gnb_open:hover span.line3 {
+  transform: translate(0, -40px) rotate(-405deg);
 }
 .custom-shape-divider-top-1666616140 {
   position: absolute;
