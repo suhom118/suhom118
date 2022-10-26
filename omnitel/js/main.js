@@ -9,3 +9,16 @@ window.addEventListener("scroll", function () {
     mainText.style.animation = "slide 2s ease-out forwards";
   }
 });
+
+
+$(document).ready(function(){
+  $(".typing").typed({
+    strings: ["DEVELOPERS;"],
+    typeSpeed: 300,
+    startDelay: 0,
+    backSpeed: 60,
+    backDelay: 2000,
+    loop: true,
+    cursorChar: "|",
+    contentType: "html",
+  });
