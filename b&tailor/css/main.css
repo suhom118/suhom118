@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* 모든 태그의 스타일 초기화 */
+/* 모든 태그에 브라우저에서 주는 여백을 삭제 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd, form, fieldset, legend, input, textarea, select, table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* width/height와 padding결합되면 사이즈가 늘어남. 이걸 막는 스타일
+     padding을 줘도 width/height가 유지가 됨 */
+}
+
+/* a태그에 브라우저가 주는 기본 속성 초기화 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 브라우저에서 기울임을 주는 것을 초기화 */
+em, address {
+  font-style: normal;
+}
+
+/* 항목 앞에 동그라미 삭제 */
+ul, ol, li {
+  list-style: none;
+}
+
+/* form태그가 문자 스타일을 상속받지 않아서 상속받게 하기 */
+form, input, select, textarea, button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  /* 서체 상속 - button은 body에서 적용한 서체를 
+     자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: none; /* form 태그의 legend은 타이틀로 숨김처리 */
+}
+
+button {
+  background-color: transparent; /* 투명 */
+  border: 0;
+  cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
+}
+
+table caption {
+  display: none;
+}
+
+/* 글자를 두껍게 하는 태그는 모두 일반 두께로 변형 */
+h1, h2, h3, h4, h5, h6, strong, th {
+  font-weight: 400;
+}
+
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+/* 본명조 */
+html,
+body {
+  color: #3d3d3d;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* letter-spacing: -0.05em; */
+  word-break: keep-all; /* 단어별 줄바꿈 */
+}
+
+#wrap {
+  /* id="wrap" */
+  overflow: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+
+@media screen and (max-width: 1000px) {
+  html,
+body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 640px) {
+  html,
+body {
+    font-size: 13px;
+  }
+} /* media 종료 */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+  position: relative;
+}
+
+.skip_nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000000000;
+  width: 100%;
+}
+
+.skip_nav a {
+  position: absolute;
+  left: 0;
+  top: -1000px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #0059a8;
+  color: #fff;
+  text-align: center;
+}
+
+.skip_nav a:focus {
+  top: 0;
+}
+
+/* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
+  -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
+::-moz-selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+::selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+
+::-moz-selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+
+::-webkit-selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+
+/*
+    scss 내에서 import할 default와 common 등의 파일은 
+    파일명 앞에 _(언더바)를 입력하면 sass 컴파일러가 해당 파일은 컴파일 하지 않음
+    main.css나 sub.css에서 default, common을 필요에 따라서 import 해서 사용하면 됨.
+*/
+.visual {
+  position: relative;
+}
+.visual .tit {
+  position: absolute;
+  left: calc(50% - 700px);
+  top: 48%;
+  z-index: 10;
+  color: #fff;
+  transform: translate(0, -52%);
+}
+.visual .tit strong {
+  display: block;
+}
+.visual .tit h2 {
+  /* mixin으로 선언한 font_serif 스타일을 불러오는 명령 
+           @mixin font_serif 로 선언된 스타일이 그대로 이 안에 들어오는 것 
+           단, 무조건 @mixin이 @include보다 먼저 선언되어 있어야 함 */
+  font-family: "Noto Serif KR", serif;
+  font-weight: 100;
+  line-height: 1.2;
+  font-size: 78px;
+  color: #fff;
+}
+.visual .popup {
+  /* .visual .popup */
+  height: 100vh;
+}
+.visual .popup ul li img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.visual .popup .btn_wrap {
+  position: absolute;
+  left: calc(50% - 700px);
+  top: calc(50% + 110px);
+  z-index: 10;
+  display: flex;
+}
+.visual .popup .btn_wrap .btn_paging {
+  line-height: 0;
+  font-size: 0;
+  display: flex;
+}
+.visual .popup .btn_wrap .btn_paging span {
+  opacity: 0.5;
+  width: 70px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  /* li:last-child 의 경우 아래와 같이 &로 표기
+                li {
+                    &:last-child {  }
+                }
+            */
+}
+.visual .popup .btn_wrap .btn_paging span.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.visual .popup .btn_wrap .btn_stop {
+  display: flex;
+  margin: -20px 0 0 20px;
+  color: rgba(255, 255, 255, 0.6);
+  align-items: flex-start;
+  justify-content: center;
+}
+.visual .popup .btn_wrap .btn_stop span {
+  font-size: 40px;
+  margin: 0 10px 0 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .visual .tit {
+    left: 20px;
+  }
+  .visual .tit h2 {
+    /* mixin으로 선언한 font_serif 스타일을 불러오는 명령 
+             @mixin font_serif 로 선언된 스타일이 그대로 이 안에 들어오는 것 
+             단, 무조건 @mixin이 @include보다 먼저 선언되어 있어야 함 */
+    font-size: 50px;
+  }
+  .visual .popup {
+    /* .visual .popup */
+    height: 100vh;
+  }
+  .visual .popup .btn_wrap {
+    position: absolute;
+    left: 20px;
+    top: calc(50% + 110px);
+    z-index: 10;
+    display: flex;
+  }
+  .visual .popup .btn_wrap .btn_paging {
+    line-height: 0;
+    font-size: 0;
+  }
+  .visual .popup .btn_wrap .btn_paging span {
+    width: 70px;
+    /* li:last-child 의 경우 아래와 같이 &로 표기
+                  li {
+                      &:last-child {  }
+                  }
+              */
+  }
+  .visual .popup .btn_wrap .btn_paging span.swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  .visual .popup .btn_wrap .btn_stop {
+    display: flex;
+    margin: -20px 0 0 20px;
+    color: rgba(255, 255, 255, 0.6);
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .visual .popup .btn_wrap .btn_stop span {
+    font-size: 40px;
+    margin: 0 10px 0 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .visual .tit {
+    left: 50%;
+    width: calc(100% - 40px);
+    top: 45%;
+    text-align: center;
+    transform: translate(-50%, 0);
+  }
+  .visual .tit strong {
+    display: block;
+  }
+  .visual .tit h2 {
+    /* mixin으로 선언한 font_serif 스타일을 불러오는 명령 
+             @mixin font_serif 로 선언된 스타일이 그대로 이 안에 들어오는 것 
+             단, 무조건 @mixin이 @include보다 먼저 선언되어 있어야 함 */
+    font-size: 28px;
+  }
+  .visual .popup {
+    /* .visual .popup */
+  }
+  .visual .popup .btn_wrap {
+    left: 30%;
+    top: 59%;
+  }
+  .visual .popup .btn_wrap .btn_paging span {
+    width: 45px;
+    height: 4px;
+    /* li:last-child 의 경우 아래와 같이 &로 표기
+                  li {
+                      &:last-child {  }
+                  }
+              */
+  }
+  .visual .popup .btn_wrap .btn_paging span.swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  .visual .popup .btn_wrap .btn_stop {
+    margin: -11px 0 0 20px;
+  }
+  .visual .popup .btn_wrap .btn_stop span {
+    font-size: 25px;
+    margin: 0 10px 0 0;
+  }
+}
