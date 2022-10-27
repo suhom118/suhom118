@@ -172,6 +172,99 @@ body {
   color: #3e3e3f;
 }
 
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 300;
+  display: flex;
+  justify-content: start;
+}
+.header .logo {
+  margin: 25px 0 0 20px;
+}
+.header .gnb {
+  width: 100%;
+}
+.header .gnb ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 40px;
+}
+.header .gnb ul li {
+  width: 100%;
+}
+.header .gnb ul li a {
+  display: block;
+  width: 100%;
+  font-size: 1.4667vw;
+  color: #fff;
+}
+.header .gnb .gnb_open {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 300;
+    display: flex;
+    justify-content: start;
+  }
+  .header .logo {
+    margin: 10px 0 0 20px;
+  }
+  .header .logo a img {
+    height: 20px;
+  }
+  .header .gnb {
+    width: 100%;
+  }
+  .header .gnb .gnb_open {
+    display: block;
+    position: relative;
+  }
+  .header .gnb .gnb_open span {
+    position: absolute;
+    right: 20px;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+  .header .gnb .gnb_open span:nth-child(1) {
+    top: 20px;
+  }
+  .header .gnb .gnb_open span:nth-child(2) {
+    top: 28px;
+  }
+  .header .gnb .gnb_open span:nth-child(3) {
+    top: 36px;
+  }
+  .header .gnb ul {
+    width: 100%;
+    display: none;
+    justify-content: center;
+  }
+  .header .gnb ul li {
+    width: 150px;
+    margin: 0 20px 0 0;
+  }
+  .header .gnb ul li a {
+    display: block;
+    padding: 20px 10px;
+    font-size: 24px;
+    color: #fff;
+  }
+}
 /*
     scss 내에서 import할 default와 common 등의 파일은 
     파일명 앞에 _(언더바)를 입력하면 sass 컴파일러가 해당 파일은 컴파일 하지 않음
@@ -297,7 +390,7 @@ body {
     margin: 0 10px 0 0;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1000px) {
   .visual .tit {
     left: 50%;
     width: calc(100% - 40px);
@@ -340,4 +433,91 @@ body {
     font-size: 25px;
     margin: 0 10px 0 0;
   }
+}
+.fabric {
+  background: #857469;
+  color: #fff;
+  position: relative;
+  padding: 70px 0;
+}
+.fabric .inner {
+  transition: 1s;
+  position: relative;
+  z-index: 10;
+}
+.fabric h2 {
+  padding: 0 0 240px 0;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 100;
+  line-height: 1.2;
+  font-size: 78px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.fabric h2::after {
+  position: absolute;
+  left: -300px;
+  bottom: 230px;
+  background: #c35257;
+  width: 60%;
+  height: 1px;
+  content: "";
+}
+.fabric .tit {
+  font-weight: 700;
+  font-size: 47px;
+  position: relative;
+  z-index: 10;
+  position: relative;
+}
+.fabric .cnt {
+  margin: 50px 0 20px 0;
+  position: relative;
+  z-index: 10;
+  width: 50%;
+}
+.fabric .tag {
+  color: #fae3de;
+}
+.fabric .tag span {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.fabric .bg1 {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 100px);
+  width: 790px;
+  z-index: 9;
+  overflow: hidden;
+}
+.fabric .bg1 img {
+  transition: 0.5s;
+  display: block;
+  width: 120%;
+  height: 120%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.fabric .bg2 {
+  position: absolute;
+  z-index: 9;
+  top: 200px;
+  left: calc(50% + 400px);
+  width: 590px;
+  overflow: hidden;
+}
+.fabric .bg2 img {
+  transition: 0.5s;
+  display: block;
+  width: 60%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product {
+  height: 1000px;
+  background: #000;
 }

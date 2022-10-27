@@ -3,9 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap"); /* 본명조 */
 html,
 body {
-  color: $basic_font_color;
+  color: $basic_color;
   line-height: 1.5;
-  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
+  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic",
+    "Apple SD Gothic Neo", "Dotum", sans-serif;
   font-size: 16px;
   font-weight: 400;
   /* letter-spacing: -0.05em; */
@@ -96,4 +97,100 @@ body {
 ::-webkit-selection {
   background: #cba585;
   color: #3e3e3f;
+}
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 300;
+  display: flex;
+  justify-content: start;
+  .logo {
+    margin: 25px 0 0 20px;
+  }
+  .gnb {
+    width: 100%;
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-left: 40px;
+      li {
+        width: 100%;
+        a {
+          display: block;
+          width: 100%;
+
+          font-size: 1.4667vw;
+          color: #fff;
+        }
+      }
+    }
+    .gnb_open {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width:1000px) {
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 300;
+    display: flex;
+    justify-content: start;
+    .logo {
+      margin: 10px 0 0 20px;
+      a {
+        img {
+          height: 20px;
+        }
+      }
+    }
+    .gnb {
+      width: 100%;
+      .gnb_open {
+        display: block;
+        position: relative;
+        span {
+          position: absolute;
+          right: 20px;
+          width: 20px;
+          height: 2px;
+          background: #fff;
+          &:nth-child(1) {
+            top: 20px;
+          }
+          &:nth-child(2) {
+            top: 28px;
+          }
+          &:nth-child(3) {
+            top: 36px;
+          }
+        }
+      }
+      ul {
+        width: 100%;
+        display: none;
+        justify-content: center;
+        li {
+          width: 150px;
+          margin: 0 20px 0 0;
+          a {
+            display: block;
+            padding: 20px 10px;
+            font-size: 24px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
