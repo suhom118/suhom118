@@ -411,8 +411,8 @@ body {
     /* .visual .popup */
   }
   .visual .popup .btn_wrap {
-    left: 30%;
-    top: 59%;
+    left: 28%;
+    top: 60%;
   }
   .visual .popup .btn_wrap .btn_paging span {
     width: 45px;
@@ -441,7 +441,6 @@ body {
   padding: 70px 0;
 }
 .fabric .inner {
-  transition: 1s;
   position: relative;
   z-index: 10;
 }
@@ -493,7 +492,6 @@ body {
   overflow: hidden;
 }
 .fabric .bg1 img {
-  transition: 0.5s;
   display: block;
   width: 120%;
   height: 120%;
@@ -509,7 +507,6 @@ body {
   overflow: hidden;
 }
 .fabric .bg2 img {
-  transition: 0.5s;
   display: block;
   width: 60%;
   height: 60%;
@@ -517,6 +514,62 @@ body {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1000px) {
+  .fabric {
+    padding: 50px 0;
+  }
+  .fabric h2 {
+    padding: 0;
+    font-size: 30px;
+  }
+  .fabric h2::after {
+    display: none;
+  }
+  .fabric .tit {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+  }
+  .fabric .tit .m_no {
+    display: none;
+  }
+  .fabric .cnt {
+    display: none;
+  }
+  .fabric .tag span {
+    margin: 0 15px 0 0;
+  }
+  .fabric .bg1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: 442px;
+    margin: 20px 0 0 0;
+  }
+  .fabric .bg1 img {
+    display: block;
+    width: 120%;
+    height: 120%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .fabric .bg2 {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 200px;
+    left: calc(50% + 400px);
+    width: 590px;
+    overflow: hidden;
+  }
+  .fabric .bg2 img {
+    display: block;
+    width: 60%;
+    height: 60%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .product {
   height: 1000px;
   background: #000;

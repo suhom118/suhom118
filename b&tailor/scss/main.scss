@@ -153,9 +153,9 @@
       /* .visual .popup */
 
       .btn_wrap {
-        left: 30%;
+        left: 28%;
 
-        top: 59%;
+        top: 60%;
 
         .btn_paging {
           span {
@@ -190,7 +190,6 @@
   position: relative;
   padding: 70px 0;
   .inner {
-    transition: 1s;
     position: relative;
     z-index: 10;
   }
@@ -236,7 +235,6 @@
 
     //bg영역안에는 bg보다 더큰이미지가 포함됨  이미지는 스크롤에 따라 bg영역안에서 이동할예정
     img {
-      transition: 0.5s;
       display: block;
       width: 120%;
       height: 120%;
@@ -252,11 +250,70 @@
     overflow: hidden;
     //bg영역안에는 bg보다 더큰이미지가 포함됨  이미지는 스크롤에 따라 bg영역안에서 이동할예정
     img {
-      transition: 0.5s;
       display: block;
       width: 60%;
       height: 60%;
       object-fit: cover;
+    }
+  }
+}
+@media screen and(max-width:1000px) {
+  .fabric {
+    padding: 50px 0;
+    .inner {
+    }
+    h2 {
+      padding: 0;
+      font-size: 30px;
+      &::after {
+        display: none;
+      }
+    }
+    .tit {
+      font-size: 20px;
+      margin: 20px 0 10px 0;
+      .m_no {
+        display: none;
+      }
+    }
+    .cnt {
+      display: none;
+    }
+    .tag {
+      span {
+        margin: 0 15px 0 0;
+      }
+    }
+    .bg1 {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      height: 442px;
+      margin: 20px 0 0 0;
+      //bg영역안에는 bg보다 더큰이미지가 포함됨  이미지는 스크롤에 따라 bg영역안에서 이동할예정
+      img {
+        display: block;
+        width: 120%;
+        height: 120%;
+        object-fit: cover;
+      }
+    }
+    .bg2 {
+      display: none;
+      position: absolute;
+      z-index: 9;
+      top: 200px;
+      left: calc(50% + 400px);
+      width: 590px;
+      overflow: hidden;
+      //bg영역안에는 bg보다 더큰이미지가 포함됨  이미지는 스크롤에 따라 bg영역안에서 이동할예정
+      img {
+        display: block;
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+      }
     }
   }
 }
