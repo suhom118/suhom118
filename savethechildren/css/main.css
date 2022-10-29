@@ -448,6 +448,18 @@
        (100/2) - (40/2) = calc(50% - 20px)*/
   width: calc(50% - 20px);
   margin: 0 40px 40px 0;
+  cursor: pointer;
+  -webkit-text-stroke: 1px #f9f7f1;
+  background-image: linear-gradient(0deg, #f9f7f1, #f9f7f1);
+  background-clip: text;
+-webkit-background-clip: text;
+
+  color: transparent;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in;
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+  
 }
 /* 왼쪽요소와 위아래 정렬을 유지하기 위해서 
    왼쪽 카드와 오른쪽 카드의 위치차이값을 한쪽 요소에 몰아주지 않고 반반 부담
@@ -481,6 +493,7 @@
        - 높이는 %로 하기가 쉽지 않음
     */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  
 }
 .support ul li a::after {
   position: absolute;
@@ -495,16 +508,16 @@
   content: "";
 }
 .support ul li.list01 a::after {
-  background-image: url(../images/main/support_ico1.svg);
+  background-image: url(../images/main/icon01.svg);
 }
 .support ul li.list02 a::after {
-  background-image: url(../images/main/support_ico2.svg);
+  background-image: url(../images/main/icon02.svg);
 }
 .support ul li.list03 a::after {
-  background-image: url(../images/main/support_ico3.svg);
+  background-image: url(../images/main/icon03.svg);
 }
 .support ul li.list04 a::after {
-  background-image: url(../images/main/support_ico4.svg);
+  background-image: url(../images/main/icon04.svg);
 }
 .support ul li a span {
   display: block;
@@ -522,19 +535,19 @@
 }
 .support ul li.list01 a:hover::after,
 .support ul li.list01.active a::after {
-  background-image: url(../images/main/support_ico1_w.svg);
+  background-image: url(../images/main/icon01_w.svg);
 }
 .support ul li.list02 a:hover::after,
 .support ul li.list02.active a::after {
-  background-image: url(../images/main/support_ico2_w.svg);
+  background-image: url(../images/main/icon02_w.svg);
 }
 .support ul li.list03 a:hover::after,
 .support ul li.list03.active a::after {
-  background-image: url(../images/main/support_ico3_w.svg);
+  background-image: url(../images/main/icon03_w.svg);
 }
 .support ul li.list04 a:hover::after,
 .support ul li.list04.active a::after {
-  background-image: url(../images/main/support_ico4_w.svg);
+  background-image: url(../images/main/icon04_w.svg);
 }
 /* 마우스 오버효과 - 왼쪽 상단으로 이동 */
 
@@ -547,6 +560,7 @@
 .support ul li a:hover {
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  
 }
 @media screen and (max-width: 1440px) {
   .support h2 span {

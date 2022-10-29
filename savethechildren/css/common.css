@@ -73,7 +73,7 @@ html, body {
   -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
 ::selection{background:#ED1B2D;color:#fff;}
 ::-moz-selection{background:#ED1B2D;color:#fff;}
-::-webkit-selection{background:#ED1B2D;color:#fff;} 
+
 
 .header {
     position: fixed;
