@@ -181,6 +181,7 @@ body {
   z-index: 300;
   display: flex;
   justify-content: start;
+  transition: 0.5s;
 }
 .header .logo {
   margin: 25px 0 0 20px;
@@ -208,6 +209,13 @@ body {
 .header .gnb .gnb_open {
   display: none;
 }
+.header.fixed {
+  position: fixed;
+  backdrop-filter: blur(10%);
+  -webkit-backdrop-filter: blur(10%);
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 @media screen and (max-width: 1000px) {
   .header {
@@ -215,7 +223,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 60px;
     z-index: 300;
     display: flex;
     justify-content: start;
@@ -276,23 +284,22 @@ body {
 .visual .tit {
   position: absolute;
   left: calc(50% - 700px);
-  top: 48%;
+  top: 50%;
   z-index: 10;
   color: #fff;
-  transform: translate(0, -52%);
+  transform: translate(0, -50%);
 }
 .visual .tit strong {
   display: block;
 }
 .visual .tit h2 {
+  font-family: "Noto Serif KR", serif;
   /* mixin으로 선언한 font_serif 스타일을 불러오는 명령 
            @mixin font_serif 로 선언된 스타일이 그대로 이 안에 들어오는 것 
            단, 무조건 @mixin이 @include보다 먼저 선언되어 있어야 함 */
-  font-family: "Noto Serif KR", serif;
-  font-weight: 100;
+  font-size: 60px;
+  font-weight: 700;
   line-height: 1.2;
-  font-size: 78px;
-  color: #fff;
 }
 .visual .popup {
   /* .visual .popup */
@@ -300,27 +307,32 @@ body {
 }
 .visual .popup ul li img {
   display: block;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .visual .popup .btn_wrap {
+  display: flex;
+  align-items: center;
   position: absolute;
   left: calc(50% - 700px);
   top: calc(50% + 110px);
   z-index: 10;
-  display: flex;
 }
 .visual .popup .btn_wrap .btn_paging {
-  line-height: 0;
-  font-size: 0;
   display: flex;
+  /* span이 여러개 발생해도 한줄로 나타남 
+          - 단, 내가 준 넓이보다 작게 구현될 수도 있음 */
+  font-size: 0;
+  line-height: 0;
 }
 .visual .popup .btn_wrap .btn_paging span {
   opacity: 0.5;
   width: 70px;
   height: 4px;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 0;
   /* li:last-child 의 경우 아래와 같이 &로 표기
                 li {
                     &:last-child {  }
@@ -337,46 +349,40 @@ body {
   align-items: flex-start;
   justify-content: center;
 }
-.visual .popup .btn_wrap .btn_stop span {
-  font-size: 40px;
-  margin: 0 10px 0 0;
-}
 
 @media screen and (max-width: 1440px) {
   .visual .tit {
     left: 20px;
   }
+  .visual .popup .btn_wrap {
+    left: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
   .visual .tit h2 {
-    /* mixin으로 선언한 font_serif 스타일을 불러오는 명령 
-             @mixin font_serif 로 선언된 스타일이 그대로 이 안에 들어오는 것 
-             단, 무조건 @mixin이 @include보다 먼저 선언되어 있어야 함 */
-    font-size: 50px;
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .visual .tit {
+    left: 50%;
+    width: calc(100% - 40px);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .visual .tit h2 {
+    font-size: 30px;
   }
   .visual .popup {
     /* .visual .popup */
-    height: 100vh;
   }
   .visual .popup .btn_wrap {
-    position: absolute;
-    left: 20px;
-    top: calc(50% + 110px);
-    z-index: 10;
-    display: flex;
-  }
-  .visual .popup .btn_wrap .btn_paging {
-    line-height: 0;
-    font-size: 0;
+    left: 50%;
+    top: calc(50% + 90px);
+    transform: translate(-50%, 0);
   }
   .visual .popup .btn_wrap .btn_paging span {
-    width: 70px;
-    /* li:last-child 의 경우 아래와 같이 &로 표기
-                  li {
-                      &:last-child {  }
-                  }
-              */
-  }
-  .visual .popup .btn_wrap .btn_paging span.swiper-pagination-bullet-active {
-    opacity: 1;
+    width: 40px;
   }
   .visual .popup .btn_wrap .btn_stop {
     display: flex;
@@ -385,111 +391,56 @@ body {
     align-items: flex-start;
     justify-content: center;
   }
-  .visual .popup .btn_wrap .btn_stop span {
+  .visual .popup .btn_wrap span {
     font-size: 40px;
     margin: 0 10px 0 0;
   }
 }
-@media screen and (max-width: 1000px) {
-  .visual .tit {
-    left: 50%;
-    width: calc(100% - 40px);
-    top: 45%;
-    text-align: center;
-    transform: translate(-50%, 0);
-  }
-  .visual .tit strong {
-    display: block;
-  }
-  .visual .tit h2 {
-    /* mixin으로 선언한 font_serif 스타일을 불러오는 명령 
-             @mixin font_serif 로 선언된 스타일이 그대로 이 안에 들어오는 것 
-             단, 무조건 @mixin이 @include보다 먼저 선언되어 있어야 함 */
-    font-size: 28px;
-  }
-  .visual .popup {
-    /* .visual .popup */
-  }
-  .visual .popup .btn_wrap {
-    left: 28%;
-    top: 60%;
-  }
-  .visual .popup .btn_wrap .btn_paging span {
-    width: 45px;
-    height: 4px;
-    /* li:last-child 의 경우 아래와 같이 &로 표기
-                  li {
-                      &:last-child {  }
-                  }
-              */
-  }
-  .visual .popup .btn_wrap .btn_paging span.swiper-pagination-bullet-active {
-    opacity: 1;
-  }
-  .visual .popup .btn_wrap .btn_stop {
-    margin: -11px 0 0 20px;
-  }
-  .visual .popup .btn_wrap .btn_stop span {
-    font-size: 25px;
-    margin: 0 10px 0 0;
-  }
-}
 .fabric {
-  background: #857469;
-  color: #fff;
   position: relative;
-  padding: 70px 0;
+  padding: 0 0 338px 0;
+  background-color: #baa89c;
+  color: rgba(255, 255, 255, 0.8);
 }
 .fabric .inner {
   position: relative;
   z-index: 10;
+  width: 670px;
 }
 .fabric h2 {
-  padding: 0 0 240px 0;
-  font-family: "Noto Serif KR", serif;
-  font-weight: 100;
-  line-height: 1.2;
-  font-size: 78px;
+  padding: 256px 0 35px 0;
   color: #fff;
-  position: relative;
-  z-index: 10;
-}
-.fabric h2::after {
-  position: absolute;
-  left: -300px;
-  bottom: 230px;
-  background: #c35257;
-  width: 60%;
-  height: 1px;
-  content: "";
+  font-size: 30px;
 }
 .fabric .tit {
+  font-family: "Noto Serif KR", serif;
+  color: #fff;
+  font-size: 40px;
   font-weight: 700;
-  font-size: 47px;
-  position: relative;
-  z-index: 10;
-  position: relative;
 }
 .fabric .cnt {
-  margin: 50px 0 20px 0;
-  position: relative;
-  z-index: 10;
-  width: 50%;
+  margin: 42px 0 60px 0;
 }
 .fabric .tag {
+  position: relative;
+  z-index: 10;
   color: #fae3de;
 }
 .fabric .tag span {
   display: inline-block;
-  margin: 0 20px 0 0;
+  margin: 0 15px 0 0;
 }
 .fabric .bg1 {
   position: absolute;
-  top: 50px;
-  left: calc(50% - 100px);
-  width: 790px;
-  z-index: 9;
   overflow: hidden;
+  /* bg영역안에는 bg보다 더 큰 이미지가 포함됨, 
+         이미지는 스크롤에 따라 bg영역 안에서 이동할 예정. 
+         그래서 overflow:hidden 영역 밖에 나간 이미지는 안보이게함 */
+  left: calc(50% - 100px);
+  top: 85px;
+  z-index: 1;
+  width: 800px;
+  height: 818px;
 }
 .fabric .bg1 img {
   display: block;
@@ -500,34 +451,83 @@ body {
 }
 .fabric .bg2 {
   position: absolute;
-  z-index: 9;
-  top: 200px;
-  left: calc(50% + 400px);
-  width: 590px;
   overflow: hidden;
+  left: calc(50% + 460px);
+  top: 279px;
+  z-index: 1;
+  width: 399px;
+  height: 499px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 .fabric .bg2 img {
   display: block;
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media screen and (max-width: 1000px) {
-  .fabric {
-    padding: 50px 0;
+@media screen and (max-width: 1440px) {
+  .fabric .inner {
+    width: 55%;
   }
-  .fabric h2 {
-    padding: 0;
-    font-size: 30px;
-  }
-  .fabric h2::after {
+  .fabric .tit .m_no {
     display: none;
   }
+  .fabric .bg1 {
+    left: 50%;
+  }
+  .fabric .bg2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .fabric .inner {
+    width: 50%;
+  }
+  .fabric h2 {
+    font-size: 25px;
+  }
   .fabric .tit {
+    font-size: 30px;
+  }
+  .fabric .bg1 {
+    left: 45%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .fabric .inner {
+    width: 80%;
+  }
+  .fabric h2 {
+    padding-top: 150px;
+  }
+  .fabric .bg1 {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 716px;
+  }
+  .fabric .bg1::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+  }
+}
+@media screen and (max-width: 640px) {
+  .fabric {
+    padding: 0;
+  }
+  .fabric h2 {
+    padding: 64px 0 8px 0;
     font-size: 20px;
-    margin: 20px 0 10px 0;
+  }
+  .fabric .tit {
+    font-size: 25px;
   }
   .fabric .tit .m_no {
     display: none;
@@ -535,55 +535,46 @@ body {
   .fabric .cnt {
     display: none;
   }
+  .fabric .tag {
+    margin: 23px 0 15px 0;
+  }
   .fabric .tag span {
-    margin: 0 15px 0 0;
+    margin: 0 11px 0 0;
   }
-  .fabric .bg1 {
+  .fabric .bg {
     position: relative;
-    top: auto;
+    overflow: hidden;
     left: auto;
+    top: auto;
     width: auto;
-    height: 442px;
-    margin: 20px 0 0 0;
+    height: 165px;
   }
-  .fabric .bg1 img {
-    display: block;
-    width: 120%;
-    height: 120%;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .fabric .bg img {
+    transform: translateY(0) !important; /* 애니메이션 안함 */
+    width: 150%;
+    height: 150%;
   }
   .fabric .bg2 {
     display: none;
-    position: absolute;
-    z-index: 9;
-    top: 200px;
-    left: calc(50% + 400px);
-    width: 590px;
-    overflow: hidden;
-  }
-  .fabric .bg2 img {
-    display: block;
-    width: 60%;
-    height: 60%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 .product {
-  background-color: #33302D;
+  background: rgb(51, 48, 45);
+  background: linear-gradient(135deg, rgb(51, 48, 45) 0%, rgb(103, 106, 91) 100%);
   color: rgba(255, 255, 255, 0.8);
 }
 .product h2 {
   font-family: "Noto Serif KR", serif;
+  font-weight: 100;
+  line-height: 1.2;
+  font-size: 78px;
+  color: #fff;
   padding: 112px 0 99px 0;
-  color: #FFFFFF;
-  font-size: 60px;
-  font-weight: 700;
 }
 .product .list {
   display: block;
   position: relative;
+  overflow: visible;
 }
 .product .list::after {
   display: block;
@@ -594,19 +585,38 @@ body {
 }
 .product .list .tit {
   position: absolute;
-  left: 0;
-  top: 0;
-  color: #FFFFFF;
+  color: #fff;
   font-size: 30px;
   line-height: 1.3;
+  left: 0;
+  top: 0;
+}
+.product .list .tit.fixed {
+  left: 13.2%;
+  top: 150px;
+  position: fixed;
+}
+.product .list .tit.end {
+  left: 0;
+  top: auto;
+  bottom: 80px;
+  position: absolute;
 }
 .product .list ul {
   float: right;
 }
 .product .list ul li {
+  display: block;
   position: relative;
   width: 440px;
   margin-bottom: 98px;
+}
+.product .list ul li::after {
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+  height: 0;
 }
 .product .list ul li a {
   display: block;
@@ -624,7 +634,7 @@ body {
 }
 .product .list ul li a h3 {
   margin-top: -35px;
-  color: #FFFFFF;
+  color: #fff;
   font-size: 40px;
   font-weight: 700;
 }
@@ -641,6 +651,16 @@ body {
     left: auto;
     top: auto;
     margin: 0 0 10px 0;
+  }
+  .product .list .tit.fixed {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .product .list .tit.end {
+    position: relative;
+    left: auto;
+    bottom: auto;
   }
   .product .list .tit .m_no {
     display: none;
@@ -690,33 +710,162 @@ body {
   }
   .product .list ul li a h3 {
     margin-top: -35px;
-    color: #FFFFFF;
+    color: #fff;
     font-size: 40px;
     font-weight: 700;
   }
   .product .list ul li a p {
     margin: 10px 0 0 0;
   }
-  .product .list ul li:nth-child(1) .pic, .product .list ul li:nth-child(3) .pic, .product .list ul li:nth-child(5) .pic {
+  .product .list ul li:nth-child(2n-1) .pic {
     width: 65%;
     height: 98px;
     margin-left: 35%;
   }
-  .product .list ul li:nth-child(1) p, .product .list ul li:nth-child(3) p, .product .list ul li:nth-child(5) p {
+  .product .list ul li:nth-child(2n-1) p {
     margin-right: 35%;
   }
-  .product .list ul li:nth-child(2) .pic, .product .list ul li:nth-child(4) .pic {
+  .product .list ul li:nth-child(2n) .pic {
     width: 65%;
     height: 98px;
     margin-right: 35%;
   }
-  .product .list ul li:nth-child(2) h3, .product .list ul li:nth-child(4) h3 {
+  .product .list ul li:nth-child(2n) h3 {
     margin-left: 35%;
   }
-  .product .list ul li:nth-child(2) p, .product .list ul li:nth-child(4) p {
+  .product .list ul li:nth-child(2n) p {
     margin-left: 35%;
   }
   .product .list ul.item1 {
     margin: 0;
+  }
+}
+.product2 {
+  position: relative;
+  padding: 120px 0;
+  margin: 0 0 1000px 0;
+  background-color: #33302d;
+  color: #fff;
+}
+.product2 h2 {
+  font-family: "Noto Serif KR", serif;
+  margin: 0 0 40px 400px;
+  font-size: 60px;
+}
+.product2 .list {
+  display: flex;
+  justify-content: flex-end;
+}
+.product2 .list .tit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  white-space: nowrap;
+}
+.product2 .list ul li {
+  width: 440px;
+}
+.product2 .list ul li .pic img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.insta {
+  background-color: #ffe9cf;
+  padding: 107px 0 80px 0;
+  position: relative;
+}
+.insta h2 {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 100;
+  line-height: 1.2;
+  font-size: 78px;
+  color: #fff;
+  color: #3d3d3d;
+  margin: 0 0 70px 0;
+  position: relative;
+  z-index: 1;
+}
+.insta .list ul li {
+  width: 320px;
+}
+.insta .list ul li a {
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.insta .list ul li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.insta .list ul li:nth-child(2n) {
+  padding: 40px;
+}
+.insta .bg_txt {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  color: #ffe0cb;
+  font-size: 200px;
+  line-height: 0;
+  white-space: nowrap;
+  z-index: 0;
+  -webkit-animation: bg_txt_ani 30s infinite linear;
+          animation: bg_txt_ani 30s infinite linear;
+}
+
+@-webkit-keyframes bg_txt_ani {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bg_txt_ani {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1441px) {
+  .insta .list {
+    width: calc(100% + 480px);
+    margin-left: -240px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .insta {
+    padding: 57px 0 30px 0;
+  }
+  .insta h2 {
+    font-family: "Noto Serif KR", serif;
+    font-weight: 100;
+    line-height: 1.2;
+    font-size: 78px;
+    color: #fff;
+    color: #3d3d3d;
+    margin: 0 0 50px 0;
+    font-size: 30px;
+  }
+  .insta .list {
+    width: auto;
+    margin-left: 0;
+  }
+  .insta .list ul li:nth-child(2n) {
+    padding: 0;
+  }
+  .insta .bg_txt {
+    top: 70px;
+    font-size: 80px;
   }
 }

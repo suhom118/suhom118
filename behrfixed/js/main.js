@@ -50,4 +50,35 @@ header에 open클래스를 추가
   $("header nav > ul > li:last-child > ul > li:last-child").on("focusout", function () {
     $("header").removeClass("open");
   });
+
+  //.product h2 상단에 도달했을때: 콘텐츠 보일 시작점
+  let fixObj = $(".product h2"); //고정요소
+  let fixArea = $(".product"); //고정요소를 감쌀요소
+  let fixTop = 140;
+  let fixBtm = 80;
+
+  let fixEnd = fixArea.offset().top + fixArea.height() - fixObj.height() - fixBtm; //끝나는 지점
+  let fixStart = fixArea.offset().top - fixTop;
+  console.log(fixStart, "fixStart");
+  console.log(fixEnd, "fixEnd");
+
+  $(window).scroll(function () {
+    objFixed();
+  });
+  function objFixed() {
+    console.log(scrolling);
+    fixStart = fixArea.offset().top - fixTop;
+    fixEnd = fixArea.offset().top + fixArea.height() - fixObj.height() - fixBtm - fixTop;
+
+    if ((scrolling >= fixStart) & (scrolling < fixEnd)) {
+      fixObj.addClass("fixed");
+      fixObj.removeClass("end");
+    } else if (scrolling < fixStart) {
+      fixObj.removeClass("fixed");
+      fixObj.removeClass("end");
+    } else {
+      fixObj.addClass("end");
+      fixObj.removeClass("fixed");
+    }
+  }
 });
