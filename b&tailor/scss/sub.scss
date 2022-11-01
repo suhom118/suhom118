@@ -1,0 +1,31 @@
+@import "_var.scss";
+@import "_default.scss";
+@import "_common.scss";
+//서브 공통 레이아웃
+.custom-shape-divider-bottom-1667288818 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1667288818 svg {
+  position: relative;
+  display: block;
+  width: calc(105% + 1.3px);
+  height: 138px;
+}
+
+.custom-shape-divider-bottom-1667288818 .shape-fill {
+  fill: #ffffff;
+}
+.container {
+  background-color: #000;
+  svg {
+    path {
+      fill: brown;
+    }
+  }
+}

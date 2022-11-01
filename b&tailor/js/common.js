@@ -18,4 +18,19 @@ $(document).ready(function () {
       $(".header").removeClass("fixed");
     }
   }
+  // let gnbStu;
+  // $(".header .gnb .gnb_open").on("click", function () {
+  //   gnbStu = $(".header .gnb").hasClass("mobile_open");
+  //   console.log(gnbStu);
+  //   if (gnbStu == true) {
+  //     $(".header .gnb").removeClass("mobile_open");
+  //     console.log("1");
+  //   } else {
+  //     $(".header .gnb").addClass("mobile_open");
+  //     console.log("2");
+  //   }
+  // });
+  $(".header .gnb .gnb_open").on("click", function () {
+    $(".header .gnb").toggleClass("mobile_open");
+  });
 });

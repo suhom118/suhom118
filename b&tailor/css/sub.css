@@ -1,0 +1,491 @@
+@charset "UTF-8";
+/* 모든 태그의 스타일 초기화 */
+/* 모든 태그에 브라우저에서 주는 여백을 삭제 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd, form, fieldset, legend, input, textarea, select, table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* width/height와 padding결합되면 사이즈가 늘어남. 이걸 막는 스타일
+     padding을 줘도 width/height가 유지가 됨 */
+}
+
+/* a태그에 브라우저가 주는 기본 속성 초기화 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 브라우저에서 기울임을 주는 것을 초기화 */
+em, address {
+  font-style: normal;
+}
+
+/* 항목 앞에 동그라미 삭제 */
+ul, ol, li {
+  list-style: none;
+}
+
+/* form태그가 문자 스타일을 상속받지 않아서 상속받게 하기 */
+form, input, select, textarea, button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  /* 서체 상속 - button은 body에서 적용한 서체를 
+     자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: none; /* form 태그의 legend은 타이틀로 숨김처리 */
+}
+
+button {
+  background-color: transparent; /* 투명 */
+  border: 0;
+  cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
+}
+
+table caption {
+  display: none;
+}
+
+/* 글자를 두껍게 하는 태그는 모두 일반 두께로 변형 */
+h1, h2, h3, h4, h5, h6, strong, th {
+  font-weight: 400;
+}
+
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+/* 본명조 */
+html,
+body {
+  color: #3d3d3d;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* letter-spacing: -0.05em; */
+  word-break: keep-all; /* 단어별 줄바꿈 */
+}
+
+#wrap {
+  /* id="wrap" */
+  overflow: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
+       1400px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+
+@media screen and (max-width: 1000px) {
+  html,
+body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 640px) {
+  html,
+body {
+    font-size: 13px;
+  }
+} /* media 종료 */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+  position: relative;
+}
+
+.skip_nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000000000;
+  width: 100%;
+}
+
+.skip_nav a {
+  position: absolute;
+  left: 0;
+  top: -1000px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #0059a8;
+  color: #fff;
+  text-align: center;
+}
+
+.skip_nav a:focus {
+  top: 0;
+}
+
+/* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
+  -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
+::-moz-selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+::selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+
+::-moz-selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+
+::-webkit-selection {
+  background: #cba585;
+  color: #3e3e3f;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 300;
+  display: flex;
+  justify-content: start;
+  transition: 0.5s;
+}
+.header .logo {
+  margin: 25px 0 0 20px;
+}
+.header .gnb {
+  width: 100%;
+}
+.header .gnb ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 40px;
+}
+.header .gnb ul li {
+  width: 100%;
+}
+.header .gnb ul li a {
+  display: block;
+  width: 100%;
+  font-size: 1.4667vw;
+  color: #fff;
+}
+.header .gnb .gnb_open {
+  display: none;
+}
+.header.fixed {
+  position: fixed;
+  backdrop-filter: blur(10%);
+  -webkit-backdrop-filter: blur(10%);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 300;
+    display: flex;
+    justify-content: start;
+  }
+  .header .logo {
+    margin: 0;
+    position: absolute;
+    left: 10px;
+  }
+  .header .logo a img {
+    height: 20px;
+  }
+  .header .gnb {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .header .gnb .gnb_open {
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+  .header .gnb .gnb_open span {
+    position: absolute;
+    transition: 0.5s;
+    right: 20px;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+  .header .gnb .gnb_open span:nth-child(1) {
+    top: 20px;
+  }
+  .header .gnb .gnb_open span:nth-child(2) {
+    top: 28px;
+  }
+  .header .gnb .gnb_open span:nth-child(3) {
+    top: 36px;
+  }
+  .header .gnb ul {
+    display: none;
+    width: 100%;
+    padding: 100px 0 0 0;
+    height: 100vh;
+    max-width: 375px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+  }
+  .header .gnb ul li {
+    width: 150px;
+    margin: 0 20px 0 0;
+  }
+  .header .gnb ul li a {
+    display: block;
+    padding: 20px 10px;
+    font-size: 24px;
+    color: #3d3d3d;
+  }
+  .header .gnb.mobile_open .gnb_open button span {
+    background: #666;
+  }
+  .header .gnb.mobile_open .gnb_open button span:nth-child(1) {
+    top: 28px;
+    transform: rotate(45deg);
+  }
+  .header .gnb.mobile_open .gnb_open button span:nth-child(2) {
+    top: 28px;
+    right: -22px;
+  }
+  .header .gnb.mobile_open .gnb_open button span:nth-child(3) {
+    top: 28px;
+    transform: rotate(-45deg);
+  }
+  .header .gnb.mobile_open ul {
+    display: flex;
+  }
+}
+.footer {
+  position: relative;
+  color: #3e3e3f;
+  padding: 40px 0;
+}
+.footer .flogo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.footer .flogo img {
+  display: block;
+  width: 100px;
+}
+.footer .cnt_wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.footer .cnt_wrap .sns ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .cnt_wrap .sns ul li {
+  margin-left: 15px;
+}
+.footer .cnt_wrap .inner {
+  width: 70%;
+}
+.footer .cnt_wrap .inner .finfo {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+.footer .cnt_wrap .inner .finfo .inner_finfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 40px;
+}
+.footer .cnt_wrap .inner .finfo .inner_finfo .info-devide__bar {
+  width: 1px;
+  height: 13px;
+  background-color: #000;
+  margin-top: 15px;
+  opacity: 0.2;
+}
+.footer .cnt_wrap .inner .copyright {
+  color: #ccc;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    position: relative;
+    color: #3e3e3f;
+    padding: 40px 0;
+  }
+  .footer .flogo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  .footer .flogo img {
+    display: block;
+    width: 100px;
+  }
+  .footer .cnt_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer .cnt_wrap .sns ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .cnt_wrap .sns ul li {
+    margin-left: 15px;
+  }
+  .footer .cnt_wrap .inner {
+    width: 100%;
+  }
+  .footer .cnt_wrap .inner .finfo {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .footer .cnt_wrap .inner .finfo .inner_finfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 40px;
+  }
+  .footer .cnt_wrap .inner .finfo .inner_finfo .info-devide__bar {
+    width: 1px;
+    height: 13px;
+    background-color: #000;
+    margin-top: 15px;
+    opacity: 0.2;
+  }
+  .footer .cnt_wrap .inner .copyright {
+    color: #ccc;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer {
+    position: relative;
+    color: #3e3e3f;
+    padding: 40px 0;
+  }
+  .footer .flogo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  .footer .flogo img {
+    display: block;
+    width: 100px;
+  }
+  .footer .cnt_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer .cnt_wrap .sns ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .cnt_wrap .sns ul li {
+    margin-left: 15px;
+  }
+  .footer .cnt_wrap .inner {
+    width: 100%;
+  }
+  .footer .cnt_wrap .inner .finfo {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .footer .cnt_wrap .inner .finfo .inner_finfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    line-height: 40px;
+  }
+  .footer .cnt_wrap .inner .finfo .inner_finfo .info-devide__bar {
+    width: 1px;
+    height: 13px;
+    background-color: #000;
+    margin-top: 15px;
+    opacity: 0.2;
+  }
+  .footer .cnt_wrap .inner .finfo .inner_finfo .info-devide__bar.m_no {
+    display: none;
+  }
+  .footer .cnt_wrap .inner .copyright {
+    color: #ccc;
+  }
+}
+.custom-shape-divider-bottom-1667288818 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1667288818 svg {
+  position: relative;
+  display: block;
+  width: calc(105% + 1.3px);
+  height: 138px;
+}
+
+.custom-shape-divider-bottom-1667288818 .shape-fill {
+  fill: #ffffff;
+}
+
+.container {
+  background-color: #000;
+}
+.container svg path {
+  fill: brown;
+}
