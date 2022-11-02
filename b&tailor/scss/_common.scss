@@ -111,6 +111,12 @@ body {
   transition: 0.5s;
   .logo {
     margin: 25px 0 0 20px;
+    svg {
+      width: 161px;
+      path {
+        fill: #cba585;
+      }
+    }
   }
   .gnb {
     width: 100%;
@@ -129,7 +135,7 @@ body {
           display: block;
           width: 100%;
 
-          font-size: 1.4667vw;
+          font-size: 1.3667vw;
           color: #fff;
         }
       }
@@ -164,8 +170,8 @@ body {
       position: absolute;
       left: 10px;
       a {
-        img {
-          height: 20px;
+        svg {
+          width: 100px;
         }
       }
     }

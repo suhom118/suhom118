@@ -21,6 +21,39 @@
 .custom-shape-divider-bottom-1667288818 .shape-fill {
   fill: #ffffff;
 }
+.sub_visual {
+  height: 770px;
+  background-image: url(/suhom118/b&tailor/images/sub/sub_bg1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .location {
+    padding: 340px 0 0 0;
+    color: $w_tit_color;
+    display: flex;
+    align-items: center;
+
+    span {
+      position: relative;
+      margin: 0 15px;
+      &::after {
+        position: absolute;
+        width: 5px;
+        height: 9px;
+        background-color: #ffffff;
+        content: "";
+        right: -20px;
+        top: 9px;
+        clip-path: path(
+          "M4.38596 -1.90735e-06L5 0.624999L1.23904 4.38596L5 8.14693L4.38596 8.77193L0 4.38596L4.38596 -1.90735e-06Z"
+        );
+      }
+    }
+  }
+  .tit {
+    @include title_style;
+  }
+}
 .container {
   background-color: #000;
   svg {

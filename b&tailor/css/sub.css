@@ -186,6 +186,12 @@ body {
 .header .logo {
   margin: 25px 0 0 20px;
 }
+.header .logo svg {
+  width: 161px;
+}
+.header .logo svg path {
+  fill: #cba585;
+}
 .header .gnb {
   width: 100%;
 }
@@ -203,7 +209,7 @@ body {
 .header .gnb ul li a {
   display: block;
   width: 100%;
-  font-size: 1.4667vw;
+  font-size: 1.3667vw;
   color: #fff;
 }
 .header .gnb .gnb_open {
@@ -233,8 +239,8 @@ body {
     position: absolute;
     left: 10px;
   }
-  .header .logo a img {
-    height: 20px;
+  .header .logo a svg {
+    width: 100px;
   }
   .header .gnb {
     width: 100%;
@@ -481,6 +487,42 @@ body {
 
 .custom-shape-divider-bottom-1667288818 .shape-fill {
   fill: #ffffff;
+}
+
+.sub_visual {
+  height: 770px;
+  background-image: url(/suhom118/b&tailor/images/sub/sub_bg1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sub_visual .location {
+  padding: 340px 0 0 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.sub_visual .location span {
+  position: relative;
+  margin: 0 15px;
+}
+.sub_visual .location span::after {
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  background-color: #ffffff;
+  content: "";
+  right: -20px;
+  top: 9px;
+  -webkit-clip-path: path("M4.38596 -1.90735e-06L5 0.624999L1.23904 4.38596L5 8.14693L4.38596 8.77193L0 4.38596L4.38596 -1.90735e-06Z");
+          clip-path: path("M4.38596 -1.90735e-06L5 0.624999L1.23904 4.38596L5 8.14693L4.38596 8.77193L0 4.38596L4.38596 -1.90735e-06Z");
+}
+.sub_visual .tit {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 100;
+  line-height: 1.2;
+  font-size: 78px;
+  color: #fff;
 }
 
 .container {

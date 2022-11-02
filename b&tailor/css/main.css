@@ -186,6 +186,12 @@ body {
 .header .logo {
   margin: 25px 0 0 20px;
 }
+.header .logo svg {
+  width: 161px;
+}
+.header .logo svg path {
+  fill: #cba585;
+}
 .header .gnb {
   width: 100%;
 }
@@ -203,7 +209,7 @@ body {
 .header .gnb ul li a {
   display: block;
   width: 100%;
-  font-size: 1.4667vw;
+  font-size: 1.3667vw;
   color: #fff;
 }
 .header .gnb .gnb_open {
@@ -233,8 +239,8 @@ body {
     position: absolute;
     left: 10px;
   }
-  .header .logo a img {
-    height: 20px;
+  .header .logo a svg {
+    width: 100px;
   }
   .header .gnb {
     width: 100%;
