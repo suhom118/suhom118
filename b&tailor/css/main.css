@@ -238,6 +238,7 @@ body {
     margin: 0;
     position: absolute;
     left: 10px;
+    top: 10px;
   }
   .header .logo a svg {
     width: 100px;
@@ -311,9 +312,10 @@ body {
   }
 }
 .footer {
+  border-top: rgba(0, 0, 0, 0.1) solid 1px;
   position: relative;
   color: #3e3e3f;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .footer .flogo {
   position: absolute;
@@ -336,6 +338,9 @@ body {
 }
 .footer .cnt_wrap .sns ul li {
   margin-left: 15px;
+}
+.footer .cnt_wrap .sns ul li a img {
+  transform: scale(0.6, 0.6);
 }
 .footer .cnt_wrap .inner {
   width: 70%;

@@ -238,6 +238,7 @@ body {
     margin: 0;
     position: absolute;
     left: 10px;
+    top: 10px;
   }
   .header .logo a svg {
     width: 100px;
@@ -311,9 +312,10 @@ body {
   }
 }
 .footer {
+  border-top: rgba(0, 0, 0, 0.1) solid 1px;
   position: relative;
   color: #3e3e3f;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .footer .flogo {
   position: absolute;
@@ -336,6 +338,9 @@ body {
 }
 .footer .cnt_wrap .sns ul li {
   margin-left: 15px;
+}
+.footer .cnt_wrap .sns ul li a img {
+  transform: scale(0.6, 0.6);
 }
 .footer .cnt_wrap .inner {
   width: 70%;
@@ -469,32 +474,13 @@ body {
     color: #ccc;
   }
 }
-.custom-shape-divider-bottom-1667288818 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-bottom-1667288818 svg {
-  position: relative;
-  display: block;
-  width: calc(105% + 1.3px);
-  height: 138px;
-}
-
-.custom-shape-divider-bottom-1667288818 .shape-fill {
-  fill: #ffffff;
-}
-
 .sub_visual {
-  height: 770px;
+  height: 550px;
   background-image: url(/suhom118/b&tailor/images/sub/sub_bg1.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 .sub_visual .location {
   padding: 340px 0 0 0;
@@ -504,7 +490,7 @@ body {
 }
 .sub_visual .location span {
   position: relative;
-  margin: 0 15px;
+  margin: 0 15px 0 0;
 }
 .sub_visual .location span::after {
   position: absolute;
@@ -512,10 +498,13 @@ body {
   height: 9px;
   background-color: #ffffff;
   content: "";
-  right: -20px;
+  right: -10px;
   top: 9px;
   -webkit-clip-path: path("M4.38596 -1.90735e-06L5 0.624999L1.23904 4.38596L5 8.14693L4.38596 8.77193L0 4.38596L4.38596 -1.90735e-06Z");
           clip-path: path("M4.38596 -1.90735e-06L5 0.624999L1.23904 4.38596L5 8.14693L4.38596 8.77193L0 4.38596L4.38596 -1.90735e-06Z");
+}
+.sub_visual .location span:last-child::after {
+  display: none;
 }
 .sub_visual .tit {
   font-family: "Noto Serif KR", serif;
@@ -524,10 +513,110 @@ body {
   font-size: 78px;
   color: #fff;
 }
+.sub_visual.sub_bg1 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg1.png);
+}
+.sub_visual.sub_bg2 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg2.png);
+}
+.sub_visual.sub_bg3 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg3.png);
+}
+.sub_visual.sub_bg4 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg4.png);
+}
+.sub_visual.sub_bg5 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg5.png);
+}
+.sub_visual.sub_bg6 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg6.png);
+}
+.sub_visual.sub_bg7 .sub_visual_bg {
+  background-image: url(/design01/bntailor/images/sub/sub_bg7.png);
+}
+
+@media screen and (max-width: 1000px) {
+  .sub_visual {
+    height: 245px;
+  }
+  .sub_visual .sub_visual_bg {
+    height: 100%;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .sub_visual .location {
+    padding: 150px 0 0 0;
+  }
+  .sub_visual .location span {
+    margin-right: 14px;
+  }
+  .sub_visual .location span::after {
+    right: -10px;
+    top: 6px;
+  }
+  .sub_visual .tit {
+    font-size: 30px;
+  }
+}
+.lnb {
+  margin: 20px 0 50px 0;
+  height: 80px;
+}
+.lnb .lnb_wrap {
+  overflow-x: auto;
+  height: 100%;
+}
+.lnb .lnb_wrap ul {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  height: 100%;
+}
+.lnb .lnb_wrap ul li a {
+  display: block;
+  padding: 0 25px;
+  color: #999999;
+  font-size: 20px;
+  font-weight: 700;
+}
+.lnb .lnb_wrap ul li:first-child a {
+  padding-left: 0;
+}
+.lnb .lnb_wrap ul li.active a {
+  position: relative;
+  color: #1d1d1d;
+}
+.lnb .lnb_wrap ul li.active a::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 19px;
+  height: 2px;
+  background-color: #9d856d;
+  content: "";
+}
 
 .container {
-  background-color: #000;
+  min-height: 400px;
 }
-.container svg path {
-  fill: brown;
+
+.custom-shape-divider-bottom-1667436110 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1667436110 svg {
+  position: relative;
+  display: block;
+  width: calc(135% + 1.3px);
+  height: 84px;
+}
+
+.custom-shape-divider-bottom-1667436110 .shape-fill {
+  fill: #ffffff;
 }
