@@ -1,28 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="daumRoughmapContainer1641279790936" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+<html lang="ko">
 
-    <!--
-								2. 설치 스크립트
-								* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-							-->
-    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>금성건설</title>
+</head>
 
-    <!-- 3. 실행 스크립트 -->
-    <script charset="UTF-8">
-      new daum.roughmap.Lander({
-        timestamp: "1641279790936",
-        key: "28oni",
-        mapWidth: "340",
-        mapHeight: "321",
-      }).render();
-    </script>
-  </body>
+<body>
+  <div class="skip_nav">
+    <!-- tap키로 홈페이지에 접근했을떄 나타나는 바로가기 링크 id:contents,gnb로 이동 -->
+    <a href="#contents">본문내용바로가기</a>
+    <a href="#gnb">메인메뉴바로가기</a>
+  </div>
+  <div id="wrap">
+    <div class="gridarea">
+      <header class="header">
+        <h1 class="logo"><a href="index.html">금성건설</a></h1>
+        <nav class="gnb" id="gnb">
+          <ul>
+            <li><a href="#n">회사소개 </a></li>
+            <li><a href="#n"> 사업분야 </a></li>
+            <li><a href="#n"> 홍보센터 </a></li>
+            <li><a href="#n">고객센터</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="visual">
+        <video loop playsinline autoplay muted width="100%" height="100%">
+          <!-- 비디오 자동실행 무한반복 -->
+          <source src="images/main.mp4" type="video/mp4">
+          <!-- 비디오 경로 -->
+        </video>
+      </div>
+      <aside>
+        <div class="language">
+          <ul>
+            <li class="active"><a href="#n">KOR </a></li>
+            <li><a href="#n"> ENG </a></li>
+            <li><a href="#n"> CHN </a></li>
+            <li><a href="#n"> ESP</a></li>
+          </ul>
+        </div>
+        <h2><span>꿈! </span>
+          <span>그 이상의 현실을 </span>
+          <span>창조하는 금성건설</span>
+        </h2>
+      </aside>
+    </div>
+
+    <section class="biz">
+
+    </section>
+    <section class="service">
+
+    </section>
+    <section class="manage">
+
+    </section>
+    <footer class="footer">
+
+    </footer>
+  </div>
+
+</body>
+
 </html>

@@ -7,7 +7,16 @@
     파일명 앞에 _(언더바)를 입력하면 sass 컴파일러가 해당 파일은 컴파일 하지 않음
     main.css나 sub.css에서 default, common을 필요에 따라서 import 해서 사용하면 됨.
 */
-
+.header {
+  &.fixed {
+    //fixed 클래스 추가
+    position: fixed;
+    backdrop-filter: blur(10%);
+    -webkit-backdrop-filter: blur(10%);
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
 .visual {
   position: relative;
   .tit {

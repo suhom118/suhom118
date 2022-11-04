@@ -145,14 +145,6 @@ body {
       display: none;
     }
   }
-  &.fixed {
-    //fixed 클래스 추가
-    position: fixed;
-    backdrop-filter: blur(10%);
-    -webkit-backdrop-filter: blur(10%);
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
 }
 
 @media screen and(max-width:1000px) {

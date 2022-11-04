@@ -10,8 +10,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-$(document).ready(function(){
+$(document).ready(function () {
   $(".typing").typed({
     strings: ["DEVELOPERS;"],
     typeSpeed: 300,
@@ -22,3 +21,15 @@ $(document).ready(function(){
     cursorChar: "|",
     contentType: "html",
   });
+});
+let observer = new IntersectionObserver((e) => {
+  e.forEach((박스) => {
+    박스.target.style.opacity = 1;
+  });
+});
+let div = document.querySelectorAll("div");
+
+observer.observe(div[0]);
+observer.observe(div[1]);
+observer.observe(div[2]);
+observer.observe(div[3]);

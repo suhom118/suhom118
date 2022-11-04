@@ -3,12 +3,53 @@
 /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
-body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd, form, fieldset, legend, input, textarea, select, table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
+body,
+header,
+footer,
+div,
+nav,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a,
+ul,
+ol,
+li,
+address,
+strong,
+span,
+em,
+p,
+i,
+dl,
+dt,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select,
+table,
+caption,
+colgroup,
+col,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   /* width/height와 padding결합되면 사이즈가 늘어남. 이걸 막는 스타일
-     padding을 줘도 width/height가 유지가 됨 */
+       padding을 줘도 width/height가 유지가 됨 */
 }
 
 /* a태그에 브라우저가 주는 기본 속성 초기화 */
@@ -18,17 +59,24 @@ a {
 }
 
 /* 브라우저에서 기울임을 주는 것을 초기화 */
-em, address {
+em,
+address {
   font-style: normal;
 }
 
 /* 항목 앞에 동그라미 삭제 */
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
 }
 
 /* form태그가 문자 스타일을 상속받지 않아서 상속받게 하기 */
-form, input, select, textarea, button {
+form,
+input,
+select,
+textarea,
+button {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -36,7 +84,7 @@ form, input, select, textarea, button {
   line-height: inherit;
   letter-spacing: inherit;
   /* 서체 상속 - button은 body에서 적용한 서체를 
-     자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
+       자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
 }
 
 fieldset {
@@ -58,7 +106,14 @@ table caption {
 }
 
 /* 글자를 두껍게 하는 태그는 모두 일반 두께로 변형 */
-h1, h2, h3, h4, h5, h6, strong, th {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th {
   font-weight: 400;
 }
 
@@ -214,13 +269,6 @@ body {
 }
 .header .gnb .gnb_open {
   display: none;
-}
-.header.fixed {
-  position: fixed;
-  backdrop-filter: blur(10%);
-  -webkit-backdrop-filter: blur(10%);
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 1000px) {
@@ -479,6 +527,14 @@ body {
     파일명 앞에 _(언더바)를 입력하면 sass 컴파일러가 해당 파일은 컴파일 하지 않음
     main.css나 sub.css에서 default, common을 필요에 따라서 import 해서 사용하면 됨.
 */
+.header.fixed {
+  position: fixed;
+  backdrop-filter: blur(10%);
+  -webkit-backdrop-filter: blur(10%);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .visual {
   position: relative;
 }
