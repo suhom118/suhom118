@@ -345,7 +345,7 @@ body {
   }
   .header .gnb.mobile_open .gnb_open button span:nth-child(1) {
     top: 28px;
-    transform: rotate(45deg);
+    transform: rotateZ(45deg);
   }
   .header .gnb.mobile_open .gnb_open button span:nth-child(2) {
     top: 28px;
@@ -353,7 +353,7 @@ body {
   }
   .header .gnb.mobile_open .gnb_open button span:nth-child(3) {
     top: 28px;
-    transform: rotate(-45deg);
+    transform: rotateZ(-45deg);
   }
   .header .gnb.mobile_open ul {
     display: flex;

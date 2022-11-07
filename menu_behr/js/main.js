@@ -80,7 +80,7 @@ $(document).ready(function () {
         */
       e.preventDefault();
       /*4개의 1차메뉴li중에서 클릭한 li를 this라고함*/
-      $(this).toggleClass("sub_open");
+      $(".header .gnb>ul>li>ul>li").toggleClass("sub_open");
     }
   });
 });
@@ -96,5 +96,7 @@ function horizontalIndicator(e) {
   horizontalBar.style.top = e.offsetTop + e.offsetHeight + "px";
 }
 
-horizontalMenus.forEach((menu) => menu.addEventListener("click", (e) => horizontalIndicator(e.currentTarget)));
+horizontalMenus.forEach((menu) =>
+  menu.addEventListener("click", (e) => horizontalIndicator(e.currentTarget))
+);
 horizontalIndicator(e);

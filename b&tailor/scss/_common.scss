@@ -228,7 +228,7 @@ body {
               background: #666;
               &:nth-child(1) {
                 top: 28px;
-                transform: rotate(45deg);
+                transform: rotateZ(45deg);
               }
               &:nth-child(2) {
                 top: 28px;
@@ -236,7 +236,7 @@ body {
               }
               &:nth-child(3) {
                 top: 28px;
-                transform: rotate(-45deg);
+                transform: rotateZ(-45deg);
               }
             }
           }

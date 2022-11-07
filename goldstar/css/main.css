@@ -183,7 +183,15 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.gridarea .header h1 a {
+.gridarea .header.fixed {
+  position: fixed;
+  color: #fff;
+  width: 100%;
+  z-index: 100;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.gridarea .header h1 > a {
   display: block;
   background-image: url(../images/logo.svg);
   background-position: center center;
@@ -196,14 +204,51 @@ body {
 }
 .gridarea .header .gnb {
   width: 100%;
+  height: 100%;
 }
-.gridarea .header .gnb ul {
-  padding: 0 20px 0 5.2083vw;
+.gridarea .header .gnb .gnb_open {
+  display: none;
+}
+.gridarea .header .gnb > ul {
+  padding: 0 0 0 10.2083vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
-.gridarea .header .gnb ul li a {
-  font-size: 25px;
+.gridarea .header .gnb > ul > li {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.gridarea .header .gnb > ul > li > a {
+  height: 100%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.gridarea .header .gnb > ul > li > ul {
+  display: none;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 360px;
+  background-color: #fff;
+  padding: 15px 0 0 0;
+}
+.gridarea .header .gnb > ul > li > ul > li > a {
+  line-height: 2.6;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  padding: 0;
+}
+.gridarea .header .gnb.menu_open ul li ul, .gridarea .header .gnb:hover ul li ul {
+  display: block;
 }
 .gridarea .visual {
   grid-area: visual;
@@ -214,63 +259,555 @@ body {
   filter: brightness(150%);
 }
 .gridarea aside {
+  z-index: 1;
   grid-area: side;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: #0081cf;
+  -webkit-animation: grid_area 1s forwards;
+          animation: grid_area 1s forwards;
 }
-.gridarea aside .language ul {
+@-webkit-keyframes grid_area {
+  from {
+    opacity: 0;
+    width: 200%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes grid_area {
+  from {
+    opacity: 0;
+    width: 200%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+.gridarea aside .language > ul {
   display: flex;
   flex-direction: row;
 }
-.gridarea aside .language ul li {
+.gridarea aside .language > ul > li {
   color: #999;
 }
-.gridarea aside .language ul li a {
+.gridarea aside .language > ul > li > a {
   display: block;
   padding: 30px 20px;
   font-size: 20px;
 }
-.gridarea aside .language ul li.active {
+.gridarea aside .language > ul > li.active {
   color: #fff;
 }
 .gridarea aside h2 {
-  font-size: 50px;
+  font-size: 48px;
   padding: 0 0 45vh 0;
   color: #fff;
 }
 .gridarea aside h2 span {
-  border-right: 3px solid wheat;
-  -webkit-animation: blink 0.5s infinite, typing 2s steps(2) forwards;
-          animation: blink 0.5s infinite, typing 2s steps(2) forwards;
-  white-space: nowrap;
-  overflow: hidden;
+  display: block;
+  transition: 1s;
 }
-@-webkit-keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+.gridarea aside h2 span:nth-child(1) {
+  -webkit-animation: appear 1s forwards;
+          animation: appear 1s forwards;
 }
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+.gridarea aside h2 span:nth-child(2) {
+  -webkit-animation: appear 2s forwards;
+          animation: appear 2s forwards;
 }
-@-webkit-keyframes typing {
+.gridarea aside h2 span:nth-child(3) {
+  -webkit-animation: appear 4s forwards;
+          animation: appear 4s forwards;
+}
+@-webkit-keyframes appear {
   from {
-    width: 0;
+    opacity: 0;
   }
   to {
-    width: 100%;
+    opacity: 1;
   }
 }
-@keyframes typing {
+@keyframes appear {
   from {
-    width: 0;
+    opacity: 0;
   }
   to {
-    width: 100%;
+    opacity: 1;
   }
+}
+
+@media screen and (max-width: 1400px) {
+  .gridarea {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px calc(100vh - 100px);
+    grid-template-areas: "header side" "visual side";
+  }
+  .gridarea .header h1 a {
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 50px;
+    font-size: 0;
+    line-height: 0;
+  }
+  .gridarea .header .gnb {
+    width: 100%;
+    height: 100%;
+  }
+  .gridarea .header .gnb .gnb_open {
+    display: none;
+  }
+  .gridarea .header .gnb > ul {
+    padding: 0 0 0 6.2083vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .gridarea .header .gnb > ul > li {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .gridarea .header .gnb > ul > li > a {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .gridarea .header .gnb > ul > li > ul {
+    display: none;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0 0 0;
+  }
+  .gridarea .header .gnb > ul > li > ul > li > a {
+    font-size: 15px;
+    display: block;
+    padding: 0;
+    line-height: 2.6;
+  }
+  .gridarea .visual {
+    grid-area: visual;
+  }
+  .gridarea .visual video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: brightness(150%);
+  }
+  .gridarea aside {
+    z-index: 1;
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0081cf;
+    -webkit-animation: grid_area 1s forwards;
+            animation: grid_area 1s forwards;
+  }
+  @-webkit-keyframes grid_area {
+    from {
+      opacity: 0;
+      width: 200%;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  @keyframes grid_area {
+    from {
+      opacity: 0;
+      width: 200%;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  .gridarea aside .language > ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .gridarea aside .language > ul > li {
+    color: #999;
+  }
+  .gridarea aside .language > ul > li > a {
+    display: block;
+    padding: 30px 20px;
+    font-size: 18px;
+  }
+  .gridarea aside .language > ul > li.active {
+    color: #fff;
+  }
+  .gridarea aside h2 {
+    font-size: 38px;
+    padding: 0 0 45vh 0;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .gridarea .header h1 a {
+    width: 150px;
+    height: 37px;
+  }
+  .gridarea .header .gnb > ul {
+    padding: 0 0 0 2.2083vw;
+  }
+  .gridarea .header .gnb > ul > li > a {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .gridarea .header .gnb > ul > li > ul {
+    display: none;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    padding: 15px 0 0 0;
+  }
+  .gridarea .header .gnb > ul > li > ul > li a {
+    font-size: 15px;
+    display: block;
+    padding: 0;
+    line-height: 2.6;
+    padding: 0 0 0 15px;
+  }
+  .gridarea .visual {
+    grid-area: visual;
+  }
+  .gridarea .visual video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: brightness(150%);
+  }
+  .gridarea aside {
+    z-index: 1;
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0081cf;
+    -webkit-animation: grid_area 1s forwards;
+            animation: grid_area 1s forwards;
+  }
+  @-webkit-keyframes grid_area {
+    from {
+      opacity: 0;
+      width: 200%;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  @keyframes grid_area {
+    from {
+      opacity: 0;
+      width: 200%;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  .gridarea aside .language > ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .gridarea aside .language > ul > li {
+    color: #999;
+  }
+  .gridarea aside .language > ul > li > a {
+    display: block;
+    padding: 30px 10px;
+    font-size: 16px;
+  }
+  .gridarea aside .language > ul > li.active {
+    color: #fff;
+  }
+  .gridarea aside h2 {
+    font-size: 25px;
+    padding: 0 0 45vh 0;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 640px) {
+  .gridarea {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px calc(100vh - 60px);
+    grid-template-areas: "header header" "visual visual";
+  }
+  .gridarea .header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .gridarea .header h1 > a {
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 37px;
+    font-size: 0;
+    line-height: 0;
+  }
+  .gridarea .header .gnb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .gridarea .header .gnb .gnb_open {
+    display: block;
+    padding: 0 10px 0 0;
+  }
+  .gridarea .header .gnb .gnb_open span {
+    display: block;
+    transition: 0.3s;
+    width: 23px;
+    height: 2px;
+    margin-bottom: 6px;
+    border-radius: 3px; /* 높이의 절반 */
+    background-color: #666;
+    font-size: 0;
+    line-height: 0;
+  }
+  .gridarea .header .gnb > ul {
+    padding: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 80vh;
+    border-bottom: 0;
+    z-index: 1;
+    color: #3d3d3d;
+    background-color: #fff;
+  }
+  .gridarea .header .gnb > ul > li {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .gridarea .header .gnb > ul > li a {
+    height: 100%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+  .gridarea .header .gnb > ul > li > ul {
+    display: none;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    padding: 15px 0 0 0;
+  }
+  .gridarea .header .gnb > ul > li > ul > li {
+    height: auto;
+  }
+  .gridarea .header .gnb > ul > li > ul > li > a {
+    font-size: 18px;
+    display: block;
+    padding: 0;
+    line-height: 1.5;
+  }
+  .gridarea .header .gnb.menu_mobile span {
+    background: #666;
+  }
+  .gridarea .header .gnb.menu_mobile span:nth-child(1) {
+    -webkit-animation: menu_rotate 1s forwards;
+            animation: menu_rotate 1s forwards;
+  }
+  .gridarea .header .gnb.menu_mobile span:nth-child(2) {
+    opacity: 0;
+  }
+  .gridarea .header .gnb.menu_mobile span:nth-child(3) {
+    -webkit-animation: menu_rotater 1s forwards;
+            animation: menu_rotater 1s forwards;
+  }
+  @-webkit-keyframes menu_rotate {
+    50% {
+      transform: translate(0, 8px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, 8px) rotate(45deg);
+    }
+  }
+  @keyframes menu_rotate {
+    50% {
+      transform: translate(0, 8px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, 8px) rotate(45deg);
+    }
+  }
+  @-webkit-keyframes menu_rotater {
+    50% {
+      transform: translate(0, -8px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, -8px) rotate(-45deg);
+    }
+  }
+  @keyframes menu_rotater {
+    50% {
+      transform: translate(0, -8px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, -8px) rotate(-45deg);
+    }
+  }
+  .gridarea .header .gnb.menu_mobile > ul {
+    display: block;
+  }
+  .gridarea .header .gnb.menu_mobile > ul > li {
+    height: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .gridarea .header .gnb.menu_mobile > ul > li > a {
+    display: flex;
+  }
+  .gridarea .header .gnb.menu_mobile > ul > li > ul {
+    display: none;
+    height: auto;
+    padding: 0;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .gridarea .header .gnb.menu_mobile > ul > li > ul > li {
+    height: auto;
+    position: relative;
+  }
+  .gridarea .header .gnb.menu_mobile > ul > li > ul > li a {
+    line-height: 2;
+  }
+  .gridarea .header .gnb.menu_mobile > ul > li > ul.sub_open {
+    display: block;
+  }
+  .gridarea .visual {
+    grid-area: visual;
+  }
+  .gridarea .visual video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: brightness(150%);
+  }
+  .gridarea aside {
+    display: none;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0081cf;
+    -webkit-animation: grid_area 1s forwards;
+            animation: grid_area 1s forwards;
+  }
+  @-webkit-keyframes grid_area {
+    from {
+      opacity: 0;
+      width: 200%;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  @keyframes grid_area {
+    from {
+      opacity: 0;
+      width: 200%;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+  .gridarea aside .language > ul {
+    display: none;
+    flex-direction: row;
+  }
+  .gridarea aside .language > ul > li {
+    color: #999;
+  }
+  .gridarea aside .language > ul > li a {
+    display: block;
+    padding: 30px 20px;
+    font-size: 20px;
+  }
+  .gridarea aside .language > ul > li.active {
+    color: #fff;
+  }
+  .gridarea aside h2 {
+    font-size: 48px;
+    padding: 0 0 45vh 0;
+    color: #fff;
+  }
+  .gridarea aside h2 span {
+    display: block;
+    transition: 1s;
+  }
+  .gridarea aside h2 span:nth-child(1) {
+    -webkit-animation: appear 1s forwards;
+            animation: appear 1s forwards;
+  }
+  .gridarea aside h2 span:nth-child(2) {
+    -webkit-animation: appear 2s forwards;
+            animation: appear 2s forwards;
+  }
+  .gridarea aside h2 span:nth-child(3) {
+    -webkit-animation: appear 4s forwards;
+            animation: appear 4s forwards;
+  }
+  @-webkit-keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.biz {
+  height: 2000px;
 }
