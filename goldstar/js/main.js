@@ -1,40 +1,55 @@
 $(document).ready(function () {
   let wiwW;
-  let pcMobile;
-  // deviceChk라는 이름을 갖은 함수호출
+  let pcMo;
+  let scrolling;
   deviceChk();
+  topShow();
 
   // 브라우저가 리사이즈될때마다 실행
   $(window).resize(function () {
     deviceChk();
   });
-  let scrolling;
-  scrollChk();
 
   $(window).scroll(function () {
-    scrollChk();
+    topShow(); //top버튼 보이는 함수
+  });
+  /* top 버튼을 누르면 상단으로 스크롤 */
+  $("aside.top").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
   });
 
-  function scrollChk() {
+  /* 스크롤을 어느정도 내리면 aside나타나고, 다시 상단으로 올라면 aisde 사라짐 */
+
+  function topShow() {
+    //함수의 선언
     scrolling = $(window).scrollTop();
-    // console.log(scrolling);
-    if (scrolling > 0) {
-      $(".header").addClass("fixed");
-    } else {
-      $(".header").removeClass("fixed");
+    console.log(scrolling);
+    if (pcMo == "pc") {
+      if (scrolling > 400) {
+        $("aside.top").fadeIn();
+      } else {
+        $("aside.top").fadeOut();
+      }
     }
   }
   function deviceChk() {
-    wiwW = $(window).width();
-    if (wiwW > 640) {
-      pcMobile = "pc";
-      console.log(pcMobile);
+    winW = $(window).width();
+
+    if (winW > 640) {
+      //브라이저 넓이가 640px 보다 크면
+      pcMo = "pc";
+      console.log(pcMo);
     } else {
-      pcMobile = "mobile";
-      console.log(pcMobile);
-    }
-  }
-  // function deviceChk
+      //브라우저의 넓이가 640px 이하면
+      pcMo = "mobile";
+      console.log(pcMo);
+    } //if
+  } // function deviceChk
 
   /*
       메뉴에 마우스를 오버하면 header에 menu_open클래스 추가
@@ -44,7 +59,7 @@ $(document).ready(function () {
 
   $(".header .gnb>ul>li").on("mouseenter focusin", function () {
     // (비교연산자는equal두개)
-    if (pcMobile == "pc") {
+    if (pcMo == "pc") {
       $(".header .gnb").addClass("menu_open");
     }
     // if문
@@ -86,7 +101,7 @@ $(document).ready(function () {
   
        */
   $(".header .gnb>ul>li").on("click", function (e) {
-    if (pcMobile == "mobile") {
+    if (pcMo == "mobile") {
       /*해당요소를 클릭했을때 기본적으로 발생하는 이벤트를취소
            a태그의 href를 작동시키지않음
           */
