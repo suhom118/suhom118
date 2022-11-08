@@ -1186,7 +1186,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    animation: bg_txt_ani 45s;
+    animation: bg_txt_ani 45s infinite;
     @keyframes bg_txt_ani {
       0% {
         transform: translateX(0);
@@ -1238,7 +1238,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      animation: bg_txt_ani 50s;
+
       @keyframes bg_txt_ani {
         0% {
           transform: translateX(0);
@@ -1251,7 +1251,7 @@
   }
 }
 aside.top {
-  // display: none;
+  display: none;
   width: 40px;
   height: 40px;
   position: fixed;
@@ -1267,7 +1267,7 @@ aside.top {
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 20px;
-    background-color: #0bb7f8;
+    background-color: #7493bc;
     color: rgba(255, 255, 255, 0.8);
     span {
       display: none;
