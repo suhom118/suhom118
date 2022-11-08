@@ -58,9 +58,12 @@ $(document).ready(function () {
   $(".header").on("mouseleave", function () {
     $(".header .gnb").removeClass("menu_open");
   });
-  $(".header .gnb>ul>li:last-child>ul>li:last-child>a").on("focusout", function () {
-    $(".header .gnb").removeClass("menu_open");
-  });
+  $(".header .gnb>ul>li:last-child>ul>li:last-child>a").on(
+    "focusout",
+    function () {
+      $(".header .gnb").removeClass("menu_open");
+    }
+  );
 
   /*
       .header .gnb .gnb_open을 클릭하면 header에 menu_mobile클래스추가
@@ -92,4 +95,50 @@ $(document).ready(function () {
       $(this).children("ul").toggleClass("sub_open");
     }
   });
+
+  // $(".biz .cnt_wrap .list > ul > li:nth-child(1)").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(1)").addClass("show");
+  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(1))").removeClass("show");
+  // });
+  // $(".biz .cnt_wrap .list > ul > li:nth-child(2)").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(2)").addClass("show");
+  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(2))").removeClass("show");
+  // });
+  // $(".biz .cnt_wrap .list > ul > li:nth-child(3)").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(3)").addClass("show");
+  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(3))").removeClass("show");
+  // });
+  // $(".biz .cnt_wrap .list > ul > li:nth-child(4)").on("click", function (e) {
+  //   over;
+  //   e.preventDefault();
+  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(4)").addClass("show");
+  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(4))").removeClass("show");
+  // });
+  // $(".biz .cnt_wrap .list > ul > li:nth-child(5)").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(5)").addClass("show");
+  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(5))").removeClass("show");
+  // });
+  // $(".biz .cnt_wrap .list > ul > li:nth-child(6)").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(6)").addClass("show");
+  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(6))").removeClass("show");
+  // });
+  for (let i = 1; i < 7; i++) {
+    $(".biz .cnt_wrap .list > ul > li:nth-child(" + i + ")").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".biz .cnt_wrap .focus > ul > li:nth-child(" + i + ")").addClass(
+          "show"
+        );
+        $(
+          ".biz .cnt_wrap .focus > ul > li:not(:nth-child(" + i + "))"
+        ).removeClass("show");
+      }
+    );
+  }
 });

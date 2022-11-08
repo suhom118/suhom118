@@ -87,14 +87,14 @@ body {
 /* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
   -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
 ::selection {
-  background: #cba585;
+  background: #96ee86;
   color: #3e3e3f;
 }
 ::-moz-selection {
-  background: #cba585;
+  background: #96ee86;
   color: #3e3e3f;
 }
 ::-webkit-selection {
-  background: #cba585;
+  background: #96ee86;
   color: #3e3e3f;
 }
