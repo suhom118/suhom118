@@ -78,7 +78,7 @@ body {
   /* id="wrap" */
   overflow: hidden;
   position: relative;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
@@ -334,7 +334,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .gridarea {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -451,7 +451,7 @@ body {
     color: #fff;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .gridarea .header h1 a {
     width: 150px;
     height: 37px;
@@ -540,7 +540,7 @@ body {
     color: #fff;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
   .gridarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -820,7 +820,7 @@ body {
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
-.biz .cnt_wrap .list > ul > li:hover {
+.biz .cnt_wrap .list > ul > li:hover, .biz .cnt_wrap .list > ul > li.active {
   border-bottom: 1px solid #fb4b7f;
 }
 .biz .cnt_wrap .list > ul > li > a {
@@ -867,7 +867,7 @@ body {
   font-size: 15px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .biz .cnt_wrap .list > ul {
     height: 460px;
   }
@@ -878,7 +878,7 @@ body {
     width: 500px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .biz .cnt_wrap .list > ul {
     height: 350px;
   }
@@ -905,7 +905,7 @@ body {
     font-size: 15px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
   .biz {
     padding: 60px 0;
   }
@@ -1043,7 +1043,7 @@ body {
   font-size: 15px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .service .gridwrapper .customer h2 {
     padding: 50px 0 0 0;
     font-size: 50px;
@@ -1110,10 +1110,10 @@ body {
     font-size: 15px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .service .gridwrapper .customer h2 {
     padding: 60px 0 0 0;
-    font-size: 40px;
+    font-size: 30px;
   }
   .service .gridwrapper .customer ul {
     display: flex;
@@ -1177,7 +1177,7 @@ body {
     font-size: 15px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
   .service {
     padding: 40px 0 50px 0;
     background-color: #002767;
@@ -1286,7 +1286,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .manage {
     position: relative;
   }
@@ -1295,7 +1295,7 @@ body {
     font-size: 60px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .manage p {
     margin: 0 0 20px 50%;
   }
@@ -1303,7 +1303,7 @@ body {
     font-size: 30px;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
   .manage {
     text-align: center;
   }
@@ -1370,9 +1370,8 @@ aside.top button i {
 }
 
 .footer {
-  height: 200px;
   background-color: #000;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0 30px 0;
 }
@@ -1381,13 +1380,15 @@ aside.top button i {
   flex-direction: column;
 }
 .footer .finfo .contact {
-  font-size: 40px;
+  font-size: 20px;
+  color: #fff;
 }
 .footer .finfo .fcnt span {
   display: inline-block;
   margin: 10px 20px 0 0;
 }
 .footer .copyright p {
+  margin: 20px 0;
   display: block;
   color: #666;
 }

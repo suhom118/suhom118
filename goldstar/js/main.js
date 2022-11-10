@@ -150,9 +150,24 @@ $(document).ready(function () {
         $(".biz .cnt_wrap .focus > ul > li:nth-child(" + i + ")").addClass(
           "show"
         );
+
         $(
           ".biz .cnt_wrap .focus > ul > li:not(:nth-child(" + i + "))"
         ).removeClass("show");
+      }
+    );
+  }
+  for (let i = 1; i < 7; i++) {
+    $(".biz .cnt_wrap .list > ul > li:nth-child(" + i + ")").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".biz .cnt_wrap .list > ul > li:nth-child(" + i + ")").addClass(
+          "active"
+        );
+        $(
+          ".biz .cnt_wrap .list > ul > li:not(:nth-child(" + i + "))"
+        ).removeClass("active");
       }
     );
   }
