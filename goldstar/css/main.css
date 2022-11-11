@@ -84,24 +84,18 @@ body {
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1740px;
   padding: 0 20px;
   margin: 0 auto;
-  /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
-       1400px 일때에도 좌우에 여백은 유지해야함 
+  /* 1700px 이하부터 360px까지 모든 사이즈 반응형 
+       1700px 일때에도 좌우에 여백은 유지해야함 
        (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
        부드럽게 여백을 유지하면서 전환
        원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
-       1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
+       1700px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1740px이 넓이
        padding으로 좌우에 여백을 20px씩 줌  */
 }
 
-@media screen and (max-width: 1000px) {
-  html,
-body {
-    font-size: 14px;
-  }
-}
 @media screen and (max-width: 640px) {
   html,
 body {
