@@ -1,0 +1,31 @@
+$basic_color: #3d3d3d; //기본글자색
+$tit_color: #1d1d1d; //제목색
+$grey_color: #666; //회색
+$grey_light_color: #f4f4f4; //밝은회색
+$w_tit_color: #fff; //어두운배경에 흰글씨
+$w_basic_color: rgba(255, 255, 255, 0.8);
+$w_dark_light_color: rgba(255, 255, 255, 0.6);
+$point_color: #fae3de;
+@mixin font_serif {
+  font-family: "Noto Serif KR", serif;
+}
+@mixin title_style($font_color: #3d3d3d) {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 70px;
+  color: $font_color;
+}
+@mixin zindex_top {
+  position: relative;
+  z-index: 10;
+}
+@mixin clearfix {
+  display: block;
+  &::after {
+    display: block;
+    clear: both;
+    content: ".";
+    visibility: hidden;
+    height: 0;
+  }
+}

@@ -1,11 +1,11 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap"); /* 본명조 */
+
+/* 본명조 */
 html,
 body {
-  line-height: 1.5;
-  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic",
-    "Apple SD Gothic Neo", "Dotum", sans-serif;
+  line-height: 1.2;
+  font-family: "Binggrae", "Noto Sans KR", "NanumGothic", "Malgun Gothic",
+    "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
   font-size: 16px;
   font-weight: 400;
   /* letter-spacing: -0.05em; */
@@ -22,7 +22,7 @@ body {
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
   width: 100%;
-  max-width: 1740px;
+  max-width: 1760px;
   padding: 0 20px;
   margin: 0 auto;
   /* 1700px 이하부터 360px까지 모든 사이즈 반응형 
@@ -34,10 +34,10 @@ body {
        padding으로 좌우에 여백을 20px씩 줌  */
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1000px) {
   html,
   body {
-    font-size: 13px;
+    font-size: 14px;
   }
 } /* media 종료 */
 .clearfix::after {
@@ -82,14 +82,14 @@ body {
 /* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
   -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
 ::selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
 }
 ::-moz-selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
 }
 ::-webkit-selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
 }

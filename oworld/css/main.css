@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /* 모든 태그의 스타일 초기화 */
 /* 모든 태그에 브라우저에서 주는 여백을 삭제 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap");
 body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, ol, li, address, strong, span, em, p, i, dl, dt, dd, form, fieldset, legend, input, textarea, select, table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td {
   padding: 0;
   margin: 0;
@@ -66,8 +64,8 @@ h1, h2, h3, h4, h5, h6, strong, th {
 /* 본명조 */
 html,
 body {
-  line-height: 1.5;
-  font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
+  line-height: 1.2;
+  font-family: "Binggrae", "Noto Sans KR", "NanumGothic", "Malgun Gothic", "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
   font-size: 16px;
   font-weight: 400;
   /* letter-spacing: -0.05em; */
@@ -84,7 +82,7 @@ body {
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
   width: 100%;
-  max-width: 1740px;
+  max-width: 1760px;
   padding: 0 20px;
   margin: 0 auto;
   /* 1700px 이하부터 360px까지 모든 사이즈 반응형 
@@ -96,10 +94,10 @@ body {
        padding으로 좌우에 여백을 20px씩 줌  */
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1000px) {
   html,
 body {
-    font-size: 13px;
+    font-size: 14px;
   }
 } /* media 종료 */
 .clearfix::after {
@@ -147,20 +145,44 @@ body {
 /* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
   -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
 ::-moz-selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
 }
 ::selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
 }
 
 ::-moz-selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
 }
 
 ::-webkit-selection {
-  background: #96ee86;
-  color: #3e3e3f;
+  background: #df007a;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "Binggrae";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Binggrae";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot?#iefix") format("embedded-opentype"), url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff") format("woff"), url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.ttf") format("truetype");
+  font-display: swap;
+}
+.header {
+  height: 100px;
+}
+.header .gnb ul {
+  display: flex;
+  justify-content: center;
 }
