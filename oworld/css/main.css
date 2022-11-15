@@ -182,6 +182,13 @@ body {
 .header {
   height: 100px;
 }
+.header h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 176px;
+  background: url(../images/logo.svg) no-repeat center center/contain;
+}
 .header .gnb ul {
   display: flex;
   justify-content: center;

@@ -33,6 +33,14 @@
 }
 .header {
   height: 100px;
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 176px;
+
+    background: url(../images/logo.svg) no-repeat center center / contain;
+  }
   .gnb {
     ul {
       display: flex;
