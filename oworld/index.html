@@ -150,9 +150,199 @@
 
         </section>
     </div>
-    <aside>
-        <a href="">티켓예매</a>
-    </aside>
+    <section class="event" id="event">
+        <div class="main-content-1">
+            <div class="sticky">
+                <div class="sticky-background">
+                    <h2>EVENT</h2>
+                    <p>오월드에서 진행중인 이벤트를 소개합니다.
+                    </p>
+                </div>
+                <div class="card-frame">
+                    <div class="card">
+                        <div class="front coati">
+                            <h3>코아티<br>
+                                생태설명회</h3>
+                            <p>긴꼬리 미국 너구리라 불리는 코아티는
+                                코가 매우 길게 생겼어요.
+                                오묘한 생김새가 볼수록 귀엽답니다</p>
+                            <span>시간:13시 50분</span>
+                            <span>장소:스페셜관</span>
+                        </div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="card">
+                        <div class="front sudal">
+                            <h3>수달<br>
+                                생태설명회</h3>
+                            <p>귀엽고 깜찍한 외모로 사랑받는 수달은
+                                사실 무시무시한 포식자에요.
+                                사육사가 들려주는 생태 설명을
+                                들으며 수달에 대해 알아봐요</p>
+                            <span>시간:14시 10분</span>
+                            <span>장소:스페셜관</span>
+                        </div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="card">
+                        <div class="front dolphin">
+                            <h3>해양동물<br>
+                                생태설명회</h3>
+                            <p>민첩한 남미물개와 귀여운 잔점박이
+                                물범이 살고 있어요!
+                                따뜻한 햇볕에 일광욕 즐기기가
+                                취미인 귀여운 친구들은
+                                이시간이 되면 누구보다
+                                활발해 진답니다</p>
+                            <span>시간:15시 00분</span>
+                            <span>장소:해양동물사</span>
+                        </div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="card">
+
+                        <div class="front wolf">
+                            <h3>한국늑대<br>
+                                생태설명회</h3>
+                            <p>국내에서 유일하게 한국늑대를
+                                복원했어요!
+                                야생성이 살아있는 늑대무리가
+                                살고있는 늑대사파리에서
+                                늑대무리를 만나보세요!</p>
+                            <span>시간:15시 30분</span>
+                            <span>장소:늑대사파리</span>
+                        </div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end-screen">
+    </section>
+    <div id="wrap">
+        <section class="sns" id="sns">
+            <h2>SNS</h2>
+            <div class="grid-area">
+                <div class="youtube">
+
+                </div>
+                <div class="blog">
+
+                </div>
+                <div class="notice">
+
+                </div>
+            </div>
+
+
+
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/ADpkaOsu4jI" title="🐯나는야 호린이🐯"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/3_Pl2H7hiTU"
+                title="재규어 자매 나리 나미 Story ㅣ The story of the Jaguar sisters, Nari and Nami." frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/3_Pl2H7hiTU"
+                title="재규어 자매 나리 나미 Story ㅣ The story of the Jaguar sisters, Nari and Nami." frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="400" height="300" src="https://www.youtube.com/embed/3_Pl2H7hiTU"
+                title="재규어 자매 나리 나미 Story ㅣ The story of the Jaguar sisters, Nari and Nami." frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+        </section>
+        <div id="daumRoughmapContainer1641279790936" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+        <!--
+               2. 설치 스크립트
+               * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+             -->
+        <script charset="UTF-8" class="daum_roughmap_loader_script"
+            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+        <!-- 3. 실행 스크립트 -->
+        <script charset="UTF-8">
+            new daum.roughmap.Lander({
+                timestamp: "1641279790936",
+                key: "28oni",
+                mapWidth: "340",
+                mapHeight: "321",
+            }).render();
+        </script>
+        <aside>
+            <a href="https://www.oworld.kr/newkfsweb/cop/bbs/selectViewPage.do?bbsId=BBSMSTR_1460&mn=KFS_34_01_01_02"
+                target="_blank" title="새창으로">티켓예매</a>
+        </aside>
+    </div>
+    <script>
+        class CardFlipOnScroll {
+            constructor(wrapper, sticky) {
+                this.wrapper = wrapper
+                this.sticky = sticky
+                this.cards = sticky.querySelectorAll('.card')
+                this.length = this.cards.length
+
+                this.start = 0
+                this.end = 0
+                this.step = 0
+            }
+
+            init() {
+                this.start = this.wrapper.offsetTop - 100
+                this.end = this.wrapper.offsetTop + this.wrapper.offsetHeight - innerHeight * 1.2
+                this.step = (this.end - this.start) / (this.length * 2)
+            }
+
+            animate() {
+                this.cards.forEach((card, i) => {
+                    const s = this.start + this.step * i
+                    const e = s + this.step * (this.length + 1)
+
+                    if (scrollY <= s) {
+                        card.style.transform = `
+                  perspective(100vw)
+                  translateX(100vw) 
+                  rotateY(180deg)
+                `
+                    } else if (scrollY > s && scrollY <= e - this.step) {
+                        card.style.transform = `
+                  perspective(100vw)
+                  translateX(${100 + (scrollY - s) / (e - s) * -100}vw)
+                  rotateY(180deg)
+                `
+                    } else if (scrollY > e - this.step && scrollY <= e) {
+                        card.style.transform = `
+                  perspective(100vw)
+                  translateX(${100 + (scrollY - s) / (e - s) * -100}vw)
+                  rotateY(${180 + -(scrollY - (e - this.step)) / this.step * 180}deg)
+                `
+                    } else if (scrollY > e) {
+                        card.style.transform = `
+                  perspective(100vw)
+                  translateX(0vw) 
+                  rotateY(0deg)
+                `
+                    }
+                })
+            }
+        }
+
+        const mainContent1 = document.querySelector('.main-content-1')
+        const sticky = document.querySelector('.sticky')
+        const cardFlipOnScroll = new CardFlipOnScroll(mainContent1, sticky)
+        cardFlipOnScroll.init()
+
+        window.addEventListener('scroll', () => {
+            cardFlipOnScroll.animate()
+        })
+
+        window.addEventListener('resize', () => {
+            cardFlipOnScroll.init()
+        })
+    </script>
 </body>
 
 </html>

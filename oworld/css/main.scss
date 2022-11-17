@@ -36,6 +36,7 @@
   position: fixed;
   height: 100px;
   width: 100%;
+  z-index: 100;
   .logo {
     position: absolute;
     top: 10px;
@@ -97,7 +98,8 @@
   }
 }
 .oworld {
-  background-color: #087328;
+  margin: 80px 0;
+  background-color: #00665c;
   padding: 80px 0;
   h2 {
     @include title_style;
@@ -258,14 +260,136 @@
     }
   }
 }
+.event {
+  .main-content-1 {
+    width: 100%;
+    height: 500vh;
+    background-color: #f3eada;
+    .sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      .sticky-background {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+
+        padding: 155px 0 0 95px;
+        h2 {
+          @include title_style;
+        }
+        p {
+          color: #999;
+          font-size: 16px;
+        }
+      }
+      .card-frame {
+        padding: 150px 0 0 0;
+        position: absolute;
+        width: 95vw;
+        height: 35vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .card {
+          width: 24%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+
+          transform-style: preserve-3d;
+          position: relative;
+          transform: perspective(100vw) translateX(100vw) rotateY(180deg);
+          transition: transform 0.1s;
+          .front,
+          .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 1vw;
+            overflow: hidden;
+            backface-visibility: hidden;
+          }
+          .front {
+            padding: 74px 0 0 0;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            &.coati {
+              background-image: url(../images/event01.png);
+            }
+            &.sudal {
+              background-image: url(../images/event02.png);
+            }
+            &.dolphin {
+              background-image: url(../images/event03.png);
+            }
+            &.wolf {
+              background-image: url(../images/event04.png);
+            }
+            h3 {
+              font-size: 50px;
+              font-weight: 700;
+            }
+            p {
+              margin: 35px 0 20px 0;
+            }
+          }
+
+          .back {
+            transform: rotateY(180deg);
+            background: url(../images/event_back.png) no-repeat center center /
+              contain;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (orientation: portrait) {
+  .card-frame {
+    display: grid;
+    height: initial;
+    width: initial;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10vw;
+    justify-items: center;
+  }
+
+  .card {
+    font-size: 20vw;
+    width: 35vw;
+    height: 50vw;
+  }
+}
+
+.sns {
+  height: 1000px;
+}
 aside {
   position: fixed;
   z-index: 10;
   bottom: 50px;
   right: 50px;
+  transition: 0.5s;
+  &:hover {
+    transform: translate(-10px, -10px);
+  }
   a {
     display: block;
-
     background: url(../images/ticket.png) no-repeat center center / contain;
     width: 139px;
     height: 64px;
