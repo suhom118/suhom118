@@ -455,7 +455,7 @@ body {
   justify-content: space-between;
 }
 .event .main-content-1 .sticky .card-frame .card {
-  width: 24%;
+  width: 23%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -476,33 +476,26 @@ body {
           backface-visibility: hidden;
 }
 .event .main-content-1 .sticky .card-frame .card .front {
-  padding: 74px 0 0 0;
-  color: #fff;
+  padding: 25px 0 0 0;
+  color: #3d3d3d;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-color: #fff;
 }
-.event .main-content-1 .sticky .card-frame .card .front.coati {
-  background-image: url(../images/event01.png);
-}
-.event .main-content-1 .sticky .card-frame .card .front.sudal {
-  background-image: url(../images/event02.png);
-}
-.event .main-content-1 .sticky .card-frame .card .front.dolphin {
-  background-image: url(../images/event03.png);
-}
-.event .main-content-1 .sticky .card-frame .card .front.wolf {
-  background-image: url(../images/event04.png);
+.event .main-content-1 .sticky .card-frame .card .front img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .event .main-content-1 .sticky .card-frame .card .front h3 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 700;
 }
 .event .main-content-1 .sticky .card-frame .card .front p {
-  margin: 35px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 .event .main-content-1 .sticky .card-frame .card .back {
   transform: rotateY(180deg);
@@ -527,6 +520,35 @@ body {
 }
 .sns {
   height: 1000px;
+}
+
+.map {
+  padding: 50px 0 0 0;
+}
+.map h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 70px;
+  color: #3d3d3d;
+  margin: 0 0 80px 100px;
+}
+.map .gridarea {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  grid-template-areas: "maparea txtarea";
+}
+.map .gridarea .maparea {
+  grid-area: maparea;
+  border: 3px solid #000;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.map .gridarea .maparea iframe {
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.map .gridarea .txtarea {
+  grid-area: txtarea;
 }
 
 aside {

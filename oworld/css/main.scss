@@ -299,7 +299,7 @@
         align-items: center;
         justify-content: space-between;
         .card {
-          width: 24%;
+          width: 23%;
           height: 100%;
           display: flex;
           align-items: center;
@@ -319,32 +319,24 @@
             backface-visibility: hidden;
           }
           .front {
-            padding: 74px 0 0 0;
-            color: #fff;
+            padding: 25px 0 0 0;
+            color: #3d3d3d;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            &.coati {
-              background-image: url(../images/event01.png);
-            }
-            &.sudal {
-              background-image: url(../images/event02.png);
-            }
-            &.dolphin {
-              background-image: url(../images/event03.png);
-            }
-            &.wolf {
-              background-image: url(../images/event04.png);
+            background-color: #fff;
+            img {
+              width: 200px;
+              height: 200px;
+              border-radius: 100px;
+              object-fit: cover;
             }
             h3 {
-              font-size: 50px;
+              font-size: 30px;
               font-weight: 700;
             }
             p {
-              margin: 35px 0 20px 0;
+              margin: 20px 0 20px 0;
             }
           }
 
@@ -378,6 +370,31 @@
 
 .sns {
   height: 1000px;
+}
+.map {
+  padding: 50px 0 0 0;
+  h2 {
+    @include title_style;
+    margin: 0 0 80px 100px;
+  }
+  .gridarea {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-areas: "maparea txtarea";
+    .maparea {
+      grid-area: maparea;
+      border: 3px solid #000;
+      border-bottom-right-radius: 40px;
+      border-top-right-radius: 40px;
+      iframe {
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 40px;
+      }
+    }
+    .txtarea {
+      grid-area: txtarea;
+    }
+  }
 }
 aside {
   position: fixed;
