@@ -245,8 +245,8 @@ body {
 }
 
 .oworld {
-  background-color: #009391;
-  padding: 80px 0 0 0;
+  background-color: #087328;
+  padding: 80px 0;
 }
 .oworld h2 {
   font-weight: 400;
@@ -347,7 +347,7 @@ body {
   left: 0;
   top: 200px;
   padding: 22px 0 0 33px;
-  background-color: #986b77;
+  background-color: #643a24;
   color: #fff;
 }
 .oworld .oworldbox2 .txtbox li .hover h3 {
@@ -376,6 +376,37 @@ body {
   100% {
     top: 0;
   }
+}
+.oworld .safari {
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.oworld .safari a {
+  width: 670px;
+  height: 110px;
+  border-radius: 20px;
+  display: block;
+  background-color: #643a24;
+  color: #fff;
+  border: 3px solid #20201e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 5px #20201e;
+  transition: 0.3s;
+}
+.oworld .safari a:hover {
+  transform: translateY(5px);
+  box-shadow: 0px 5px 5px #20201e;
+}
+.oworld .safari a strong {
+  font-size: 28px;
+  font-weight: 700;
+}
+.oworld .safari a p {
+  margin: 20px 0 0 0;
 }
 
 aside {
