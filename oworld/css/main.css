@@ -703,6 +703,9 @@ body {
   width: 400px;
   height: 300px;
 }
+.sns .grid-area .blog .autoslide a li img {
+  border-radius: 40px;
+}
 .sns .grid-area .notice {
   grid-area: notice;
   display: flex;
