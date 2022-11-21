@@ -1397,7 +1397,7 @@ aside {
     }
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1000px) {
   .header {
     background-color: #fff;
     position: fixed;
@@ -2031,9 +2031,9 @@ aside {
     }
   }
   aside {
-    position: fixed;
+    position: absolute;
     z-index: 10;
-    bottom: 50px;
+    bottom: 350px;
     right: 50px;
     transition: 0.5s;
 
