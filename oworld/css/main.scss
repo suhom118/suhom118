@@ -1684,6 +1684,7 @@ aside {
           padding: 40px 0;
           .mobilecard {
             display: block;
+            width: 100%;
 
             ul {
               display: flex;
@@ -1691,6 +1692,7 @@ aside {
               align-content: space-around;
               flex-wrap: wrap;
               height: 350px;
+
               li {
                 width: 45%;
                 height: 150px;
@@ -2083,7 +2085,7 @@ aside {
     .gridarea {
       display: grid;
       grid-template-columns: 0.9fr;
-      grid-template-rows: 300px 400px;
+      grid-template-rows: 400px 400px;
       grid-template-areas:
         "maparea"
         "txtarea";
@@ -2093,7 +2095,7 @@ aside {
         border-bottom-right-radius: 40px;
         border-top-right-radius: 40px;
         overflow: hidden;
-        margin: 0 0 0 -160px;
+        margin: 0;
         iframe {
           border-bottom-right-radius: 40px;
           border-top-right-radius: 40px;
@@ -2132,7 +2134,7 @@ aside {
   aside {
     position: absolute;
     z-index: 10;
-    bottom: 300px;
+    bottom: 340px;
     right: 50px;
     transition: 0.5s;
 

@@ -1825,6 +1825,7 @@ aside a span {
   }
   .event .main-content-1 .sticky .sticky-background .mobilecard {
     display: block;
+    width: 100%;
   }
   .event .main-content-1 .sticky .sticky-background .mobilecard ul {
     display: flex;
@@ -2227,7 +2228,7 @@ aside a span {
   .map .gridarea {
     display: grid;
     grid-template-columns: 0.9fr;
-    grid-template-rows: 300px 400px;
+    grid-template-rows: 400px 400px;
     grid-template-areas: "maparea" "txtarea";
   }
   .map .gridarea .maparea {
@@ -2236,7 +2237,7 @@ aside a span {
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
     overflow: hidden;
-    margin: 0 0 0 -160px;
+    margin: 0;
   }
   .map .gridarea .maparea iframe {
     border-bottom-right-radius: 40px;
@@ -2273,7 +2274,7 @@ aside a span {
   aside {
     position: absolute;
     z-index: 10;
-    bottom: 300px;
+    bottom: 340px;
     right: 50px;
     transition: 0.5s;
   }
