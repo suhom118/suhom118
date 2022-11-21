@@ -327,7 +327,7 @@ body {
   height: 200px;
   border-radius: 30px;
   background-color: #fff;
-  padding: 44px 0 0 44px;
+  padding: 44px 0 0 33px;
   position: relative;
   overflow: hidden;
   transition: 1s;
@@ -1004,7 +1004,6 @@ aside a span {
     height: 200px;
     border-radius: 30px;
     background-color: #fff;
-    padding: 44px 0 0 44px;
     position: relative;
     overflow: hidden;
     transition: 1s;
@@ -1560,7 +1559,7 @@ aside a span {
   .header .logo {
     position: absolute;
     top: 10px;
-    left: 43%;
+    left: 40%;
   }
   .header .logo a {
     display: block;
@@ -1594,14 +1593,14 @@ aside a span {
     text-align: center;
   }
   .visual h2 {
-    margin: 205px 0 25px 0;
+    margin: 155px 0 25px 0;
     font-weight: 700;
     line-height: 1.2;
     font-size: 40px;
     color: #3d3d3d;
   }
   .visual p {
-    font-size: 26px;
+    font-size: 20px;
   }
   .visual span {
     color: #df007a;
@@ -1614,106 +1613,122 @@ aside a span {
   }
   .visual .video_area video {
     display: block;
+    width: 100%;
   }
   .oworld {
-    margin: 80px 0;
+    margin: 40px 0;
     background: rgb(0, 147, 145);
     background: linear-gradient(135deg, rgb(0, 147, 145) 0%, rgb(86, 194, 142) 100%);
-    padding: 80px 0;
+    padding: 40px 0;
   }
   .oworld h2 {
     font-weight: 700;
     line-height: 1.2;
-    font-size: 70px;
+    font-size: 40px;
     color: #3d3d3d;
     color: #fff;
     text-align: center;
   }
-  .oworld .oworldbox1 {
+  .oworld .gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "oworldbox1 oworldbox2";
+  }
+  .oworld .gridcontainer .oworldbox1 {
+    grid-area: oworldbox1;
     margin: 50px 0 0 0;
     width: 100%;
   }
-  .oworld .oworldbox1 ul {
+  .oworld .gridcontainer .oworldbox1 ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   }
-  .oworld .oworldbox1 ul li {
-    width: 24%;
+  .oworld .gridcontainer .oworldbox1 ul li {
+    width: 90%;
     border-radius: 40px;
     background-position: center center;
     background-repeat: no-repeat;
+    margin: 0 0 20px 0;
   }
-  .oworld .oworldbox1 ul li a {
+  .oworld .gridcontainer .oworldbox1 ul li a {
     display: block;
-    height: 250px;
+    height: 150px;
     width: 100%;
   }
-  .oworld .oworldbox1 ul li:nth-child(1) {
+  .oworld .gridcontainer .oworldbox1 ul li:nth-child(1) {
     background-color: #fff;
     background-image: url(../images/oworld01.png);
   }
-  .oworld .oworldbox1 ul li:nth-child(2) {
+  .oworld .gridcontainer .oworldbox1 ul li:nth-child(2) {
     background-color: #f3eada;
     background-image: url(../images/oworld02.png);
   }
-  .oworld .oworldbox1 ul li:nth-child(3) {
+  .oworld .gridcontainer .oworldbox1 ul li:nth-child(3) {
     background-color: #e7fefd;
     background-image: url(../images/oworld03.png);
   }
-  .oworld .oworldbox1 ul li:nth-child(4) {
+  .oworld .gridcontainer .oworldbox1 ul li:nth-child(4) {
     background-color: #ffe3f1;
     background-image: url(../images/oworld04.png);
   }
-  .oworld .oworldbox1 ul li:hover {
+  .oworld .gridcontainer .oworldbox1 ul li:hover {
     background-size: cover;
   }
-  .oworld .oworldbox1 ul li:hover:nth-child(1) {
+  .oworld .gridcontainer .oworldbox1 ul li:hover:nth-child(1) {
     background-color: #fff;
     background-image: url(../images/oworld_hover01.png);
   }
-  .oworld .oworldbox1 ul li:hover:nth-child(2) {
+  .oworld .gridcontainer .oworldbox1 ul li:hover:nth-child(2) {
     background-color: #f3eada;
     background-image: url(../images/oworld_hover02.png);
   }
-  .oworld .oworldbox1 ul li:hover:nth-child(3) {
+  .oworld .gridcontainer .oworldbox1 ul li:hover:nth-child(3) {
     background-color: #e7fefd;
     background-image: url(../images/oworld_hover03.png);
   }
-  .oworld .oworldbox1 ul li:hover:nth-child(4) {
+  .oworld .gridcontainer .oworldbox1 ul li:hover:nth-child(4) {
     background-color: #ffe3f1;
     background-image: url(../images/oworld_hover04.png);
   }
-  .oworld .oworldbox2 {
-    margin: 42px 0 0 0;
+  .oworld .gridcontainer .oworldbox2 {
+    grid-area: oworldbox2;
+    margin: 50px 0 0 0;
   }
-  .oworld .oworldbox2 .txtbox {
+  .oworld .gridcontainer .oworldbox2 .txtbox {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
   }
-  .oworld .oworldbox2 .txtbox li {
-    width: 24%;
-    height: 200px;
+  .oworld .gridcontainer .oworldbox2 .txtbox li {
+    width: 90%;
     border-radius: 30px;
     background-color: #fff;
-    padding: 44px 0 0 44px;
-    position: relative;
+    padding: 0;
+    margin: 0 0 20px 0;
     overflow: hidden;
     transition: 1s;
+    height: 150px;
   }
-  .oworld .oworldbox2 .txtbox li h3 {
-    font-size: 30px;
+  .oworld .gridcontainer .oworldbox2 .txtbox li a {
+    display: block;
+    padding: 10px 0 0 10px;
+  }
+  .oworld .gridcontainer .oworldbox2 .txtbox li a h3 {
+    font-size: 20px;
     font-weight: 700;
   }
-  .oworld .oworldbox2 .txtbox li p {
+  .oworld .gridcontainer .oworldbox2 .txtbox li a p {
     color: #999;
     margin: 44px 0 10px 0;
   }
-  .oworld .oworldbox2 .txtbox li span {
-    font-size: 22px;
+  .oworld .gridcontainer .oworldbox2 .txtbox li a span {
+    font-size: 13px;
   }
-  .oworld .oworldbox2 .txtbox li .hover {
+  .oworld .gridcontainer .oworldbox2 .txtbox li .hover {
     width: 100%;
     height: 200px;
     position: absolute;
@@ -1723,20 +1738,20 @@ aside a span {
     background-color: #643a24;
     color: #fff;
   }
-  .oworld .oworldbox2 .txtbox li .hover h3 {
+  .oworld .gridcontainer .oworldbox2 .txtbox li .hover h3 {
     font-size: 30px;
     font-weight: 700;
   }
-  .oworld .oworldbox2 .txtbox li .hover strong {
+  .oworld .gridcontainer .oworldbox2 .txtbox li .hover strong {
     display: block;
     font-size: 22px;
     margin: 33px 0 10px 0;
   }
-  .oworld .oworldbox2 .txtbox li .hover p {
+  .oworld .gridcontainer .oworldbox2 .txtbox li .hover p {
     color: #ffe3f0;
     margin: 0;
   }
-  .oworld .oworldbox2 .txtbox li:hover .hover {
+  .oworld .gridcontainer .oworldbox2 .txtbox li:hover .hover {
     -webkit-animation: slideup 0.1s forwards;
             animation: slideup 0.1s forwards;
   }
@@ -1751,7 +1766,7 @@ aside a span {
     }
   }
   .oworld .safari {
-    margin: 50px 0 0 0;
+    margin: 30px 0 0 0;
     display: flex;
     justify-content: center;
   }
@@ -1775,7 +1790,8 @@ aside a span {
     box-shadow: 0px 5px 5px #20201e;
   }
   .oworld .safari a strong {
-    font-size: 28px;
+    font-size: 20px;
+    text-align: center;
     font-weight: 700;
   }
   .oworld .safari a p {
@@ -1783,7 +1799,7 @@ aside a span {
   }
   .event .main-content-1 {
     width: 100%;
-    height: 500vh;
+    height: 500px;
     background: rgb(243, 234, 218);
     background: linear-gradient(135deg, rgb(243, 234, 218) 0%, rgb(107, 137, 132) 100%);
   }
@@ -1791,7 +1807,7 @@ aside a span {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1804,12 +1820,12 @@ aside a span {
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
-    padding: 155px 0 0 95px;
+    padding: 20px 0 0 20px;
   }
   .event .main-content-1 .sticky .sticky-background h2 {
     font-weight: 700;
     line-height: 1.2;
-    font-size: 70px;
+    font-size: 40px;
     color: #3d3d3d;
   }
   .event .main-content-1 .sticky .sticky-background p {
@@ -1817,10 +1833,10 @@ aside a span {
     font-size: 16px;
   }
   .event .main-content-1 .sticky .card-frame {
-    padding: 150px 0 0 0;
-    position: absolute;
-    width: 95vw;
-    height: 700px;
+    padding: 0;
+    position: relative;
+    width: auto;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1833,7 +1849,7 @@ aside a span {
     justify-content: end;
     transform-style: preserve-3d;
     position: relative;
-    transform: perspective(100vw) translateX(100vw) rotateY(180deg);
+    transform: perspective(0) translateX(0) rotateY(0);
     transition: transform 0.1s;
   }
   .event .main-content-1 .sticky .card-frame .card .front,
@@ -1845,6 +1861,8 @@ aside a span {
     overflow: hidden;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    left: 0;
+    top: 0;
   }
   .event .main-content-1 .sticky .card-frame .card .front {
     padding: 25px 0 0 0;
@@ -1855,7 +1873,7 @@ aside a span {
     background-color: #fff;
   }
   .event .main-content-1 .sticky .card-frame .card .front img {
-    width: 200px;
+    width: 50px;
     height: 200px;
     border-radius: 100px;
     -o-object-fit: cover;
@@ -1869,19 +1887,20 @@ aside a span {
     margin: 20px 0 20px 0;
   }
   .event .main-content-1 .sticky .card-frame .card .back {
+    display: none;
     transform: rotateY(180deg);
     background: url(../images/event_back.png) no-repeat center center/contain;
   }
   .sns {
-    padding: 80px 0;
+    padding: 40px 0;
   }
   .sns h2 {
     font-weight: 700;
     line-height: 1.2;
-    font-size: 70px;
+    font-size: 40px;
     color: #3d3d3d;
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
   .sns .grid-area {
     display: grid;
@@ -1913,7 +1932,7 @@ aside a span {
   }
   .sns .grid-area .youtube .slides {
     width: 100%;
-    height: 800px;
+    height: 700px;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -1981,13 +2000,13 @@ aside a span {
   }
   .sns .grid-area .blog .autoslide a {
     display: block;
-    width: 400px;
+    width: 144px;
     overflow: hidden;
     border-radius: 40px;
   }
   .sns .grid-area .blog .autoslide a ul {
-    width: 2400px;
-    height: 300px;
+    width: 864px;
+    height: 144px;
     position: relative;
     -webkit-animation: slide_animation 20s infinite alternate linear;
             animation: slide_animation 20s infinite alternate linear;
@@ -1997,34 +2016,34 @@ aside a span {
       transform: translateX(0);
     }
     10% {
-      transform: translateX(-400px);
+      transform: translateX(-144px);
     }
     20% {
-      transform: translateX(-400px);
+      transform: translateX(-144px);
     }
     30% {
-      transform: translateX(-800px);
+      transform: translateX(-288px);
     }
     40% {
-      transform: translateX(-800px);
+      transform: translateX(-288px);
     }
     50% {
-      transform: translateX(-1200px);
+      transform: translateX(-432px);
     }
     60% {
-      transform: translateX(-1200px);
+      transform: translateX(-432px);
     }
     70% {
-      transform: translateX(-1600px);
+      transform: translateX(-576px);
     }
     80% {
-      transform: translateX(-1600px);
+      transform: translateX(-576px);
     }
     90% {
-      transform: translateX(-2000px);
+      transform: translateX(-864px);
     }
     100% {
-      transform: translateX(-2000px);
+      transform: translateX(-864px);
     }
   }
   @keyframes slide_animation {
@@ -2032,41 +2051,47 @@ aside a span {
       transform: translateX(0);
     }
     10% {
-      transform: translateX(-400px);
+      transform: translateX(-144px);
     }
     20% {
-      transform: translateX(-400px);
+      transform: translateX(-144px);
     }
     30% {
-      transform: translateX(-800px);
+      transform: translateX(-288px);
     }
     40% {
-      transform: translateX(-800px);
+      transform: translateX(-288px);
     }
     50% {
-      transform: translateX(-1200px);
+      transform: translateX(-432px);
     }
     60% {
-      transform: translateX(-1200px);
+      transform: translateX(-432px);
     }
     70% {
-      transform: translateX(-1600px);
+      transform: translateX(-576px);
     }
     80% {
-      transform: translateX(-1600px);
+      transform: translateX(-576px);
     }
     90% {
-      transform: translateX(-2000px);
+      transform: translateX(-864px);
     }
     100% {
-      transform: translateX(-2000px);
+      transform: translateX(-864px);
     }
   }
   .sns .grid-area .blog .autoslide a li {
     float: left;
     opacity: 1;
-    width: 400px;
-    height: 300px;
+    width: 144px;
+    height: 144px;
+  }
+  .sns .grid-area .blog .autoslide a li img {
+    width: 144px;
+    height: 144px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .sns .grid-area .notice {
     grid-area: notice;
@@ -2079,7 +2104,7 @@ aside a span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
+    width: 144px;
     height: 180px;
     border-radius: 40px;
   }
@@ -2140,20 +2165,23 @@ aside a span {
   .map h2 {
     font-weight: 700;
     line-height: 1.2;
-    font-size: 70px;
+    font-size: 40px;
     color: #3d3d3d;
-    margin: 0 0 80px 100px;
+    margin: 0 0 30px 40px;
   }
   .map .gridarea {
     display: grid;
-    grid-template-columns: 5fr 4fr;
-    grid-template-areas: "maparea txtarea";
+    grid-template-columns: 0.9fr;
+    grid-template-rows: 300px 400px;
+    grid-template-areas: "maparea" "txtarea";
   }
   .map .gridarea .maparea {
     grid-area: maparea;
     border: 3px solid #000;
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
+    overflow: hidden;
+    margin: 0 0 0 -160px;
   }
   .map .gridarea .maparea iframe {
     border-bottom-right-radius: 40px;
@@ -2161,10 +2189,10 @@ aside a span {
   }
   .map .gridarea .txtarea {
     grid-area: txtarea;
-    padding: 100px 0 0 30px;
+    padding: 20px 0 0 30px;
   }
   .map .gridarea .txtarea h3 {
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 700;
   }
   .map .gridarea .txtarea ul {
@@ -2176,15 +2204,15 @@ aside a span {
     display: flex;
     justify-content: start;
     align-items: center;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
   }
   .map .gridarea .txtarea ul li span {
     color: #df007a;
     margin: 0 20px 0 0;
-    font-size: 40px;
+    font-size: 20px;
   }
   .map .gridarea .txtarea ul li p {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 1.5;
   }
   aside {

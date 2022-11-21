@@ -180,7 +180,7 @@
         height: 200px;
         border-radius: 30px;
         background-color: #fff;
-        padding: 44px 0 0 44px;
+        padding: 44px 0 0 33px;
         position: relative;
         overflow: hidden;
         transition: 1s;
@@ -859,7 +859,7 @@ aside {
           height: 200px;
           border-radius: 30px;
           background-color: #fff;
-          padding: 44px 0 0 44px;
+
           position: relative;
           overflow: hidden;
           transition: 1s;
@@ -1407,7 +1407,7 @@ aside {
     .logo {
       position: absolute;
       top: 10px;
-      left: 43%;
+      left: 40%;
       a {
         display: block;
         width: 100px;
@@ -1446,11 +1446,11 @@ aside {
 
     text-align: center;
     h2 {
-      margin: 205px 0 25px 0;
+      margin: 155px 0 25px 0;
       @include mobile_style;
     }
     p {
-      font-size: 26px;
+      font-size: 20px;
     }
     span {
       color: #df007a;
@@ -1462,137 +1462,155 @@ aside {
       font-size: 0;
       video {
         display: block;
+        width: 100%;
       }
     }
   }
   .oworld {
-    margin: 80px 0;
+    margin: 40px 0;
     background: rgb(0, 147, 145);
     background: linear-gradient(
       135deg,
       rgba(0, 147, 145, 1) 0%,
       rgba(86, 194, 142, 1) 100%
     );
-    padding: 80px 0;
+    padding: 40px 0;
     h2 {
-      @include title_style;
+      @include mobile_style;
       color: #fff;
       text-align: center;
     }
-    .oworldbox1 {
-      margin: 50px 0 0 0;
-      width: 100%;
-      ul {
+    .gridcontainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "oworldbox1 oworldbox2";
+      .oworldbox1 {
+        grid-area: oworldbox1;
+        margin: 50px 0 0 0;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        li {
-          width: 24%;
-          border-radius: 40px;
-          background-position: center center;
-          background-repeat: no-repeat;
+        ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          li {
+            width: 90%;
+            border-radius: 40px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0 0 20px 0;
 
-          a {
-            display: block;
-            height: 250px;
-            width: 100%;
-          }
+            a {
+              display: block;
+              height: 150px;
+              width: 100%;
+            }
 
-          &:nth-child(1) {
-            background-color: #fff;
-            background-image: url(../images/oworld01.png);
-          }
-          &:nth-child(2) {
-            background-color: #f3eada;
-            background-image: url(../images/oworld02.png);
-          }
-          &:nth-child(3) {
-            background-color: #e7fefd;
-            background-image: url(../images/oworld03.png);
-          }
-          &:nth-child(4) {
-            background-color: #ffe3f1;
-            background-image: url(../images/oworld04.png);
-          }
-          &:hover {
-            background-size: cover;
             &:nth-child(1) {
               background-color: #fff;
-              background-image: url(../images/oworld_hover01.png);
+              background-image: url(../images/oworld01.png);
             }
             &:nth-child(2) {
               background-color: #f3eada;
-              background-image: url(../images/oworld_hover02.png);
+              background-image: url(../images/oworld02.png);
             }
             &:nth-child(3) {
               background-color: #e7fefd;
-              background-image: url(../images/oworld_hover03.png);
+              background-image: url(../images/oworld03.png);
             }
             &:nth-child(4) {
               background-color: #ffe3f1;
-              background-image: url(../images/oworld_hover04.png);
+              background-image: url(../images/oworld04.png);
+            }
+            &:hover {
+              background-size: cover;
+              &:nth-child(1) {
+                background-color: #fff;
+                background-image: url(../images/oworld_hover01.png);
+              }
+              &:nth-child(2) {
+                background-color: #f3eada;
+                background-image: url(../images/oworld_hover02.png);
+              }
+              &:nth-child(3) {
+                background-color: #e7fefd;
+                background-image: url(../images/oworld_hover03.png);
+              }
+              &:nth-child(4) {
+                background-color: #ffe3f1;
+                background-image: url(../images/oworld_hover04.png);
+              }
             }
           }
         }
       }
-    }
-    .oworldbox2 {
-      margin: 42px 0 0 0;
-      .txtbox {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+      .oworldbox2 {
+        grid-area: oworldbox2;
+        margin: 50px 0 0 0;
+        .txtbox {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
 
-        li {
-          width: 24%;
-          height: 200px;
-          border-radius: 30px;
-          background-color: #fff;
-          padding: 44px 0 0 44px;
-          position: relative;
-          overflow: hidden;
-          transition: 1s;
-          h3 {
-            font-size: 30px;
-            font-weight: 700;
-          }
-          p {
-            color: #999;
-            margin: 44px 0 10px 0;
-          }
-          span {
-            font-size: 22px;
-          }
-          .hover {
-            width: 100%;
-            height: 200px;
-            position: absolute;
-            left: 0;
-            top: 200px;
-            padding: 22px 0 0 33px;
+          li {
+            width: 90%;
 
-            background-color: #643a24;
-            color: #fff;
-            h3 {
-              font-size: 30px;
-              font-weight: 700;
-            }
-            strong {
+            border-radius: 30px;
+            background-color: #fff;
+            padding: 0;
+            margin: 0 0 20px 0;
+            overflow: hidden;
+            transition: 1s;
+            height: 150px;
+            a {
               display: block;
-              font-size: 22px;
-              margin: 33px 0 10px 0;
+              padding: 10px 0 0 10px;
+
+              h3 {
+                font-size: 20px;
+                font-weight: 700;
+              }
+              p {
+                color: #999;
+                margin: 44px 0 10px 0;
+              }
+              span {
+                font-size: 13px;
+              }
             }
-            p {
-              color: #ffe3f0;
-              margin: 0;
-            }
-          }
-          &:hover {
             .hover {
-              animation: slideup 0.1s forwards;
-              @keyframes slideup {
-                100% {
-                  top: 0;
+              width: 100%;
+              height: 200px;
+              position: absolute;
+              left: 0;
+              top: 200px;
+              padding: 22px 0 0 33px;
+
+              background-color: #643a24;
+              color: #fff;
+              h3 {
+                font-size: 30px;
+                font-weight: 700;
+              }
+              strong {
+                display: block;
+                font-size: 22px;
+                margin: 33px 0 10px 0;
+              }
+              p {
+                color: #ffe3f0;
+                margin: 0;
+              }
+            }
+            &:hover {
+              .hover {
+                animation: slideup 0.1s forwards;
+                @keyframes slideup {
+                  100% {
+                    top: 0;
+                  }
                 }
               }
             }
@@ -1601,7 +1619,7 @@ aside {
       }
     }
     .safari {
-      margin: 50px 0 0 0;
+      margin: 30px 0 0 0;
       display: flex;
       justify-content: center;
 
@@ -1624,7 +1642,8 @@ aside {
           box-shadow: 0px 5px 5px #20201e;
         }
         strong {
-          font-size: 28px;
+          font-size: 20px;
+          text-align: center;
           font-weight: 700;
         }
         p {
@@ -1636,7 +1655,7 @@ aside {
   .event {
     .main-content-1 {
       width: 100%;
-      height: 500vh;
+      height: 500px;
       background: rgb(243, 234, 218);
       background: linear-gradient(
         135deg,
@@ -1646,7 +1665,7 @@ aside {
       .sticky {
         position: sticky;
         top: 0;
-        height: 100vh;
+        height: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1659,9 +1678,9 @@ aside {
           align-items: flex-start;
           justify-content: start;
 
-          padding: 155px 0 0 95px;
+          padding: 20px 0 0 20px;
           h2 {
-            @include title_style;
+            @include mobile_style;
           }
           p {
             color: #999;
@@ -1669,10 +1688,10 @@ aside {
           }
         }
         .card-frame {
-          padding: 150px 0 0 0;
-          position: absolute;
-          width: 95vw;
-          height: 700px;
+          padding: 0;
+          position: relative;
+          width: auto;
+          height: 500px;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -1685,7 +1704,7 @@ aside {
 
             transform-style: preserve-3d;
             position: relative;
-            transform: perspective(100vw) translateX(100vw) rotateY(180deg);
+            transform: perspective(0) translateX(0) rotateY(0);
             transition: transform 0.1s;
             .front,
             .back {
@@ -1695,6 +1714,8 @@ aside {
               border-radius: 1vw;
               overflow: hidden;
               backface-visibility: hidden;
+              left: 0;
+              top: 0;
             }
             .front {
               padding: 25px 0 0 0;
@@ -1704,7 +1725,7 @@ aside {
               text-align: center;
               background-color: #fff;
               img {
-                width: 200px;
+                width: 50px;
                 height: 200px;
                 border-radius: 100px;
                 object-fit: cover;
@@ -1719,6 +1740,7 @@ aside {
             }
 
             .back {
+              display: none;
               transform: rotateY(180deg);
               background: url(../images/event_back.png) no-repeat center center /
                 contain;
@@ -1746,11 +1768,11 @@ aside {
   }
 
   .sns {
-    padding: 80px 0;
+    padding: 40px 0;
     h2 {
-      @include title_style;
+      @include mobile_style;
       text-align: center;
-      margin: 0 0 40px 0;
+      margin: 0 0 20px 0;
     }
     .grid-area {
       display: grid;
@@ -1781,7 +1803,7 @@ aside {
         grid-area: youtube;
         .slides {
           width: 100%;
-          height: 800px;
+          height: 700px;
           display: block;
           margin: 0 auto;
           position: relative;
@@ -1857,12 +1879,13 @@ aside {
           align-items: center;
           a {
             display: block;
-            width: 400px;
+            width: 144px;
             overflow: hidden;
             border-radius: 40px;
+
             ul {
-              width: 2400px;
-              height: 300px;
+              width: 864px;
+              height: 144px;
               position: relative;
               animation: slide_animation 20s infinite alternate linear;
               @keyframes slide_animation {
@@ -1870,42 +1893,47 @@ aside {
                   transform: translateX(0);
                 }
                 10% {
-                  transform: translateX(-400px);
+                  transform: translateX(-144px);
                 }
                 20% {
-                  transform: translateX(-400px);
+                  transform: translateX(-144px);
                 }
                 30% {
-                  transform: translateX(-800px);
+                  transform: translateX(-288px);
                 }
                 40% {
-                  transform: translateX(-800px);
+                  transform: translateX(-288px);
                 }
                 50% {
-                  transform: translateX(-1200px);
+                  transform: translateX(-432px);
                 }
                 60% {
-                  transform: translateX(-1200px);
+                  transform: translateX(-432px);
                 }
                 70% {
-                  transform: translateX(-1600px);
+                  transform: translateX(-576px);
                 }
                 80% {
-                  transform: translateX(-1600px);
+                  transform: translateX(-576px);
                 }
                 90% {
-                  transform: translateX(-2000px);
+                  transform: translateX(-864px);
                 }
                 100% {
-                  transform: translateX(-2000px);
+                  transform: translateX(-864px);
                 }
               }
             }
             li {
               float: left;
               opacity: 1;
-              width: 400px;
-              height: 300px;
+              width: 144px;
+              height: 144px;
+              img {
+                width: 144px;
+                height: 144px;
+                object-fit: cover;
+              }
             }
           }
         }
@@ -1920,7 +1948,7 @@ aside {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          width: 400px;
+          width: 144px;
           height: 180px;
           border-radius: 40px;
           &:nth-child(1) {
@@ -1984,18 +2012,23 @@ aside {
   .map {
     padding: 50px 0 0 0;
     h2 {
-      @include title_style;
-      margin: 0 0 80px 100px;
+      @include mobile_style;
+      margin: 0 0 30px 40px;
     }
     .gridarea {
       display: grid;
-      grid-template-columns: 5fr 4fr;
-      grid-template-areas: "maparea txtarea";
+      grid-template-columns: 0.9fr;
+      grid-template-rows: 300px 400px;
+      grid-template-areas:
+        "maparea"
+        "txtarea";
       .maparea {
         grid-area: maparea;
         border: 3px solid #000;
         border-bottom-right-radius: 40px;
         border-top-right-radius: 40px;
+        overflow: hidden;
+        margin: 0 0 0 -160px;
         iframe {
           border-bottom-right-radius: 40px;
           border-top-right-radius: 40px;
@@ -2003,9 +2036,9 @@ aside {
       }
       .txtarea {
         grid-area: txtarea;
-        padding: 100px 0 0 30px;
+        padding: 20px 0 0 30px;
         h3 {
-          font-size: 50px;
+          font-size: 25px;
           font-weight: 700;
         }
         ul {
@@ -2016,14 +2049,14 @@ aside {
             display: flex;
             justify-content: start;
             align-items: center;
-            margin: 30px 0 0 0;
+            margin: 10px 0 0 0;
             span {
               color: #df007a;
               margin: 0 20px 0 0;
-              font-size: 40px;
+              font-size: 20px;
             }
             p {
-              font-size: 20px;
+              font-size: 14px;
               line-height: 1.5;
             }
           }
