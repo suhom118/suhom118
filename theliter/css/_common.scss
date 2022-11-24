@@ -1,0 +1,125 @@
+/* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
+
+@font-face {
+  font-family: "Binggrae";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeRegular.ttf")
+      format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Binggrae";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/binggrae/BinggraeBold.ttf")
+      format("truetype");
+  font-display: swap;
+}
+html,
+body {
+  line-height: 1.5;
+  font-family: "Binggrae", "Noto Sans KR", "NanumGothic", "Malgun Gothic",
+    "Apple SD Gothic", "Apple SD Gothic Neo", "Dotum", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  /* letter-spacing: -0.05em; */
+  word-break: keep-all; /* 단어별 줄바꿈 */
+  background-color: #f6f6f6;
+}
+
+#wrap {
+  /* id="wrap" */
+  overflow: hidden;
+  position: relative;
+  min-width: 360px;
+}
+
+/* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
+.wrapper {
+  width: 100%;
+  max-width: 1740px;
+  padding: 0 20px;
+  margin: 0 auto;
+  /* 1700px 이하부터 360px까지 모든 사이즈 반응형 
+       1700px 일때에도 좌우에 여백은 유지해야함 
+       (1400이상에서 1400px이하로 변경되는 점 - 반응형으로 전환되는점)
+       부드럽게 여백을 유지하면서 전환
+       원래 좌우에 여백이 20px씩 들어가 있는 걸로 스타일을 줌
+       1700px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1740px이 넓이
+       padding으로 좌우에 여백을 20px씩 줌  */
+}
+
+@media screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+} /* media 종료 */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+  height: 0;
+}
+.clearfix {
+  display: block;
+}
+
+/* wrapper와 동일한 사이즈를 갖은 position:relative를 요소는
+   cnt_wrap 클래스 줌 */
+.cnt_wrap {
+  position: relative;
+}
+
+.skip_nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000000000;
+  width: 100%;
+}
+.skip_nav a {
+  position: absolute;
+  left: 0;
+  top: -1000px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #0059a8;
+  color: #fff;
+  text-align: center;
+}
+.skip_nav a:focus {
+  top: 0;
+}
+
+/* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
+  -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
+::selection {
+  background: #96ee86;
+  color: #3e3e3f;
+}
+::-moz-selection {
+  background: #96ee86;
+  color: #3e3e3f;
+}
+::-webkit-selection {
+  background: #96ee86;
+  color: #3e3e3f;
+}

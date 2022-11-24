@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>더리터</title>
+</head>
+
+<body>
+  <div class="skip_nav">
+    <!-- tap키로 홈페이지에 접근했을떄 나타나는 바로가기 링크 id:contents,gnb로 이동 -->
+    <a href="#contents">본문내용바로가기</a>
+    <a href="#gnb">메인메뉴바로가기</a>
+  </div>
+  <div id="wrap">
+    <header class="header">
+      <h1><a href="index.html">더리터로고</a></h1>
+      <nav class="gnb">
+        <ul>
+          <li><a href="">The Liter</a></li>
+          <li><a href="">Menu</a></li>
+          <li><a href="">Interview</a></li>
+          <li><a href="">Franchise</a></li>
+          <li><a href="">News</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="fullpage">
+      <section class="section visual">
+        <div class="bg">
+
+          <div class="wrapper">
+            <div class="visual_txt">
+              <h2>The Liter</h2>
+              <p class="eng">Bigger! Cheaper! More Delicious!
+              </p>
+              <p>엄선된 원두에서 추출한 최상의 맛과 향을<br>언제 어디서나
+                간편하게 즐겨보세요.
+              </p>
+            </div>
+            <div class="popup swiper">
+
+              <ul class="swiper-wrapper">
+
+                <li class="swiper-slide">
+
+                  <img src="images/visual01.png"">
+      
+                </li>
+                <li class=" swiper-slide">
+                  <img src="images/visual02.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <img src="images/visual03.png" alt="">
+                </li>
+              </ul>
+              <div class="btn_wrap">
+                <div class="btn_paging"></div>
+                <button class="btn_stop">
+                  <span class="material-symbols-rounded pause"> pause </span>
+                  <span class="material-symbols-rounded play"> play_arrow </span>
+                </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
