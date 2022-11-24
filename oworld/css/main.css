@@ -1274,9 +1274,6 @@ aside a span {
   .sns .grid-area .youtube .slides input:checked + .slide-container .nav label {
     display: block;
   }
-  .sns .grid-area .youtube .slides input#img-1:checked, .sns .grid-area .youtube .slides input#img-2:checked, .sns .grid-area .youtube .slides input#img-3:checked, .sns .grid-area .youtube .slides input#img-4:checked {
-    background: rgba(0, 0, 0, 0.8);
-  }
   .sns .grid-area .blog {
     grid-area: blog;
     padding: 20px 0 0 0;

@@ -16,21 +16,6 @@ $(document).ready(function () {
 
     // scrollOverflow: false,
 
-    afterLoad: function (origin, destination, direction, trigger) {
-      //console.log(destination.index);
-      if (
-        destination.index == 2 ||
-        destination.index == 3 ||
-        destination.index == 4 ||
-        destination.index == 5
-      ) {
-        $(".header").addClass("black");
-        $("#fp-nav").addClass("black");
-      } else {
-        $(".header").removeClass("black");
-        $("#fp-nav").removeClass("black");
-      }
-    },
     responsiveWidth: 1000 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
   }); //fullpage
   const swiper = new Swiper(".visual .popup", {
@@ -70,40 +55,39 @@ $(document).ready(function () {
   let pcMo;
   let scrolling;
   deviceChk();
-  topShow();
 
   // 브라우저가 리사이즈될때마다 실행
   $(window).resize(function () {
     deviceChk();
   });
 
-  $(window).scroll(function () {
-    topShow(); //top버튼 보이는 함수
-  });
+  // $(window).scroll(function () {
+  //   topShow(); //top버튼 보이는 함수
+  // });
   /* top 버튼을 누르면 상단으로 스크롤 */
-  $("aside.top").on("click", function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
-  });
+  // $("aside.top").on("click", function () {
+  //   $("html, body").animate(
+  //     {
+  //       scrollTop: 0,
+  //     },
+  //     500
+  //   );
+  // });
 
   /* 스크롤을 어느정도 내리면 aside나타나고, 다시 상단으로 올라면 aisde 사라짐 */
 
-  function topShow() {
-    //함수의 선언
-    scrolling = $(window).scrollTop();
-    console.log(scrolling);
-    if (pcMo == "pc") {
-      if (scrolling > 400) {
-        $("aside.top").fadeIn();
-      } else {
-        $("aside.top").fadeOut();
-      }
-    }
-  }
+  // function topShow() {
+  //   //함수의 선언
+  //   scrolling = $(window).scrollTop();
+  //   console.log(scrolling);
+  //   if (pcMo == "pc") {
+  //     if (scrolling > 400) {
+  //       $("aside.top").fadeIn();
+  //     } else {
+  //       $("aside.top").fadeOut();
+  //     }
+  //   }
+  // }
   function deviceChk() {
     winW = $(window).width();
 
@@ -178,64 +162,49 @@ $(document).ready(function () {
     }
   });
 
-  // $(".biz .cnt_wrap .list > ul > li:nth-child(1)").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(1)").addClass("show");
-  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(1))").removeClass("show");
-  // });
-  // $(".biz .cnt_wrap .list > ul > li:nth-child(2)").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(2)").addClass("show");
-  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(2))").removeClass("show");
-  // });
-  // $(".biz .cnt_wrap .list > ul > li:nth-child(3)").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(3)").addClass("show");
-  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(3))").removeClass("show");
-  // });
-  // $(".biz .cnt_wrap .list > ul > li:nth-child(4)").on("click", function (e) {
-  //   over;
-  //   e.preventDefault();
-  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(4)").addClass("show");
-  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(4))").removeClass("show");
-  // });
-  // $(".biz .cnt_wrap .list > ul > li:nth-child(5)").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(5)").addClass("show");
-  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(5))").removeClass("show");
-  // });
-  // $(".biz .cnt_wrap .list > ul > li:nth-child(6)").on("click", function (e) {
-  //   e.preventDefault();
-  //   $(".biz .cnt_wrap .focus > ul > li:nth-child(6)").addClass("show");
-  //   $(".biz .cnt_wrap .focus > ul > li:not(:nth-child(6))").removeClass("show");
-  // });
-  for (let i = 1; i < 7; i++) {
-    $(".biz .cnt_wrap .list > ul > li:nth-child(" + i + ")").on(
+  for (let i = 1; i < 5; i++) {
+    $(".menu .inner .left ul li:nth-child(" + i + ") button").on(
       "click",
       function (e) {
         e.preventDefault();
-        $(".biz .cnt_wrap .focus > ul > li:nth-child(" + i + ")").addClass(
-          "show"
-        );
+        $(".menu .inner .left ul li:nth-child(" + i + ")").addClass("actived");
 
-        $(
-          ".biz .cnt_wrap .focus > ul > li:not(:nth-child(" + i + "))"
-        ).removeClass("show");
-      }
-    );
-  }
-  for (let i = 1; i < 7; i++) {
-    $(".biz .cnt_wrap .list > ul > li:nth-child(" + i + ")").on(
-      "click",
-      function (e) {
-        e.preventDefault();
-        $(".biz .cnt_wrap .list > ul > li:nth-child(" + i + ")").addClass(
-          "active"
+        $(".menu .inner .left ul li:not(:nth-child(" + i + "))").removeClass(
+          "actived"
         );
-        $(
-          ".biz .cnt_wrap .list > ul > li:not(:nth-child(" + i + "))"
-        ).removeClass("active");
       }
     );
   }
+  $(".menu .inner .left ul li:nth-child(1) button").on("click", function (e) {
+    e.preventDefault();
+    $(".menu .inner .left ").addClass("signature");
+
+    // $(".menu .inner .left:not(.signature)").css("oppacity", "0");
+    $(".menu .inner .menu .right .bg").addClass("signature");
+    $(".menu .inner .menu .right .bg:not(.signature)").css("oppacity", "0");
+  });
+  $(".menu .inner .left ul li:nth-child(2)").on("click", function (e) {
+    e.preventDefault();
+    $(".menu .inner .left ").addClass("beverage");
+
+    $(".menu .inner .left:not(.beverage)").css("oppacity", "0");
+    $(".menu .inner .menu .right .bg").addClass("beverage");
+    $(".menu .inner .menu .right .bg:not(.beverage)").css("oppacity", "0");
+  });
+  $(".menu .inner .left ul li:nth-child(3)").on("click", function (e) {
+    e.preventDefault();
+    $(".menu .inner .left ").addClass("coffee");
+
+    $(".menu .inner .left:not(.coffee)").css("oppacity", "0");
+    $(".menu .inner .menu .right .bg").addClass("coffee");
+    $(".menu .inner .menu .right .bg:not(.coffee)").css("oppacity", "0");
+  });
+  $(".menu .inner .left ul li:nth-child(4)").on("click", function (e) {
+    e.preventDefault();
+    $(".menu .inner .left ").addClass("cookie");
+
+    $(".menu .inner .left:not(.cookie)").css("oppacity", "0");
+    $(".menu .inner .menu .right .bg").addClass("cookie");
+    $(".menu .inner .menu .right .bg:not(.cookie)").css("oppacity", "0");
+  });
 });

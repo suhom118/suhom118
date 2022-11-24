@@ -156,15 +156,96 @@
   .inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    color: #fff;
     grid-template-areas: "left right";
+
+    height: 100vh;
+    width: 100%;
+
     .left {
       grid-area: left;
-      background-color: #fff;
+      width: 100%;
+      background-image: url(../images/menu_left_01.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      padding: 130px 0 0 40px;
+      position: relative;
+      &.signature {
+        background-image: url(../images/menu_left_01.png);
+      }
+      &.beverage {
+        background-image: url(../images/menu_left_02.png);
+      }
+      &.coffee {
+        background-image: url(../images/menu_left_03.png);
+      }
+      &.cookie {
+        background-image: url(../images/menu_left_04.png);
+      }
+      h2 {
+        @include title_style;
+        color: #fff;
+      }
+      .bg {
+        position: absolute;
+        background-image: url(../images/menu01_01.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        content: "";
+        right: -250px;
+        top: calc(50% - 250px);
+        width: 500px;
+        height: 500px;
+        &.signature {
+          background-image: url(../images/menu01_01.png);
+        }
+        &.beverage {
+          background-image: url(../images/menu01_02.png);
+        }
+        &.coffee {
+          background-image: url(../images/menu01_03.png);
+        }
+        &.cookie {
+          background-image: url(../images/menu01_04.png);
+        }
+      }
+      ul {
+        padding: 0 0 0 10px;
+        li {
+          font-size: 24px;
+          line-height: 57px;
+
+          &.actived {
+            display: inline;
+            border-bottom: 2px solid #fff;
+          }
+        }
+      }
     }
-    .right {
-      grid-area: right;
-      background-color: #000;
+  }
+}
+.right {
+  grid-area: right;
+  .bg {
+    background-image: url(../images/menu01_right.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    &.signature {
+      background-image: url(../images/menu01_right.png);
+    }
+    &.beverage {
+      background-image: url(../images/menu02_right.png);
+    }
+    &.coffee {
+      background-image: url(../images/menu03_right.png);
+    }
+    &.cookie {
+      background-image: url(../images/menu04_right.png);
     }
   }
 }
