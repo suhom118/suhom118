@@ -1147,13 +1147,6 @@ aside {
             &:checked + .slide-container .nav label {
               display: block;
             }
-
-            &#img-1:checked,
-            &#img-2:checked,
-            &#img-3:checked,
-            &#img-4:checked {
-              background: rgba(0, 0, 0, 0.8);
-            }
           }
         }
       }

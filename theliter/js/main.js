@@ -30,10 +30,6 @@ $(document).ready(function () {
         $(".header").removeClass("black");
         $("#fp-nav").removeClass("black");
       }
-      if (destination.index == 1) {
-        //보건통계 슬라이드가 나타났을때
-        funCount(); //함수 이름이 funCount인 것을 실행
-      }
     },
     responsiveWidth: 1000 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
   }); //fullpage
