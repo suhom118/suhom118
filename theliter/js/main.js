@@ -15,6 +15,15 @@ $(document).ready(function () {
     showActiveTooltip: false /* 현재 활성화된 페이지의 툴팁 보이기 */,
 
     // scrollOverflow: false,
+    afterLoad: function (origin, destination, direction, trigger) {
+      if (destination.index >= 1) {
+        /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
+        console.log("3번째 슬라이드가 로딩 되었을때");
+        $(".header").addClass("display");
+      } else {
+        $(".header").removeClass("display");
+      }
+    },
 
     responsiveWidth: 1000 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
   }); //fullpage
@@ -163,48 +172,74 @@ $(document).ready(function () {
   });
 
   for (let i = 1; i < 5; i++) {
-    $(".menu .inner .left ul li:nth-child(" + i + ") button").on(
+    $(".menu .inner .left .txt li:nth-child(" + i + ") button").on(
       "click",
       function (e) {
         e.preventDefault();
-        $(".menu .inner .left ul li:nth-child(" + i + ")").addClass("actived");
+        $(".menu .inner .left .txt li:nth-child(" + i + ")").addClass(
+          "actived"
+        );
 
-        $(".menu .inner .left ul li:not(:nth-child(" + i + "))").removeClass(
+        $(".menu .inner .left .txt li:not(:nth-child(" + i + "))").removeClass(
           "actived"
         );
       }
     );
   }
-  $(".menu .inner .left ul li:nth-child(1) button").on("click", function (e) {
-    e.preventDefault();
-    $(".menu .inner .left ").addClass("signature");
+  //버튼누르면 actived 클래스추가
+  for (let i = 1; i < 5; i++) {
+    $(".menu .inner .left .txt li:nth-child(" + i + ") button").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".menu .inner .left .bg li:nth-child(" + i + ")").addClass("actived");
+        $(".menu .inner .left .bg li:not(:nth-child(" + i + "))").removeClass(
+          "actived"
+        );
+      }
+    );
+  }
 
-    // $(".menu .inner .left:not(.signature)").css("oppacity", "0");
-    $(".menu .inner .menu .right .bg").addClass("signature");
-    $(".menu .inner .menu .right .bg:not(.signature)").css("oppacity", "0");
-  });
-  $(".menu .inner .left ul li:nth-child(2)").on("click", function (e) {
-    e.preventDefault();
-    $(".menu .inner .left ").addClass("beverage");
-
-    $(".menu .inner .left:not(.beverage)").css("oppacity", "0");
-    $(".menu .inner .menu .right .bg").addClass("beverage");
-    $(".menu .inner .menu .right .bg:not(.beverage)").css("oppacity", "0");
-  });
-  $(".menu .inner .left ul li:nth-child(3)").on("click", function (e) {
-    e.preventDefault();
-    $(".menu .inner .left ").addClass("coffee");
-
-    $(".menu .inner .left:not(.coffee)").css("oppacity", "0");
-    $(".menu .inner .menu .right .bg").addClass("coffee");
-    $(".menu .inner .menu .right .bg:not(.coffee)").css("oppacity", "0");
-  });
-  $(".menu .inner .left ul li:nth-child(4)").on("click", function (e) {
-    e.preventDefault();
-    $(".menu .inner .left ").addClass("cookie");
-
-    $(".menu .inner .left:not(.cookie)").css("oppacity", "0");
-    $(".menu .inner .menu .right .bg").addClass("cookie");
-    $(".menu .inner .menu .right .bg:not(.cookie)").css("oppacity", "0");
-  });
+  for (let i = 1; i < 5; i++) {
+    $(".menu .inner .left .txt li:nth-child(" + i + ") button").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".menu .inner .left .centerbg li:nth-child(" + i + ")").addClass(
+          "actived"
+        );
+        $(
+          ".menu .inner .left .centerbg li:not(:nth-child(" + i + "))"
+        ).removeClass("actived");
+      }
+    );
+  }
+  //버튼누르면 가운데 이미지 교체
+  for (let i = 1; i < 5; i++) {
+    $(".menu .inner .left .txt li:nth-child(" + i + ") button").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".menu .inner .right .bg li:nth-child(" + i + ")").addClass(
+          "actived"
+        );
+        $(".menu .inner .right .bg li:not(:nth-child(" + i + "))").removeClass(
+          "actived"
+        );
+      }
+    );
+  }
+  //버튼누르면 오른쪽 이미지 교체
+  for (let i = 1; i < 5; i++) {
+    $(".menu .inner .left .txt li:nth-child(" + i + ") button").on(
+      "click",
+      function (e) {
+        e.preventDefault();
+        $(".menu .inner .left .bg li:nth-child(" + i + ")").addClass("actived");
+        $(".menu .inner .left .bg li:not(:nth-child(" + i + "))").removeClass(
+          "actived"
+        );
+      }
+    );
+  }
 });
