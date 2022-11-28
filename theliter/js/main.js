@@ -25,8 +25,6 @@ $(document).ready(function () {
         $(".header").removeClass("display");
       }
     },
-
-    responsiveWidth: 320 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
   }); //fullpage
   const swiper = new Swiper(".visual .popup", {
     /* 팝업을 감싼는 요소의 class명 */

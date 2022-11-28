@@ -1334,7 +1334,7 @@ body {
   .interview .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 30vh 70vh;
     grid-template-areas: "txt" "img";
   }
   .interview .grid .txt {
@@ -1361,10 +1361,10 @@ body {
     position: absolute;
     -o-object-fit: cover;
        object-fit: cover;
-    transform: scale3d(0.6, 0.6, 1);
+    transform: scale3d(0.4, 0.4, 1);
   }
   .interview .grid .img img:nth-child(1) {
-    left: 20%;
+    left: 0;
     top: 0;
     opacity: 0;
     z-index: 1;
@@ -1377,34 +1377,35 @@ body {
     transition: 0.8s;
   }
   .interview .grid .img img:nth-child(3) {
-    right: 0;
-    bottom: 3%;
+    left: 0;
+    bottom: 0;
   }
   .interview.fp-completely .grid .img img:nth-child(1) {
-    left: 20%;
-    top: auto;
-    bottom: 0;
+    left: -50%;
+    top: 0;
     opacity: 1;
     z-index: 1;
   }
   .interview.fp-completely .grid .img img:nth-child(2) {
     opacity: 1;
-    left: -20%;
-    bottom: 10%;
+    left: -30%;
+    bottom: 0;
   }
   .interview.fp-completely .grid .img img:nth-child(3) {
     opacity: 1;
-    right: 0;
-    bottom: 0;
+    left: 0;
+    bottom: auto;
+    top: -10%;
   }
   .blend {
     background-color: #d31f30;
     color: #fff;
+    overflow: hidden;
   }
   .blend .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 30vh 70vh;
     grid-template-areas: "txt" "img";
   }
   .blend .grid .txt {
@@ -1430,6 +1431,9 @@ body {
   .blend .grid .txt:hover span {
     transform: rotate(0);
   }
+  .blend .grid .txt p {
+    display: none;
+  }
   .blend .grid .img {
     grid-area: img;
     position: relative;
@@ -1438,25 +1442,27 @@ body {
     align-items: center;
   }
   .blend .grid .img img {
-    transform: scale3d(0.5, 0.5, 1) translate(-50%, -50%);
+    transform: scale3d(0.4, 0.4, 1) translate(-50%, 0);
   }
   .blend .grid .img img.sub {
+    display: none;
     z-index: 1;
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 100px;
     opacity: 0;
   }
   .blend.fp-completely .img img.sub {
+    display: none;
     transition: 0.5s;
     opacity: 1;
     left: 10%;
-    top: 35%;
+    top: 150px;
   }
   .news .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 30vh 70vh;
     grid-template-areas: "tit" "cnt";
   }
   .news .grid .tit {
@@ -1491,6 +1497,7 @@ body {
     }
   }
   .news .grid .cnt {
+    margin: 20px 0 0 0;
     grid-area: cnt;
     display: flex;
     flex-direction: column;
@@ -1509,7 +1516,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 250px;
+    height: 150px;
     padding: 20px 0 0 20px;
   }
   .news .grid .cnt li a:hover .ico span {
@@ -1548,7 +1555,7 @@ body {
   .footer .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 20vh 55vh 25vh;
     grid-template-areas: "fnav" "finfo" "sns";
   }
   .footer .grid .fnav {
@@ -1561,6 +1568,9 @@ body {
   }
   .footer .grid .fnav li.privacy {
     font-weight: 700;
+  }
+  .footer .grid .fnav li a {
+    padding: 5px 10px;
   }
   .footer .grid .finfo {
     grid-area: finfo;
@@ -1594,10 +1604,10 @@ body {
     justify-content: space-around;
   }
   .footer .grid .sns .tel span {
-    font-size: 40px;
+    font-size: 25px;
   }
   .footer .grid .sns .ico {
-    height: 50%;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;

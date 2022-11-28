@@ -1291,7 +1291,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 4fr;
+      grid-template-rows: 30vh 70vh;
       grid-template-areas: "txt" "img";
       .txt {
         margin: 50px 0 0 0;
@@ -1311,12 +1311,13 @@
       .img {
         grid-area: img;
         position: relative;
+
         img {
           position: absolute;
           object-fit: cover;
-          transform: scale3d(0.6, 0.6, 1);
+          transform: scale3d(0.4, 0.4, 1);
           &:nth-child(1) {
-            left: 20%;
+            left: 0;
             top: 0;
             opacity: 0;
             z-index: 1;
@@ -1329,8 +1330,8 @@
             transition: 0.8s;
           }
           &:nth-child(3) {
-            right: 0;
-            bottom: 3%;
+            left: 0;
+            bottom: 0;
           }
         }
       }
@@ -1340,21 +1341,22 @@
         .img {
           img {
             &:nth-child(1) {
-              left: 20%;
-              top: auto;
-              bottom: 0;
+              left: -50%;
+              top: 0;
+
               opacity: 1;
               z-index: 1;
             }
             &:nth-child(2) {
               opacity: 1;
-              left: -20%;
-              bottom: 10%;
+              left: -30%;
+              bottom: 0;
             }
             &:nth-child(3) {
               opacity: 1;
-              right: 0;
-              bottom: 0;
+              left: 0;
+              bottom: auto;
+              top: -10%;
             }
           }
         }
@@ -1412,10 +1414,11 @@
   .blend {
     background-color: #d31f30;
     color: #fff;
+    overflow: hidden;
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr;
+      grid-template-rows: 30vh 70vh;
       grid-template-areas:
         "txt"
         "img";
@@ -1441,6 +1444,9 @@
             transform: rotate(0);
           }
         }
+        p {
+          display: none;
+        }
       }
       .img {
         grid-area: img;
@@ -1449,12 +1455,13 @@
         justify-content: start;
         align-items: center;
         img {
-          transform: scale3d(0.5, 0.5, 1) translate(-50%, -50%);
+          transform: scale3d(0.4, 0.4, 1) translate(-50%, 0);
           &.sub {
+            display: none;
             z-index: 1;
             position: absolute;
             left: 0;
-            top: 35%;
+            top: 100px;
             opacity: 0;
           }
         }
@@ -1464,10 +1471,11 @@
       .img {
         img {
           &.sub {
+            display: none;
             transition: 0.5s;
             opacity: 1;
             left: 10%;
-            top: 35%;
+            top: 150px;
           }
         }
       }
@@ -1477,7 +1485,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 3fr;
+      grid-template-rows: 30vh 70vh;
       grid-template-areas: "tit" "cnt";
       .tit {
         grid-area: tit;
@@ -1501,6 +1509,7 @@
         }
       }
       .cnt {
+        margin: 20px 0 0 0;
         grid-area: cnt;
         display: flex;
         flex-direction: column;
@@ -1517,7 +1526,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 250px;
+            height: 150px;
             padding: 20px 0 0 20px;
             &:hover {
               .ico {
@@ -1565,7 +1574,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 20vh 55vh 25vh;
       grid-template-areas:
         "fnav" "finfo"
         "sns";
@@ -1579,6 +1588,9 @@
         li {
           &.privacy {
             font-weight: 700;
+          }
+          a {
+            padding: 5px 10px;
           }
         }
       }
@@ -1612,11 +1624,11 @@
           align-items: center;
           justify-content: space-around;
           span {
-            font-size: 40px;
+            font-size: 25px;
           }
         }
         .ico {
-          height: 50%;
+          height: auto;
           display: flex;
           justify-content: space-around;
           align-items: center;
