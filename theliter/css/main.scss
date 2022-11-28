@@ -1164,6 +1164,7 @@
         .gnb_open {
           display: block;
           padding: 0 20px 0 0;
+          transition: 0.5s;
           span {
             background-color: #ccc;
           }
@@ -1171,9 +1172,53 @@
         ul {
           display: none;
         }
+        &.menu_mobile {
+          .gnb_open {
+            span {
+              &:nth-child(1) {
+                animation: menu_rotate 1s forwards;
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                animation: menu_rotater 1s forwards;
+              }
+
+              @keyframes menu_rotate {
+                50% {
+                  transform: translate(0, 8px) rotate(180deg);
+                }
+                100% {
+                  transform: translate(0, 8px) rotate(45deg);
+                }
+              }
+              @keyframes menu_rotater {
+                50% {
+                  transform: translate(0, -8px) rotate(180deg);
+                }
+                100% {
+                  transform: translate(0, -8px) rotate(-45deg);
+                }
+              }
+            }
+          }
+          ul {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            > li {
+              height: auto;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              > a {
+                display: flex;
+              }
+            }
+          }
+        }
       }
     }
-
     .bg {
       margin: -40px 0 0 0;
       height: 400px;
