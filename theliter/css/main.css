@@ -234,33 +234,37 @@ body {
   color: #3e3e3f;
 }
 
-.header {
+.visual .header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   background-color: #2f4858;
 }
-.header.display {
+.visual .header.display {
   display: none;
 }
-.header h1 {
+.visual .header h1 {
   font-size: 0;
   line-height: 0;
   width: 302px;
   height: 100%;
   margin: 0 0 0 30px;
 }
-.header h1 a {
+.visual .header h1 a {
   display: block;
   height: 100%;
   background: url(../images/logo.svg) no-repeat center center/contain;
 }
-.header .gnb .gnb_open {
+.visual .header .gnb .gnb_open {
   display: none;
   padding: 0 10px 0 0;
 }
-.header .gnb .gnb_open span {
+.visual .header .gnb .gnb_open span {
   display: block;
   transition: 0.3s;
   width: 23px;
@@ -271,24 +275,23 @@ body {
   font-size: 0;
   line-height: 0;
 }
-.header .gnb ul {
+.visual .header .gnb ul {
   display: flex;
 }
-.header .gnb ul li:last-child {
+.visual .header .gnb ul li:last-child {
   margin: 0 40px 0 0;
 }
-.header .gnb ul li a {
+.visual .header .gnb ul li a {
   font-size: 25px;
   padding: 20px 40px;
   color: #fff;
 }
-
 .visual .bg {
   position: absolute;
   width: 100%;
   height: 500px;
   left: 0;
-  top: 0;
+  top: 100px;
   background-color: #2f4858;
   z-index: 10;
 }
@@ -321,8 +324,28 @@ body {
   left: 0;
   bottom: -10px;
 }
-.visual .bg .popup .btn_stop {
+.visual .bg .popup .btn_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-4%);
+}
+.visual .bg .popup .btn_wrap .btn_paging {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}
+.visual .bg .popup .btn_wrap .btn_paging span {
+  width: 15px;
+  height: 15px;
+}
+.visual .bg .popup .btn_wrap .btn_stop {
+  margin: 20px 0 0 0;
   color: #999;
+}
+.visual .bg .popup .btn_wrap .btn_stop span {
+  font-size: 30px;
 }
 
 .theliter .inner {
@@ -400,6 +423,7 @@ body {
   width: 100%;
   height: 100%;
   display: none;
+  transition: 0.5s;
 }
 .menu .inner .left .bg li.actived {
   display: block;
@@ -536,16 +560,21 @@ body {
   opacity: 0;
   z-index: 1;
   transition: 0.5s;
+  filter: brightness(120%);
 }
 .interview .grid .img img:nth-child(2) {
   left: -40%;
   opacity: 0;
   bottom: 10%;
   transition: 0.8s;
+  filter: brightness(80%);
 }
 .interview .grid .img img:nth-child(3) {
   right: 0;
   bottom: 3%;
+}
+.interview.fp-completely .grid .img img {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .interview.fp-completely .grid .img img:nth-child(1) {
   left: 20%;
@@ -765,14 +794,14 @@ body {
 }
 
 @media screen and (max-width: 1300px) {
-  .header h1 {
+  .visual .header h1 {
     width: 202px;
     margin: 0 0 0 20px;
   }
-  .header .gnb ul li:last-child {
+  .visual .header .gnb ul li:last-child {
     margin: 0 20px 0 0;
   }
-  .header .gnb ul li a {
+  .visual .header .gnb ul li a {
     font-size: 20px;
     padding: 20px 30px;
     color: #fff;
@@ -1183,32 +1212,33 @@ body {
   }
 }
 @media screen and (max-width: 1000px) {
-  .header {
+  .visual .header {
     height: 60px;
   }
-  .header h1 {
+  .visual .header h1 {
     width: 120px;
     height: 100%;
     margin: 0 0 0 20px;
   }
-  .header .gnb .gnb_open {
+  .visual .header .gnb .gnb_open {
     display: block;
     padding: 0 20px 0 0;
   }
-  .header .gnb .gnb_open span {
+  .visual .header .gnb .gnb_open span {
     background-color: #ccc;
   }
-  .header .gnb ul {
+  .visual .header .gnb ul {
     display: none;
   }
   .visual .bg {
+    margin: -40px 0 0 0;
     height: 400px;
   }
   .visual .bg .visual_txt {
     color: #fff;
     position: absolute;
     left: 1vw;
-    top: 100px;
+    top: 0;
     z-index: 15;
     overflow: visible;
   }
@@ -1575,12 +1605,13 @@ body {
   .footer .grid .finfo {
     grid-area: finfo;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   .footer .grid .finfo span {
     position: relative;
-    margin: 0 20px 0 0;
+    margin: 0 30px 0 0;
   }
   .footer .grid .finfo span::after {
     position: absolute;

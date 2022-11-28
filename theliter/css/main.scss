@@ -1,67 +1,71 @@
 @import "_default.scss";
 @import "_common.scss";
 @import "_var.scss";
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  background-color: #2f4858;
-  &.display {
-    display: none;
-  }
-  h1 {
-    font-size: 0;
-    line-height: 0;
-    width: 302px;
-    height: 100%;
-    margin: 0 0 0 30px;
-    a {
-      display: block;
-
-      height: 100%;
-      background: url(../images/logo.svg) no-repeat center center / contain;
-    }
-  }
-  .gnb {
-    .gnb_open {
-      display: none;
-      padding: 0 10px 0 0;
-      span {
-        display: block;
-        transition: 0.3s;
-        width: 23px;
-        height: 2px;
-        margin-bottom: 6px;
-        border-radius: 3px; /* 높이의 절반 */
-        background-color: #666;
-        font-size: 0;
-        line-height: 0;
-      }
-    }
-    ul {
-      display: flex;
-      li {
-        &:last-child {
-          margin: 0 40px 0 0;
-        }
-        a {
-          font-size: 25px;
-          padding: 20px 40px;
-          color: #fff;
-        }
-      }
-    }
-  }
-}
 
 .visual {
+  .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #2f4858;
+    &.display {
+      display: none;
+    }
+    h1 {
+      font-size: 0;
+      line-height: 0;
+      width: 302px;
+      height: 100%;
+      margin: 0 0 0 30px;
+      a {
+        display: block;
+
+        height: 100%;
+        background: url(../images/logo.svg) no-repeat center center / contain;
+      }
+    }
+    .gnb {
+      .gnb_open {
+        display: none;
+        padding: 0 10px 0 0;
+        span {
+          display: block;
+          transition: 0.3s;
+          width: 23px;
+          height: 2px;
+          margin-bottom: 6px;
+          border-radius: 3px; /* 높이의 절반 */
+          background-color: #666;
+          font-size: 0;
+          line-height: 0;
+        }
+      }
+      ul {
+        display: flex;
+        li {
+          &:last-child {
+            margin: 0 40px 0 0;
+          }
+          a {
+            font-size: 25px;
+            padding: 20px 40px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
   .bg {
     position: absolute;
     width: 100%;
     height: 500px;
     left: 0;
-    top: 0;
+    top: 100px;
     background-color: #2f4858;
     z-index: 10;
     .visual_txt {
@@ -97,8 +101,29 @@
           }
         }
       }
-      .btn_stop {
-        color: #999;
+      .btn_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-4%);
+        .btn_paging {
+          display: flex;
+          justify-content: center;
+          height: 20px;
+
+          span {
+            width: 15px;
+            height: 15px;
+          }
+        }
+        .btn_stop {
+          margin: 20px 0 0 0;
+          color: #999;
+          span {
+            font-size: 30px;
+          }
+        }
       }
     }
   }
@@ -181,8 +206,10 @@
           width: 100%;
           height: 100%;
           display: none;
+          transition: 0.5s;
           &.actived {
             display: block;
+
             &:nth-child(1) {
               background-image: url(../images/menu_left_01.png);
             }
@@ -314,12 +341,14 @@
           opacity: 0;
           z-index: 1;
           transition: 0.5s;
+          filter: brightness(120%);
         }
         &:nth-child(2) {
           left: -40%;
           opacity: 0;
           bottom: 10%;
           transition: 0.8s;
+          filter: brightness(80%);
         }
         &:nth-child(3) {
           right: 0;
@@ -332,6 +361,8 @@
     .grid {
       .img {
         img {
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
           &:nth-child(1) {
             left: 20%;
             top: 5%;
@@ -606,23 +637,25 @@
   }
 }
 @media screen and (max-width: 1300px) {
-  .header {
-    h1 {
-      width: 202px;
-      margin: 0 0 0 20px;
-      a {
+  .visual {
+    .header {
+      h1 {
+        width: 202px;
+        margin: 0 0 0 20px;
+        a {
+        }
       }
-    }
-    .gnb {
-      ul {
-        li {
-          &:last-child {
-            margin: 0 20px 0 0;
-          }
-          a {
-            font-size: 20px;
-            padding: 20px 30px;
-            color: #fff;
+      .gnb {
+        ul {
+          li {
+            &:last-child {
+              margin: 0 20px 0 0;
+            }
+            a {
+              font-size: 20px;
+              padding: 20px 30px;
+              color: #fff;
+            }
           }
         }
       }
@@ -1118,36 +1151,37 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .header {
-    height: 60px;
+  .visual {
+    .header {
+      height: 60px;
 
-    h1 {
-      width: 120px;
-      height: 100%;
-      margin: 0 0 0 20px;
-    }
-    .gnb {
-      .gnb_open {
-        display: block;
-        padding: 0 20px 0 0;
-        span {
-          background-color: #ccc;
+      h1 {
+        width: 120px;
+        height: 100%;
+        margin: 0 0 0 20px;
+      }
+      .gnb {
+        .gnb_open {
+          display: block;
+          padding: 0 20px 0 0;
+          span {
+            background-color: #ccc;
+          }
+        }
+        ul {
+          display: none;
         }
       }
-      ul {
-        display: none;
-      }
     }
-  }
 
-  .visual {
     .bg {
+      margin: -40px 0 0 0;
       height: 400px;
       .visual_txt {
         color: #fff;
         position: absolute;
         left: 1vw;
-        top: 100px;
+        top: 0;
         z-index: 15;
         overflow: visible;
         h2 {
@@ -1597,11 +1631,13 @@
       .finfo {
         grid-area: finfo;
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
         span {
           position: relative;
-          margin: 0 20px 0 0;
+          margin: 0 30px 0 0;
           &::after {
             position: absolute;
             right: -10px;
