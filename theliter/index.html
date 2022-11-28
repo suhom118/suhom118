@@ -27,7 +27,10 @@
   <div id="wrap">
     <header class="header">
       <h1><a href="index.html">더리터로고</a></h1>
-      <nav class="gnb">
+      <nav class="gnb" id="gnb">
+        <button class="gnb_open ">
+          <span>메뉴열기</span><span></span><span></span>
+        </button>
         <ul>
           <li>
             <a href="">
@@ -83,7 +86,7 @@
           </div>
         </div>
       </section>
-      <section class="section theliter">
+      <section class="section theliter" id="contents">
         <div class="wrapper">
           <div class="inner">
             <div class="txt">
@@ -198,9 +201,11 @@
             <h2>THE LITER SPECIALTY<br>
               COFFEE BLEND
             </h2>
-            <span class="material-symbols-rounded">
-              arrow_forward
-            </span>
+            <a href="">
+              <span class="material-symbols-rounded">
+                arrow_forward
+              </span>
+            </a>
             <p>다크초콜릿과 카카오의 풍미, 굿 밸런스로 깔끔하게 떨어지는 애프터
             </p>
 
@@ -261,7 +266,7 @@
               <a href="">
                 <div class="txt">
                   <span>Event</span>
-                  <strong>컵빙수 레드빈 리터치노 2종 출시 기념<br> 퀴즈 이벤트!
+                  <strong>컵빙수 레드빈 리터치노 2종 출시 기념 <span>퀴즈 이벤트!</span>
 
                   </strong>
                   <span>22.06.28~22.07.04</span>
@@ -287,7 +292,7 @@
                 가맹안내
 
               </a></li>
-            <li><a href="">
+            <li class="privacy"><a href="">
                 개인정보처리방침
 
               </a></li>

@@ -9,8 +9,9 @@ $(document).ready(function () {
       "TheLiter",
       "Menu",
       "Interview",
-      "Franchise",
+      "Blend",
       "News",
+      "footer",
     ] /* 툴팁 */,
     showActiveTooltip: false /* 현재 활성화된 페이지의 툴팁 보이기 */,
 
@@ -25,7 +26,7 @@ $(document).ready(function () {
       }
     },
 
-    responsiveWidth: 1000 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
+    responsiveWidth: 320 /* fullpage를 적용시키지 않을 모바일 사이즈 */,
   }); //fullpage
   const swiper = new Swiper(".visual .popup", {
     /* 팝업을 감싼는 요소의 class명 */

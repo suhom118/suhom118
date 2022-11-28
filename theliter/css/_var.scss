@@ -5,7 +5,7 @@
   color: $font_color;
 }
 @mixin mobile_style($font_color: #3d3d3d) {
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
   font-size: 40px;
   color: $font_color;
